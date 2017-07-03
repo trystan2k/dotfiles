@@ -44,7 +44,7 @@ __cells_commands ()
 
   current_word="${COMP_WORDS[COMP_CWORD]}"
 
-  context="$(cells -c | awk -F '[][]' '{print $2}' | xargs)"
+  context="$(cells -c | awk -F '[][]' '{print $2}' | cut -d \, -f 1 | xargs)"
 
   case "${context}" in
   app) __cells_app_context "$context";;
