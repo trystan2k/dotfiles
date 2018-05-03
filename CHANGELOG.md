@@ -11,6 +11,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 
+- Instructions to install Oh My ZSH
+- Config file for Oh My ZSH
+- Font files to be used with Oh My ZSH
+
+## [1.0.0] - 2017-07-01
+
+### Added
+
 - Initial release
 - Add file for git configuration
 - Add file for git-flow completion
@@ -23,4 +31,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
 [Unreleased]: https://github.com/trystan2k/dotfiles/compare/master...develop
+[1.1.0]: https://github.com/trystan2k/dotfiles/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/trystan2k/dotfiles/compare/master...v1.0.0
