@@ -71,6 +71,7 @@ plugins=(
   git
   git-flow
   dnf
+  brew
   zsh-syntax-highlighting
   zsh-autosuggestions 
   bgnotify
