@@ -1,15 +1,3 @@
-if [ -f ~/.git-completion.bash ]; then
-  . ~/.git-completion.bash
-fi
-
-if [ -f ~/.git-flow-completion.bash ]; then
-  . ~/.git-flow-completion.bash
-fi
-
-if [ -f ~/.cells-completion.bash ]; then
-  . ~/.cells-completion.bash
-fi
-
 export GPG_TTY=$(tty)
 
 # Add `~/bin` to the `$PATH`
