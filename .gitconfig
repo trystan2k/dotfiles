@@ -41,10 +41,7 @@
 	# Switch to a branch, creating it if necessary
 	go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
 
-	p2br = "!f() { \
-		declare currentBranch=\"$(git symbolic-ref --short HEAD)\"; \
-		git push -u origin $currentBranch; \
-		}; f"
+	p2br = "!push2Branch() { currentBranch=\"$(git symbolic-ref --short HEAD)\"; git push -u origin $currentBranch; }; push2Branch"
 
 	# Show verbose output about tags, branches or remotes
 	tags = tag -l
