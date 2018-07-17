@@ -7,6 +7,31 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.2.0] - 2018-07-17
+
+### Added
+
+- Add new files for Hack font
+
+### Changed
+
+- Add more plugins for Oh-My-Zsh
+- Update ZSH folder to be relative
+- Change gitconfig alias to be more OS independent.
+
+### Removed
+
+- Remove completion files not used anymore
+- Remove bash files not used anymore
+
+## [1.1.0] - 2017-07-01
+
+### Added
+
+- Instructions to install Oh My ZSH
+- Config file for Oh My ZSH
+- Font files to be used with Oh My ZSH
+
 ## [1.0.0] - 2017-07-01
 
 ### Added
@@ -23,4 +48,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
 [Unreleased]: https://github.com/trystan2k/dotfiles/compare/master...develop
+[1.2.0]: https://github.com/trystan2k/dotfiles/compare/v1.1.0...v1.2.0
+[1.1.0]: https://github.com/trystan2k/dotfiles/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/trystan2k/dotfiles/compare/master...v1.0.0
