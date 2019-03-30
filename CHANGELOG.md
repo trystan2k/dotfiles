@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.3.0] - 2019-03-30
+
+### Added
+
+- Add config file for [Hyper terminal](https://hyper.is)
+
 ## [1.2.0] - 2018-07-17
 
 ### Added
@@ -48,6 +54,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
 [Unreleased]: https://github.com/trystan2k/dotfiles/compare/master...develop
+[1.3.0]: https://github.com/trystan2k/dotfiles/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/trystan2k/dotfiles/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/trystan2k/dotfiles/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/trystan2k/dotfiles/compare/master...v1.0.0
