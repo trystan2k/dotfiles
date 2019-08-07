@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.4.0] - 2019-08-07
+
+### Added
+
+- Add global .gitignore file generated at [gitignore.io](http://www.gitignore.io/)
+
+### Changed
+
+- Update aliaes, gitconfig, hyper.js and zshrc files
+
 ## [1.3.0] - 2019-03-30
 
 ### Added
@@ -54,6 +64,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
 [Unreleased]: https://github.com/trystan2k/dotfiles/compare/master...develop
+[1.4.0]: https://github.com/trystan2k/dotfiles/compare/v1.2.0...v1.4.0
 [1.3.0]: https://github.com/trystan2k/dotfiles/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/trystan2k/dotfiles/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/trystan2k/dotfiles/compare/v1.0.0...v1.1.0

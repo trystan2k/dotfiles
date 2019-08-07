@@ -4,6 +4,8 @@
 
 module.exports = {
   config: {
+    webGLRenderer: false, 
+    
     // choose either `'stable'` for receiving highly polished,
     // or `'canary'` for less polished but more frequent updates
     updateChannel: 'stable',
@@ -144,6 +146,28 @@ module.exports = {
         "memory",                                                                   
         "battery"
       ]                                                                          
+    },
+
+    hyperNative: {
+      darkMode: true,
+      colors: {
+          black: "#000000",
+          red: "#ab1500",
+          green: "#39fd35",
+          yellow: "#a9a600",
+          blue: "#36a5fc",
+          magenta: "#c12dbf",
+          cyan: "#00b3bf",
+          white: "#cacaca",
+          lightBlack: "#797979",
+          lightRed: "#ec2100",
+          lightGreen: "#00db00",
+          lightYellow: "#eae600",
+          lightBlue: "#36a5fc",
+          lightMagenta: "#ec3aea",
+          lightCyan: "#00e8ea",
+          lightWhite: "#eaeaea",
+      }
     }
   },
 
