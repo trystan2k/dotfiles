@@ -1,6 +1,6 @@
-#[user]
-#	name = 
-#	email = 
+[user]
+	name = Trystan
+	email = trystan2k
 
 [alias]
 
@@ -12,6 +12,20 @@
     dc = diff --cached
     lg = log -p
 
+	cmsg = "!f() { git commit -m $1; }; f"
+
+	codevelop = checkout develop
+
+	comaster = checkout master
+
+	cofeature = "!cofeature() { git checkout feature/$1; }; cofeature"
+
+	crfeature = "!crfeature() { git checkout -b feature/$1; }; crfeature"
+
+	corelease = "!corelease() { git checkout release/$1; }; corelease"
+
+	crrelease = "!crrelease() { git checkout -b release/$1; }; crrelease"
+
 	# Delete any branches (except the actual, master and develop) that have been merged into master
 	# See also: https://gist.github.com/robmiller/5133264
 	# delete-merged-branches
@@ -19,6 +33,8 @@
 
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit
+
+	ls = "log --pretty=format:\"%C(yellow)%h %C(green)%s %Creset(%ad)\" --date=relative"
 
 	# View the current working tree status using the short format
 	s = status -s
@@ -41,7 +57,10 @@
 	# Switch to a branch, creating it if necessary
 	go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
 
-	p2br = "!push2Branch() { currentBranch=\"$(git symbolic-ref --short HEAD)\"; git push -u origin $currentBranch; }; push2Branch"
+	p2br = "!f() { \
+		declare currentBranch=\"$(git symbolic-ref --short HEAD)\"; \
+		git push -u origin $currentBranch; \
+		}; f"
 
 	# Show verbose output about tags, branches or remotes
 	tags = tag -l
@@ -71,10 +90,6 @@
 
 	# Find commits by commit message
 	fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
-
-	# Remove branches that have already been merged with master
-	# a.k.a. ‘delete merged’
-	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 
 	# List contributors with number of commits
 	contributors = shortlog --summary --numbered
@@ -118,6 +133,7 @@
 	# Prevent showing files whose names contain non-ASCII symbols as unversioned.
 	# http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
 	precomposeunicode = false
+	editor = code --wait
 
 [color]
 

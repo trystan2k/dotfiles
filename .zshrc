@@ -3,12 +3,11 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="~/.oh-my-zsh"
-
 source ~/.fonts/*.sh
 
 POWERLEVEL9K_MODE="nerdfont-complete"
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_VCS_GIT_ICON=$'\uE703 '
+#POWERLEVEL9K_VCS_GIT_ICON=$'\uE703 '
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(user dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs command_execution_time)
@@ -63,30 +62,43 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+# Setup bgnotify plugin
+bgnotify_threshold=4  ## set your own notification threshold
+
+function bgnotify_formatted {
+  ## $1=exit_status, $2=command, $3=elapsed_time
+  [ $1 -eq 0 ] && title="Success!" || title="Failed!"
+  bgnotify "$title -- after $3 s" "$2";
+}
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
-  git-flow
-  dnf
-  brew
-  zsh-syntax-highlighting
-  zsh-autosuggestions 
+  autojump
   bgnotify
-  boot2docker
   bower
+  brew
+  copyfile
+  dnf
+  docker
   docker-compose
   docker-machine
-  docker
+  encode64
+  extract
+  git
+  git-flow
   node
   npm
   nvm
+  osx
+  sublime
   thefuck
   yarn
-  vscode
-  mvn
+  z
+  zsh-autosuggestions 
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh

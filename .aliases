@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 alias fuck='PYTHONIOENCODING=utf-8 eval $(thefuck $(fc -ln -1)); history -r'
+alias kindlegen=/Applications/KindleGen/kindlegen
 
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
@@ -17,7 +18,6 @@ alias dt="cd ~/Desktop"
 alias p="cd ~/projects"
 alias g="git"
 alias h="history"
-alias j="jobs"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
