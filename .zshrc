@@ -2,12 +2,10 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="~/.oh-my-zsh"
-source ~/.fonts/*.sh
+export ZSH="$HOME/.oh-my-zsh"
 
 POWERLEVEL9K_MODE="nerdfont-complete"
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-#POWERLEVEL9K_VCS_GIT_ICON=$'\uE703 '
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(user dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs command_execution_time)
@@ -79,7 +77,6 @@ plugins=(
   autojump
   bgnotify
   bower
-  brew
   copyfile
   dnf
   docker
@@ -132,8 +129,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-if [ -f ~/.aliases ]; then
-  . ~/.aliases
+if [ -f $HOME/.aliases ]; then
+  . $HOME/.aliases
 fi
