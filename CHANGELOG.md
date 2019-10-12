@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.5.0] - 2019-10-12
+
+### Changed
+
+- Update zshrc to use correct home directory and remove not used plugins
+
 ## [1.4.0] - 2019-08-07
 
 ### Added
@@ -64,7 +70,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
 [Unreleased]: https://github.com/trystan2k/dotfiles/compare/master...develop
-[1.4.0]: https://github.com/trystan2k/dotfiles/compare/v1.2.0...v1.4.0
+[1.5.0]: https://github.com/trystan2k/dotfiles/compare/v1.4.0...v1.5.0
+[1.4.0]: https://github.com/trystan2k/dotfiles/compare/v1.3.0...v1.4.0
 [1.3.0]: https://github.com/trystan2k/dotfiles/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/trystan2k/dotfiles/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/trystan2k/dotfiles/compare/v1.0.0...v1.1.0
