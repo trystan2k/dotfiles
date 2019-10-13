@@ -1,6 +1,7 @@
-[user]
-	name = Trystan
-	email = trystan2k
+[include]
+	path = .gituser-personal
+[includeIf "gitdir:~/Documents/Work/Repos/"]
+	path = .gituser-work
 
 [alias]
 
