@@ -7,11 +7,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.7.0] - 2019-10-21
+
+### Added
+
+- Add new Oh-My-ZSH plugins, alias-finder and fzf
+- Add new alias for initial commit
+
 ## [1.6.0] - 2019-10-13
 
 ### Added
 
-- Added gitconfig configuration per folder
+- Add gitconfig configuration per folder
 
 ## [1.5.0] - 2019-10-12
 
@@ -76,6 +83,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
 [Unreleased]: https://github.com/trystan2k/dotfiles/compare/master...develop
+[1.7.0]: https://github.com/trystan2k/dotfiles/compare/v1.6.0...v1.7.0
 [1.6.0]: https://github.com/trystan2k/dotfiles/compare/v1.5.0...v1.6.0
 [1.5.0]: https://github.com/trystan2k/dotfiles/compare/v1.4.0...v1.5.0
 [1.4.0]: https://github.com/trystan2k/dotfiles/compare/v1.3.0...v1.4.0
