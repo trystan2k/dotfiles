@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.8.0] - 2019-10-29
+
+### Added
+
+- Add new Hyper plugin `hyper-font-ligatures`
+
+### Changed
+
+- Change Hyper default font to `Fira Code`
+
+### Removed
+
+- Remove .bash_profile as currently using ZSH
+- Remove .fonts folder, as it is not needed anymore
+
 ## [1.7.0] - 2019-10-21
 
 ### Added
@@ -83,6 +98,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
 [Unreleased]: https://github.com/trystan2k/dotfiles/compare/master...develop
+[1.8.0]: https://github.com/trystan2k/dotfiles/compare/v1.7.0...v1.8.0
 [1.7.0]: https://github.com/trystan2k/dotfiles/compare/v1.6.0...v1.7.0
 [1.6.0]: https://github.com/trystan2k/dotfiles/compare/v1.5.0...v1.6.0
 [1.5.0]: https://github.com/trystan2k/dotfiles/compare/v1.4.0...v1.5.0

@@ -1,73 +1,104 @@
 # Thiago’s dotfiles
 
-[![v1.7.0](https://img.shields.io/badge/version-1.7.0-brightgreen.svg)](https://github.com/trystan2k/dotfiles/tree/v1.7.0)
+[![v1.8.0](https://img.shields.io/badge/version-1.8.0-brightgreen.svg)](https://github.com/trystan2k/dotfiles/tree/v1.8.0)
 
-## Installation
+# General Information
 
 **Warning:** If you want to give these dotfiles a try, you should first fork this repository, review the code, and remove things you don’t want or need. Don’t blindly use my settings unless you know what that entails. Use at your own risk!
 
 You can fork this repo and copy the files to you home folder
 
-For the bash completion files, you can just download each bash file and load it.
+# Terminal
 
-For example:
+I am currently using [Hyper Terminal](https://hyper.is/).
+You can use the same configuration I have currently, doing the following:
+
+
+- Copy `hyper.js` file from dotfiles project to user home folder
+- Clone ([hyper-native plugin](https://github.com/trystan2k/hyper-native)) inside hyper_plugins/local folder
+
+
+## Homebrew
+
+I use [Homebrew](https://brew.sh/) to install packages I need in my MacOS. There are alternatives for Linux([https://linuxbrew.sh]) that can also be used in Windows 10 with Windows Subsystem for Linux (WSL)
+
+### Install [Homebrew](https://brew.sh/)
 
 ```bash
-curl https://raw.githubusercontent.com/trystan2k/dotfiles/master/git-completion.bash -o ~/.git-completion.bash
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
-And then edit your .bash_profile file with the following:
+
+## Oh my ZSH 
+
+I have OhMyZSH installed, which is very useful (specially because of its plugins). So here are the instructions to have it installed and configured in the same way I have.
+
+### Install zsh
 
 ```bash
-if [ -f ~/.git-completion.bash ]; then
-  . ~/.git-completion.bash
-fi
+  brew install zsh zsh-autosuggestions zsh-syntax-highlighting thefuck autojump
 ```
 
-### Oh my ZSH 
+### Install ([OhMyZSH](https://github.com/robbyrussell/oh-my-zsh))
 
-To install and configure OhMyZSH, follow the instructions:
+```bash
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
 
-# Install ZSH
+### Install zsh-syntax-highlighting plugin
 
-First, you need to install ZSH terminal
+```bash
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
 
-**MacOS**
+### Install zsh-autosuggestions plugin
 
-brew install zsh (If you don´t have Homebrew, follow the insttructions here: https://brew.sh/)
+```bash
+  git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
 
-**Ubuntu**
+### Install ([powerlevel9k theme](https://github.com/Powerlevel9k/powerlevel9k))
 
-sudo apt-get install zsh
+```bash
+  git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+```
 
-# Set ZSH as default terminal
+### Install ([Nerd Font](https://github.com/ryanoasis/nerd-fonts))
 
-chsh -s $(which zsh)
+```bash
+  brew tap homebrew/cask-fonts
+  brew cask install font-hack-nerd-font
+```
 
-# Install OhMyZSH
+### Install fire code
 
-curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh; zsh
+```bash
+  brew tap homebrew/cask-fonts
+  brew cask install font-fira-code
+```
 
-# Setup
+### Install plugin for ([bgnotify](https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/bgnotify))
 
-**Plugins**
+```bash
+  brew install terminal-notifier
+```
 
-Here are the plugins we have setup for now:
+### Install ([fzf plugin](https://github.com/junegunn/fzf))
 
-zsh-syntax-highlighting: git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting 
+```bash
+  brew install fzf
+```
 
-zsh-autosuggestions: git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+### Install tree plugin
 
-fzf: git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
+```bash
+  brew install tree
+```
 
-**Themes and Fonts**
+### Copy ZSH config file
 
-Here are the theme and font we have setup:
-
- Nerd Fonts: https://nerdfonts.com/#downloads
-  mkdir ~/.fonts && cd ~/.fonts
-  unzip ~/Downloads/<font_name>.zip
-
-Powerlevel9k: git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+```bash
+  Copy `.zshrc` file from dotfiles project to user home folder
+```
 
 ## Thanks to...
 
