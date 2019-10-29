@@ -14,7 +14,7 @@ module.exports = {
     fontSize: 12,
 
     // font family with optional fallbacks
-    fontFamily: '"Hack Nerd Font", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    fontFamily: 'Fira Code, "Hack Nerd Font", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
     // default font weight: 'normal' or 'bold'
     fontWeight: 'bold',
@@ -187,6 +187,7 @@ module.exports = {
     "hyper-search",
     //"hyper-letters",
     "hyper-fading-scrollbar", 
+    "hyper-font-ligatures"
   ],
 
   // in development, you can create a directory under
