@@ -70,7 +70,7 @@ brew cask install alfred
 
 # Parallels
 echo "Install Parallels"
-brew cask install parallels-desktop
+brew cask install parallels
 
 # Dozer
 echo "Install Dozer"
@@ -122,7 +122,7 @@ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/theme
 # not officially supported, might install outdated version
 # Change font in terminal preferences
 echo "Install Fira Code"
-brew tap caskroom/cask-fonts
+brew tap homebrew/cask-fonts
 brew cask install font-fira-code
 
 # Nerd Font
