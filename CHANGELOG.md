@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.10.0] - 2019-12-08
+
+### Changed
+
+- Change ZSH_THEME to [powerlevel10k](https://github.com/romkatv/powerlevel10k)
+
 ## [1.9.0] - 2019-12-08
 
 ### Added
@@ -109,6 +115,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
 [Unreleased]: https://github.com/trystan2k/dotfiles/compare/master...develop
+[1.10.0]: https://github.com/trystan2k/dotfiles/compare/v1.9.0...v1.10.0
 [1.9.0]: https://github.com/trystan2k/dotfiles/compare/v1.8.0...v1.9.0
 [1.8.0]: https://github.com/trystan2k/dotfiles/compare/v1.7.0...v1.8.0
 [1.7.0]: https://github.com/trystan2k/dotfiles/compare/v1.6.0...v1.7.0
