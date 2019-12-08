@@ -11,7 +11,7 @@ module.exports = {
     updateChannel: 'stable',
 
     // default font size in pixels for all tabs
-    fontSize: 12,
+    fontSize: 14,
 
     // font family with optional fallbacks
     fontFamily: 'Fira Code, "Hack Nerd Font", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
@@ -179,6 +179,7 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
+    "hyperterm-cobalt2-theme",
     "hyper-quit",
     "hyperline",
     "hypercwd",
@@ -187,14 +188,15 @@ module.exports = {
     "hyper-search",
     //"hyper-letters",
     "hyper-fading-scrollbar", 
-    "hyper-font-ligatures"
+    "hyper-font-ligatures",
+    "hyper-reorderable-tabs"
   ],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
   // to load it and avoid it being `npm install`ed
   localPlugins: [
-    "hyper-native",
+    //"hyper-native",
   ],
 
   keymaps: {
