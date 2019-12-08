@@ -47,5 +47,5 @@ install_tools () {
 }
 
 init
-link
 install_tools
+link
