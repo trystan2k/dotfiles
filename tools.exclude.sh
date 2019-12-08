@@ -56,6 +56,26 @@ brew cask install docker
 # Useful tools
 # ---------------------------------------------
 
+# Chrome
+echo "Install Chrome"
+brew cask install google-chrome
+
+# Firefox 
+echo "Install Firefox"
+brew cask install firefox
+
+# Alfred
+echo "Install Alfred"
+brew cask install alfred
+
+# Parallels
+echo "Install Parallels"
+brew cask install parallels-desktop
+
+# Dozer
+echo "Install Dozer"
+brew cask install dozer
+
 # Make requests with awesome response formatting
 echo "Install httpie"
 brew install httpie
@@ -102,7 +122,7 @@ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/theme
 # not officially supported, might install outdated version
 # Change font in terminal preferences
 echo "Install Fira Code"
-brew tap caskroom/fonts
+brew tap caskroom/cask-fonts
 brew cask install font-fira-code
 
 # Nerd Font

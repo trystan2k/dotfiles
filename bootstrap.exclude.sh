@@ -2,6 +2,7 @@
 
 source .exports
 source .aliases
+source .macos
 
 # Initialize a few things
 init () {
@@ -30,18 +31,18 @@ link () {
 
 install_tools () {
 	if [ $( echo "$OSTYPE" | grep 'darwin' ) ] ; then
-		echo "This utility will install useful utilities using Homebrew"
+		echo "This utility will install useful utilities using Homebrew/Git/others"
 		echo "Proceed? (y/n)"
 		read resp
 		# TODO - regex here?
 		if [ "$resp" = 'y' -o "$resp" = 'Y' ] ; then
-			echo "Installing useful stuff using brew. This may take a while..."
-			sh brew.exclude.sh
+			echo "Installing useful stuff using brew/git/others. This may take a while..."
+			sh tools.exclude.sh
 		else
 			echo "Brew installation cancelled by user"
 		fi
 	else
-		echo "Skipping installations using Homebrew because MacOS was not detected..."
+		echo "Skipping installations using Homebrew/Git/Others because MacOS was not detected..."
 	fi
 }
 
