@@ -102,7 +102,7 @@ brew install zsh-autosuggestions zsh-syntax-highlighting thefuck autojump
 
 # OhMyZSH
 echo "Install Oh-My-ZSH"
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 
 # zsh-syntax-highlighting
 echo "Install zsh-syntax-highlighting"
