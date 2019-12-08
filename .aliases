@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 alias fuck='PYTHONIOENCODING=utf-8 eval $(thefuck $(fc -ln -1)); history -r'
-alias kindlegen=/Applications/KindleGen/kindlegen
 
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
@@ -12,10 +11,8 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
-alias d="cd ~/Documents/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias p="cd ~/projects"
 alias g="git"
 alias h="history"
 
@@ -165,9 +162,4 @@ alias reload="exec $SHELL -l"
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
 
-# Alias function for initial commit
-function initialCommit() {
-	git add .
-	git commit -m "Initial Commit"
-	git push
-}
+[ -f ".aliases.local" ] && source ".aliases.local"
