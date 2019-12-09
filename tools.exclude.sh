@@ -88,6 +88,10 @@ brew install tree
 echo "Install hyper"
 brew cask install hyper
 
+# Sublime
+echo "Install Sublime"
+brew cask install sublime-text
+
 # ---------------------------------------------
 # ZSH and Oh-My-ZSH
 # ---------------------------------------------

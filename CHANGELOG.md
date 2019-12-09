@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.11.0] - 2019-12-09
+
+### Added
+
+- Add instructions to install Sublime Text
+
+### Changed
+
+- Change Hyper.js to use WebGLRender
+
+### Removed
+
+- Remove Hyper.js plugins not used
+- Remove Hyper.js settings not needed
+
 ## [1.10.0] - 2019-12-08
 
 ### Changed
@@ -115,6 +130,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
 [Unreleased]: https://github.com/trystan2k/dotfiles/compare/master...develop
+[1.11.0]: https://github.com/trystan2k/dotfiles/compare/v1.10.0...v1.11.0
 [1.10.0]: https://github.com/trystan2k/dotfiles/compare/v1.9.0...v1.10.0
 [1.9.0]: https://github.com/trystan2k/dotfiles/compare/v1.8.0...v1.9.0
 [1.8.0]: https://github.com/trystan2k/dotfiles/compare/v1.7.0...v1.8.0
