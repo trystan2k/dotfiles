@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.13.0] - 2019-12-10
+
+### Added
+
+- Add gitignore file to be included in the symlink process
+- Add common aliases in the .aliases file
+
+### Changed
+
+- Disable webGLRenderer in Hyper.js
+- Change right margin in Hyper.js
+
 ## [1.12.0] - 2019-12-09
 
 ### Added
@@ -144,6 +156,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
 [Unreleased]: https://github.com/trystan2k/dotfiles/compare/master...develop
+[1.13.0]: https://github.com/trystan2k/dotfiles/compare/v1.12.0...v1.13.0
 [1.12.0]: https://github.com/trystan2k/dotfiles/compare/v1.11.0...v1.12.0
 [1.11.0]: https://github.com/trystan2k/dotfiles/compare/v1.10.0...v1.11.0
 [1.10.0]: https://github.com/trystan2k/dotfiles/compare/v1.9.0...v1.10.0
