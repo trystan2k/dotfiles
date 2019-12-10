@@ -1,7 +1,14 @@
 [include]
 	path = .gituser-personal
-[includeIf "gitdir:~/Documents/Work/Repos/"]
-	path = .gituser-work
+[include]
+	path = .gitconfig.local
+
+# Example for gitconfig.work, to only load when inside
+# a git folder of a work folder
+# [includeIf "gitdir:~/Documents/Work1/"]
+# 	path = .gituser-work1
+# [includeIf "gitdir:~/Documents/Work2/"]
+# 	path = .gituser-work2
 
 [alias]
 
@@ -221,4 +228,3 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
-
