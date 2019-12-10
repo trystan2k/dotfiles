@@ -32,10 +32,6 @@ brew install coreutils
 echo "Install git"
 brew install git
 
-# NVM
-echo "Install nvm"
-brew install nvm
-
 # Python 3
 echo "Install python"
 brew install python
@@ -55,6 +51,14 @@ brew cask install docker
 # ---------------------------------------------
 # Useful tools
 # ---------------------------------------------
+
+# Station
+echo "Install Station"
+brew cask install station
+
+# App Cleaner
+echo "Install AppCleaner"
+brew cask install appcleaner
 
 # Chrome
 echo "Install Chrome"
@@ -119,6 +123,10 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 # powerlevel9k
 echo "Install powerlevel10k"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
+
+# NVM
+echo "Install nvm"
+git clone https://github.com/lukechilds/zsh-nvm ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-nvm
 
 # The Fire Code font
 # https://github.com/tonsky/FiraCode
