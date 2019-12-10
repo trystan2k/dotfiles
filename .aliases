@@ -174,4 +174,4 @@ alias reload="exec $SHELL -l"
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
 
-[ -f ".aliases.local" ] && source ".aliases.local"
+[ -f "$HOME/.aliases.local" ] && source "$HOME/.aliases.local"
