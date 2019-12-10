@@ -19,7 +19,7 @@ link () {
 	read resp
 	# TODO - regex here?
 	if [ "$resp" = 'y' -o "$resp" = 'Y' ] ; then
-		for file in $( ls -A | grep -vE '\.exclude*|\.git$|\.gitignore|.*.md' ) ; do
+		for file in $( ls -A | grep -vE '\.exclude*|\.git$|.*.md' ) ; do
 			ln -sv "$PWD/$file" "$HOME"
 		done
 		echo "Symlinking complete"
@@ -46,6 +46,6 @@ install_tools () {
 	fi
 }
 
-init
-install_tools
+#init
+#install_tools
 link
