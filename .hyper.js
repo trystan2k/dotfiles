@@ -23,7 +23,7 @@ module.exports = {
     cursorBlink: true,
 
     // custom padding (CSS format, i.e.: `top right bottom left`)
-    padding: '2px 8px 14px 8px',
+    padding: '2px 4px 14px 8px',
 
     // for advanced config flags please refer to https://hyper.is/#cfg  
 
