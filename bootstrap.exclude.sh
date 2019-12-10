@@ -9,17 +9,14 @@ init () {
 	echo "Making a Projects folder in $PATH_TO_PROJECTS if it doesn't already exist"
 	mkdir -p "$PATH_TO_PROJECTS"
 }
-
-# TODO : Delete symlinks to deleted files
-# Is this where rsync shines?
-# TODO - add support for -f and --force
+# Symlink files to home folder
 link () {
 	echo "This utility will symlink the files in this repo to the home directory"
 	echo "Proceed? (y/n)"
 	read resp
 	# TODO - regex here?
 	if [ "$resp" = 'y' -o "$resp" = 'Y' ] ; then
-		for file in $( ls -A | grep -vE '\.exclude*|\.git$|\.gitignore|.*.md' ) ; do
+		for file in $( ls -A | grep -vE '\.exclude*|\.git$|.*.md' ) ; do
 			ln -sv "$PWD/$file" "$HOME"
 		done
 		echo "Symlinking complete"
@@ -29,6 +26,7 @@ link () {
 	fi
 }
 
+# Install tools
 install_tools () {
 	if [ $( echo "$OSTYPE" | grep 'darwin' ) ] ; then
 		echo "This utility will install useful utilities using Homebrew/Git/others"
