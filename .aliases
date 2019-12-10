@@ -2,18 +2,6 @@
 
 eval "$(thefuck --alias fuck)"
 
-# Alias function for initial commit
-function initialCommit() {
-        git add .
-        git commit -m "Initial Commit"
-        git push
-}
-
-# Alias personal
-alias kindlegen=/Applications/KindleGen/kindlegen
-alias thiago="cd ~/Documents/Thiago"
-alias home="cd ~/"
-
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
