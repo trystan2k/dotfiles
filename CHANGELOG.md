@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.12.0] - 2019-12-09
+
+### Added
+
+- Add config for [zsh-nvm](https://github.com/lukechilds/zsh-nvm) plugin
+- Add [AppCleaner](https://freemacsoft.net/appcleaner/) install instructions via brew
+- Add [Station](https://getstation.com/) install instructions via brew
+
+### Changed
+
+- Change how NVM installs, from brew to [zsh-nvm](https://github.com/lukechilds/zsh-nvm) plugin
+- Change how `thefuck` plugin is loaded
+- Move source of .aliases and .exports to beginning of the .zshrc file
+
 ## [1.11.0] - 2019-12-09
 
 ### Added
@@ -130,6 +144,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
 [Unreleased]: https://github.com/trystan2k/dotfiles/compare/master...develop
+[1.12.0]: https://github.com/trystan2k/dotfiles/compare/v1.11.0...v1.12.0
 [1.11.0]: https://github.com/trystan2k/dotfiles/compare/v1.10.0...v1.11.0
 [1.10.0]: https://github.com/trystan2k/dotfiles/compare/v1.9.0...v1.10.0
 [1.9.0]: https://github.com/trystan2k/dotfiles/compare/v1.8.0...v1.9.0

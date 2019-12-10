@@ -1,8 +1,13 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+if [ -f $HOME/.aliases ]; then
+  . $HOME/.aliases
+fi
+
+if [ -f $HOME/.exports ]; then
+  . $HOME/.exports
+fi
 
 POWERLEVEL9K_MODE="nerdfont-complete"
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
@@ -96,7 +101,8 @@ plugins=(
   thefuck
   yarn
   z
-  zsh-autosuggestions 
+  zsh-autosuggestions
+  zsh-nvm
   zsh-syntax-highlighting
 )
 
@@ -131,11 +137,4 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-if [ -f $HOME/.aliases ]; then
-  . $HOME/.aliases
-fi
-
-if [ -f $HOME/.exports ]; then
-  . $HOME/.exports
-fi
 

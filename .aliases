@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-alias fuck='PYTHONIOENCODING=utf-8 eval $(thefuck $(fc -ln -1)); history -r'
+eval "$(thefuck --alias fuck)"
 
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
