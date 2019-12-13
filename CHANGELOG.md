@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.14.0] - 2019-12-13
+
+### Removed
+
+- Remove settings in .gitconfig that were causing issues
+
 ## [1.13.0] - 2019-12-10
 
 ### Added
