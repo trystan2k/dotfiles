@@ -9,22 +9,6 @@ init () {
 	echo "Making a Projects folder in $PATH_TO_PROJECTS if it doesn't already exist"
 	mkdir -p "$PATH_TO_PROJECTS"
 }
-# Symlink files to home folder
-link () {
-	echo "This utility will symlink the files in this repo to the home directory"
-	echo "Proceed? (y/n)"
-	read resp
-	# TODO - regex here?
-	if [ "$resp" = 'y' -o "$resp" = 'Y' ] ; then
-		for file in $( ls -A | grep -vE '\.exclude*|\.git$|.*.md' ) ; do
-			ln -sv "$PWD/$file" "$HOME"
-		done
-		echo "Symlinking complete"
-	else
-		echo "Symlinking cancelled by user"
-		return 1
-	fi
-}
 
 # Install tools
 install_tools () {
@@ -42,6 +26,10 @@ install_tools () {
 	else
 		echo "Skipping installations using Homebrew/Git/Others because MacOS was not detected..."
 	fi
+}
+
+link () {
+	sh symlinks.exclude.sh
 }
 
 init
