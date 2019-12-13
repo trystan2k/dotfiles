@@ -1,8 +1,7 @@
 #!/bin/sh
 
-source .exports
-source .aliases
-source .macos
+source ../.exports
+source ../.aliases
 
 # Symlink files to home folder
 link () {
@@ -10,7 +9,7 @@ link () {
 	echo "Proceed? (y/n)"
 	read resp
 	if [ "$resp" = 'y' -o "$resp" = 'Y' ] ; then
-		for file in $( ls -A | grep -vE '\.exclude*|\.git$|.*.md' ) ; do
+		for file in $( ls -Ap ../ | grep -vE '\.exclude*|\.git$|.*.md|/$' ) ; do
 			linkDotFile $file
 		done
 		echo "Symlinking complete"

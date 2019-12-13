@@ -1,28 +1,28 @@
 #!/usr/bin/env bash
+install() {
+    which $1 &> /dev/null
 
-# Install command-line tools using Homebrew.
+    if [ $? -ne 0 ]; then
+        echo "Installing: ${1}..."
+        sudo apt install -y $1 $2
+    else
+        echo "Already installed: ${1}"
+    fi
+}
+
+mkdir -p "$PATH_TO_CUSTOM_APPS"
+
+sudo apt update
 
 # Install homebrew if it is not installed
 which brew 1>&/dev/null
 if [ ! "$?" -eq 0 ] ; then
-	echo "Homebrew not installed. Attempting to install Homebrew"
-	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    echo "Homebrew not installed. Attempting to install Homebrew"
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
 	if [ ! "$?" -eq 0 ] ; then
 		echo "Something went wrong. Exiting..." && exit 1
 	fi
 fi
-
-# Make sure we’re using the latest Homebrew
-echo "Update Homebrew"
-brew update
-
-# Upgrade any already-installed formulae
-echo "Upgrade Homebrew"
-brew upgrade
-
-# Core Utils
-echo "Install coreutils"
-brew install coreutils
 
 # ---------------------------------------------
 # Programming Languages and Frameworks
@@ -30,11 +30,11 @@ brew install coreutils
 
 # Git
 echo "Install git"
-brew install git
+install git
 
 # Python 3
 echo "Install python"
-brew install python
+install python3.7
 
 # ---------------------------------------------
 # Tools I use often
@@ -42,59 +42,12 @@ brew install python
 
 # Yarn
 echo "Install Yarn"
-brew install yarn --ignore-dependencies
-
-# Docker for containerization
-echo "Install docker"
-brew cask install docker
+install yarn --no-install-recommends
 
 # ---------------------------------------------
 # Useful tools
 # ---------------------------------------------
 
-# Station
-echo "Install Station"
-brew cask install station
-
-# App Cleaner
-echo "Install AppCleaner"
-brew cask install appcleaner
-
-# Chrome
-echo "Install Chrome"
-brew cask install google-chrome
-
-# Firefox 
-echo "Install Firefox"
-brew cask install firefox
-
-# Alfred
-echo "Install Alfred"
-brew cask install alfred
-
-# Parallels
-echo "Install Parallels"
-brew cask install parallels
-
-# Dozer
-echo "Install Dozer"
-brew cask install dozer
-
-# Make requests with awesome response formatting
-echo "Install httpie"
-brew install httpie
-
-# Show directory structure with excellent formatting
-echo "Install tree"
-brew install tree
-
-# Hyper terminal
-echo "Install hyper"
-brew cask install hyper
-
-# Sublime
-echo "Install Sublime"
-brew cask install sublime-text
 
 # ---------------------------------------------
 # ZSH and Oh-My-ZSH
@@ -134,21 +87,13 @@ git clone https://github.com/lukechilds/zsh-nvm ${ZSH_CUSTOM:-~/.oh-my-zsh/custo
 # not officially supported, might install outdated version
 # Change font in terminal preferences
 echo "Install Fira Code"
-brew tap homebrew/cask-fonts
-brew cask install font-fira-code
+sudo add-apt-repository universe
+sudo apt-get update
+install fonts-firacode
 
 # Nerd Font
 echo "Install Nerd Font"
-brew tap homebrew/cask-fonts
-brew cask install font-hack-nerd-font
-
-# My favorite text editor
-echo "Install VS Code"
-brew cask install visual-studio-code
-
-# terminal-notifier
-echo "Install Terminal Notifier"
-brew install terminal-notifier
+install fonts-hack-ttf
 
 # fzf
 echo "Install FZF"
