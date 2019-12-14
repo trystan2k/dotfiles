@@ -26,12 +26,12 @@ installAppImage() {
     sudo sh -c "echo 'Categories=Application;' >> /usr/share/applications/$1.desktop"
     sudo sh -c "echo 'StartupNotify=true' >> /usr/share/applications/$1.desktop"
 
-    echo "Finish installing ${1}"
+    echo "Finish installing ${1}. Press enter to continue"
 }
 
 installDebApp() {
     wget -O $PATH_TO_DOWNLOAD/$1.deb $2
-    sudo gdebi $PATH_TO_DOWNLOAD/$1.deb
+    sudo apt install $PATH_TO_DOWNLOAD/$1.deb -y
     rm $PATH_TO_DOWNLOAD/$1.deb
 }
 
@@ -51,9 +51,8 @@ if [ ! "$?" -eq 0 ] ; then
     else
         test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
         test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-        test -r ~/.bash_profile && echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.bash_profile
-        echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile 
-        echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.zprofile 
+        echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.exports.local 
+        source ~/.exports.local
 	fi
 fi
 
@@ -137,7 +136,6 @@ install zsh
 
 # Make zsh default shell
 echo "Default shell to zsh"
-chsh -s $(which zsh)
 
 # ZSH Plugins
 echo "Install zsh-autosuggestions zsh-syntax-highlighting thefuck autojump"
@@ -180,7 +178,7 @@ install fonts-hack-ttf
 
 # My favorite text editor
 echo "Install VS Code"
-install code
+installDebApp VSCode https://go.microsoft.com/fwlink/?LinkID=760868
 
 # fzf
 echo "Install FZF"
@@ -193,3 +191,6 @@ brew install fzf
 # Remove outdated versions from the cellar
 echo "Brew Cleanup"
 brew cleanup
+
+echo "Apt remove"
+sudo apt autoremove
