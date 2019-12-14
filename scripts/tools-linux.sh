@@ -25,6 +25,8 @@ installAppImage() {
     sudo sh -c "echo 'Type=Application' >> /usr/share/applications/$1.desktop"
     sudo sh -c "echo 'Categories=Application;' >> /usr/share/applications/$1.desktop"
     sudo sh -c "echo 'StartupNotify=true' >> /usr/share/applications/$1.desktop"
+
+    echo "Finish installing ${1}"
 }
 
 installDebApp() {
@@ -70,6 +72,14 @@ sudo apt update
 # Git
 echo "Install git"
 install git
+
+# Wget
+echo "Install wget"
+install wget
+
+# Curl
+echo "Install curl"
+install curl
 
 # Python 3
 echo "Install python"
@@ -124,6 +134,10 @@ install sublime-text
 # Zsh 
 echo "Install zsh"
 install zsh
+
+# Make zsh default shell
+echo "Default shell to zsh"
+chsh -s $(which zsh)
 
 # ZSH Plugins
 echo "Install zsh-autosuggestions zsh-syntax-highlighting thefuck autojump"
