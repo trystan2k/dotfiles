@@ -39,7 +39,12 @@ install_tools () {
 	fi
 }
 
+default_shell() {
+  echo "Set default shell to ZSH"
+  chsh -s $(which zsh)
+}
 
 init
 install_tools
 link
+default_shell
