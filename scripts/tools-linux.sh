@@ -134,8 +134,9 @@ install sublime-text
 echo "Install zsh"
 install zsh
 
-# Make zsh default shell
-echo "Default shell to zsh"
+# GCC
+echo "Install gcc"
+brew install gcc
 
 # ZSH Plugins
 echo "Install zsh-autosuggestions zsh-syntax-highlighting thefuck autojump"
@@ -193,4 +194,4 @@ echo "Brew Cleanup"
 brew cleanup
 
 echo "Apt remove"
-sudo apt autoremove
+sudo apt autoremove -y
