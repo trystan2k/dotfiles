@@ -2,7 +2,7 @@
 install() {
     which $1 &> /dev/null
 
-    if [ $? -ne 0 ]; then
+    if [ ! "$?" -eq 0 ] ; then
         echo "Installing: ${1}..."
         sudo apt install -y $1 $2
     else
@@ -36,7 +36,9 @@ installDebApp() {
 
 mkdir -p "$PATH_TO_CUSTOM_APPS"
 
-sudo apt update
+# ---------------------------------------------
+# Package Managers and tools
+# ---------------------------------------------
 
 # Install homebrew if it is not installed
 which brew 1>&/dev/null
@@ -50,6 +52,11 @@ fi
 
 # Install gdebi to take care of .deb packages
 install gdebi-core
+
+# Install add-apt-repository
+install software-properties-common
+
+sudo apt update
 
 # ---------------------------------------------
 # Programming Languages and Frameworks
@@ -89,7 +96,7 @@ installDebApp Chrome https://dl.google.com/linux/direct/google-chrome-stable_cur
 
 # Firefox 
 echo "Install Firefox"
-sudo add-apt-repository ppa:mozillateam/firefox-next -y
+sudo add-apt-repository ppa:mozillateam/firefox-stable -y
 sudo apt update
 sudo apt install -y firefox
 
