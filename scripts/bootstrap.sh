@@ -1,7 +1,6 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 source ../.exports
-source ../.aliases
 
 # Initialize a few things
 init () {
@@ -23,7 +22,7 @@ install_tools () {
     case "$OSTYPE" in
       darwin*)  
         echo "MacOS detected. Start installing tools..."
-        sh tools-macos.sh 
+        sh tools-macos.sh ;;
       linux*)   
         if grep -q Microsoft /proc/version; then
             echo "Linux on Windows (WSL) detected. Start installing tools..."
@@ -31,9 +30,9 @@ install_tools () {
         else
             echo "Linux detected. Start installing tools..."
             sh tools-linux.sh
-        fi    
+        fi ;;   
       *)        
-        echo "unknown: $OSTYPE"
+        echo "unknown: $OSTYPE" ;;
     esac
   else
     echo "Tools installation cancelled by user"
