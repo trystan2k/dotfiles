@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 install() {
-    which $1 &> /dev/null
-    if [ ! "$?" -eq 0 ] ; then
+    command -v "${1}" > /dev/null 2>&1
+    if [ $? -ne 0 ] ; then
         echo "Installing: ${1}..."
         sudo apt install -y $1 $2
     else
@@ -15,16 +15,16 @@ installAppImage() {
 
     wget -O $PATH_TO_CUSTOM_APPS/$1.png $3   
 
-    sudo echo "[Desktop Entry]" > /usr/share/applications/$1.desktop
-    sudo echo "Encoding=UTF-8" >> /usr/share/applications/$1.desktop
-    sudo echo "Name=$1" >> /usr/share/applications/$1.desktop
-    sudo echo "Comment=$1" >> /usr/share/applications/$1.desktop
-    sudo echo "Exec=${PATH_TO_CUSTOM_APPS}/${1}.AppImage" >> /usr/share/applications/$1.desktop
-    sudo echo "Icon=${PATH_TO_CUSTOM_APPS}/${1}.png" >> /usr/share/applications/$1.desktop
-    sudo echo "Terminal=false" >> /usr/share/applications/$1.desktop
-    sudo echo "Type=Application" >> /usr/share/applications/$1.desktop
-    sudo echo "Categories=Application;" >> /usr/share/applications/$1.desktop
-    sudo echo "StartupNotify=true" >> /usr/share/applications/$1.desktop
+    sudo sh -c "echo '[Desktop Entry]' > /usr/share/applications/$1.desktop"
+    sudo sh -c "echo 'Encoding=UTF-8' >> /usr/share/applications/$1.desktop"
+    sudo sh -c "echo 'Name=$1' >> /usr/share/applications/$1.desktop"
+    sudo sh -c "echo 'Comment=$1' >> /usr/share/applications/$1.desktop"
+    sudo sh -c "echo 'Exec=${PATH_TO_CUSTOM_APPS}/${1}.AppImage' >> /usr/share/applications/$1.desktop"
+    sudo sh -c "echo 'Icon=${PATH_TO_CUSTOM_APPS}/${1}.png' >> /usr/share/applications/$1.desktop"
+    sudo sh -c "echo 'Terminal=false' >> /usr/share/applications/$1.desktop"
+    sudo sh -c "echo 'Type=Application' >> /usr/share/applications/$1.desktop"
+    sudo sh -c "echo 'Categories=Application;' >> /usr/share/applications/$1.desktop"
+    sudo sh -c "echo 'StartupNotify=true' >> /usr/share/applications/$1.desktop"
 }
 
 installDebApp() {
@@ -40,12 +40,12 @@ mkdir -p "$PATH_TO_CUSTOM_APPS"
 # ---------------------------------------------
 
 # Install homebrew if it is not installed
-which brew &> /dev/null
+command -v brew > /dev/null 2>&1
 if [ ! "$?" -eq 0 ] ; then
     echo "Homebrew not installed. Attempting to install Homebrew"
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
-	if [ ! "$?" -eq 0 ] ; then
-		echo "Something went wrong. Exiting..." && exit 1
+	install linuxbrew-wrapper
+	if [ "$?" -eq 0 ] ; then
+		brew --help
 	fi
 fi
 
