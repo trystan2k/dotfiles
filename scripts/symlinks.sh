@@ -20,6 +20,7 @@ linkDotFile() {
 
 	dest="${HOME}/${1}"
 	dateStr=$(date +%Y-%m-%d-%H%M)
+	filePath="$(readlink -f ${1})"
 
 	if [ -h ~/${1} ]; then
 		# Existing symlink 
@@ -38,7 +39,7 @@ linkDotFile() {
 	fi
 
 	echo "Creating new symlink: ${dest}"
-	ln -sv ${PWD}/${1} ${dest}	  
+	ln -sv ${filePath} ${dest}	  
 }
 
 link
