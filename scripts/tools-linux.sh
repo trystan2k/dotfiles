@@ -30,7 +30,7 @@ installAppImage() {
 
 installDebApp() {
     wget -O $PATH_TO_DOWNLOAD/$1.deb $2
-    sudo dpkg -i $PATH_TO_DOWNLOAD/$1.deb
+    sudo gdebi $PATH_TO_DOWNLOAD/$1.deb
     rm $PATH_TO_DOWNLOAD/$1.deb
 }
 
@@ -47,6 +47,9 @@ if [ ! "$?" -eq 0 ] ; then
 		echo "Something went wrong. Exiting..." && exit 1
 	fi
 fi
+
+# Install gdebi to take care of .deb packages
+install gdebi-core
 
 # ---------------------------------------------
 # Programming Languages and Frameworks
