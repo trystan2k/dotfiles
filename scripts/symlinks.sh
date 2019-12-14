@@ -1,7 +1,6 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 source ../.exports
-source ../.aliases
 
 # Symlink files to home folder
 link () {
