@@ -40,7 +40,7 @@ mkdir -p "$PATH_TO_CUSTOM_APPS"
 # ---------------------------------------------
 
 # Install homebrew if it is not installed
-which brew 1>&/dev/null
+which brew &> /dev/null
 if [ ! "$?" -eq 0 ] ; then
     echo "Homebrew not installed. Attempting to install Homebrew"
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"

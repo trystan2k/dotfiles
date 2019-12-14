@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-source ../.exports
-
 # Symlink files to home folder
 link () {
 	echo "This utility will symlink the files in this repo to the home directory"
