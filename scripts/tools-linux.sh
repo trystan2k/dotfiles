@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 install() {
     which $1 &> /dev/null
-
     if [ ! "$?" -eq 0 ] ; then
         echo "Installing: ${1}..."
         sudo apt install -y $1 $2
@@ -16,16 +15,16 @@ installAppImage() {
 
     wget -O $PATH_TO_CUSTOM_APPS/$1.png $3   
 
-    echo "[Desktop Entry]" > /usr/share/applications/$1.desktop
-    echo "Encoding=UTF-8" >> /usr/share/applications/$1.desktop
-    echo "Name=$1" >> /usr/share/applications/$1.desktop
-    echo "Comment=$1" >> /usr/share/applications/$1.desktop
-    echo "Exec=${PATH_TO_CUSTOM_APPS}/${1}.AppImage" >> /usr/share/applications/$1.desktop
-    echo "Icon=${PATH_TO_CUSTOM_APPS}/${1}.png" >> /usr/share/applications/$1.desktop
-    echo "Terminal=false" >> /usr/share/applications/$1.desktop
-    echo "Type=Application" >> /usr/share/applications/$1.desktop
-    echo "Categories=Application;" >> /usr/share/applications/$1.desktop
-    echo "StartupNotify=true" >> /usr/share/applications/$1.desktop
+    sudo echo "[Desktop Entry]" > /usr/share/applications/$1.desktop
+    sudo echo "Encoding=UTF-8" >> /usr/share/applications/$1.desktop
+    sudo echo "Name=$1" >> /usr/share/applications/$1.desktop
+    sudo echo "Comment=$1" >> /usr/share/applications/$1.desktop
+    sudo echo "Exec=${PATH_TO_CUSTOM_APPS}/${1}.AppImage" >> /usr/share/applications/$1.desktop
+    sudo echo "Icon=${PATH_TO_CUSTOM_APPS}/${1}.png" >> /usr/share/applications/$1.desktop
+    sudo echo "Terminal=false" >> /usr/share/applications/$1.desktop
+    sudo echo "Type=Application" >> /usr/share/applications/$1.desktop
+    sudo echo "Categories=Application;" >> /usr/share/applications/$1.desktop
+    sudo echo "StartupNotify=true" >> /usr/share/applications/$1.desktop
 }
 
 installDebApp() {
@@ -102,7 +101,7 @@ sudo apt install -y firefox
 
 # Hyper terminal
 echo "Install hyper"
-installDepApp Hyper https://hyper-updates.now.sh/download/linux_deb
+installDebApp Hyper https://hyper-updates.now.sh/download/linux_deb
 
 # Sublime
 echo "Install Sublime"
