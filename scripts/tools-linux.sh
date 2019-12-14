@@ -43,9 +43,15 @@ mkdir -p "$PATH_TO_CUSTOM_APPS"
 command -v brew > /dev/null 2>&1
 if [ ! "$?" -eq 0 ] ; then
     echo "Homebrew not installed. Attempting to install Homebrew"
-	install linuxbrew-wrapper
-	if [ "$?" -eq 0 ] ; then
-		brew --help
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+	if [ ! "$?" -eq 0 ] ; then
+		echo "Something went wrong. Exiting..." && exit 1
+    else
+        test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
+        test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+        test -r ~/.bash_profile && echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.bash_profile
+        echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile 
+        echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.zprofile 
 	fi
 fi
 
@@ -117,7 +123,7 @@ install sublime-text
 
 # Zsh 
 echo "Install zsh"
-brew install zsh
+install zsh
 
 # ZSH Plugins
 echo "Install zsh-autosuggestions zsh-syntax-highlighting thefuck autojump"
