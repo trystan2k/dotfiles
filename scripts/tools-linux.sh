@@ -16,18 +16,16 @@ installAppImage() {
 
     wget -O $PATH_TO_CUSTOM_APPS/$1.png $3   
 
-    sudo tee -a /usr/share/applications/$1.desktop << EOT
-    [Desktop Entry]
-    Encoding=UTF-8
-    Name=$1
-    Comment=$1
-    Exec=${PATH_TO_CUSTOM_APPS}/${1}.AppImage
-    Icon=${PATH_TO_CUSTOM_APPS}/${1}.png
-    Terminal=false
-    Type=Application
-    Categories=Application;
-    StartupNotify=true
-    EOT
+    echo "[Desktop Entry]" > /usr/share/applications/$1.desktop
+    echo "Encoding=UTF-8" >> /usr/share/applications/$1.desktop
+    echo "Name=$1" >> /usr/share/applications/$1.desktop
+    echo "Comment=$1" >> /usr/share/applications/$1.desktop
+    echo "Exec=${PATH_TO_CUSTOM_APPS}/${1}.AppImage" >> /usr/share/applications/$1.desktop
+    echo "Icon=${PATH_TO_CUSTOM_APPS}/${1}.png" >> /usr/share/applications/$1.desktop
+    echo "Terminal=false" >> /usr/share/applications/$1.desktop
+    echo "Type=Application" >> /usr/share/applications/$1.desktop
+    echo "Categories=Application;" >> /usr/share/applications/$1.desktop
+    echo "StartupNotify=true" >> /usr/share/applications/$1.desktop
 }
 
 installDebApp() {
