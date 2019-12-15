@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 install() {
     echo "Installing: ${1}..."
     sudo apt install -y $1 $2
@@ -170,6 +171,8 @@ install fonts-firacode
 
 # Nerd Font
 echo "Install Nerd Font"
+wget -O ~/.local/share/fonts/Hack_Regular_Nerd_Font_Complete.ttf https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Hack/Regular/complete/Hack%20Regular%20Nerd%20Font%20Complete.ttf
+fc-cache -f -v
 install fonts-hack-ttf
 
 # My favorite text editor
