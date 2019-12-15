@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [2.0.0] - 2019-12-15
+
+### Added
+
+- Add scripts to handle installations in OSX, Linux and WSL
+
 ## [1.15.0] - 2019-12-13
 
 ### Added
@@ -168,6 +174,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
 [Unreleased]: https://github.com/trystan2k/dotfiles/compare/master...develop
+[2.0.0]: https://github.com/trystan2k/dotfiles/compare/v1.15.0...v2.0.0
 [1.15.0]: https://github.com/trystan2k/dotfiles/compare/v1.14.0...v1.15.0
 [1.14.0]: https://github.com/trystan2k/dotfiles/compare/v1.13.0...v1.14.0
 [1.13.0]: https://github.com/trystan2k/dotfiles/compare/v1.12.0...v1.13.0

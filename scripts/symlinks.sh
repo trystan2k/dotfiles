@@ -1,8 +1,4 @@
-#!/bin/sh
-
-source .exports
-source .aliases
-source .macos
+#!/usr/bin/env bash
 
 # Symlink files to home folder
 link () {
@@ -10,7 +6,7 @@ link () {
 	echo "Proceed? (y/n)"
 	read resp
 	if [ "$resp" = 'y' -o "$resp" = 'Y' ] ; then
-		for file in $( ls -A | grep -vE '\.exclude*|\.git$|.*.md' ) ; do
+		for file in $( ls -Ap ../ | grep -vE '\.exclude*|\.git$|.*.md|/$' ) ; do
 			linkDotFile $file
 		done
 		echo "Symlinking complete"
@@ -24,6 +20,7 @@ linkDotFile() {
 
 	dest="${HOME}/${1}"
 	dateStr=$(date +%Y-%m-%d-%H%M)
+	filePath="$(readlink -f ../${1})"
 
 	if [ -h ~/${1} ]; then
 		# Existing symlink 
@@ -33,16 +30,16 @@ linkDotFile() {
 	elif [ -f "${dest}" ]; then
 		# Existing file
 		echo "Backing up existing file: ${dest}"
-		mv ${dest}{,.${dateStr}}
+		mv ${dest} ${dest}.${dateStr}
 
 	elif [ -d "${dest}" ]; then
 		# Existing dir
 		echo "Backing up existing dir: ${dest}"
-		mv ${dest}{,.${dateStr}}
+		mv ${dest} ${dest}.${dateStr}
 	fi
 
 	echo "Creating new symlink: ${dest}"
-	ln -sv ${PWD}/${1} ${dest}	  
+	ln -sv ${filePath} ${dest}	  
 }
 
 link
