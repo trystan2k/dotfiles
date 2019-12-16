@@ -31,10 +31,10 @@ zplug "plugins/fzf",   from:oh-my-zsh
 zplug "plugins/git",   from:oh-my-zsh
 zplug "plugins/npm",   from:oh-my-zsh
 zplug "plugins/osx",   from:oh-my-zsh
-zplug "zsh-users/zsh-autosuggestions", defer: 2
-zplug "zsh-users/zsh-completions", defer: 2
+zplug "zsh-users/zsh-autosuggestions", defer:2
+zplug "zsh-users/zsh-completions", defer:2
 zplug "mattmc3/zsh-safe-rm"
-zplug "zdharma/fast-syntax-highlighting", defer: 2
+zplug "zdharma/fast-syntax-highlighting", defer:2
 
 # Zplug Theme
 zplug "romkatv/powerlevel10k", as:theme, depth:1
