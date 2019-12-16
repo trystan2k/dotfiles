@@ -38,10 +38,6 @@ brew install gpg
 echo "Install git"
 brew install git
 
-# Python 3
-echo "Install python"
-brew install python
-
 # Docker for containerization
 echo "Install docker"
 brew cask install docker
