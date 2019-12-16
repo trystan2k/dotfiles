@@ -11,6 +11,9 @@ fi
 
 ### ZPLUG Section
 
+# Zplug Init
+source $ZPLUG_HOME/init.zsh
+
 # Zplug Self Manage
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
