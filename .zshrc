@@ -18,8 +18,8 @@ source $ZPLUG_HOME/init.zsh
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
 # Zplug Plugins
-zplug "djui/alias-tips"
 zplug "plugins/asdf",   from:oh-my-zsh
+zplug "djui/alias-tips"
 zplug "plugins/autojump",   from:oh-my-zsh
 zplug "t413/zsh-background-notify"
 zplug "plugins/docker",   from:oh-my-zsh
@@ -31,10 +31,10 @@ zplug "plugins/fzf",   from:oh-my-zsh
 zplug "plugins/git",   from:oh-my-zsh
 zplug "plugins/npm",   from:oh-my-zsh
 zplug "plugins/osx",   from:oh-my-zsh
-zplug "zsh-users/zsh-autosuggestions"
-zplug "zsh-users/zsh-completions"
+zplug "zsh-users/zsh-autosuggestions", defer: 2
+zplug "zsh-users/zsh-completions", defer: 2
 zplug "mattmc3/zsh-safe-rm"
-zplug "zdharma/fast-syntax-highlighting"
+zplug "zdharma/fast-syntax-highlighting", defer: 2
 
 # Zplug Theme
 zplug "romkatv/powerlevel10k", as:theme, depth:1
@@ -48,7 +48,7 @@ if ! zplug check --verbose; then
 fi
 
 # Then, source plugins and add commands to $PATH
-zplug load --verbose
+zplug load
 
 ### Powerline configuration
 POWERLEVEL9K_MODE="nerdfont-complete"
@@ -70,3 +70,16 @@ function bgnotify_formatted {
   [ $1 -eq 0 ] && title="Success!" || title="Failed!"
   bgnotify "$title -- after $3 s" "$2";
 }
+
+# Add zsh completitions
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi
+
+# Use completition menu
+autoload -Uz compinit
+compinit
+zstyle ':completion:*' menu yes select
+
+# enable auto cd
+setopt auto_cd
