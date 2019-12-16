@@ -5,7 +5,11 @@ export SCREENSHOT_FOLDER=$HOME/Downloads/Screenshots
 export TEXT_EDITOR="Visual Studio Code"
 
 #ZPLUG Exports
-export ZPLUG_HOME=/usr/local/opt/zplug
+if [ -d "${dest}" ]; then
+    export ZPLUG_HOME=/usr/local/opt/zplug
+else
+    export ZPLUG_HOME=/home/linuxbrew/.linuxbrew/opt/zplug
+fi
 
 # This should be the last line of the file
 # For local changes
