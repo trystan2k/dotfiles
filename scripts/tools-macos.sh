@@ -34,6 +34,14 @@ brew install gpg
 # Programming Languages and Frameworks
 # ---------------------------------------------
 
+# ASDF
+echo "Install ASDF"
+brew install asdf
+
+# Jq
+echo "Install jq"
+brew install jq
+
 # Git
 echo "Install git"
 brew install git
