@@ -16,6 +16,7 @@ function initialCommit() {
 alias kindlegen=/Applications/KindleGen/kindlegen
 alias thiago="cd ~/Documents/Thiago"
 alias home="cd ~/"
+alias lsf='function _lsf(){ (cd $(dirname "$1") && echo $(pwd)/$(basename "$1")) };_lsf'
 
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
