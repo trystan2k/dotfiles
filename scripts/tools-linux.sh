@@ -76,17 +76,21 @@ install wget
 echo "Install curl"
 install curl
 
-# Python 3
-echo "Install python"
-install python3.7
+# dirmngr
+echo "Install dirmngr"
+install dirmngr
+
+# gpg
+echo "Install gpg"
+install gpg
 
 # ---------------------------------------------
 # Tools I use often
 # ---------------------------------------------
 
-# Yarn
-echo "Install Yarn"
-install yarn --no-install-recommends
+# ASDF
+echo "Install ASDF"
+brew install asdf
 
 # Docker for containerization
 echo "Install docker"
@@ -130,33 +134,17 @@ install sublime-text
 echo "Install zsh"
 install zsh
 
+# Zplug
+echo "Instal Zplug"
+brew install zplug
+
 # GCC
 echo "Install gcc"
 brew install gcc
 
 # ZSH Plugins
-echo "Install zsh-autosuggestions zsh-syntax-highlighting thefuck autojump"
-brew install zsh-autosuggestions zsh-syntax-highlighting thefuck autojump
-
-# OhMyZSH
-echo "Install Oh-My-ZSH"
-curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
-
-# zsh-syntax-highlighting
-echo "Install zsh-syntax-highlighting"
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-
-# zsh-autosuggestions
-echo "Install zsh-autosuggestions"
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-
-# powerlevel9k
-echo "Install powerlevel10k"
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
-
-# NVM
-echo "Install nvm"
-git clone https://github.com/lukechilds/zsh-nvm ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-nvm
+echo "Install autojump"
+brew install autojump
 
 # The Fire Code font
 # https://github.com/tonsky/FiraCode
