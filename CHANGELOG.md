@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [3.0.0] - 2019-12-17
+
+### Added
+
+- Add Zplug to manage the ZSH plugins
+- Add ASDF to manage version of tools (Node, Java, Yarn, Ruby, etc)
+
+### Removed
+
+- Remove Oh-My-ZSH framework
+- Remove NVM as node version manager in favor of ASDF
+
 ## [2.0.0] - 2019-12-15
 
 ### Added
@@ -174,6 +186,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
 [Unreleased]: https://github.com/trystan2k/dotfiles/compare/master...develop
+[3.0.0]: https://github.com/trystan2k/dotfiles/compare/v2.0.0...v3.0.0
 [2.0.0]: https://github.com/trystan2k/dotfiles/compare/v1.15.0...v2.0.0
 [1.15.0]: https://github.com/trystan2k/dotfiles/compare/v1.14.0...v1.15.0
 [1.14.0]: https://github.com/trystan2k/dotfiles/compare/v1.13.0...v1.14.0
