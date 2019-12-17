@@ -20,7 +20,7 @@ linkDotFile() {
 
 	dest="${HOME}/${1}"
 	dateStr=$(date +%Y-%m-%d-%H%M)
-	filePath="$(readlink -f ../${1})"
+	filePath="$(realpath ../${1})"
 
 	if [ -h ~/${1} ]; then
 		# Existing symlink 

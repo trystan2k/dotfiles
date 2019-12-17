@@ -4,12 +4,12 @@ export PATH_TO_PROJECTS="$HOME/Documents/Thiago"
 export SCREENSHOT_FOLDER=$HOME/Downloads/Screenshots
 export TEXT_EDITOR="Visual Studio Code"
 
-#OH-MY-ZSH Exports
-export ZSH="$HOME/.oh-my-zsh"
-
-# ZSH_NVM Exports
-export NVM_AUTO_USE=true
-export NVM_LAZY_LOAD=true
+#ZPLUG Exports
+if [ -d /usr/local/opt/zplug ]; then
+    export ZPLUG_HOME=/usr/local/opt/zplug
+else
+    export ZPLUG_HOME=/home/linuxbrew/.linuxbrew/opt/zplug
+fi
 
 # This should be the last line of the file
 # For local changes

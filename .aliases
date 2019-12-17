@@ -3,8 +3,6 @@
 # Include any exports
 [ -f "$HOME/.exports" ] && source "$HOME/.exports"
 
-eval "$(thefuck --alias fuck)"
-
 # Alias function for initial commit
 function initialCommit() {
         git add .
