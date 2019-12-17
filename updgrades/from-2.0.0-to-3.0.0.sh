@@ -1,3 +1,7 @@
+# ---------------------------------------------
+# Uninstall not needed anymore
+# ---------------------------------------------
+
 # Python 3
 echo "Uninstall python"
 brew uninstall python
@@ -18,6 +22,10 @@ rm -rf ./.oh-my-zsh
 echo "Uninstall NVM"
 rm -rf ./.nvm
 
+# ---------------------------------------------
+# Install new tools
+# ---------------------------------------------
+
 # Zplug
 echo "Instal Zplug"
 brew install zplug
@@ -33,3 +41,11 @@ brew install asdf
 # Jq
 echo "Install jq"
 brew install jq
+
+# ---------------------------------------------
+# Cleanup and finish
+# ---------------------------------------------
+
+# Remove outdated versions from the cellar
+echo "Brew Cleanup"
+brew cleanup
