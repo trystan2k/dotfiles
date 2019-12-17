@@ -5,7 +5,7 @@ export SCREENSHOT_FOLDER=$HOME/Downloads/Screenshots
 export TEXT_EDITOR="Visual Studio Code"
 
 #ZPLUG Exports
-if [ -d "${dest}" ]; then
+if [ -d /usr/local/opt/zplug ]; then
     export ZPLUG_HOME=/usr/local/opt/zplug
 else
     export ZPLUG_HOME=/home/linuxbrew/.linuxbrew/opt/zplug
