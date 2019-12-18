@@ -9,46 +9,52 @@ if [ -f $HOME/.exports ]; then
   . $HOME/.exports
 fi
 
-### ZPLUG Section
+### ZPLUGIN Section
 
-# Zplug Init
-source $ZPLUG_HOME/init.zsh
+# Zplugin Init
+source "$HOME/.zplugin/bin/zplugin.zsh"
+autoload -Uz _zplugin
+(( ${+_comps} )) && _comps[zplugin]=_zplugin
 
-# Zplug Self Manage
-zplug 'zplug/zplug', hook-build:'zplug --self-manage'
+# Zplugin Self Update
+zplugin self-update
+
+setopt promptsubst
 
 # Zplug Plugins
-zplug "plugins/asdf",   from:oh-my-zsh
-zplug "djui/alias-tips"
-zplug "plugins/autojump",   from:oh-my-zsh
-zplug "t413/zsh-background-notify"
-zplug "plugins/docker",   from:oh-my-zsh
-zplug "plugins/docker-compose",   from:oh-my-zsh
-zplug "plugins/encode64",   from:oh-my-zsh
-zplug "plugins/extract",   from:oh-my-zsh
-zplug "wfxr/forgit"
-zplug "plugins/fzf",   from:oh-my-zsh
-zplug "plugins/git",   from:oh-my-zsh
-zplug "plugins/npm",   from:oh-my-zsh
-zplug "plugins/osx",   from:oh-my-zsh
-zplug "zsh-users/zsh-autosuggestions", defer:2
-zplug "zsh-users/zsh-completions", defer:2
-zplug "mattmc3/zsh-safe-rm"
-zplug "zdharma/fast-syntax-highlighting", defer:2
+zplugin ice wait blockf atpull'zplugin creinstall -q .'
+zplugin light zsh-users/zsh-completions
 
-# Zplug Theme
-zplug "romkatv/powerlevel10k", as:theme, depth:1
+zplugin ice wait atinit"zpcompinit; zpcdreplay"
+zplugin light zdharma/fast-syntax-highlighting
 
-# Install plugins if there are plugins that have not been installed
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
-fi
+zplugin ice wait atload"_zsh_autosuggest_start"
+zplugin light zsh-users/zsh-autosuggestions
 
-# Then, source plugins and add commands to $PATH
-zplug load
+zplugin ice wait lucid
+zplugin snippet OMZ::lib/git.zsh
+
+zplugin ice wait atload"unalias grv" lucid
+zplugin snippet OMZ::plugins/git/git.plugin.zsh
+
+PS1="READY >" # provide a nice prompt till the theme loads
+zplugin ice wait'!' lucid
+zplugin load romkatv/powerlevel10k
+
+zplugin snippet OMZ::plugins/asdf/asdf.plugin.zsh
+zplugin snippet OMZ::plugins/autojump/autojump.plugin.zsh
+zplugin snippet OMZ::plugins/docker/docker.plugin.zsh
+zplugin snippet OMZ::plugins/docker-compose/docker-compose.plugin.zsh
+zplugin snippet OMZ::plugins/encode64/encode64.plugin.zsh
+zplugin snippet OMZ::plugins/extract/extract.plugin.zsh
+zplugin snippet OMZ::plugins/fzf/fzf.plugin.zsh
+zplugin snippet OMZ::plugins/npm/npm.plugin.zsh
+zplugin snippet OMZ::plugins/osx/osx.plugin.zsh
+
+zplugin load djui/alias-tips
+zplugin load t413/zsh-background-notify
+zplugin load wfxr/forgit
+zplugin load mattmc3/zsh-safe-rm
 
 ### Powerline configuration
 POWERLEVEL9K_MODE="nerdfont-complete"
