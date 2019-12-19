@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [4.0.0] - 2019-12-19
+
+### Added
+
+- Add Zplugin to manage the ZSH plugins
+
+### Removed
+
+- Remove Zplug plugin manager
+
 ## [3.0.0] - 2019-12-17
 
 ### Added
