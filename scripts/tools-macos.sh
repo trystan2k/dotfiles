@@ -151,7 +151,3 @@ brew install fzf
 # Remove outdated versions from the cellar
 echo "Brew Cleanup"
 brew cleanup
-
-# Restart shell and complie Zplugin
-exec $SHELL
-zplugin self-update
