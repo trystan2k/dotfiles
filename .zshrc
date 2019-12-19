@@ -60,6 +60,9 @@ zplugin load wfxr/forgit
 zplugin ice wait lucid
 zplugin load mattmc3/zsh-safe-rm
 
+zplugin ice wait pick"h.sh" lucid
+zplugin load paoloantinori/hhighlighter
+
 zplugin ice wait as"completion" lucid
 zplugin snippet OMZ::plugins/docker/_docker
 
@@ -97,9 +100,7 @@ function bgnotify_formatted {
 }
 
 # # Use completition menu
-# autoload -Uz compinit
-# compinit
-# zstyle ':completion:*' menu yes select
+zstyle ':completion:*' menu yes select
 
 # enable auto cd
 setopt auto_cd
