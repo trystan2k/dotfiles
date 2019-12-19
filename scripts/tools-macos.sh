@@ -106,9 +106,13 @@ brew cask install sublime-text
 echo "Install zsh"
 brew install zsh
 
-# Zplug
-echo "Instal Zplug"
-brew install zplug
+# Ack
+echo "Install ack"
+brew install ack
+
+# Zplugin
+echo "Install Zplugin"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zplugin/master/doc/install.sh)"
 
 # ZSH Plugins
 echo "Install autojump"
