@@ -110,6 +110,9 @@ brew install zsh
 echo "Install Zplugin"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zplugin/master/doc/install.sh)"
 
+source "$HOME/.zplugin/bin/zplugin.zsh"
+zplugin self-update
+
 # ZSH Plugins
 echo "Install autojump"
 brew install autojump
