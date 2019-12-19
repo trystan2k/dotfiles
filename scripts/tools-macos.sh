@@ -114,7 +114,7 @@ brew install ack
 echo "Install Zplugin"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zplugin/master/doc/install.sh)"
 
-source "$HOME/.zplugin/bin/zplugin.zsh"
+source ~/.zshrc
 zplugin self-update
 
 # ZSH Plugins
