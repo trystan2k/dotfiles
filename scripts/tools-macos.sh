@@ -114,9 +114,6 @@ brew install ack
 echo "Install Zplugin"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zplugin/master/doc/install.sh)"
 
-source ~/.zshrc
-zplugin self-update
-
 # ZSH Plugins
 echo "Install autojump"
 brew install autojump
@@ -154,3 +151,7 @@ brew install fzf
 # Remove outdated versions from the cellar
 echo "Brew Cleanup"
 brew cleanup
+
+# Restart shell and complie Zplugin
+exec $SHELL
+zplugin self-update
