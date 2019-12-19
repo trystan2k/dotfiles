@@ -24,9 +24,6 @@ zplugin snippet OMZ::lib/git.zsh
 zplugin ice wait atload"unalias grv" lucid
 zplugin snippet OMZ::plugins/git/git.plugin.zsh
 
-zplugin ice wait pick"h.sh" lucid
-zplugin load paoloantinori/hhighlighter
-
 zplugin ice wait lucid
 zplugin snippet OMZ::plugins/asdf/asdf.plugin.zsh
 
@@ -99,42 +96,10 @@ function bgnotify_formatted {
   bgnotify "$title -- after $3 s" "$2";
 }
 
-# Add zsh completitions
-if type brew &>/dev/null; then
-
-zplugin load wfxr/forgit
-zplugin load mattmc3/zsh-safe-rm
-
-### Powerline configuration
-POWERLEVEL9K_MODE="nerdfont-complete"
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(user dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs command_execution_time)
-
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
-
-# Setup bgnotify plugin
-bgnotify_threshold=4  ## set your own notification threshold
-
-function bgnotify_formatted {
-  ## $1=exit_status, $2=command, $3=elapsed_time
-  [ $1 -eq 0 ] && title="Success!" || title="Failed!"
-  bgnotify "$title -- after $3 s" "$2";
-}
-
-# Add zsh completitions
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
-fi
-
-# Use completition menu
-autoload -Uz compinit
-compinit
-zstyle ':completion:*' menu yes select
+# # Use completition menu
+# autoload -Uz compinit
+# compinit
+# zstyle ':completion:*' menu yes select
 
 # enable auto cd
 setopt auto_cd
