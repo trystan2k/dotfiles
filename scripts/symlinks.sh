@@ -90,7 +90,7 @@ install_dotfiles () {
 	for src in $(ls -Ap ../symlinks)
 	do
 		dst="$HOME/$(basename "${src}")"
-		filePath="$(realpath ${src})"
+		filePath="$(abspath ${src})"
 		_link_file "$filePath" "$dst"
 	done	
 }

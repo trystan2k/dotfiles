@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
-LOG_FOLDER="$(realpath ../)/logs"
+abspath() {                                               
+    cd "$(dirname "$1")"
+    printf "%s/%s\n" "$(pwd)" "$(basename "$1")"
+}
+
+LOG_FOLDER="$(abspath ../logs)"
 LOG_FILE="$LOG_FOLDER/dotfiles.log"
 
 startLogRedirect() {
