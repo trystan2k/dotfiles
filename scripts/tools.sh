@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 
 # Load functions
-source ../scripts/functions.sh
-
-# Redirect logs to file
-startLogRedirect 
+source ../configure/functions
 
 # ---------------------------------------------
 # Tools list
@@ -55,30 +52,47 @@ tools=(
 # Install process
 # ---------------------------------------------
 
-info "Installing core tools"
-for i in "${core[@]}"; 
-do 
-    sh ../tools/"${i}.sh"
-done
+install() {
+    user "This utility will install useful tools using Homebrew/Git/others, according to the OS"
+    user "Proceed? (y/n)"
+    read resp
+    if [ "$resp" = 'y' -o "$resp" = 'Y' ] ; then
+        info "Installing core tools"
+        for i in "${core[@]}"; 
+        do 
+            sh ../tools/"${i}.sh"
+        done
 
-info "Installing other tools"
-for i in "${tools[@]}"; 
-do 
-    sh ../tools/"${i}.sh"
-done
+        info "Installing other tools"
+        for i in "${tools[@]}"; 
+        do 
+            sh ../tools/"${i}.sh"
+        done
+    else
+        warn "Tools installation cancelled by user"
+    fi
+}
 
 # ---------------------------------------------
 # Cleanup and finish
 # ---------------------------------------------
 
-# Remove outdated versions from the cellar
-info "Brew Cleanup"
-brew cleanup
+cleanup() {
+    # Remove outdated versions from the cellar
+    info "Brew Cleanup"
+    brew cleanup
 
-if [[ $OSTYPE == linux* ]] ; then
-    info "Apt remove"
-    sudo apt autoremove -y
-fi
+    if [[ $OSTYPE == linux* ]] ; then
+        info "Apt remove"
+        sudo apt autoremove -y
+    fi
+}
+
+# Redirect logs to file
+startLogRedirect 
+
+install
+cleanup
 
 # Restore log redirection
 stopLogRedirect

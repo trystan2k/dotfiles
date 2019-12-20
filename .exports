@@ -4,13 +4,6 @@ export PATH_TO_PROJECTS="$HOME/Documents/Thiago"
 export SCREENSHOT_FOLDER=$HOME/Downloads/Screenshots
 export TEXT_EDITOR="Visual Studio Code"
 
-#ZPLUG Exports
-if [ -d /usr/local/opt/zplug ]; then
-    export ZPLUG_HOME=/usr/local/opt/zplug
-else
-    export ZPLUG_HOME=/home/linuxbrew/.linuxbrew/opt/zplug
-fi
-
 # This should be the last line of the file
 # For local changes
 # Don't make edits below this

@@ -57,22 +57,22 @@ install() {
         if [[ $OSTYPE == "$os_type"* ]] ; then
             case "$install_type" in
                 brew*)  
-                    brewInstall $otherArguments
+                    _brewInstall $otherArguments
                     ;;
                 apt*)   
-                    aptInstall $otherArguments
+                    _aptInstall $otherArguments
                     ;;
                 cask*)
-                    brewCaskInstall $otherArguments
+                    _brewCaskInstall $otherArguments
                     ;;
                 debFile*)
-                    debFileInstall $otherArguments
+                    _debFileInstall $otherArguments
                     ;;
                 sh*)
-                    shInstall $otherArguments
+                    _shInstall $otherArguments
                     ;;
                 appImage*)
-                    appImageInstall $otherArguments
+                    _appImageInstall $otherArguments
                     ;;
                 *)        
                     warn "Unknow Installatin type: '$install_type'"
@@ -95,7 +95,7 @@ _checkInstallStatus() {
     fi
 }
 
-brewInstall() {
+_brewInstall() {
 
     if [ -z "$1" ]; then
         warn "The name of the tool to install must be informed."
@@ -108,7 +108,7 @@ brewInstall() {
     return 0
 }
 
-brewCaskInstall() {
+_brewCaskInstall() {
 
     if [ -z "$1" ]; then
         warn "The name of the tool to install must be informed."
@@ -122,7 +122,7 @@ brewCaskInstall() {
     return 0
 }
 
-aptInstalll() {
+_aptInstalll() {
 
     if [ -z "$1" ]; then
         warn "The name of the tool to install must be informed."
@@ -136,7 +136,7 @@ aptInstalll() {
     return 0
 }
 
-debFileInstall() {
+_debFileInstall() {
 
     if [ -z "$1" ]; then
         warn "The name of the tool to install must be informed."
@@ -157,7 +157,7 @@ debFileInstall() {
     return 0
 }
 
-shInstall() {
+_shInstall() {
 
     if [ -z "$1" ]; then
         warn "The name of the tool to install must be informed."
@@ -176,7 +176,7 @@ shInstall() {
     return 0
 }
 
-appImageInstal() {
+_appImageInstall() {
 
     if [ -z "$1" ]; then
         warn "The name of the tool to install must be informed."

@@ -9,7 +9,7 @@ asdf plugin-add nodejs
 asdf plugin-add yarn
 
 # Add keys for nodejs
-bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
+bash $HOME/.asdf/plugins/nodejs/bin/import-release-team-keyring
 
 # Install current node version
 asdf install nodejs $CURRENT_NODE_VERSION

@@ -7,7 +7,7 @@ link () {
 	read resp
 	if [ "$resp" = 'y' -o "$resp" = 'Y' ] ; then
 		for file in $( ls -Ap ../ | grep -vE '\.exclude*|\.git$|.*.md|/$' ) ; do
-			linkDotFile $file
+			_linkDotFile $file
 		done
 		echo "Symlinking complete"
 	else
@@ -16,7 +16,7 @@ link () {
 	fi
 }
 
-linkDotFile() {
+_linkDotFile() {
 
 	dest="${HOME}/${1}"
 	dateStr=$(date +%Y-%m-%d-%H%M)
