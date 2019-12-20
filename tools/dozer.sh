@@ -3,13 +3,13 @@
 ## Variables definitions
 
 # Tool name
-TOOL_NAME=asdf
+TOOL_NAME=dozer
 
 # Tool extra information
 EXTRA_INFO=
 
 # Install methods by OS
-OS_METHODS="darwin:brew linux:brew"
+OS_METHODS="darwin:cask"
 
 ## Pre-installation required steps
 preInstall() {

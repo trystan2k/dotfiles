@@ -3,17 +3,21 @@
 ## Variables definitions
 
 # Tool name
-TOOL_NAME=asdf
+TOOL_NAME=firefox
 
 # Tool extra information
 EXTRA_INFO=
 
 # Install methods by OS
-OS_METHODS="darwin:brew linux:brew"
+OS_METHODS="darwin:cask linux:apt"
 
 ## Pre-installation required steps
 preInstall() {
 
+    if [[ $OSTYPE == linux* ]] ; then
+        sudo add-apt-repository ppa:mozillateam/firefox-stable -y
+        sudo apt update
+    fi
 }
 
 ## Post-installation required steps

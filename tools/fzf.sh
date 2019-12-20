@@ -3,7 +3,7 @@
 ## Variables definitions
 
 # Tool name
-TOOL_NAME=asdf
+TOOL_NAME=fzf
 
 # Tool extra information
 EXTRA_INFO=

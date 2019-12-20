@@ -3,13 +3,13 @@
 ## Variables definitions
 
 # Tool name
-TOOL_NAME=asdf
+TOOL_NAME=google-chrome
 
 # Tool extra information
-EXTRA_INFO=
+EXTRA_INFO="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 
 # Install methods by OS
-OS_METHODS="darwin:brew linux:brew"
+OS_METHODS="darwin:cask linux:debFile"
 
 ## Pre-installation required steps
 preInstall() {

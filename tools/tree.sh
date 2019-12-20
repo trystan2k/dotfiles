@@ -3,13 +3,13 @@
 ## Variables definitions
 
 # Tool name
-TOOL_NAME=asdf
+TOOL_NAME=tree
 
 # Tool extra information
 EXTRA_INFO=
 
 # Install methods by OS
-OS_METHODS="darwin:brew linux:brew"
+OS_METHODS="darwin:brew"
 
 ## Pre-installation required steps
 preInstall() {
