@@ -28,8 +28,15 @@ configure() {
   sh macos/default.sh
 }
 
+# Redirect logs to file
+startLogRedirect 
+
 init
 install_tools
 link
 configure
 default_shell
+
+# Restore log redirection
+stopLogRedirect
+
