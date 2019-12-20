@@ -46,6 +46,14 @@ brew install jq
 echo "Install git"
 brew install git
 
+# Wget
+echo "Install wget"
+brew install wget
+
+# Curl
+echo "Install curl"
+brew install curl
+
 # Docker for containerization
 echo "Install docker"
 brew cask install docker
