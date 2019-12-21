@@ -95,11 +95,8 @@ install_dotfiles () {
 	done	
 }
 
-# Redirect logs to file
-startLogRedirect 
+execute() {
+	install_dotfiles
+}
 
-install_dotfiles
-
-# Restore log redirection
-stopLogRedirect
-
+execute 2>&1 | tee -a $DOTFILE_LOG_FILE

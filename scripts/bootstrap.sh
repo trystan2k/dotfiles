@@ -4,39 +4,36 @@ source ../.exports
 source ../configure/functions
 
 # Initialize a few things
-init () {
+_init () {
 	info "Making a Projects folder in $PATH_TO_PROJECTS if it doesn't already exist"
 	mkdir -p "$PATH_TO_PROJECTS"
 }
 
-link () {
+_link () {
 	sh symlinks.sh
 }
 
-install_tools () {
+_install_tools () {
   sh tools.sh
 }
 
-default_shell() {
+_default_shell() {
   user "Set default shell to ZSH"
   chsh -s $(which zsh)
 }
 
-configure() {
+_configure() {
 
   # MacOS defaults
   sh macos/default.sh
 }
 
-# Redirect logs to file
-startLogRedirect 
+execute() {
+  _init
+  _install_tools
+  _link
+  _configure
+  _default_shell
+} 
 
-init
-install_tools
-link
-configure
-default_shell
-
-# Restore log redirection
-stopLogRedirect
-
+execute 2>&1 | tee -a $DOTFILE_LOG_FILE

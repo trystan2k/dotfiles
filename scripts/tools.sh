@@ -88,11 +88,9 @@ cleanup() {
     fi
 }
 
-# Redirect logs to file
-startLogRedirect 
+execute() {
+    install
+    cleanup
+}
 
-install
-cleanup
-
-# Restore log redirection
-stopLogRedirect
+execute 2>&1 | tee -a $DOTFILE_LOG_FILE

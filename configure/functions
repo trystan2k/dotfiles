@@ -5,30 +5,6 @@ abspath() {
     printf "%s/%s\n" "$(pwd)" "$(basename "$1")"
 }
 
-LOG_FOLDER="$(abspath ../logs)"
-LOG_FILE="$LOG_FOLDER/dotfiles.log"
-
-startLogRedirect() {
-
-    if [[ ! -f $LOG_FILE ]] ; then
-        mkdir -p $LOG_FOLDER 
-        touch $LOG_FILE
-    fi
-
-    # file descriptor 4 prints to STDOUT and to TARGET
-    exec 4> >(while read a; do echo $a; echo $a >>$LOG_FILE; done)
-    # file descriptor 5 remembers STDOUT
-    exec 5>&1
-
-    # now STDOUT is redirected
-    exec >&4
-}
-
-stopLogRedirect() {
-    # wer're done
-    exec >&5
-}
-
 info () {
     printf "\r  [ `date "+%Y-%m-%d %H:%M:%S"` ] [ \033[36mINFO\033[0m ] $1\n"
 }
@@ -212,4 +188,15 @@ _appImageInstall() {
     sudo sh -c "echo 'StartupNotify=true' >> /usr/share/applications/$1.desktop"
 
     return 0
+}
+
+_verifyLogFileExists() {
+    if [[ ! -f $LOG_FILE ]] ; then
+        mkdir -p $LOG_FOLDER 
+        touch $LOG_FILE
+    fi
+}
+
+exeucte() {
+    _verifyLogFileExists
 }
