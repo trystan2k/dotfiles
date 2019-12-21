@@ -25,13 +25,10 @@ _default_shell() {
 _configure() {
 
   # MacOS defaults
-  sh macos/default.sh
+  sh ../macos/default.sh
 }
 
 execute() {
-
-  verifyLogFileExists
-
   _init
   _install_tools
   _link
