@@ -87,10 +87,11 @@ install_dotfiles () {
 
 	local overwrite_all=false backup_all=false skip_all=false
 
-	for src in $(ls -Ap ../symlinks)
+	for src in $(ls -Ap ./symlinks)
 	do
 		dst="$HOME/$(basename "${src}")"
-		filePath="$(abspath ${src})"
+		filePath="${DOTFILES_ROOT}/symlinks/${src}"
+
 		_link_file "$filePath" "$dst"
 	done	
 }
