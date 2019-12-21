@@ -1,6 +1,3 @@
-LOG_FOLDER="$(abspath ../logs)"
-export DOTFILE_LOG_FILE="$LOG_FOLDER/dotfiles.log"
-
 export PATH_TO_CUSTOM_APPS="$HOME/Applications"
 export PATH_TO_DOWNLOAD="$HOME/Downloads"
 export PATH_TO_PROJECTS="$HOME/Documents/Thiago"
