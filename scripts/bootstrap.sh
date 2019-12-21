@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-source ../configure/functions
 source ../symlinks/.exports
+source ../configure/functions
 
 # Initialize a few things
 _init () {

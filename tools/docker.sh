@@ -13,6 +13,8 @@ OS_METHODS="darwin:cask linux:apt"
 
 ## Pre-installation required steps
 preInstall() {
+    info "Pre Install for $1"
+
     if [[ $OSTYPE == linux* ]] ; then
         curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
         sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
@@ -26,27 +28,24 @@ preInstall() {
 
 ## Post-installation required steps
 postInstall() {
-    
+    info "Post Install for $1"
 }
 
 ## Installation exeution. 
 ## No need to change from this line on
 
 # Load functions
-source ../scripts/functions.sh
+source ../configure/functions
 
-# Redirect logs to file
-startLogRedirect 
+execute() {
+    # Pre install steps
+    preInstall $TOOL_NAME
 
-# Pre install steps
-preInstall
+    # Install tool
+    install "$OS_METHODS" $TOOL_NAME $EXTRA_INFO
 
-# Install tool
-install "$OS_METHODS" $TOOL_NAME $EXTRA_INFO
+    # Post install steps
+    postInstall $TOOL_NAME
+}
 
-# Post install steps
-postInstall
-
-# Restore log redirection
-stopLogRedirect
-
+execute 2>&1 | tee -a $DOTFILE_LOG_FILE

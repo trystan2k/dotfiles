@@ -1,27 +1,46 @@
-# ---------------------------------------------
-# Uninstall not needed anymore
-# ---------------------------------------------
+#!/usr/bin/env bash
 
-# Python 3
-echo "Uninstall zplug"
-brew uninstall zplug
+# Load functions
+source ../configure/functions
 
-# ---------------------------------------------
-# Install new tools
-# ---------------------------------------------
+_remove() {
+    # ---------------------------------------------
+    # Uninstall not needed anymore
+    # ---------------------------------------------
 
-# Ack
-echo "Install ack"
-brew install ack
+    # Zplug
+    echo "Uninstall zplug"
+    brew uninstall zplug
+}
 
-# Zplugin
-echo "Install Zplugin"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zplugin/master/doc/install.sh)"
+_add() {
+    # ---------------------------------------------
+    # Install new tools
+    # ---------------------------------------------
 
-# ---------------------------------------------
-# Cleanup and finish
-# ---------------------------------------------
+    # Ack
+    echo "Install ack"
+    brew install ack
 
-# Remove outdated versions from the cellar
-echo "Brew Cleanup"
-brew cleanup
+    # Zplugin
+    echo "Install Zplugin"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zplugin/master/doc/install.sh)"
+}
+
+_cleanup () {
+    # ---------------------------------------------
+    # Cleanup and finish
+    # ---------------------------------------------
+
+    # Remove outdated versions from the cellar
+    echo "Brew Cleanup"
+    brew cleanup
+}
+
+execute() {
+    _remove
+    _add
+    _cleanup
+}
+
+execute 2>&1 | tee -a $DOTFILE_LOG_FILE

@@ -14,13 +14,10 @@ OS_METHODS="linux:apt"
 ## Installation exeution. 
 
 # Load functions
-source ../scripts/functions.sh
-
-# Redirect logs to file
-startLogRedirect 
+source ../configure/functions
 
 ## Functions definitions
-firacode() {
+_firacode() {
 
     if [[ $OSTYPE == darwin* ]] ; then
         info "Install Fira Code"
@@ -35,7 +32,7 @@ firacode() {
 
 }
 
-hacknerd() {
+_hacknerd() {
 
     if [[ $OSTYPE == darwin* ]] ; then
         info "Install Hack Nerd"
@@ -51,11 +48,12 @@ hacknerd() {
 
 }
 
-firacode
-hacknerd
+execute() {
+    _firacode
+    _hacknerd
+}
 
-# Restore log redirection
-stopLogRedirect
+execute 2>&1 | tee -a $DOTFILE_LOG_FILE
 
 
 

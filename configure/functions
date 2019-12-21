@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+source ../symlinks/.exports
+
 abspath() {                                               
     cd "$(dirname "$1")"
     printf "%s/%s\n" "$(pwd)" "$(basename "$1")"
