@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-source ../symlinks/.exports
-
 abspath() {                                               
     cd "$(dirname "$1")"
     printf "%s/%s\n" "$(pwd)" "$(basename "$1")"
 }
+
+source ../symlinks/.exports
 
 verifyLogFileExists() {
     if [[ ! -f $DOTFILE_LOG_FILE ]] ; then
