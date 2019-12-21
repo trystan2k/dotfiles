@@ -5,15 +5,16 @@ abspath() {
     printf "%s/%s\n" "$(pwd)" "$(basename "$1")"
 }
 
-LOG_FOLDER="$(abspath ../logs)"
-export DOTFILE_LOG_FILE="$LOG_FOLDER/dotfiles.log"
-
 verifyLogFileExists() {
     if [[ ! -f $DOTFILE_LOG_FILE ]] ; then
         mkdir -p $LOG_FOLDER 
         touch $DOTFILE_LOG_FILE
     fi
 }
+
+LOG_FOLDER="$(abspath ../logs)"
+export DOTFILE_LOG_FILE="$LOG_FOLDER/dotfiles.log"
+verifyLogFileExists
 
 info () {
     printf "\r  [ `date "+%Y-%m-%d %H:%M:%S"` ] [ \033[36mINFO\033[0m ] $1\n"
