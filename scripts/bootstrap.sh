@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-source ../.exports
 source ../configure/functions
+source ../symlinks.exports
 
 # Initialize a few things
 _init () {
@@ -29,6 +29,9 @@ _configure() {
 }
 
 execute() {
+
+  verifyLogFileExists
+
   _init
   _install_tools
   _link

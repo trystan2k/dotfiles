@@ -5,6 +5,13 @@ abspath() {
     printf "%s/%s\n" "$(pwd)" "$(basename "$1")"
 }
 
+verifyLogFileExists() {
+    if [[ ! -f $DOTFILE_LOG_FILE ]] ; then
+        mkdir -p $LOG_FOLDER 
+        touch $DOTFILE_LOG_FILE
+    fi
+}
+
 info () {
     printf "\r  [ `date "+%Y-%m-%d %H:%M:%S"` ] [ \033[36mINFO\033[0m ] $1\n"
 }
@@ -188,15 +195,4 @@ _appImageInstall() {
     sudo sh -c "echo 'StartupNotify=true' >> /usr/share/applications/$1.desktop"
 
     return 0
-}
-
-_verifyLogFileExists() {
-    if [[ ! -f $LOG_FILE ]] ; then
-        mkdir -p $LOG_FOLDER 
-        touch $LOG_FILE
-    fi
-}
-
-exeucte() {
-    _verifyLogFileExists
 }
