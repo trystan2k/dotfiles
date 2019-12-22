@@ -28,12 +28,18 @@ _configure() {
   sh ../macos/defaults.sh
 }
 
+_restart() {
+  user "Restaring system to apply settings..."
+  osascript -e 'tell app "loginwindow" to «event aevtrrst»'
+}
+
 execute() {
   _init
   _install_tools
   _link
   _configure
   _default_shell
+  _restart
 } 
 
 execute 2>&1 | tee -a $DOTFILE_LOG_FILE
