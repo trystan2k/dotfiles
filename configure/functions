@@ -163,7 +163,7 @@ _shInstall() {
 
     info "Installing $1 via sh script, from $2"
 
-    sh -c "$(curl -fsSL $1)"
+    sh -c "$(curl -fsSL $2)"
 
     return 0
 }
