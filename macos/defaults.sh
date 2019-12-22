@@ -117,12 +117,12 @@ defaults write com.apple.dock showAppExposeGestureEnabled -bool true
 # Set energy save settings
 # Battery
 sudo pmset -b displaysleep 15
-sudo pmset -b sleep 15
+sudo pmset -b sleep 20
 sudo pmset -b disksleep 10
 
 # Power supply
 sudo pmset -c displaysleep 60
-sudo pmset -c sleep 60
+sudo pmset -c sleep 65
 sudo pmset -c disksleep 10
 
 ## Sharing
