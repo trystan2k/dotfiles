@@ -1,50 +1,39 @@
 #!/usr/bin/env bash
 
-source ../.exports
+source ../symlinks/.exports
+source ../configure/functions
 
 # Initialize a few things
-init () {
-	echo "Making a Projects folder in $PATH_TO_PROJECTS if it doesn't already exist"
+_init () {
+	info "Making a Projects folder in $PATH_TO_PROJECTS if it doesn't already exist"
 	mkdir -p "$PATH_TO_PROJECTS"
 }
 
-link () {
+_link () {
 	sh symlinks.sh
 }
 
-install_tools () {
-
-  echo "This utility will install useful tools using Homebrew/Git/others, according to the OS"
-  echo "Proceed? (y/n)"
-  read resp
-  if [ "$resp" = 'y' -o "$resp" = 'Y' ] ; then
-
-    case "$OSTYPE" in
-      darwin*)  
-        echo "MacOS detected. Start installing tools..."
-        sh tools-macos.sh ;;
-      linux*)   
-        if grep -q Microsoft /proc/version; then
-            echo "Linux on Windows (WSL) detected. Start installing tools..."
-            sh tools-wsl.sh
-        else
-            echo "Linux detected. Start installing tools..."
-            sh tools-linux.sh
-        fi ;;   
-      *)        
-        echo "unknown: $OSTYPE" ;;
-    esac
-  else
-    echo "Tools installation cancelled by user"
-	fi
+_install_tools () {
+  sh tools.sh
 }
 
-default_shell() {
-  echo "Set default shell to ZSH"
+_default_shell() {
+  user "Set default shell to ZSH"
   chsh -s $(which zsh)
 }
 
-init
-install_tools
-link
-default_shell
+_configure() {
+
+  # MacOS defaults
+  sh ../macos/default.sh
+}
+
+execute() {
+  _init
+  _install_tools
+  _link
+  _configure
+  _default_shell
+} 
+
+execute 2>&1 | tee -a $DOTFILE_LOG_FILE

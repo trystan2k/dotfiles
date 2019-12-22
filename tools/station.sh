@@ -3,13 +3,13 @@
 ## Variables definitions
 
 # Tool name
-TOOL_NAME=asdf
+TOOL_NAME=station
 
 # Tool extra information
-EXTRA_INFO=
+EXTRA_INFO="https://dl.getstation.com/download/linux_64?filetype=AppImage https://avatars2.githubusercontent.com/u/27734877?s=200&v=4"
 
 # Install methods by OS
-OS_METHODS="darwin:brew linux:brew"
+OS_METHODS="darwin:cask linux:appImage"
 
 ## Pre-installation required steps
 preInstall() {

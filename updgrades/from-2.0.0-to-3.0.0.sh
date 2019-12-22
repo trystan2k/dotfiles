@@ -1,51 +1,70 @@
-# ---------------------------------------------
-# Uninstall not needed anymore
-# ---------------------------------------------
+#!/usr/bin/env bash
 
-# Python 3
-echo "Uninstall python"
-brew uninstall python
+# Load functions
+source ../configure/functions
 
-# Yarn
-echo "Uninstall Yarn"
-brew uninstall yarn
+_remove() {
+    # ---------------------------------------------
+    # Uninstall not needed anymore
+    # ---------------------------------------------
 
-# ZSH Plugins
-echo "Uninstall zsh-autosuggestions zsh-syntax-highlighting thefuck"
-brew uninstall zsh-autosuggestions zsh-syntax-highlighting thefuck
+    # Python 3
+    echo "Uninstall python"
+    brew uninstall python
 
-# Oh-My-ZSH
-echo "Uninstall Oh-My-ZSH"
-rm -rf ./.oh-my-zsh
+    # Yarn
+    echo "Uninstall Yarn"
+    brew uninstall yarn
 
-# NVM
-echo "Uninstall NVM"
-rm -rf ./.nvm
+    # ZSH Plugins
+    echo "Uninstall zsh-autosuggestions zsh-syntax-highlighting thefuck"
+    brew uninstall zsh-autosuggestions zsh-syntax-highlighting thefuck
 
-# ---------------------------------------------
-# Install new tools
-# ---------------------------------------------
+    # Oh-My-ZSH
+    echo "Uninstall Oh-My-ZSH"
+    rm -rf ./.oh-my-zsh
 
-# Zplug
-echo "Instal Zplug"
-brew install zplug
+    # NVM
+    echo "Uninstall NVM"
+    rm -rf ./.nvm
+}
 
-# GPG
-echo "Install gpg"
-brew install gpg
+_add() {
+    # ---------------------------------------------
+    # Install new tools
+    # ---------------------------------------------
 
-# ASDF
-echo "Install ASDF"
-brew install asdf
+    # Zplug
+    echo "Instal Zplug"
+    brew install zplug
 
-# Jq
-echo "Install jq"
-brew install jq
+    # GPG
+    echo "Install gpg"
+    brew install gpg
 
-# ---------------------------------------------
-# Cleanup and finish
-# ---------------------------------------------
+    # ASDF
+    echo "Install ASDF"
+    brew install asdf
 
-# Remove outdated versions from the cellar
-echo "Brew Cleanup"
-brew cleanup
+    # Jq
+    echo "Install jq"
+    brew install jq
+}
+
+_cleanup () {
+    # ---------------------------------------------
+    # Cleanup and finish
+    # ---------------------------------------------
+
+    # Remove outdated versions from the cellar
+    echo "Brew Cleanup"
+    brew cleanup
+}
+
+execute() {
+    _remove
+    _add
+    _cleanup
+}
+
+execute 2>&1 | tee -a $DOTFILE_LOG_FILE

@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+CURRENT_NODE_VERSION=8.9.4
+
+execute() {
+    # Install nodejs plugin
+    asdf plugin-add nodejs
+
+    # Install yarn plugin
+    asdf plugin-add yarn
+
+    # Add keys for nodejs
+    bash $HOME/.asdf/plugins/nodejs/bin/import-release-team-keyring
+
+    # Install current node version
+    asdf install nodejs $CURRENT_NODE_VERSION
+
+    # Set current node version as global version
+    asdf global nodejs $CURRENT_NODE_VERSION
+}
+
+execute
+

@@ -3,17 +3,27 @@
 ## Variables definitions
 
 # Tool name
-TOOL_NAME=asdf
+TOOL_NAME=docker
 
 # Tool extra information
 EXTRA_INFO=
 
 # Install methods by OS
-OS_METHODS="darwin:brew linux:brew"
+OS_METHODS="darwin:cask linux:apt"
 
 ## Pre-installation required steps
 preInstall() {
     info "Pre Install for $1"
+
+    if [[ $OSTYPE == linux* ]] ; then
+        curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+        sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+        sudo apt-get update
+        
+        TOOL_NAME=docker-ce
+        
+        install $OS_METHODS docker-ce-cli containerd.io
+    fi
 }
 
 ## Post-installation required steps

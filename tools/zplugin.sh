@@ -3,13 +3,13 @@
 ## Variables definitions
 
 # Tool name
-TOOL_NAME=asdf
+TOOL_NAME=zplugin
 
 # Tool extra information
-EXTRA_INFO=
+EXTRA_INFO="https://raw.githubusercontent.com/zdharma/zplugin/master/doc/install.sh"
 
 # Install methods by OS
-OS_METHODS="darwin:brew linux:brew"
+OS_METHODS="darwin:sh linux:sh"
 
 ## Pre-installation required steps
 preInstall() {

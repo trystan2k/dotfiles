@@ -3,7 +3,7 @@
 ## Variables definitions
 
 # Tool name
-TOOL_NAME=asdf
+TOOL_NAME=autojump
 
 # Tool extra information
 EXTRA_INFO=

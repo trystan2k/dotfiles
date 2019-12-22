@@ -3,13 +3,13 @@
 ## Variables definitions
 
 # Tool name
-TOOL_NAME=asdf
+TOOL_NAME=visual-studio-code
 
 # Tool extra information
-EXTRA_INFO=
+EXTRA_INFO="https://go.microsoft.com/fwlink/?LinkID=760868"
 
 # Install methods by OS
-OS_METHODS="darwin:brew linux:brew"
+OS_METHODS="darwin:cask linux:debFile"
 
 ## Pre-installation required steps
 preInstall() {

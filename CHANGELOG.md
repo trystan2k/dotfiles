@@ -7,6 +7,22 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [5.0.0] - 2019-12-22
+
+### Changed
+
+- Refactor to install tools in a smarter way
+- Refactor how symlinks for dotfiles are created
+
+### Added
+
+- Add functions file with all common functions used everywhere
+- Add logging system, so installation can be reviewed easily
+
+### Removed
+
+- Remove Zplug plugin manager
+
 ## [4.0.0] - 2019-12-19
 
 ### Added
@@ -196,6 +212,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
 [Unreleased]: https://github.com/trystan2k/dotfiles/compare/master...develop
+[5.0.0]: https://github.com/trystan2k/dotfiles/compare/v4.0.0...v5.0.0
+[4.0.0]: https://github.com/trystan2k/dotfiles/compare/v3.0.0...v4.0.0
 [3.0.0]: https://github.com/trystan2k/dotfiles/compare/v2.0.0...v3.0.0
 [2.0.0]: https://github.com/trystan2k/dotfiles/compare/v1.15.0...v2.0.0
 [1.15.0]: https://github.com/trystan2k/dotfiles/compare/v1.14.0...v1.15.0
