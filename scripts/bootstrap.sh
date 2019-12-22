@@ -25,7 +25,7 @@ _default_shell() {
 _configure() {
 
   # MacOS defaults
-  sh ../macos/default.sh
+  sh ../macos/defaults.sh
 }
 
 execute() {
