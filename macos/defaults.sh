@@ -57,41 +57,42 @@ execute() {
 
     # Enable magnification and set its size
     info "Dock - Enable Dock magnification and set its size"
-    defaults write com.apple.dock magnification 1
+    defaults write com.apple.dock magnification -bool true
     defaults write com.apple.dock largesize 75
 
     # Automatically hide and show the Dock
     info "Dock - Automatically hide and show the Dock"
-    defaults write com.apple.dock autohide 1
+    defaults write com.apple.dock autohide -bool true
 
     # Do not show recents apps in Dock
     info "Dock - Do not show recents apps in Dock"
-    defaults write com.apple.dock "show-recents" 1
+    defaults write com.apple.dock "show-recents" -bool false
 
     ## Spotlight
 
     # Change Spotlight shortcut to Alt + Space
     info "Spotlight - Change Spotlight shortcut to Alt + Space"
-    defaults write "com.apple.symbolichotkeys" "AppleSymbolicHotKeys" -dict-add 64 "{ enabled = 1; value = { parameters = (65535, 49, 524288); type = 'standard'; }; }"
+    defaults write "com.apple.symbolichotkeys" "AppleSymbolicHotKeys" -dict-add 64 "{ enabled = 1; value = { parameters = (32, 49, 524288); type = 'standard'; }; }"
 
     ## Language & Region
 
     # Change system languages
     info "Language & Region - Change system languages"
+    sudo defaults write /Library/Preferences/.GlobalPreferences AppleLanguages -array
     sudo defaults write /Library/Preferences/.GlobalPreferences AppleLanguages -array en-US es-ES pt-BR
 
     ## Notifications
 
     # Enable Do Not Disturb and set to 23:00 to 06:00
     info "Notifications - Enable Do Not Disturb and set to 23:00 to 06:00"
-    defaults -currentHost write com.apple.notificationcenteru dndEnabledDisplayLock 1
-    defaults -currentHost write com.apple.notificationcenteru dndEnd 360
-    defaults -currentHost write com.apple.notificationcenteru dndStart 1380
+    defaults -currentHost write com.apple.notificationcenterui dndEnabledDisplayLock -bool true
+    defaults -currentHost write com.apple.notificationcenterui dndEnd 360
+    defaults -currentHost write com.apple.notificationcenterui dndStart 1380
 
     ## Users & Groups
 
     # Configure menu bar icons, including fast user switch, battery %, time/date, bluetooth
-    info "Users & Groups - Configure menu bar icons, including fast user switch, battery %, time/date, bluetooth"
+    info "Users & Groups - Configure menu bar icons, including fast user switch, battery percentege, time/date, bluetooth"
     defaults write com.apple.systemuiserver menuExtras -array-add '<string>/System/Library/CoreServices/Menu Extras/Clock.menu</string>'
     defaults write com.apple.systemuiserver menuExtras -array-add '<string>/System/Library/CoreServices/Menu Extras/Battery.menu</string>'
     defaults write com.apple.systemuiserver menuExtras -array-add '<string>/System/Library/CoreServices/Menu Extras/AirPort.menu</string>'
