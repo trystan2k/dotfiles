@@ -75,7 +75,7 @@ zplugin load zdharma/fast-syntax-highlighting
 zplugin ice wait atload"_zsh_autosuggest_start" lucid
 zplugin load zsh-users/zsh-autosuggestions
 
-zplugin ice wait'!' lucid
+zplugin ice lucid
 zplugin load romkatv/powerlevel10k
 
 ### Powerline configuration
