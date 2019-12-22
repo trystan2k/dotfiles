@@ -1,5 +1,8 @@
 # Specific setups for MacOS system
 
+## Ask for sudo pass
+sudo -v
+
 ## General
 
 # Set dark interface style"
@@ -59,7 +62,7 @@ defaults write "com.apple.symbolichotkeys" "AppleSymbolicHotKeys" -dict-add 64 "
 ## Language & Region
 
 # Change system languages
-defaults write /Library/Preferences/.GlobalPreferences AppleLanguages -array en-US es-ES pt-BR
+sudo defaults write /Library/Preferences/.GlobalPreferences AppleLanguages -array en-US es-ES pt-BR
 
 ## Notifications
 
