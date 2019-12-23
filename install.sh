@@ -3,8 +3,10 @@
 case $(uname -s) in
     Linux*)
         sudo apt install git -y
+        ;;
     Darwin*)
         git
+        ;;
 esac
 
 # Check if git is installed
