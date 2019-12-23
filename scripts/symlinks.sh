@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
-source ../configure/functions
+# dotfiles folder
+DOTFILES_FOLDER="$(cd -P ..; pwd)"
 
-cd "$(dirname "$0")/.."
-DOTFILES_ROOT=$(pwd -P)
+# Load helper functions
+source $DOTFILES_FOLDER/configure/functions
 
 _link_file () {
 	dateStr=$(date +%Y-%m-%d-%H%M)
@@ -87,10 +88,10 @@ install_dotfiles () {
 
 	local overwrite_all=false backup_all=false skip_all=false
 
-	for src in $(ls -Ap ./symlinks)
+	for src in $(ls -Ap ${DOTFILES_FOLDER}/symlinks)
 	do
 		dst="$HOME/$(basename "${src}")"
-		filePath="${DOTFILES_ROOT}/symlinks/${src}"
+		filePath="${DOTFILES_FOLDER}/symlinks/${src}"
 
 		_link_file "$filePath" "$dst"
 	done	

@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
+# dotfiles folder
+DOTFILES_FOLDER="$(cd -P ..; pwd)"
+
 # Load helper functions
-source ../configure/functions
+source $DOTFILES_FOLDER/configure/functions
 
 _configureNodeJs() {
 

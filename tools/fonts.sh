@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# dotfiles folder
+DOTFILES_FOLDER="$(cd -P ..; pwd)"
+
 ## Variables definitions
 
 # Tool name
@@ -14,7 +17,7 @@ OS_METHODS="linux:apt"
 ## Installation exeution. 
 
 # Load functions
-source ../configure/functions
+source $DOTFILES_FOLDER/configure/functions
 
 ## Functions definitions
 _firacode() {

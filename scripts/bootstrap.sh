@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
-source ../symlinks/.exports
-source ../configure/functions
+# Export dotfiles folder
+DOTFILES_FOLDER="$(cd -P ..; pwd)"
+
+source $DOTFILES_FOLDER/symlinks/.exports
+source $DOTFILES_FOLDER/configure/functions
 
 # Initialize a few things
 _init () {
@@ -10,11 +13,11 @@ _init () {
 }
 
 _link () {
-	. symlinks.sh
+	. $DOTFILES_FOLDER/scripts/symlinks.sh
 }
 
 _install_tools () {
-  . tools.sh
+  . $DOTFILES_FOLDER/scripts/tools.sh
 }
 
 _default_shell() {
@@ -26,7 +29,7 @@ _configure() {
 
   if [[ $OSTYPE == darwin* ]] ; then
     # MacOS defaults
-    . ../macos/defaults.sh
+    . $DOTFILES_FOLDER/macos/defaults.sh
   fi
 
 }

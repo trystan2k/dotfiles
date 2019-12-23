@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
-# Load functions
-source ../configure/functions
+# dotfiles folder
+DOTFILES_FOLDER="$(cd -P ..; pwd)"
+
+# Load helper functions
+source $DOTFILES_FOLDER/configure/functions
 
 # ---------------------------------------------
 # Tools list
@@ -63,13 +66,13 @@ install() {
         info "Installing core tools"
         for i in "${core[@]}"; 
         do 
-            . ../tools/"${i}.sh"
+            . $DOTFILES_FOLDER/tools/"${i}.sh"
         done
 
         info "Installing other tools"
         for i in "${tools[@]}"; 
         do 
-            . ../tools/"${i}.sh"
+            . $DOTFILES_FOLDER/tools/"${i}.sh"
         done
     else
         warn "Tools installation cancelled by user"

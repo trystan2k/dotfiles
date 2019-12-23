@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Export dotfiles folder
+export DOTFILES_FOLDER="$(cd -P ..; pwd)"
+
 # Handle exports.local file
 if [[ ! -f $HOME/.exports.local ]] ; then
     touch $HOME/.exports.local
@@ -19,7 +22,7 @@ verifyLogFileExists() {
     fi
 }
 
-LOG_FOLDER="$(abspath ../logs)"
+LOG_FOLDER=$DOTFILES_FOLDER/logs
 export DOTFILE_LOG_FILE="$LOG_FOLDER/dotfiles.log"
 verifyLogFileExists
 

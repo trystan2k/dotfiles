@@ -3,8 +3,11 @@
 
 # Specific setups for MacOS system
 
+# dotfiles folder
+DOTFILES_FOLDER="$(cd -P ..; pwd)"
+
 # Load helper functions
-source ../configure/functions
+source $DOTFILES_FOLDER/configure/functions
 
 execute() {
 
