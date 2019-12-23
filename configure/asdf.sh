@@ -8,7 +8,7 @@ source $DOTFILES_FOLDER/configure/functions
 
 _configureNodeJs() {
 
-    local CURRENT_NODE_VERSION=8.9.4
+    local CURRENT_NODE_VERSION=8.17.0
     
     info "Installing Node version $CURRENT_NODE_VERSION"
 
@@ -36,7 +36,7 @@ _configureYarn() {
     # Install yarn plugin
     asdf plugin-add yarn
 
-    # Install current nodyarne version
+    # Install current yarn version
     asdf install yarn $CURRENT_YARN_VERSION
 
     # Set current yarn version as global version
@@ -45,9 +45,28 @@ _configureYarn() {
     success "Yarn version $CURRENT_YARN_VERSION installed."
 }
 
+_configureJava() {
+
+    local CURRENT_JAVA_VERSION=adopt-openjdk-13+33
+
+    info "Installing Java version $CURRENT_YARN_VERSION"
+    
+    # Install java plugin
+    asdf plugin-add java
+
+    # Install current java version
+    asdf install java $CURRENT_JAVA_VERSION
+
+    # Set current java version as global version
+    asdf global java $CURRENT_JAVA_VERSION
+
+    success "Java version $CURRENT_JAVA_VERSION installed."
+}
+
 execute() {
     _configureNodeJs
     _configureYarn
+    _configureJava
 }
 
 execute  2>&1 | tee -a $DOTFILE_LOG_FILE

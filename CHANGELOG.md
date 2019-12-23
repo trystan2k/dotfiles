@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [5.2.0] - 2019-12-23
+
+### Added
+
+- Add ASDF Java installation
+
+### Changed
+
+- Change ASDF Node.js installation version to 8.17.0
+
 ## [5.1.0] - 2019-12-23
 
 ### Added
