@@ -1,6 +1,6 @@
 # Thiago’s dotfiles
 
-[![v5.1.1](https://img.shields.io/badge/version-5.1.1-brightgreen.svg)](https://github.com/trystan2k/dotfiles/tree/v5.1.1)
+[![v5.2.0](https://img.shields.io/badge/version-5.2.0-brightgreen.svg)](https://github.com/trystan2k/dotfiles/tree/v5.2.0)
 
 ## General Information
 
@@ -14,7 +14,7 @@ This script setup a MacOS (tested in Catalina 10.15.x) or a Linux (tested in Ele
 
 The first and easier option to install is just execute the line in a terminal window:
 
-`sh -c "$(curl -fsSL https://raw.githubusercontent.com/trystan2k/dotfiles/release/5.1.1/install.sh)"`
+`sh -c "$(curl -fsSL https://raw.githubusercontent.com/trystan2k/dotfiles/master/install.sh)"`
 
 This will verify any missing dependency (like Git) and install it (or ask you to install, in MacOS case), create my personal folder, clone this repository inside it and execute the bootstrap script
 
