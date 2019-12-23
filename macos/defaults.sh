@@ -8,7 +8,7 @@ source ../configure/functions
 
 execute() {
     ## Ask for sudo pass
-    user "Please enter root password"
+    user "Please enter root password to start setup MacOS defaults"
     sudo -v
 
     ## General
@@ -58,7 +58,7 @@ execute() {
     # Enable magnification and set its size
     info "Dock - Enable Dock magnification and set its size"
     defaults write com.apple.dock magnification -bool true
-    defaults write com.apple.dock largesize 75
+    defaults write com.apple.dock largesize -integer 75
 
     # Automatically hide and show the Dock
     info "Dock - Automatically hide and show the Dock"
@@ -72,22 +72,33 @@ execute() {
 
     # Change Spotlight shortcut to Alt + Space
     info "Spotlight - Change Spotlight shortcut to Alt + Space"
-    defaults write "com.apple.symbolichotkeys" "AppleSymbolicHotKeys" -dict-add 64 "{ enabled = 1; value = { parameters = (32, 49, 524288); type = 'standard'; }; }"
+    defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 '<dict>
+        <key>enabled</key><true/>
+        <key>value</key>
+        <dict>
+            <key>type</key><string>standard</string>
+            <key>parameters</key>
+            <array>
+                <integer>32</integer>
+                <integer>49</integer>
+                <integer>524288</integer>
+            </array>
+        </dict>
+    </dict>'
 
     ## Language & Region
 
     # Change system languages
     info "Language & Region - Change system languages"
-    sudo defaults write /Library/Preferences/.GlobalPreferences AppleLanguages -array
-    sudo defaults write /Library/Preferences/.GlobalPreferences AppleLanguages -array en-US es-ES pt-BR
+    defaults write -g AppleLanguages '(en-US, es-ES, pt-BR)'
 
     ## Notifications
 
     # Enable Do Not Disturb and set to 23:00 to 06:00
     info "Notifications - Enable Do Not Disturb and set to 23:00 to 06:00"
     defaults -currentHost write com.apple.notificationcenterui dndEnabledDisplayLock -bool true
-    defaults -currentHost write com.apple.notificationcenterui dndEnd 360
-    defaults -currentHost write com.apple.notificationcenterui dndStart 1380
+    defaults -currentHost write com.apple.notificationcenterui dndStart -integer 1380
+    defaults -currentHost write com.apple.notificationcenterui dndEnd -integer 360    
 
     ## Users & Groups
 
@@ -123,11 +134,6 @@ execute() {
 
     ## Security & Privacy
 
-    # Require password as soon as sleep
-    info "Security & Privacy - Require password as soon as sleep"
-    defaults write com.apple.screensaver askForPassword -int 1
-    defaults write com.apple.screensaver askForPasswordDelay -int 0
-
     ## Keyboard
 
     # Enable App Expose Gesture
@@ -147,6 +153,13 @@ execute() {
     sudo pmset -c displaysleep 60
     sudo pmset -c sleep 65
     sudo pmset -c disksleep 10
+
+    ## Date & Time
+
+    # Show day of week, date and 24-hour time
+    info "Date & Time - Show day of week, date and 24-hour time"
+    defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM HH:mm"
+    defaults write com.apple.menuextra.clock FlashDateSeparators -bool true
 
     ## Sharing
 
