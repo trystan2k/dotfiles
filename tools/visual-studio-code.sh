@@ -6,14 +6,18 @@
 TOOL_NAME=visual-studio-code
 
 # Tool extra information
-EXTRA_INFO="https://go.microsoft.com/fwlink/?LinkID=760868"
+EXTRA_INFO="--classic"
 
 # Install methods by OS
-OS_METHODS="darwin:cask linux:debFile"
+OS_METHODS="darwin:cask linux:snap"
 
 ## Pre-installation required steps
 preInstall() {
     info "Pre Install for $1"
+
+    if [[ $OSTYPE == linux* ]] ; then
+        TOOL_NAME=code
+    fi
 }
 
 ## Post-installation required steps

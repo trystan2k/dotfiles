@@ -181,7 +181,7 @@ _snapInstall() {
 
     info "Installing '$1' via Snap"
 
-    sudo snap install $1
+    sudo snap install $1 $2
 
     return 0
 }
