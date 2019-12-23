@@ -10,6 +10,8 @@ You can fork this repo and copy the files to you home folder
 
 ## Unassisted installation
 
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/trystan2k/dotfiles/release/5.1.0/install.sh)"
+
 The script name `bootstrap.exclude.sh` can perform the configuration of the dotfiles and installation of some useful tools in a Unassisted way. It will do the following steps (more details can be found reading the file)
 
 1. Install tools defined in `tools.exclude.sh`, including Homebrew, Hyper.js, Google Chrome, Firefox, Paralles, Oh-My-ZSH, etc
