@@ -9,6 +9,10 @@ case $(uname -s) in
         ;;
 esac
 
+# Create personal Repos folder and cd into it
+mkdir -p ~/Documents/Thiago/Repos
+cd ~/Documents/Thiago/Repos
+
 # Check if git is installed
 git --version
 if [ ! $? -eq 0 ] ; then
@@ -16,37 +20,41 @@ if [ ! $? -eq 0 ] ; then
     exit 1
 fi
 
-if [ ! -f $HOME/.ssh/id_rsa.pub ] ; then
-    echo "The SSH key does not exist. Let´s create it."
-    echo "Press any key to start"
-    read -r response
-    ssh-keygen -t rsa -f $HOME/.ssh/id_rsa -q -P ""
-fi
+GITHUB_URL="https://github.com/trystan2k/dotfiles.git"
 
-if [ ! -f $HOME/.ssh/id_rsa.pub ] ; then
-    echo "There was an error creating or reading your SSH key at $HOME/.ssh/id_rsa.pub."
-    echo "Please check if everything is ok and try again"
-    exit 2
-fi
-
-echo "Now, copy the SSH and add to your GitHub account, to be able to clone the repository via SSH"
-echo "Once you have the key added, press any key to continue"
-echo ""
-cat $HOME/.ssh/id_rsa.pub
-echo ""
+echo "Do you want to use SSH to clone the repo (y/n) ? (No will use HTTPS) ?"
 read -r response
+if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
+    if [ ! -f $HOME/.ssh/id_rsa.pub ] ; then
+        echo "The SSH key does not exist. Let´s create it."
+        echo "Press any key to start"
+        read -r response
+        ssh-keygen -t rsa -f $HOME/.ssh/id_rsa -q -P ""
+    fi
 
-# Create personal Repos folder and cd into it
-mkdir -p ~/Documents/Thiago/Repos
-cd ~/Documents/Thiago/Repos
+    if [ ! -f $HOME/.ssh/id_rsa.pub ] ; then
+        echo "There was an error creating or reading your SSH key at $HOME/.ssh/id_rsa.pub."
+        echo "Please check if everything is ok and try again"
+        exit 2
+    fi
+
+    echo "Now, copy the SSH and add to your GitHub account, to be able to clone the repository via SSH"
+    echo "Once you have the key added, press any key to continue"
+    echo ""
+    cat $HOME/.ssh/id_rsa.pub
+    echo ""
+    read -r response
+
+    GITHUB_URL="git@github.com:trystan2k/dotfiles.git"
+fi
 
 # Clone dotfiles repo and cd into it
-git clone git@github.com:trystan2k/dotfiles.git
+git clone $GITHUB_URL
 
 cd dotfiles
 
 # Go to branch
-git checkout release/5.1.0
+git checkout master
 
 # Cd into scripts folder and execute bootstrap
 cd scripts
