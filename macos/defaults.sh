@@ -7,9 +7,14 @@
 source ../configure/functions
 
 execute() {
+
     ## Ask for sudo pass
     user "Please enter root password to start setup MacOS defaults"
     sudo -v
+
+    info "Close any open System Preferences panes"
+    # Close any open System Preferences panes, to prevent them from overriding settings we’re about to change
+    osascript -e 'tell application "System Preferences" to quit'
 
     ## General
 
@@ -134,6 +139,10 @@ execute() {
 
     ## Security & Privacy
 
+    # Set Lock Message to show on login screen
+    info "Security & Privacy - Set Lock Message to show on login screen"
+    sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText -string "Found me? Shoot a mail to trystan2k@gmail.com to return me. Thanks."
+
     ## Keyboard
 
     # Enable App Expose Gesture
@@ -208,8 +217,9 @@ execute() {
     mkdir -p $SCREENSHOT_FOLDER
     defaults write com.apply.screencapture location $SCREENSHOT_FOLDER
 
-    # Avoid the creation of .DS_Store files on network volumes
-    info "Others - Avoid the creation of .DS_Store files on network volumes"
+    # Avoid the creation of .DS_Store files on USB and network volumes
+    info "Others - Avoid the creation of .DS_Store files on USB and network volumes"
+    defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
     defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 }
 
