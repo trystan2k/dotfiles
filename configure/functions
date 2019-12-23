@@ -117,7 +117,7 @@ _brewCaskInstall() {
     return 0
 }
 
-_aptInstalll() {
+_aptInstall() {
 
     if [ -z "$1" ]; then
         warn "The name of the tool to install must be informed."
