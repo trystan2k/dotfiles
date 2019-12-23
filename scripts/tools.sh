@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
-# Load functions
-source ../configure/functions
+# dotfiles folder
+DOTFILES_FOLDER="$(cd -P ..; pwd)"
+
+# Load helper functions
+source $DOTFILES_FOLDER/configure/functions
 
 # ---------------------------------------------
 # Tools list
@@ -10,10 +13,12 @@ source ../configure/functions
 # Core softwares list
 core=(
     homebrew
+    snapd
     apt-transport-https
     software-properties-common
     gdebi-core
     git
+    subversion
     wget
     curl
     dirmngr
@@ -46,6 +51,7 @@ tools=(
     visual-studio-code
     terminal-notifier
     fzf    
+    postman
 )
 
 # ---------------------------------------------
@@ -60,13 +66,13 @@ install() {
         info "Installing core tools"
         for i in "${core[@]}"; 
         do 
-            sh ../tools/"${i}.sh"
+            . $DOTFILES_FOLDER/tools/"${i}.sh"
         done
 
         info "Installing other tools"
         for i in "${tools[@]}"; 
         do 
-            sh ../tools/"${i}.sh"
+            . $DOTFILES_FOLDER/tools/"${i}.sh"
         done
     else
         warn "Tools installation cancelled by user"
@@ -93,4 +99,4 @@ execute() {
     cleanup
 }
 
-execute 2>&1 | tee -a $DOTFILE_LOG_FILE
+execute

@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
 # Load functions
-source ../configure/functions
+source $DOTFILES_FOLDER/configure/functions
 
 execute() {
 
     # Install homebrew if it is not installed
-    which brow 1>&/dev/null
+    which brew 1>&/dev/null
 
     if [ ! "$?" -eq 0 ] ; then
 
@@ -53,4 +53,4 @@ execute() {
 
 }
 
-execute 2>&1 | tee -a $DOTFILE_LOG_FILE
+execute

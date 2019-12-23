@@ -1,19 +1,26 @@
 #!/usr/bin/env bash
 
+# dotfiles folder
+DOTFILES_FOLDER="$(cd -P ..; pwd)"
+
 ## Variables definitions
 
 # Tool name
 TOOL_NAME=visual-studio-code
 
 # Tool extra information
-EXTRA_INFO="https://go.microsoft.com/fwlink/?LinkID=760868"
+EXTRA_INFO="--classic"
 
 # Install methods by OS
-OS_METHODS="darwin:cask linux:debFile"
+OS_METHODS="darwin:cask linux:snap"
 
 ## Pre-installation required steps
 preInstall() {
     info "Pre Install for $1"
+
+    if [[ $OSTYPE == linux* ]] ; then
+        TOOL_NAME=code
+    fi
 }
 
 ## Post-installation required steps
@@ -25,7 +32,7 @@ postInstall() {
 ## No need to change from this line on
 
 # Load functions
-source ../configure/functions
+source $DOTFILES_FOLDER/configure/functions
 
 execute() {
     # Pre install steps
@@ -38,4 +45,4 @@ execute() {
     postInstall $TOOL_NAME
 }
 
-execute 2>&1 | tee -a $DOTFILE_LOG_FILE
+execute

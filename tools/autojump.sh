@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# dotfiles folder
+DOTFILES_FOLDER="$(cd -P ..; pwd)"
+
 ## Variables definitions
 
 # Tool name
@@ -25,7 +28,7 @@ postInstall() {
 ## No need to change from this line on
 
 # Load functions
-source ../configure/functions
+source $DOTFILES_FOLDER/configure/functions
 
 execute() {
     # Pre install steps
@@ -38,4 +41,4 @@ execute() {
     postInstall $TOOL_NAME
 }
 
-execute 2>&1 | tee -a $DOTFILE_LOG_FILE
+execute

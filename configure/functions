@@ -1,5 +1,15 @@
 #!/usr/bin/env bash
 
+# Export dotfiles folder
+export DOTFILES_FOLDER="$(cd -P ..; pwd)"
+
+# Handle exports.local file
+if [[ ! -f $HOME/.exports.local ]] ; then
+    touch $HOME/.exports.local
+fi
+
+source $HOME/.exports.local
+
 abspath() {                                               
     cd "$(dirname "$1")"
     printf "%s/%s\n" "$(pwd)" "$(basename "$1")"
@@ -12,7 +22,7 @@ verifyLogFileExists() {
     fi
 }
 
-LOG_FOLDER="$(abspath ../logs)"
+LOG_FOLDER=$DOTFILES_FOLDER/logs
 export DOTFILE_LOG_FILE="$LOG_FOLDER/dotfiles.log"
 verifyLogFileExists
 
@@ -66,6 +76,9 @@ install() {
                 appImage*)
                     _appImageInstall $otherArguments
                     ;;
+                snap*)
+                    _snapInstall $otherArguments
+                    ;;                    
                 *)        
                     warn "Unknow Installatin type: '$install_type'"
                     _errorInstall $otherArguments ;;
@@ -114,7 +127,7 @@ _brewCaskInstall() {
     return 0
 }
 
-_aptInstalll() {
+_aptInstall() {
 
     if [ -z "$1" ]; then
         warn "The name of the tool to install must be informed."
@@ -123,6 +136,7 @@ _aptInstalll() {
 
     info "Installing '$1' via APT"
 
+    sudo apt update
     sudo apt install -y $1
 
     return 0
@@ -164,6 +178,20 @@ _shInstall() {
     info "Installing $1 via sh script, from $2"
 
     sh -c "$(curl -fsSL $2)"
+
+    return 0
+}
+
+_snapInstall() {
+
+    if [ -z "$1" ]; then
+        warn "The name of the tool to install must be informed."
+        return 1
+    fi
+
+    info "Installing '$1' via Snap"
+
+    sudo snap install $1 $2
 
     return 0
 }

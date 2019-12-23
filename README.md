@@ -1,115 +1,76 @@
 # Thiago’s dotfiles
 
-[![v5.0.0](https://img.shields.io/badge/version-5.0.0-brightgreen.svg)](https://github.com/trystan2k/dotfiles/tree/v5.0.0)
+[![v5.1.0](https://img.shields.io/badge/version-5.1.0-brightgreen.svg)](https://github.com/trystan2k/dotfiles/tree/v5.1.0)
 
 ## General Information
 
-**Warning:** If you want to give these dotfiles a try, you should first fork this repository, review the code, and remove things you don’t want or need. Don’t blindly use my settings unless you know what that entails. Use at your own risk!
+**Warning** The idea of this repository is to be a reference to others. **NEVER** run the installation script or any other script without reading it first and adjust according to your needs. This is my very personal configuration and may not be suitable for you. I highly recommend you to fork or clone and edit this repo before try it. I am not responsible for any problem it may cause to you. Use at your own risk!
 
-You can fork this repo and copy the files to you home folder
+This script setup a MacOS (tested in Catalina 10.15.x) or a Linux (tested in Elementary OS Hera 5.1). It basically install the same softwares (if available for the OS) and do the dotfiles symlink to the home folder. Specificaly for MacOS, it also do some initial configuration like add icons to the Dock, set languages, etc.
 
-## Unassisted installation
+## Installation
 
-The script name `bootstrap.exclude.sh` can perform the configuration of the dotfiles and installation of some useful tools in a Unassisted way. It will do the following steps (more details can be found reading the file)
+### Option 1 - Install Script
 
-1. Install tools defined in `tools.exclude.sh`, including Homebrew, Hyper.js, Google Chrome, Firefox, Paralles, Oh-My-ZSH, etc
-2. Create a symlink with all files in this folder (except the git related, markdowns and the ones with `exclude` in the name) to the user folder, so any change in this repository will be automatically synced with the user configuration.
+The first and easier option to install is just execute the line in a terminal window:
 
-Executing the unassisted configuration install all items listed below. 
+`sh -c "$(curl -fsSL https://raw.githubusercontent.com/trystan2k/dotfiles/release/5.1.0/install.sh)"`
 
-If you want to have control on what is installed (or which order), you can edit the `tools.exclude.sh` file, or follow the instructions bellow.
+This will verify any missing dependency (like Git) and install it (or ask you to install, in MacOS case), create my personal folder, clone this repository inside it and execute the bootstrap script
 
-## Terminal
+### Option 2 - Clone repo
+
+Other option is to manually clone this repository and execute the bootstrap script.
+
+a. Clone repo: `git clone https://github.com/trystan2k/dotfiles.git`
+b. Go to script folders and execute bootstrap: `cd dotfiles\scripts; ./bootstrap.sh`
+
+### Option 3 - Separated steps
+
+Some of the configuration can be ran isolated. You can, for example, use the `tools.sh` script in the scripts folder to just install the software listed there.
+
+a. Install tools: `cd dotfiles\scripts; ./tools.sh`
+b. Create/Recreate the symlinks to home folder: `cd dotfiles\scripts; ./symlinks.sh`
+c. Install any of the tools from tools folder executing the correspondent script, like for example Google Chrome: `cd dotfiles\tools; ./google-chrome.sh`
+
+## Apps installed by the script
+
+### Terminal
 
 I am currently using [Hyper Terminal](https://hyper.is/).
-You can use the same configuration I have currently, doing the following:
+The symlink step link the `.hyper.js` file with my current configuration, themes, etc.
 
-- Copy `hyper.js` file from dotfiles project to user home folder
+**Theme** : [powerlevel10k theme](https://github.com/romkatv/powerlevel10k)
+**Fonts** : [Nerd Font](https://github.com/ryanoasis/nerd-fonts) and [Fira Code](https://github.com/tonsky/FiraCode)
 
-## Homebrew
+### Homebrew
 
 I use [Homebrew](https://brew.sh/) to install packages I need in my MacOS. There are alternatives for Linux([https://linuxbrew.sh]) that can also be used in Windows 10 with Windows Subsystem for Linux (WSL)
 
-### Install [Homebrew](https://brew.sh/)
+### Shell and Shell Manager
 
-```bash
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
+I use ZSH as my current shell and to manage its plugin I am using [Zplugin](https://github.com/zdharma/zplugin)
 
-## Oh my ZSH 
+### Package Manager
 
-I have OhMyZSH installed, which is very useful (specially because of its plugins). So here are the instructions to have it installed and configured in the same way I have.
+I am using [ASDF]() as package manager for tools like `node/npm`, `yarn`, `java`, `ruby`, etc. 
+Some of initial configuration can be done executing the configuration script located at configure folder
 
-### Install zsh
+`cd dotfiles\configure; ./asdf.sh`
 
-```bash
-  brew install zsh zsh-autosuggestions zsh-syntax-highlighting thefuck autojump
-```
+## Apps that needs to be installed manually
 
-### Install ([OhMyZSH](https://github.com/robbyrussell/oh-my-zsh))
+1. BetterSnapTool (https://apps.apple.com/es/app/bettersnaptool/id417375580?mt=12)
+2. DaisyDisk (https://daisydiskapp.com/)
+3. PDF Expert (https://pdfexpert.com/)
 
-```bash
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-```
-
-### Install zsh-syntax-highlighting plugin
-
-```bash
-  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-```
-
-### Install zsh-autosuggestions plugin
-
-```bash
-  git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-```
-
-### Install ([powerlevel10k theme](https://github.com/romkatv/powerlevel10k))
-
-```bash
-  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
-```
-
-### Install ([Nerd Font](https://github.com/ryanoasis/nerd-fonts))
-
-```bash
-  brew tap homebrew/cask-fonts
-  brew cask install font-hack-nerd-font
-```
-
-### Install fire code
-
-```bash
-  brew tap homebrew/cask-fonts
-  brew cask install font-fira-code
-```
-
-### Install plugin for ([bgnotify](https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/bgnotify))
-
-```bash
-  brew install terminal-notifier
-```
-
-### Install ([fzf plugin](https://github.com/junegunn/fzf))
-
-```bash
-  brew install fzf
-```
-
-### Install tree plugin
-
-```bash
-  brew install tree
-```
-
-### Copy ZSH config file
-
-```bash
-  Copy `.zshrc` file from dotfiles project to user home folder
-```
 
 ## Thanks to...
 
 This repo was based in the | [Mathias Bynens](https://mathiasbynens.be/) | one (https://github.com/mathiasbynens/dotfiles). I had remove some setup I do not need and add some I found over internet.
 
 The unassisted install script was based in the | [Mohammed Ajmal Siddiqui](https://github.com/ajmalsiddiqui/dotfiles) | one. I had added some tools I used and remove some I don't.
+
+The idea to split tools into separated files was inspired by | [Zach Holman](https://github.com/holman/dotfiles) |.
+
+And many other folks that is always available to help in GitHub Issue, StackOverFlow questions, blog articles and sharing Gists with examples.

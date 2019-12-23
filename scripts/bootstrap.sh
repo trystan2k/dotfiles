@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
-source ../symlinks/.exports
-source ../configure/functions
+# Export dotfiles folder
+DOTFILES_FOLDER="$(cd -P ..; pwd)"
+
+source $DOTFILES_FOLDER/symlinks/.exports
+source $DOTFILES_FOLDER/configure/functions
 
 # Initialize a few things
 _init () {
@@ -10,11 +13,11 @@ _init () {
 }
 
 _link () {
-	sh symlinks.sh
+	. $DOTFILES_FOLDER/scripts/symlinks.sh
 }
 
 _install_tools () {
-  sh tools.sh
+  . $DOTFILES_FOLDER/scripts/tools.sh
 }
 
 _default_shell() {
@@ -24,8 +27,21 @@ _default_shell() {
 
 _configure() {
 
-  # MacOS defaults
-  sh ../macos/default.sh
+  if [[ $OSTYPE == darwin* ]] ; then
+    # MacOS defaults
+    . $DOTFILES_FOLDER/macos/defaults.sh
+  fi
+
+}
+
+_restart() {
+  if [[ $OSTYPE == darwin* ]] ; then
+    user "Restarting system to apply settings..."
+    osascript -e 'tell app "loginwindow" to «event aevtrrst»'
+  elif [[ $OSTYPE == linux* ]] ; then
+    user "Restarting system to apply settings..."
+    shutdown +1 -r
+  fi
 }
 
 execute() {
@@ -34,6 +50,7 @@ execute() {
   _link
   _configure
   _default_shell
+  _restart
 } 
 
 execute 2>&1 | tee -a $DOTFILE_LOG_FILE

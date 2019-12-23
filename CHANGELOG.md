@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [5.1.0] - 2019-12-23
+
+### Added
+
+- Add MacOS default setup via script (as requested in issue [#36](https://github.com/trystan2k/dotfiles/issues/36))
+- Add new tools like postman, snapd, svn
+
+### Changed
+
+- Better manage script execution using absolute path
+
+###
+
 ## [5.0.0] - 2019-12-22
 
 ### Changed
@@ -212,6 +225,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
 [Unreleased]: https://github.com/trystan2k/dotfiles/compare/master...develop
+[5.1.0]: https://github.com/trystan2k/dotfiles/compare/v4.0.0...v5.1.0
 [5.0.0]: https://github.com/trystan2k/dotfiles/compare/v4.0.0...v5.0.0
 [4.0.0]: https://github.com/trystan2k/dotfiles/compare/v3.0.0...v4.0.0
 [3.0.0]: https://github.com/trystan2k/dotfiles/compare/v2.0.0...v3.0.0

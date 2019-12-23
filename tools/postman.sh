@@ -6,13 +6,13 @@ DOTFILES_FOLDER="$(cd -P ..; pwd)"
 ## Variables definitions
 
 # Tool name
-TOOL_NAME=tree
+TOOL_NAME=postman
 
 # Tool extra information
 EXTRA_INFO=
 
 # Install methods by OS
-OS_METHODS="darwin:brew"
+OS_METHODS="darwin:cask linux:snap"
 
 ## Pre-installation required steps
 preInstall() {

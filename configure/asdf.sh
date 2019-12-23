@@ -1,13 +1,19 @@
 #!/usr/bin/env bash
 
-CURRENT_NODE_VERSION=8.9.4
+# dotfiles folder
+DOTFILES_FOLDER="$(cd -P ..; pwd)"
 
-execute() {
+# Load helper functions
+source $DOTFILES_FOLDER/configure/functions
+
+_configureNodeJs() {
+
+    local CURRENT_NODE_VERSION=8.9.4
+    
+    info "Installing Node version $CURRENT_NODE_VERSION"
+
     # Install nodejs plugin
     asdf plugin-add nodejs
-
-    # Install yarn plugin
-    asdf plugin-add yarn
 
     # Add keys for nodejs
     bash $HOME/.asdf/plugins/nodejs/bin/import-release-team-keyring
@@ -17,7 +23,32 @@ execute() {
 
     # Set current node version as global version
     asdf global nodejs $CURRENT_NODE_VERSION
+
+    success "Node version $CURRENT_NODE_VERSION installed."
 }
 
-execute
+_configureYarn() {
+
+    local CURRENT_YARN_VERSION=1.21.1
+
+    info "Installing Yarn version $CURRENT_YARN_VERSION"
+    
+    # Install yarn plugin
+    asdf plugin-add yarn
+
+    # Install current nodyarne version
+    asdf install yarn $CURRENT_YARN_VERSION
+
+    # Set current yarn version as global version
+    asdf global yarn $CURRENT_YARN_VERSION
+
+    success "Yarn version $CURRENT_YARN_VERSION installed."
+}
+
+execute() {
+    _configureNodeJs
+    _configureYarn
+}
+
+execute  2>&1 | tee -a $DOTFILE_LOG_FILE
 
