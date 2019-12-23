@@ -26,7 +26,7 @@ _configure() {
 
   if [[ $OSTYPE == darwin* ]] ; then
     # MacOS defaults
-    sh ../macos/defaults.sh
+    . ../macos/defaults.sh
   fi
 
 }
