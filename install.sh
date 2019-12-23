@@ -25,8 +25,7 @@ GITHUB_URL="https://github.com/trystan2k/dotfiles.git"
 echo "Do you want to use SSH to clone the repo (y/n) ? (No will use HTTPS) ?"
 read -n 1 action
     case "$action" in
-        y )
-        Y )
+        y|Y )
             if [ ! -f $HOME/.ssh/id_rsa.pub ] ; then
                 echo "The SSH key does not exist. Let´s create it."
                 echo "Press any key to start"
