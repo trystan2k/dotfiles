@@ -1,6 +1,6 @@
 # Thiago’s dotfiles
 
-[![v5.1.0](https://img.shields.io/badge/version-5.1.0-brightgreen.svg)](https://github.com/trystan2k/dotfiles/tree/v5.1.0)
+[![v5.1.1](https://img.shields.io/badge/version-5.1.1-brightgreen.svg)](https://github.com/trystan2k/dotfiles/tree/v5.1.1)
 
 ## General Information
 
@@ -14,7 +14,7 @@ This script setup a MacOS (tested in Catalina 10.15.x) or a Linux (tested in Ele
 
 The first and easier option to install is just execute the line in a terminal window:
 
-`sh -c "$(curl -fsSL https://raw.githubusercontent.com/trystan2k/dotfiles/release/5.1.0/install.sh)"`
+`sh -c "$(curl -fsSL https://raw.githubusercontent.com/trystan2k/dotfiles/release/5.1.1/install.sh)"`
 
 This will verify any missing dependency (like Git) and install it (or ask you to install, in MacOS case), create my personal folder, clone this repository inside it and execute the bootstrap script
 
@@ -23,6 +23,7 @@ This will verify any missing dependency (like Git) and install it (or ask you to
 Other option is to manually clone this repository and execute the bootstrap script.
 
 a. Clone repo: `git clone https://github.com/trystan2k/dotfiles.git`
+
 b. Go to script folders and execute bootstrap: `cd dotfiles\scripts; ./bootstrap.sh`
 
 ### Option 3 - Separated steps
@@ -30,7 +31,9 @@ b. Go to script folders and execute bootstrap: `cd dotfiles\scripts; ./bootstrap
 Some of the configuration can be ran isolated. You can, for example, use the `tools.sh` script in the scripts folder to just install the software listed there.
 
 a. Install tools: `cd dotfiles\scripts; ./tools.sh`
+
 b. Create/Recreate the symlinks to home folder: `cd dotfiles\scripts; ./symlinks.sh`
+
 c. Install any of the tools from tools folder executing the correspondent script, like for example Google Chrome: `cd dotfiles\tools; ./google-chrome.sh`
 
 ## Apps installed by the script
