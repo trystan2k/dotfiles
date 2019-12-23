@@ -62,13 +62,13 @@ install() {
         info "Installing core tools"
         for i in "${core[@]}"; 
         do 
-            sh ../tools/"${i}.sh"
+            . ../tools/"${i}.sh"
         done
 
         info "Installing other tools"
         for i in "${tools[@]}"; 
         do 
-            sh ../tools/"${i}.sh"
+            . ../tools/"${i}.sh"
         done
     else
         warn "Tools installation cancelled by user"

@@ -10,11 +10,11 @@ _init () {
 }
 
 _link () {
-	sh symlinks.sh
+	. symlinks.sh
 }
 
 _install_tools () {
-  sh tools.sh
+  . tools.sh
 }
 
 _default_shell() {
