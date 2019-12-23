@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [5.4.0] - 2019-12-23
+
+### Added
+
+- Add option to install (clone repo) via SSH or HTTPS
+
 ## [5.3.0] - 2019-12-23
 
 ### Added
@@ -245,6 +251,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
 [Unreleased]: https://github.com/trystan2k/dotfiles/compare/master...develop
+[5.4.0]: https://github.com/trystan2k/dotfiles/compare/v5.3.0...v5.4.0
 [5.3.0]: https://github.com/trystan2k/dotfiles/compare/v5.2.0...v5.3.0
 [5.2.0]: https://github.com/trystan2k/dotfiles/compare/v5.1.0...v5.2.0
 [5.1.0]: https://github.com/trystan2k/dotfiles/compare/v5.0.0...v5.1.0
