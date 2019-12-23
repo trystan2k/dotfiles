@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 if [[ $OSTYPE == linux* ]] ; then
     sudo apt install git
