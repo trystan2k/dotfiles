@@ -9,7 +9,7 @@ TOOL_NAME=jq
 EXTRA_INFO=
 
 # Install methods by OS
-OS_METHODS="darwin:brew linux:jq"
+OS_METHODS="darwin:brew linux:apt"
 
 ## Pre-installation required steps
 preInstall() {
