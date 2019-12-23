@@ -6,7 +6,7 @@ source ../configure/functions
 execute() {
 
     # Install homebrew if it is not installed
-    which brow 1>&/dev/null
+    which brew 1>&/dev/null
 
     if [ ! "$?" -eq 0 ] ; then
 
