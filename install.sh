@@ -10,7 +10,8 @@ case $(uname -s) in
 esac
 
 # Check if git is installed
-if ! command -v git >/dev/null ; then
+git --version
+if [ ! $? -eq 0 ] ; then
     echo "Git needs to be installed before. Please follow system instructions to install git and try again"
     exit 1
 fi
@@ -21,6 +22,7 @@ cd ~/Documents/Thiago/Repos
 
 # Clone dotfiles repo and cd into it
 git clone https://github.com/trystan2k/dotfiles.git
+
 cd dotfiles
 
 # Go to branch
