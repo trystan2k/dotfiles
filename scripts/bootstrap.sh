@@ -32,8 +32,13 @@ _configure() {
 }
 
 _restart() {
-  user "Restarting system to apply settings..."
-  osascript -e 'tell app "loginwindow" to «event aevtrrst»'
+  if [[ $OSTYPE == darwin* ]] ; then
+    user "Restarting system to apply settings..."
+    osascript -e 'tell app "loginwindow" to «event aevtrrst»'
+  elif if [[ $OSTYPE == linux* ]] ; then
+    user "Restarting system to apply settings..."
+    shutdown +1 -r
+  fi
 }
 
 execute() {
