@@ -10,7 +10,7 @@ source ../configure/functions
 # Core softwares list
 core=(
     homebrew
-    snap
+    snapd
     apt-transport-https
     software-properties-common
     gdebi-core

@@ -3,7 +3,7 @@
 ## Variables definitions
 
 # Tool name
-TOOL_NAME=snap
+TOOL_NAME=snapd
 
 # Tool extra information
 EXTRA_INFO=
