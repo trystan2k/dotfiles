@@ -15,6 +15,7 @@ core=(
     software-properties-common
     gdebi-core
     git
+    subversion
     wget
     curl
     dirmngr
