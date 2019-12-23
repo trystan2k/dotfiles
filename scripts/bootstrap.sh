@@ -24,12 +24,15 @@ _default_shell() {
 
 _configure() {
 
-  # MacOS defaults
-  sh ../macos/defaults.sh
+  if [[ $OSTYPE == darwin* ]] ; then
+    # MacOS defaults
+    sh ../macos/defaults.sh
+  fi
+
 }
 
 _restart() {
-  user "Restaring system to apply settings..."
+  user "Restarting system to apply settings..."
   osascript -e 'tell app "loginwindow" to «event aevtrrst»'
 }
 
