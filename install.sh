@@ -1,16 +1,14 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
-if [[ $OSTYPE == linux* ]] ; then
-    sudo apt install git
-elif [[ $OSTYPE == darwin* ]] ; then
-    git
-fi
-
-# Install homebrew if it is not installed
-which git 1>&/dev/null
+case $(uname -s) in
+    Linux*)
+        sudo apt install git -y
+    Darwin*)
+        git
+esac
 
 # Check if git is installed
-if [ ! "$?" -eq 0 ] ; then
+if ! command -v git >/dev/null ; then
     echo "Git needs to be installed before. Please follow system instructions to install git and try again"
     exit 1
 fi
@@ -28,4 +26,4 @@ git checkout release/5.1.0
 
 # Cd into scripts folder and execute bootstrap
 cd scripts
-. bootstrap.sh
+bash bootstrap.sh

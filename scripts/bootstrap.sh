@@ -35,7 +35,7 @@ _restart() {
   if [[ $OSTYPE == darwin* ]] ; then
     user "Restarting system to apply settings..."
     osascript -e 'tell app "loginwindow" to «event aevtrrst»'
-  elif if [[ $OSTYPE == linux* ]] ; then
+  elif [[ $OSTYPE == linux* ]] ; then
     user "Restarting system to apply settings..."
     shutdown +1 -r
   fi
