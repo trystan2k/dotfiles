@@ -10,6 +10,7 @@ source ../configure/functions
 # Core softwares list
 core=(
     homebrew
+    snap
     apt-transport-https
     software-properties-common
     gdebi-core
@@ -46,6 +47,7 @@ tools=(
     visual-studio-code
     terminal-notifier
     fzf    
+    postman
 )
 
 # ---------------------------------------------
