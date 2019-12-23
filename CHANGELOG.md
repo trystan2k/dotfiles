@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [5.3.0] - 2019-12-23
+
+### Added
+
+- Add Cobalt2 theme profile for MacOS terminal
+
+### Changed
+
+- Change install script to create SSH key and clone repo via SSH
+
 ## [5.2.0] - 2019-12-23
 
 ### Added
@@ -235,7 +245,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
 [Unreleased]: https://github.com/trystan2k/dotfiles/compare/master...develop
-[5.1.0]: https://github.com/trystan2k/dotfiles/compare/v4.0.0...v5.1.0
+[5.3.0]: https://github.com/trystan2k/dotfiles/compare/v5.2.0...v5.3.0
+[5.2.0]: https://github.com/trystan2k/dotfiles/compare/v5.1.0...v5.2.0
+[5.1.0]: https://github.com/trystan2k/dotfiles/compare/v5.0.0...v5.1.0
 [5.0.0]: https://github.com/trystan2k/dotfiles/compare/v4.0.0...v5.0.0
 [4.0.0]: https://github.com/trystan2k/dotfiles/compare/v3.0.0...v4.0.0
 [3.0.0]: https://github.com/trystan2k/dotfiles/compare/v2.0.0...v3.0.0
