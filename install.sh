@@ -14,7 +14,7 @@ mkdir -p ~/Documents/Thiago/Repos
 cd ~/Documents/Thiago/Repos
 
 # Check if git is installed
-git --version
+git --version >/dev/null
 if [ ! $? -eq 0 ] ; then
     echo "Git needs to be installed before. Please follow system instructions to install git and try again"
     exit 1
