@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+# Handle exports.local file
+if [[ ! -f $HOME/.exports.local ]] ; then
+    touch $HOME/.exports.local
+fi
+
 source $HOME/.exports.local
 
 abspath() {                                               

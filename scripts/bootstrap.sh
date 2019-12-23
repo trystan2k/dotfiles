@@ -7,8 +7,6 @@ source ../configure/functions
 _init () {
 	info "Making a Projects folder in $PATH_TO_PROJECTS if it doesn't already exist"
 	mkdir -p "$PATH_TO_PROJECTS"
-
-  touch $HOME/.exports.local
 }
 
 _link () {
