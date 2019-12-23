@@ -66,6 +66,9 @@ install() {
                 appImage*)
                     _appImageInstall $otherArguments
                     ;;
+                snap*)
+                    _snapInstall $otherArguments
+                    ;;                    
                 *)        
                     warn "Unknow Installatin type: '$install_type'"
                     _errorInstall $otherArguments ;;
@@ -123,6 +126,7 @@ _aptInstalll() {
 
     info "Installing '$1' via APT"
 
+    sudo apt update
     sudo apt install -y $1
 
     return 0
@@ -164,6 +168,20 @@ _shInstall() {
     info "Installing $1 via sh script, from $2"
 
     sh -c "$(curl -fsSL $2)"
+
+    return 0
+}
+
+_snapInstall() {
+
+    if [ -z "$1" ]; then
+        warn "The name of the tool to install must be informed."
+        return 1
+    fi
+
+    info "Installing '$1' via Snap"
+
+    sudo snap install $1
 
     return 0
 }
