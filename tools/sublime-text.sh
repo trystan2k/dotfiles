@@ -45,4 +45,4 @@ execute() {
     postInstall $TOOL_NAME
 }
 
-execute 2>&1 | tee -a $DOTFILE_LOG_FILE
+execute

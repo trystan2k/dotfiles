@@ -53,7 +53,7 @@ execute() {
     _hacknerd
 }
 
-execute 2>&1 | tee -a $DOTFILE_LOG_FILE
+execute
 
 
 

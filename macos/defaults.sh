@@ -223,4 +223,4 @@ execute() {
     defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 }
 
-execute  2>&1 | tee -a $DOTFILE_LOG_FILE
+execute
