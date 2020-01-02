@@ -52,6 +52,7 @@ tools=(
     terminal-notifier
     fzf    
     postman
+    notion
 )
 
 # ---------------------------------------------
