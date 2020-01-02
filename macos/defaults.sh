@@ -219,7 +219,7 @@ execute() {
     # Set default screenshot location to a specific folder
     info "Others - Set default screenshot location to a specific folder"
     mkdir -p $SCREENSHOT_FOLDER
-    defaults write com.apply.screencapture location $SCREENSHOT_FOLDER
+    defaults write com.apple.screencapture location $SCREENSHOT_FOLDER
 
     # Avoid the creation of .DS_Store files on USB and network volumes
     info "Others - Avoid the creation of .DS_Store files on USB and network volumes"
