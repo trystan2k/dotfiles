@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [5.6.0] - 2020-01-03
+
+### Added
+
+- Add script to upgrade tools installed via Homebrew and Homebrew cask
+
 ## [5.5.0] - 2020-01-02
 
 ### Added
@@ -257,6 +263,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
 [Unreleased]: https://github.com/trystan2k/dotfiles/compare/master...develop
+[5.6.0]: https://github.com/trystan2k/dotfiles/compare/v5.5.0...v5.6.0
 [5.5.0]: https://github.com/trystan2k/dotfiles/compare/v5.4.0...v5.5.0
 [5.4.0]: https://github.com/trystan2k/dotfiles/compare/v5.3.0...v5.4.0
 [5.3.0]: https://github.com/trystan2k/dotfiles/compare/v5.2.0...v5.3.0
