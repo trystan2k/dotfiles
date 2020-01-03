@@ -1,6 +1,6 @@
 # Thiago’s dotfiles
 
-[![v5.4.0](https://img.shields.io/badge/version-5.4.0-brightgreen.svg)](https://github.com/trystan2k/dotfiles/tree/v5.4.0)
+[![v5.5.0](https://img.shields.io/badge/version-5.5.0-brightgreen.svg)](https://github.com/trystan2k/dotfiles/tree/v5.5.0)
 
 ## General Information
 
@@ -67,6 +67,10 @@ Some of initial configuration can be done executing the configuration script loc
 2. DaisyDisk (https://daisydiskapp.com/)
 3. PDF Expert (https://pdfexpert.com/)
 
+## Settings that needs to be done manually
+
+1. System Preferences -> Users & Groups -> Login Options => Change 'Show fast user switching menu as' to `Icon`
+2. System Preferences -> Security & Privacy -> General => Change 'Require password' to `5 seconds`
 
 ## Thanks to...
 

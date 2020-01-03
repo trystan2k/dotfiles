@@ -43,6 +43,7 @@ execute() {
     defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>file:///Applications/Visual%20Studio%20Code.app</string><key>_CFURLStringType</key><integer>15</integer></dict></dict></dict>'
     defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>file:///Applications/Firefox.app</string><key>_CFURLStringType</key><integer>15</integer></dict></dict></dict>'
     defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>file:///Applications//Google%20Chrome.app</string><key>_CFURLStringType</key><integer>15</integer></dict></dict></dict>'
+    defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>file:///Applications//Notion.app</string><key>_CFURLStringType</key><integer>15</integer></dict></dict></dict>'
     defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>file:///Applications/Station.app</string><key>_CFURLStringType</key><integer>15</integer></dict></dict></dict>'
     defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>file:///Applications/Sublime%20Text.app</string><key>_CFURLStringType</key><integer>15</integer></dict></dict></dict>'
 
@@ -218,7 +219,7 @@ execute() {
     # Set default screenshot location to a specific folder
     info "Others - Set default screenshot location to a specific folder"
     mkdir -p $SCREENSHOT_FOLDER
-    defaults write com.apply.screencapture location $SCREENSHOT_FOLDER
+    defaults write com.apple.screencapture location $SCREENSHOT_FOLDER
 
     # Avoid the creation of .DS_Store files on USB and network volumes
     info "Others - Avoid the creation of .DS_Store files on USB and network volumes"
