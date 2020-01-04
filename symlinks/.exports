@@ -4,6 +4,9 @@ export PATH_TO_PROJECTS="$HOME/Documents/Thiago"
 export SCREENSHOT_FOLDER=$HOME/Downloads/Screenshots
 export TEXT_EDITOR="Visual Studio Code"
 
+# Disable zsh-tab-title prefix
+ZSH_TAB_TITLE_DEFAULT_DISABLE_PREFIX=true
+
 # This should be the last line of the file
 # For local changes
 # Don't make edits below this
