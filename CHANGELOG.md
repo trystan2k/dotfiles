@@ -5,7 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased]
+## [5.7.0] - 2020-01-04
+
+### Added
+
+- Add hyper-tab-touchbar Hyper plugin
+- Add zsh-tab-title ZSH plugin
 
 ## [5.6.0] - 2020-01-03
 
@@ -262,7 +267,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Documentation.
 
 
-[Unreleased]: https://github.com/trystan2k/dotfiles/compare/master...develop
+[5.7.0]: https://github.com/trystan2k/dotfiles/compare/v5.5.0...v5.7.0
 [5.6.0]: https://github.com/trystan2k/dotfiles/compare/v5.5.0...v5.6.0
 [5.5.0]: https://github.com/trystan2k/dotfiles/compare/v5.4.0...v5.5.0
 [5.4.0]: https://github.com/trystan2k/dotfiles/compare/v5.3.0...v5.4.0
