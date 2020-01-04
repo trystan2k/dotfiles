@@ -76,6 +76,9 @@ zplugin ice wait atload"_zsh_autosuggest_start" lucid
 zplugin load zsh-users/zsh-autosuggestions
 
 zplugin ice lucid
+zplugin load trystan2k/zsh-tab-title
+
+zplugin ice lucid
 zplugin load romkatv/powerlevel10k
 
 ### Powerline configuration
