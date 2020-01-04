@@ -61,7 +61,8 @@ module.exports = {
     "hyperterm-safepaste",
     "hyper-search",
     "hyper-fading-scrollbar", 
-    "hyper-font-ligatures"
+    "hyper-font-ligatures",
+    "hyper-tab-touchbar"
   ],
 
   // in development, you can create a directory under
