@@ -63,10 +63,28 @@ _configureJava() {
     success "Java version $CURRENT_JAVA_VERSION installed."
 }
 
+_configureRuby() {
+    local CURRENT_RUBY_VERSION=adopt-openjdk-13+33
+
+    info "Installing ruby version $CURRENT_RUBY_VERSION"
+    
+    # Install ruby plugin
+    asdf plugin-add ruby
+
+    # Install current ruby version
+    asdf install ruby $CURRENT_RUBY_VERSION
+
+    # Set current ruby version as global version
+    asdf global ruby $CURRENT_RUBY_VERSION
+
+    success "Ruby version $CURRENT_RUBY_VERSION installed."    
+}
+
 execute() {
     _configureNodeJs
     _configureYarn
     _configureJava
+    _configureRuby
 }
 
 execute  2>&1 | tee -a $DOTFILE_LOG_FILE

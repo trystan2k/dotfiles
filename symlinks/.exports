@@ -4,6 +4,9 @@ export PATH_TO_PROJECTS="$HOME/Documents/Thiago"
 export SCREENSHOT_FOLDER=$HOME/Downloads/Screenshots
 export TEXT_EDITOR="Visual Studio Code"
 
+# Ruby ignore warnings
+export RUBYOPT='-W:no-deprecated -W:no-experimental'
+
 # Disable zsh-tab-title prefix
 ZSH_TAB_TITLE_DEFAULT_DISABLE_PREFIX=true
 
