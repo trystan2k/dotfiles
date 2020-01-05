@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.9.0] - 2020-01-05
+
+### Changed
+
+- Move `functions` file to `lib` folder
+- Move `Cobal2.terminal` file to `macos` folder
+- Change ASDF plugins install process to be more maintainable
+
 ## [5.8.0] - 2020-01-05
 
 ### Added
@@ -278,6 +286,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Add file for bash aliases
 - Documentation.
 
+[5.9.0]: https://github.com/trystan2k/dotfiles/compare/v5.8.0...v5.9.0
 [5.8.0]: https://github.com/trystan2k/dotfiles/compare/v5.7.0...v5.8.0
 [5.7.0]: https://github.com/trystan2k/dotfiles/compare/v5.6.0...v5.7.0
 [5.6.0]: https://github.com/trystan2k/dotfiles/compare/v5.5.0...v5.6.0
