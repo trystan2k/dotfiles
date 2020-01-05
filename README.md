@@ -1,6 +1,6 @@
 # Thiago’s dotfiles
 
-[![v5.9.0](https://img.shields.io/badge/version-5.9.0-brightgreen.svg)](https://github.com/trystan2k/dotfiles/tree/v5.9.0)
+[![v5.9.1](https://img.shields.io/badge/version-5.9.1-brightgreen.svg)](https://github.com/trystan2k/dotfiles/tree/v5.9.1)
 
 ## General Information
 
