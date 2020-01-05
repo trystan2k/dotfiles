@@ -48,7 +48,7 @@ alias la="ls -la"
 alias lsd="ls -ld"
 
 # Always use color output for `ls`
-alias ls="command colorls"
+alias ls="RUBYOPT='-W:no-deprecated -W:no-experimental' command colorls"
 
 # Always enable colored `grep` output
 # Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
