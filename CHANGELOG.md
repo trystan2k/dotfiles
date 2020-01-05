@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.8.0] - 2020-01-05
+
+### Added
+
+- Add ASDF Ruby installation
+- Add Ruby gem installation configure file, with 'colorls'
+
+### Changed
+
+- Change ls alias to use colorls gem
+- Change gitconfig to point to global gitignore
+
 ## [5.7.0] - 2020-01-04
 
 ### Added
@@ -266,8 +278,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Add file for bash aliases
 - Documentation.
 
-
-[5.7.0]: https://github.com/trystan2k/dotfiles/compare/v5.5.0...v5.7.0
+[5.8.0]: https://github.com/trystan2k/dotfiles/compare/v5.7.0...v5.8.0
+[5.7.0]: https://github.com/trystan2k/dotfiles/compare/v5.6.0...v5.7.0
 [5.6.0]: https://github.com/trystan2k/dotfiles/compare/v5.5.0...v5.6.0
 [5.5.0]: https://github.com/trystan2k/dotfiles/compare/v5.4.0...v5.5.0
 [5.4.0]: https://github.com/trystan2k/dotfiles/compare/v5.3.0...v5.4.0
