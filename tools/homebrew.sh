@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Load functions
-source $DOTFILES_FOLDER/configure/functions
+source $DOTFILES_FOLDER/lib/functions
 
 execute() {
 

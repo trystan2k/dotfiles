@@ -32,7 +32,7 @@ postInstall() {
 ## No need to change from this line on
 
 # Load functions
-source $DOTFILES_FOLDER/configure/functions
+source $DOTFILES_FOLDER/lib/functions
 
 execute() {
     # Pre install steps

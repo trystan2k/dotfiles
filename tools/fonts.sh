@@ -17,7 +17,7 @@ OS_METHODS="linux:apt"
 ## Installation exeution. 
 
 # Load functions
-source $DOTFILES_FOLDER/configure/functions
+source $DOTFILES_FOLDER/lib/functions
 
 ## Functions definitions
 _firacode() {
