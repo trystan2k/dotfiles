@@ -4,7 +4,7 @@
 DOTFILES_FOLDER="$(cd -P ..; pwd)"
 
 # Load helper functions
-source $DOTFILES_FOLDER/configure/functions
+source $DOTFILES_FOLDER/lib/functions
 
 _link_file () {
 	dateStr=$(date +%Y-%m-%d-%H%M)

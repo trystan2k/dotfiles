@@ -7,7 +7,7 @@
 DOTFILES_FOLDER="$(cd -P ..; pwd)"
 
 # Load helper functions
-source $DOTFILES_FOLDER/configure/functions
+source $DOTFILES_FOLDER/lib/functions
 
 execute() {
 

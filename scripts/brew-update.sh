@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Load helper functions
-source $DOTFILES_FOLDER/configure/functions
+source $DOTFILES_FOLDER/lib/functions
 
 # Update brew
 info "Update Brew"

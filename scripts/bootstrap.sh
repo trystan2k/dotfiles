@@ -4,7 +4,7 @@
 DOTFILES_FOLDER="$(cd -P ..; pwd)"
 
 source $DOTFILES_FOLDER/symlinks/.exports
-source $DOTFILES_FOLDER/configure/functions
+source $DOTFILES_FOLDER/lib/functions
 
 # Initialize a few things
 _init () {
