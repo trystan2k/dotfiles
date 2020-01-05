@@ -23,6 +23,22 @@ plugins=(
 # Install process
 # ---------------------------------------------
 
+preInstall() {
+
+    case $1 in
+    nodejs)
+        info "Executing pre-install step for $1"
+        
+        # Add keys for nodejs
+        bash $HOME/.asdf/plugins/nodejs/bin/import-release-team-keyring
+
+        success "Pre-install step for $1 completed"
+    ;;
+    *)
+    ;;
+    esac
+}
+
 install() {
     user "This utility will install ASDF Plugins"
     user "Proceed? (y/n)"
@@ -42,14 +58,20 @@ install() {
             # Add plugin
             asdf plugin-add $PLUGIN_NAME
 
+            # Pre install step
+            preInstall $PLUGIN_NAME
+
             # Install current node version
             asdf install $PLUGIN_NAME $PLUGIN_VERSION
 
             if [ "$SET_GLOBAL" == "true" ]
             then
-                info "Set version $PLUGIN_VERSION for $PLUGIN_NAME as global"
+                info "Sets version $PLUGIN_VERSION for $PLUGIN_NAME as global"
+                
                 # Set current node version as global version
                 asdf global $PLUGIN_NAME $PLUGIN_VERSION
+                
+                success "Version $PLUGIN_VERSION set as global for $PLUGIN_NAME"
             fi
 
             success "ASDF Plugin $PLUGIN_NAME version $PLUGIN_VERSION installed."
