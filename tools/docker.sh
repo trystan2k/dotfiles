@@ -20,7 +20,8 @@ preInstall() {
 
     if [[ $OSTYPE == linux* ]] ; then
         curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-        sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+        sudo apt-key fingerprint 0EBFCD88   
+        sudo apt-add-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
         sudo apt-get update
         
         TOOL_NAME=docker-ce
