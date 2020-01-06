@@ -30,6 +30,9 @@ _configure() {
   if [[ $OSTYPE == darwin* ]] ; then
     # MacOS defaults
     . $DOTFILES_FOLDER/macos/defaults.sh
+
+    # MacOS Quick Actions
+    . $DOTFILES_FOLDER/macos/quick-actions.sh
   fi
 
 }
