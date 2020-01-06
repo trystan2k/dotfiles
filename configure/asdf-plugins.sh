@@ -45,6 +45,11 @@ install() {
     read resp
     if [ "$resp" = 'y' -o "$resp" = 'Y' ] ; then
         info "Installing ASDF Plugins"
+
+        # Unlink openssl on brew in linux to avoid issue with Ruby
+        if [[ $OSTYPE == linux* ]] ; then
+            brew unlink openssl
+        fi
         
         for aux in "${plugins[@]}"; 
         do 

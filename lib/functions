@@ -97,6 +97,8 @@ _errorInstall() {
 _checkInstallStatus() {
     if [ "$1" -gt 0 ] ; then
         _errorInstall $otherArguments
+    else
+        success "'$otherArguments' installation finished with success"
     fi
 }
 
@@ -206,7 +208,11 @@ _appImageInstall() {
     if [ -z "$2" ]; then
         warn "To install .appImage files, a URL must be informed, to obtain the .appImage file from"
         return 2
-    fi       
+    fi     
+
+    if [ ! -d "$PATH_TO_CUSTOM_APPS" ]; then
+        mkdir -p $PATH_TO_CUSTOM_APPS
+    fi  
 
     info "Installing '$1' via AppImage, from $2"
 
