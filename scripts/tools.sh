@@ -28,6 +28,8 @@ core=(
     jq
     zsh
     ack
+    libssl-dev 
+    zlib1g-dev
 )
 
 # Tools list
