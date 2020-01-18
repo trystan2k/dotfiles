@@ -85,8 +85,9 @@ zplugin load romkatv/powerlevel10k
 POWERLEVEL9K_MODE="nerdfont-complete"
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(user dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs command_execution_time)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs )
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs command_execution_time node_version)
+POWERLEVEL9K_NODE_VERSION_BACKGROUND='022'
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
