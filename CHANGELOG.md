@@ -5,10 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [5.11.0] - 2020-01-13
+## [6.0.0] - 2020-01-20
 
 ### Added
 
+- Add asdf direnv plugin, to better manager versions
 - Add alias to get a folder size
 - Add alias to change mac address
 
@@ -299,6 +300,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Add file for bash aliases
 - Documentation.
 
+[6.0.0]: https://github.com/trystan2k/dotfiles/compare/v5.10.0...v6.0.0
 [5.10.0]: https://github.com/trystan2k/dotfiles/compare/v5.9.0...v5.10.0
 [5.9.0]: https://github.com/trystan2k/dotfiles/compare/v5.8.0...v5.9.0
 [5.8.0]: https://github.com/trystan2k/dotfiles/compare/v5.7.0...v5.8.0
