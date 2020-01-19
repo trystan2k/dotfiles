@@ -27,6 +27,9 @@ _add() {
     info "Install fx tool"
     . $DOTFILES_FOLDER/tools/fx.sh
 
+    info "Remove node dependency"
+    brew uninstall node --ignore-dependencies
+
     info "Install Microsfot Edge"
     . $DOTFILES_FOLDER/tools/microsoft-edge.sh
 
