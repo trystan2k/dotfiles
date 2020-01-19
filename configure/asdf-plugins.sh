@@ -17,6 +17,7 @@ plugins=(
     java:adopt-openjdk-8u232-b09:false
     yarn:1.21.1:true
     ruby:2.7.0:true
+    direnv:2.2.0.0:true
 )
 
 # ---------------------------------------------
@@ -88,6 +89,7 @@ install() {
 
 execute() {
     install
+    configure
 }
 
 execute  2>&1 | tee -a $DOTFILE_LOG_FILE

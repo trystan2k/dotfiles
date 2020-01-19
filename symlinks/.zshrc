@@ -108,3 +108,9 @@ zstyle ':completion:*' menu yes select
 
 # enable auto cd
 setopt auto_cd
+
+# Add ASDF Bin into path, to use with direnv
+export PATH="$HOME/.asdf/bin:$PATH"
+
+# Hook direnv into your shell.
+eval "$(asdf exec direnv hook zsh)"
