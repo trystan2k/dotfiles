@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 
+- Add fx tools installation instructions
+- Add Microsoft Edge installation instructions
 - Add asdf direnv plugin, to better manager versions
 - Add alias to get a folder size
 - Add alias to change mac address
