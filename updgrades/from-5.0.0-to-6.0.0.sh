@@ -27,6 +27,9 @@ _add() {
     info "Install fx tool"
     . $DOTFILES_FOLDER/tools/fx.sh
 
+    info "Install Microsfot Edge"
+    . $DOTFILES_FOLDER/tools/microsoft-edge.sh
+
     info "Install ASDF Direnv plugin and set it to global"
     asdf plugin-add direnv
     asdf install direnv 2.20.0

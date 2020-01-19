@@ -56,6 +56,7 @@ tools=(
     postman
     notion
     fx
+    microsoft-edge
 )
 
 # ---------------------------------------------
