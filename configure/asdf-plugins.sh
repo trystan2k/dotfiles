@@ -89,7 +89,6 @@ install() {
 
 execute() {
     install
-    configure
 }
 
 execute  2>&1 | tee -a $DOTFILE_LOG_FILE
