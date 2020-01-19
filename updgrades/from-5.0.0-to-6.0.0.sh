@@ -27,6 +27,9 @@ _add() {
     info "Install fx tool"
     . $DOTFILES_FOLDER/tools/fx.sh
 
+    info "Remove node dependency"
+    brew uninstall node --ignore-dependencies
+
     info "Install Microsfot Edge"
     . $DOTFILES_FOLDER/tools/microsoft-edge.sh
 
@@ -48,6 +51,9 @@ _configure() {
 
     info "Configure ASDF Direnv plugin"
     . $DOTFILES_FOLDER/configure/direnv-config.sh
+
+    info "Add Microsoft Edge icon in dock"
+    defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>file:///Applications/Microsoft%20Edge.app</string><key>_CFURLStringType</key><integer>15</integer></dict></dict></dict>'
 }
 
 _cleanup () {

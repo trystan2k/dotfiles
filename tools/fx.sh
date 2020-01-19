@@ -22,6 +22,9 @@ preInstall() {
 ## Post-installation required steps
 postInstall() {
     info "Post Install for $1"
+
+    info "Remove node dependency"
+    brew uninstall node --ignore-dependencies
 }
 
 ## Installation exeution. 
