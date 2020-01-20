@@ -55,6 +55,9 @@ tools=(
     fzf    
     postman
     notion
+    fx
+    microsoft-edge
+    caffeine
 )
 
 # ---------------------------------------------
