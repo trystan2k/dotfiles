@@ -57,6 +57,7 @@ tools=(
     notion
     fx
     microsoft-edge
+    caffeine
 )
 
 # ---------------------------------------------
