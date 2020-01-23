@@ -63,13 +63,17 @@ Some of initial configuration can be done executing the configuration script loc
 
 ## Apps that needs to be installed manually
 
-1. DaisyDisk (https://daisydiskapp.com/)
-2. PDF Expert (https://pdfexpert.com/)
 
 ## Settings that needs to be done manually
 
 1. System Preferences -> Users & Groups -> Login Options => Change 'Show fast user switching menu as' to `Icon`
 2. System Preferences -> Security & Privacy -> General => Change 'Require password' to `5 seconds`
+
+## Apps that are interesting but not sure if useful
+
+1. Captin (http://captin.strikingly.com/)
+2. Mac App Store Cli [mas-cli] (https://github.com/mas-cli/mas)
+3. Mackup (https://github.com/lra/mackup)
 
 ## Thanks to...
 
