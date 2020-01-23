@@ -62,6 +62,7 @@ tools=(
     licecap
     skitch
     daisydisk
+    pdf-expert
 )
 
 # ---------------------------------------------
