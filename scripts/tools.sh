@@ -59,6 +59,7 @@ tools=(
     microsoft-edge
     caffeine
     rectangle
+    licecap
 )
 
 # ---------------------------------------------
