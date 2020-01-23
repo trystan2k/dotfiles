@@ -63,9 +63,8 @@ Some of initial configuration can be done executing the configuration script loc
 
 ## Apps that needs to be installed manually
 
-1. BetterSnapTool (https://apps.apple.com/es/app/bettersnaptool/id417375580?mt=12)
-2. DaisyDisk (https://daisydiskapp.com/)
-3. PDF Expert (https://pdfexpert.com/)
+1. DaisyDisk (https://daisydiskapp.com/)
+2. PDF Expert (https://pdfexpert.com/)
 
 ## Settings that needs to be done manually
 

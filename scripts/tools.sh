@@ -58,7 +58,7 @@ tools=(
     fx
     microsoft-edge
     caffeine
-    spectacle
+    rectangle
 )
 
 # ---------------------------------------------

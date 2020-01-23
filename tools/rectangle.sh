@@ -6,7 +6,10 @@ DOTFILES_FOLDER="$(cd -P ..; pwd)"
 ## Variables definitions
 
 # Tool name
-TOOL_NAME=spectacle
+TOOL_NAME=rectangle
+
+# Tool description
+TOOL_DESCRIPTION="Move and resize windows in macOS using keyboard shortcuts or snap areas."
 
 # Tool extra information
 EXTRA_INFO=
