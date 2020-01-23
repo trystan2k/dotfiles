@@ -60,6 +60,7 @@ tools=(
     caffeine
     rectangle
     licecap
+    skitch
 )
 
 # ---------------------------------------------
