@@ -61,6 +61,7 @@ tools=(
     rectangle
     licecap
     skitch
+    daisydisk
 )
 
 # ---------------------------------------------
