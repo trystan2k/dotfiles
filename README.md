@@ -74,6 +74,7 @@ Some of initial configuration can be done executing the configuration script loc
 1. Captin (http://captin.strikingly.com/)
 2. Mac App Store Cli [mas-cli] (https://github.com/mas-cli/mas)
 3. Mackup (https://github.com/lra/mackup)
+4. Pock (https://pock.dev/)
 
 ## Thanks to...
 
