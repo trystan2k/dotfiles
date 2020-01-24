@@ -63,6 +63,7 @@ tools=(
     skitch
     daisydisk
     pdf-expert
+    flycut
 )
 
 # ---------------------------------------------

@@ -19,7 +19,7 @@ _remove() {
     info "Remove spectacle"
     brew cask uninstall spectacle
 
-    info "Remove both 'PDFExpert' and 'DaisyDisk' Manually (AppCleaner)"
+    info "Remove both 'PDFExpert', 'BetterSnapTool' and 'DaisyDisk' Manually (AppCleaner)"
     user "When done, press any key to continue"
 }
 
@@ -44,6 +44,9 @@ _add() {
 
     info "Install pdf-expert"
     . $DOTFILES_FOLDER/tools/pdf-expert.sh    
+
+    info "Install flycut"
+    . $DOTFILES_FOLDER/tools/flycut.sh        
 }
 
 _configure() {
