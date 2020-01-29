@@ -185,4 +185,9 @@ function change_mac_address() {
   echo "Your new physical address is $mac"
 }
 
+# download a subfolder of a github repository
+function dl_github_sub() {
+  svn checkout ${1:gs/tree\/master/trunk}
+}
+
 [ -f "$HOME/.aliases.local" ] && source "$HOME/.aliases.local"
