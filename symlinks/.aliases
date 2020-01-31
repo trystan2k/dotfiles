@@ -187,7 +187,9 @@ function change_mac_address() {
 
 # download a subfolder of a github repository
 function dl_github_sub() {
+  local folder=$(echo "$1" | sed -e 's/.*\///g')
   svn checkout ${1:gs/tree\/master/trunk}
+  rm -rf "./$folder/.svn"
 }
 
 [ -f "$HOME/.aliases.local" ] && source "$HOME/.aliases.local"
