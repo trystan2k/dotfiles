@@ -58,6 +58,12 @@ tools=(
     fx
     microsoft-edge
     caffeine
+    rectangle
+    licecap
+    skitch
+    daisydisk
+    pdf-expert
+    flycut
 )
 
 # ---------------------------------------------
