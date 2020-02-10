@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [6.2.0] - 2020-02-10
+
+### Added
+
+- Add sudo script for macos to enable touch id to autorize sudo
+- Add default window size to Hyper, to always open in the same size no matter what happened in past
+
 ## [6.1.0] - 2020-02-03
 
 ### Added
@@ -314,6 +321,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Add file for bash aliases
 - Documentation.
 
+[6.2.0]: https://github.com/trystan2k/dotfiles/compare/v6.1.0...v6.2.0
 [6.1.0]: https://github.com/trystan2k/dotfiles/compare/v6.0.0...v6.1.0
 [6.0.0]: https://github.com/trystan2k/dotfiles/compare/v5.10.0...v6.0.0
 [5.10.0]: https://github.com/trystan2k/dotfiles/compare/v5.9.0...v5.10.0

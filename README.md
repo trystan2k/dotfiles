@@ -1,6 +1,6 @@
 # Thiago’s dotfiles
 
-[![v6.1.0](https://img.shields.io/badge/version-6.1.0-brightgreen.svg)](https://github.com/trystan2k/dotfiles/tree/v6.1.0)
+[![v6.2.0](https://img.shields.io/badge/version-6.2.0-brightgreen.svg)](https://github.com/trystan2k/dotfiles/tree/v6.2.0)
 
 ## General Information
 
@@ -71,10 +71,12 @@ Some of initial configuration can be done executing the configuration script loc
 
 ## Apps that are interesting but not sure if useful
 
-1. Captin (http://captin.strikingly.com/)
-2. Mac App Store Cli [mas-cli] (https://github.com/mas-cli/mas)
-3. Mackup (https://github.com/lra/mackup)
-4. Pock (https://pock.dev/)
+1. Captin (http://captin.strikingly.com/) - Show Mac caps lock status
+2. Mac App Store Cli [mas-cli] (https://github.com/mas-cli/mas) - App Store cli
+3. Mackup (https://github.com/lra/mackup) - Backup of Mac
+4. Pock (https://pock.dev/) - Customize Touch Bar
+5. Mosh (https://mosh.org/) - Mobile SSH client
+6. Karabiner (https://pqrs.org/osx/karabiner/) - Remap keybinds
 
 ## Thanks to...
 
