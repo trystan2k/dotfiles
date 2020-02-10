@@ -13,6 +13,9 @@ module.exports = {
     // default font size in pixels for all tabs
     fontSize: 12,
 
+    // default window size to open
+    windowSize: [1000, 650],
+
     // font family with optional fallbacks
     fontFamily: 'Fira Code, "Hack Nerd Font", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
