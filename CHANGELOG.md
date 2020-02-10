@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 
 - Add sudo script for macos to enable touch id to autorize sudo
+- Add default window size to Hyper, to always open in the same size no matter what happened in past
 
 ## [6.1.0] - 2020-02-03
 
