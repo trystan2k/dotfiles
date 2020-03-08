@@ -4,6 +4,10 @@ export PATH_TO_PROJECTS="$HOME/Documents/Thiago"
 export SCREENSHOT_FOLDER=$HOME/Downloads/Screenshots
 export TEXT_EDITOR="Visual Studio Code"
 
+export HISTFILE=~/.zsh_history
+export HISTSIZE=10000000
+export SAVEHIST=10000000
+
 # Disable zsh-tab-title prefix
 ZSH_TAB_TITLE_DEFAULT_DISABLE_PREFIX=true
 
