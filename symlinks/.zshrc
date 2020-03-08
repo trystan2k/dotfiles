@@ -25,9 +25,6 @@ zplugin ice wait atload"unalias grv" lucid
 zplugin snippet OMZ::plugins/git/git.plugin.zsh
 
 zplugin ice wait lucid
-zplugin snippet OMZ::plugins/asdf/asdf.plugin.zsh
-
-zplugin ice wait lucid
 zplugin snippet OMZ::plugins/autojump/autojump.plugin.zsh
 
 zplugin ice wait lucid
@@ -41,9 +38,6 @@ zplugin snippet OMZ::plugins/extract/extract.plugin.zsh
 
 zplugin ice wait lucid
 zplugin snippet OMZ::plugins/fzf/fzf.plugin.zsh
-
-zplugin ice wait lucid
-zplugin snippet OMZ::plugins/npm/npm.plugin.zsh
 
 zplugin ice wait svn lucid
 zplugin snippet OMZ::plugins/osx
@@ -66,6 +60,9 @@ zplugin load paoloantinori/hhighlighter
 zplugin ice wait as"completion" lucid
 zplugin snippet OMZ::plugins/docker/_docker
 
+zplugin ice wait lucid as"completion"
+zplugin snippet https://github.com/asdf-vm/asdf/blob/master/completions/_asdf
+
 zplugin ice wait blockf atpull'zplugin creinstall -q .' lucid
 zplugin load zsh-users/zsh-completions
 
@@ -75,7 +72,10 @@ zplugin load zdharma/fast-syntax-highlighting
 zplugin ice wait atload"_zsh_autosuggest_start" lucid
 zplugin load zsh-users/zsh-autosuggestions
 
-zplugin ice lucid
+zplugin ice wait lucid
+zplugin load trystan2k/zsh-npm-plugin
+
+zplugin ice wait lucid
 zplugin load trystan2k/zsh-tab-title
 
 zplugin ice lucid
@@ -122,3 +122,4 @@ setopt SHARE_HISTORY         # Share history file amongst all Zsh sessions
 
 # Hook direnv into your shell.
 eval "$(asdf exec direnv hook zsh)"
+#. $(brew --prefix asdf)/asdf.sh
