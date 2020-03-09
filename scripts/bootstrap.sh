@@ -34,9 +34,6 @@ _configure() {
     # MacOS Quick Actions
     . $DOTFILES_FOLDER/macos/quick-actions.sh
 
-    # Sudo config
-    . $DOTFILES_FOLDER/macos/sudo.sh
-
   fi
 
 }
