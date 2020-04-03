@@ -34,6 +34,9 @@ function setenv() {
   fi
 }
 
+# Alias to remove node installed in system
+alias removeNodeSystem="brew uninstall --ignore-dependencies node"
+
 # Alias personal
 alias kindlegen=/Applications/KindleGen/kindlegen
 alias thiago="cd ~/Documents/Thiago"
