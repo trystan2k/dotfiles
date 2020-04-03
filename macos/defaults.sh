@@ -179,9 +179,7 @@ execute() {
 
     # Computer name
     info "Sharing - Computer name"
-    user "Would you like to set your computer name (as done via System Preferences >> Sharing)?  (y/n)"
-    read -r response
-    if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
+    if ask_question '"Would you like to set your computer name (as done via System Preferences >> Sharing)?'; then
         user "What would you like it to be?"
         read COMPUTER_NAME
         sudo scutil --set ComputerName $COMPUTER_NAME
