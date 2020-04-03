@@ -68,9 +68,27 @@ cleanup() {
     fi
 }
 
+# ---------------------------------------------
+# Configure tools
+# ---------------------------------------------
+configure() {
+    info "ASDF Configuration"
+
+    if ask_question 'Do you want to configure ASDF and install plugins?'; then
+        . $DOTFILES_FOLDER/configure/asdf-plugin.sh
+        . $DOTFILES_FOLDER/configure/direnv-config.sh
+    fi
+
+    info "Install Ruby Gems"
+    if ask_question 'Do you want to install Ruby Gems?'; then
+        . $DOTFILES_FOLDER/configure/ruby-gems.sh
+    fi
+}
+
 execute() {
     install
     cleanup
+    configure
 }
 
 execute
