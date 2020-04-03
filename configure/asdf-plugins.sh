@@ -41,10 +41,7 @@ preInstall() {
 }
 
 install() {
-    user "This utility will install ASDF Plugins"
-    user "Proceed? (y/n)"
-    read resp
-    if [ "$resp" = 'y' -o "$resp" = 'Y' ] ; then
+    if ask_question 'Do you want to install ASDF Plugins?'; then
         info "Installing ASDF Plugins"
 
         # Unlink openssl on brew in linux to avoid issue with Ruby

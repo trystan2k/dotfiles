@@ -10,6 +10,16 @@ fi
 
 source $HOME/.exports.local
 
+# Ask the user a Yes/No question
+function ask_question() {
+    read -p "${1} (y/N) " choice
+    case "$choice" in
+        Y | y | Yes | YES | yes ) return 0; exit;;
+        N | n | No | NO | no ) return 1; exit;;
+        * ) return 2;;
+    esac
+}
+
 abspath() {                                               
     cd "$(dirname "$1")"
     printf "%s/%s\n" "$(pwd)" "$(basename "$1")"

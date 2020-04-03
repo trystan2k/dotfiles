@@ -12,10 +12,7 @@ source $DOTFILES_FOLDER/lib/functions
 # ---------------------------------------------
 
 install() {
-    user "This utility will install useful tools using Homebrew/Git/others, according to the OS"
-    user "Proceed? (y/n)"
-    read resp
-    if [ "$resp" = 'y' -o "$resp" = 'Y' ] ; then
+    if ask_question 'Do you want to install all tools using Homebrew/Git/others?'; then
 
         info "Install HomeBrew"
         . $DOTFILES_FOLDER/tools/homebrew.sh
