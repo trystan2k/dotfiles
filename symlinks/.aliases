@@ -3,11 +3,26 @@
 # Include any exports
 [ -f "$HOME/.exports" ] && source "$HOME/.exports"
 
+# Alias function to create and enter a folder
+function take() {
+  mkdir -p $@ && cd ${@:$#}
+}
+
 # Alias function for initial commit
 function initialCommit() {
-        git add .
-        git commit -m "Initial Commit"
-        git push
+  git add .
+  git commit -m "Initial Commit"
+  git push
+}
+
+# Function to create a .envrc file with the asdf current settings (used by direnv)
+function setenv() {
+  echo $@
+  local envFile='.envrc'
+  if [[ ! -f "$envFile" ]]; then
+    echo "use asdf" > $envFile
+    asdf exec direnv allow $envFile
+  fi
 }
 
 # Alias personal
