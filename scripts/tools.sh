@@ -28,7 +28,7 @@ install() {
 
             # Install all our dependencies with bundle (See Brewfile)
             brew tap homebrew/bundle
-            brew bundle $DOTFILES_FOLDER/tools/macos/Brewfile
+            brew bundle --file=$DOTFILES_FOLDER/tools/macos/Brewfile
 
         elif [[ $OSTYPE == linux* ]] ; then
             info "Installing tools for Linux"
