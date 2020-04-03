@@ -26,7 +26,6 @@ function initialCommit() {
 
 # Function to create a .envrc file with the asdf current settings (used by direnv)
 function setenv() {
-  echo $@
   local envFile='.envrc'
   if [[ ! -f "$envFile" ]]; then
     echo "use asdf" > $envFile
