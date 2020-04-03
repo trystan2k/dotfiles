@@ -5,6 +5,35 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [6.3.0] - 2020-03-09
+
+### Added
+
+- Add ZSH History settings, to extend its functionality
+
+### Removed
+
+- Remove sudo script for macos
+
+## [6.2.0] - 2020-02-10
+
+### Added
+
+- Add sudo script for macos to enable touch id to authorize sudo
+- Add default window size to Hyper, to always open in the same size no matter what happened in past
+
+## [6.1.0] - 2020-02-03
+
+### Added
+
+- Add rectangle installation instructions
+- Add licecap installation instructions
+- Add skitch installation instructions
+- Add daisydisk installation instructions
+- Add pdf-expert installation instructions
+- Add flycut installation instructions
+- Add download github subfolder alias
+
 ## [6.0.0] - 2020-01-20
 
 ### Added
@@ -302,6 +331,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Add file for bash aliases
 - Documentation.
 
+[6.3.0]: https://github.com/trystan2k/dotfiles/compare/v6.2.0...v6.3.0
+[6.2.0]: https://github.com/trystan2k/dotfiles/compare/v6.1.0...v6.2.0
+[6.1.0]: https://github.com/trystan2k/dotfiles/compare/v6.0.0...v6.1.0
 [6.0.0]: https://github.com/trystan2k/dotfiles/compare/v5.10.0...v6.0.0
 [5.10.0]: https://github.com/trystan2k/dotfiles/compare/v5.9.0...v5.10.0
 [5.9.0]: https://github.com/trystan2k/dotfiles/compare/v5.8.0...v5.9.0

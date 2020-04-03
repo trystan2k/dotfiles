@@ -1,6 +1,6 @@
 # Thiago’s dotfiles
 
-[![v6.0.0](https://img.shields.io/badge/version-6.0.0-brightgreen.svg)](https://github.com/trystan2k/dotfiles/tree/v6.0.0)
+[![v6.3.0](https://img.shields.io/badge/version-6.3.0-brightgreen.svg)](https://github.com/trystan2k/dotfiles/tree/v6.3.0)
 
 ## General Information
 
@@ -63,14 +63,20 @@ Some of initial configuration can be done executing the configuration script loc
 
 ## Apps that needs to be installed manually
 
-1. BetterSnapTool (https://apps.apple.com/es/app/bettersnaptool/id417375580?mt=12)
-2. DaisyDisk (https://daisydiskapp.com/)
-3. PDF Expert (https://pdfexpert.com/)
 
 ## Settings that needs to be done manually
 
 1. System Preferences -> Users & Groups -> Login Options => Change 'Show fast user switching menu as' to `Icon`
 2. System Preferences -> Security & Privacy -> General => Change 'Require password' to `5 seconds`
+
+## Apps that are interesting but not sure if useful
+
+1. Captin (http://captin.strikingly.com/) - Show Mac caps lock status
+2. Mac App Store Cli [mas-cli] (https://github.com/mas-cli/mas) - App Store cli
+3. Mackup (https://github.com/lra/mackup) - Backup of Mac
+4. Pock (https://pock.dev/) - Customize Touch Bar
+5. Mosh (https://mosh.org/) - Mobile SSH client
+6. Karabiner (https://pqrs.org/osx/karabiner/) - Remap keybinds
 
 ## Thanks to...
 

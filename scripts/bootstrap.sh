@@ -33,6 +33,7 @@ _configure() {
 
     # MacOS Quick Actions
     . $DOTFILES_FOLDER/macos/quick-actions.sh
+
   fi
 
 }
