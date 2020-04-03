@@ -30,8 +30,8 @@ function setenv() {
   local envFile='.envrc'
   if [[ ! -f "$envFile" ]]; then
     echo "use asdf" > $envFile
-    asdf exec direnv allow $envFile
   fi
+  asdf exec direnv allow $envFile
 }
 
 # Function to fix ZSH permisions
