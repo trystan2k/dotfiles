@@ -1,0 +1,21 @@
+# Trystan2k's Brewfile
+
+# Taps
+
+tap "homebrew/bundle"
+tap "homebrew/core"
+
+# Binaries
+
+brew "asdf"
+brew "autojump"
+brew "curl"
+brew "fx"
+brew "fzf"
+brew "git"
+brew "gnupg"
+brew "jq"
+brew "tree"
+brew "wget"
+brew "zsh"
+

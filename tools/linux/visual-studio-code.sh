@@ -6,17 +6,21 @@ DOTFILES_FOLDER="$(cd -P ..; pwd)"
 ## Variables definitions
 
 # Tool name
-TOOL_NAME=software-properties-common
+TOOL_NAME=visual-studio-code
 
 # Tool extra information
-EXTRA_INFO=
+EXTRA_INFO="--classic"
 
 # Install methods by OS
-OS_METHODS="linux:apt"
+OS_METHODS="linux:snap"
 
 ## Pre-installation required steps
 preInstall() {
     info "Pre Install for $1"
+
+    if [[ $OSTYPE == linux* ]] ; then
+        TOOL_NAME=code
+    fi
 }
 
 ## Post-installation required steps

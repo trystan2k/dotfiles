@@ -6,13 +6,13 @@ DOTFILES_FOLDER="$(cd -P ..; pwd)"
 ## Variables definitions
 
 # Tool name
-TOOL_NAME=notion
+TOOL_NAME=hyper
 
 # Tool extra information
-EXTRA_INFO=
+EXTRA_INFO="https://releases.hyper.is/download/deb"
 
 # Install methods by OS
-OS_METHODS="darwin:cask"
+OS_METHODS="linux:debFile"
 
 ## Pre-installation required steps
 preInstall() {

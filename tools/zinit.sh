@@ -6,28 +6,17 @@ DOTFILES_FOLDER="$(cd -P ..; pwd)"
 ## Variables definitions
 
 # Tool name
-TOOL_NAME=docker
+TOOL_NAME=zinit
 
 # Tool extra information
-EXTRA_INFO=
+EXTRA_INFO="https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh"
 
 # Install methods by OS
-OS_METHODS="darwin:cask linux:apt"
+OS_METHODS="darwin:sh linux:sh"
 
 ## Pre-installation required steps
 preInstall() {
     info "Pre Install for $1"
-
-    if [[ $OSTYPE == linux* ]] ; then
-        curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-        sudo apt-key fingerprint 0EBFCD88   
-        sudo apt-add-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
-        sudo apt-get update
-        
-        TOOL_NAME=docker-ce
-        
-        install $OS_METHODS docker-ce-cli containerd.io
-    fi
 }
 
 ## Post-installation required steps

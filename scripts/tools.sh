@@ -6,65 +6,6 @@ DOTFILES_FOLDER="$(cd -P ..; pwd)"
 # Load helper functions
 source $DOTFILES_FOLDER/lib/functions
 
-# ---------------------------------------------
-# Tools list
-# ---------------------------------------------
-
-# Core softwares list
-core=(
-    homebrew
-    snapd
-    apt-transport-https
-    software-properties-common
-    gdebi-core
-    git
-    subversion
-    wget
-    curl
-    dirmngr
-    gcc
-    coreutils
-    gpg
-    jq
-    zsh
-    ack
-    libssl-dev 
-    zlib1g-dev
-)
-
-# Tools list
-tools=(
-    asdf
-    docker
-    station
-    appcleaner
-    google-chrome
-    firefox
-    alfred
-    parallels
-    dozer
-    httpie
-    tree
-    hyper
-    sublime-text
-    zplugin
-    autojump
-    fonts
-    visual-studio-code
-    terminal-notifier
-    fzf    
-    postman
-    notion
-    fx
-    microsoft-edge
-    caffeine
-    rectangle
-    licecap
-    skitch
-    daisydisk
-    pdf-expert
-    flycut
-)
 
 # ---------------------------------------------
 # Install process
@@ -75,17 +16,41 @@ install() {
     user "Proceed? (y/n)"
     read resp
     if [ "$resp" = 'y' -o "$resp" = 'Y' ] ; then
-        info "Installing core tools"
-        for i in "${core[@]}"; 
-        do 
-            . $DOTFILES_FOLDER/tools/"${i}.sh"
-        done
 
-        info "Installing other tools"
-        for i in "${tools[@]}"; 
-        do 
-            . $DOTFILES_FOLDER/tools/"${i}.sh"
-        done
+        info "Install HomeBrew"
+        . $DOTFILES_FOLDER/tools/homebrew.sh
+
+        if [[ $OSTYPE == darwin* ]] ; then
+            info "Installing tools for MacOS"
+
+            # Update Homebrew recipes
+            brew update
+
+            # Install all our dependencies with bundle (See Brewfile)
+            brew tap homebrew/bundle
+            brew bundle $DOTFILES_FOLDER/tools/macos/Brewfile
+
+        elif [[ $OSTYPE == linux* ]] ; then
+            info "Installing tools for Linux"
+
+            info "Setup APT before install"
+            . $DOTFILES_FOLDER/tools/linux/AptSetup.sh
+
+            while read file; do
+                info "Installing $file"
+                sudo apt update
+                sudo apt install -y $1
+            done < $DOTFILES_FOLDER/tools/linux/Aptfile
+
+            info "Install other tools"
+
+            for file in `/bin/ls $DOTFILES_FOLDER/tools/linux/*.sh |grep -v AptSteup.sh`; do 
+                echo . $file
+            done
+        fi;
+
+        info "Install Zinit"
+        . $DOTFILES_FOLDER/tools/zinit.sh
     else
         warn "Tools installation cancelled by user"
     fi

@@ -58,15 +58,6 @@ install() {
 
         if [[ $OSTYPE == "$os_type"* ]] ; then
             case "$install_type" in
-                brew*)  
-                    _brewInstall $otherArguments
-                    ;;
-                apt*)   
-                    _aptInstall $otherArguments
-                    ;;
-                cask*)
-                    _brewCaskInstall $otherArguments
-                    ;;
                 debFile*)
                     _debFileInstall $otherArguments
                     ;;
@@ -100,48 +91,6 @@ _checkInstallStatus() {
     else
         success "'$otherArguments' installation finished with success"
     fi
-}
-
-_brewInstall() {
-
-    if [ -z "$1" ]; then
-        warn "The name of the tool to install must be informed."
-        return 1
-    fi
-
-    info "Installing '$1' via Homebrew"
-    brew install $1
-
-    return 0
-}
-
-_brewCaskInstall() {
-
-    if [ -z "$1" ]; then
-        warn "The name of the tool to install must be informed."
-        return 1
-    fi
-
-    info "Installing '$1' via Homebrew/cask"
-
-    brew cask install $1
-
-    return 0
-}
-
-_aptInstall() {
-
-    if [ -z "$1" ]; then
-        warn "The name of the tool to install must be informed."
-        return 1
-    fi
-
-    info "Installing '$1' via APT"
-
-    sudo apt update
-    sudo apt install -y $1
-
-    return 0
 }
 
 _debFileInstall() {

@@ -6,13 +6,13 @@ DOTFILES_FOLDER="$(cd -P ..; pwd)"
 ## Variables definitions
 
 # Tool name
-TOOL_NAME=dirmngr
+TOOL_NAME=station
 
 # Tool extra information
-EXTRA_INFO=
+EXTRA_INFO="https://dl.getstation.com/download/linux_64?filetype=AppImage https://avatars2.githubusercontent.com/u/27734877?s=200&v=4"
 
 # Install methods by OS
-OS_METHODS="linux:apt"
+OS_METHODS="linux:appImage"
 
 ## Pre-installation required steps
 preInstall() {
