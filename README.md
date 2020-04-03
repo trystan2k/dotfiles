@@ -78,6 +78,15 @@ Some of initial configuration can be done executing the configuration script loc
 5. Mosh (https://mosh.org/) - Mobile SSH client
 6. Karabiner (https://pqrs.org/osx/karabiner/) - Remap keybinds
 
+## Posibile issues
+
+1. For message `zsh compinit: insecure directories and files, run compaudit for list`, a posible solution is:
+    ```
+    $ cd /usr/local/share/
+    $ sudo chmod -R 755 zsh
+    $ sudo chown -R root:staff zsh
+    ```
+
 ## Thanks to...
 
 This repo was based in the | [Mathias Bynens](https://mathiasbynens.be/) | one (https://github.com/mathiasbynens/dotfiles). I had remove some setup I do not need and add some I found over internet.
