@@ -12,7 +12,7 @@ source $HOME/.exports.local
 
 # Ask the user a Yes/No question
 function ask_question() {
-    read -p "${1} (y/N) " choice
+    read -p "$(user "${1} (y/N) ")" choice
     case "$choice" in
         Y | y | Yes | YES | yes ) return 0; exit;;
         N | n | No | NO | no ) return 1; exit;;
