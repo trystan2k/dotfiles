@@ -3,6 +3,15 @@
 # Include any exports
 [ -f "$HOME/.exports" ] && source "$HOME/.exports"
 
+# Alias function to backup current Brewfile and generate a new one, with currenct tools installed
+function updateBrewfile() {
+  if [[ ! -f $HOME/Brewfile ]]; then
+    mv $HOME/Brewfile $HOME/Brewfile_bkp  
+  fi
+
+  brew bundle dump
+}
+
 # Alias function to create and enter a folder
 function take() {
   mkdir -p $@ && cd ${@:$#}
