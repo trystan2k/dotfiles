@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Add necessary dependency
+sudo apt-get install software-properties-common
+
 # Docker repository
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo apt-key fingerprint 0EBFCD88   

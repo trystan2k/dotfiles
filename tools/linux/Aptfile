@@ -13,7 +13,6 @@ gdebi-core
 gps
 libssl-dev
 snapd
-software-properties-common
 sublime-text
 subversion
 zlib1g-dev
