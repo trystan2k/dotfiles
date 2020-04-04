@@ -8,7 +8,6 @@ tap "homebrew/core"
 # Binaries
 
 brew "asdf"
-brew "autojump"
 brew "curl"
 brew "fx"
 brew "fzf"

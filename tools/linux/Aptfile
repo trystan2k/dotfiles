@@ -1,5 +1,6 @@
 ack
 apt-transport-https
+autojump
 build-essential
 dirmngr
 docker-ce 
