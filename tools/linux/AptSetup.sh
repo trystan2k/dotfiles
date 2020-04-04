@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Add necessary dependency
-sudo apt-get install software-properties-common
+sudo apt-get install software-properties-common -y
 sudo apt-get update
 
 # Docker repository
