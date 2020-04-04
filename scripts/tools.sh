@@ -5,7 +5,7 @@ DOTFILES_FOLDER="$(cd -P ..; pwd)"
 
 # Load helper functions
 source $DOTFILES_FOLDER/lib/functions
-
+source $DOTFILES_FOLDER/symlinks/.exports
 
 # ---------------------------------------------
 # Install process

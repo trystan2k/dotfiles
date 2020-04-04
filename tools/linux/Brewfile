@@ -16,5 +16,4 @@ brew "gnupg"
 brew "jq"
 brew "tree"
 brew "wget"
-brew "zsh"
 
