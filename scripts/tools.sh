@@ -30,6 +30,9 @@ install() {
         elif [[ $OSTYPE == linux* ]] ; then
             info "Installing tools for Linux"
 
+            brew tap homebrew/bundle
+            brew bundle -v --file=$DOTFILES_FOLDER/tools/linux/Brewfile
+
             info "Setup APT before install"
             . $DOTFILES_FOLDER/tools/linux/AptSetup.sh
 
@@ -42,7 +45,7 @@ install() {
             info "Install other tools"
 
             for file in `/bin/ls $DOTFILES_FOLDER/tools/linux/*.sh |grep -v AptSteup.sh`; do 
-                echo . $file
+                sh $file
             done
         fi;
 

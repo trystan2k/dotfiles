@@ -3,14 +3,18 @@
 # Docker repository
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo apt-key fingerprint 0EBFCD88   
-sudo apt-add-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+sudo apt-get update
 
 # Firefox repository
-sudo add-apt-repository ppa:mozillateam/firefox-stable -y
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A6DCF7707EBC211F
+sudo apt-add-repository "deb http://ppa.launchpad.net/ubuntu-mozilla-security/ppa/ubuntu bionic main"
+sudo apt-get update
 
 # Font Firacode repository
 sudo apt --fix-broken install
-sudo add-apt-repository universe
+sudo apt-add-repository universe
+sudo apt-get update
 
 # Font hard nerd
 mkdir -p $HOME/.local/share/fonts/ 

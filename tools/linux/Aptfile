@@ -1,5 +1,6 @@
 ack
 apt-transport-https
+build-essential
 dirmngr
 docker-ce 
 docker-ce-cli 
