@@ -45,7 +45,7 @@ install() {
             info "Install other tools"
 
             for file in `/bin/ls $DOTFILES_FOLDER/tools/linux/*.sh |grep -v AptSetup.sh`; do 
-                sh $file
+                . $file
             done
         fi;
 

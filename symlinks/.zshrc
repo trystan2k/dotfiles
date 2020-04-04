@@ -1,6 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# PERF: Uncoment these line and last one to get a performance report of terminal init
+#zmodload zsh/zprof
+
 if [ -f $HOME/.aliases ]; then
   . $HOME/.aliases
 fi
@@ -123,3 +126,6 @@ setopt SHARE_HISTORY         # Share history file amongst all Zsh sessions
 # Hook direnv into your shell.
 eval "$(asdf exec direnv hook zsh)"
 #. $(brew --prefix asdf)/asdf.sh
+
+# PERF: Uncoment these line and first one to get a performance report of terminal init
+zprof
