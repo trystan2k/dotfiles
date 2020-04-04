@@ -38,7 +38,6 @@ install() {
 
             while read file; do
                 info "Installing $file"
-                sudo apt update
                 sudo apt install -y $file
             done < $DOTFILES_FOLDER/tools/linux/Aptfile
 
