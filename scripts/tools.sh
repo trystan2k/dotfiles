@@ -72,6 +72,12 @@ cleanup() {
 # Configure tools
 # ---------------------------------------------
 configure() {
+
+    info "Fix ZSH configuration"
+    if ask_question 'Do you want to fiz ZSH permissions?'; then
+        fixZshPerms
+    fi
+
     info "ASDF Configuration"
 
     if ask_question 'Do you want to configure ASDF and install plugins?'; then
