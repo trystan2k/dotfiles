@@ -2,6 +2,7 @@
 
 # Add necessary dependency
 sudo apt-get install software-properties-common
+sudo apt-get update
 
 # Docker repository
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
