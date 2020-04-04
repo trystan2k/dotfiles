@@ -6,7 +6,8 @@
 # Alias function to backup current Brewfile and generate a new one, with currenct tools installed
 function updateBrewfile() {
   if [[ -f $HOME/Brewfile ]]; then
-    mv $HOME/Brewfile $HOME/Brewfile_bkp  
+    local dateStr=$(date +%Y-%m-%d-%H%M)
+    mv $HOME/Brewfile $HOME/Brewfile_bkp_${dateStr}
   fi
 
   brew bundle dump
