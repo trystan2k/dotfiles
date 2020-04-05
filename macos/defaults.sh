@@ -1,4 +1,3 @@
-
 #!/usr/bin/env bash
 
 # Specific setups for MacOS system
