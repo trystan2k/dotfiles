@@ -10,7 +10,7 @@ source "$DOTFILES_FOLDER"/lib/functions
 execute() {
 
     # Install homebrew if it is not installed
-    if which brew 1>&/dev/null ; then
+    if command -v brew 1>&/dev/null ; then
 
         info "Homebrew not installed. Attempting to install Homebrew"
 

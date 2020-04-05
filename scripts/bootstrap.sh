@@ -26,7 +26,7 @@ _install_tools () {
 
 _default_shell() {
   user "Set default shell to ZSH"
-  chsh -s "$(which zsh)"
+  chsh -s "$(command -v zsh)"
 }
 
 _configure() {
