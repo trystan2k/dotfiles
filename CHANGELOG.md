@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [7.0.0] - 2020-04-05
+
+### Added
+
+- Migrate from Zplugin to Zinit
+- Add new aliases `updateBrewfile`, `setenv`, `fixZshPerms`, `removeNodeSystem`
+- Add macos default to not rearrange Spaces based on most recent use
+
+### Changed
+
+- Fix `ls` command when outside ruby environment (fallback to /bin/ls)
+- Change how brew formulas are installed, now using Brewfile
+- Move some linux tools to use APT instead of Brew or other things
+
 ## [6.3.0] - 2020-03-09
 
 ### Added
@@ -331,6 +345,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Add file for bash aliases
 - Documentation.
 
+[7.0.0]: https://github.com/trystan2k/dotfiles/compare/v6.3.0...v7.0.0
 [6.3.0]: https://github.com/trystan2k/dotfiles/compare/v6.2.0...v6.3.0
 [6.2.0]: https://github.com/trystan2k/dotfiles/compare/v6.1.0...v6.2.0
 [6.1.0]: https://github.com/trystan2k/dotfiles/compare/v6.0.0...v6.1.0
