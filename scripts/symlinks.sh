@@ -95,6 +95,9 @@ install_dotfiles () {
 
 		_link_file "$filePath" "$dst"
 	done	
+
+	info "Allow .envrc file execution"
+    asdf exec direnv allow $HOME/.envrc
 }
 
 execute() {

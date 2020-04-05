@@ -6,13 +6,13 @@ DOTFILES_FOLDER="$(cd -P ..; pwd)"
 ## Variables definitions
 
 # Tool name
-TOOL_NAME=caffeine
+TOOL_NAME=postman
 
 # Tool extra information
 EXTRA_INFO=
 
 # Install methods by OS
-OS_METHODS="darwin:cask"
+OS_METHODS="linux:snap"
 
 ## Pre-installation required steps
 preInstall() {

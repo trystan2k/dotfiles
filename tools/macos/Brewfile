@@ -1,0 +1,71 @@
+# Trystan2k's Brewfile
+
+# Taps
+
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/core"
+
+# Binaries
+
+brew "ack"
+brew "coreutils"
+brew "asdf"
+brew "autojump"
+brew "curl"
+brew "fx"
+brew "fzf"
+brew "git"
+brew "gnupg"
+brew "httpie"
+brew "jq"
+brew "mas"
+brew "terminal-notifier"
+brew "tree"
+brew "wget"
+brew "zsh"
+
+# Apps
+
+## Utils
+cask "alfred"
+cask "android-file-transfer"
+cask "appcleaner"
+cask "caffeine"
+cask "daisydisk"
+cask "dozer"
+cask "flycut"
+cask "licecap"
+cask "notion"
+cask "parallels"
+
+## Dev
+cask "docker"
+cask "hyper"
+cask "postman"
+cask "zeplin"
+
+## Browsers
+cask "firefox"
+cask "google-chrome"
+cask "microsoft-edge"
+
+## Chats
+cask "microsoft-teams"
+cask "station"
+cask "pdf-expert"
+cask "rectangle"
+
+## Movies
+cask "stremio"
+
+## Editors
+cask "sublime-text"
+cask "visual-studio-code"
+cask "webstorm"
+
+# Fonts
+
+cask "font-fira-code"
+cask "font-hack-nerd-font"

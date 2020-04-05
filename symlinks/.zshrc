@@ -1,6 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# PERF: Uncoment these line and last one to get a performance report of terminal init
+#zmodload zsh/zprof
+
 if [ -f $HOME/.aliases ]; then
   . $HOME/.aliases
 fi
@@ -9,77 +12,77 @@ if [ -f $HOME/.exports ]; then
   . $HOME/.exports
 fi
 
-### ZPLUGIN Section
+### Zinit Section
 
-# Zplugin Init
-source "$HOME/.zplugin/bin/zplugin.zsh"
-autoload -Uz _zplugin
-(( ${+_comps} )) && _comps[zplugin]=_zplugin
+# Zinit Init
+source "$HOME/.zinit/bin/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
 
 setopt promptsubst
 
-zplugin ice wait lucid
-zplugin snippet OMZ::lib/git.zsh
+zinit ice wait lucid
+zinit snippet OMZ::lib/git.zsh
 
-zplugin ice wait atload"unalias grv" lucid
-zplugin snippet OMZ::plugins/git/git.plugin.zsh
+zinit ice wait atload"unalias grv" lucid
+zinit snippet OMZ::plugins/git/git.plugin.zsh
 
-zplugin ice wait lucid
-zplugin snippet OMZ::plugins/autojump/autojump.plugin.zsh
+zinit ice wait lucid
+zinit snippet OMZ::plugins/autojump/autojump.plugin.zsh
 
-zplugin ice wait lucid
-zplugin snippet OMZ::plugins/docker-compose/docker-compose.plugin.zsh
+zinit ice wait lucid
+zinit snippet OMZ::plugins/docker-compose/docker-compose.plugin.zsh
 
-zplugin ice wait lucid
-zplugin snippet OMZ::plugins/encode64/encode64.plugin.zsh
+zinit ice wait lucid
+zinit snippet OMZ::plugins/encode64/encode64.plugin.zsh
 
-zplugin ice wait lucid
-zplugin snippet OMZ::plugins/extract/extract.plugin.zsh
+zinit ice wait lucid
+zinit snippet OMZ::plugins/extract/extract.plugin.zsh
 
-zplugin ice wait lucid
-zplugin snippet OMZ::plugins/fzf/fzf.plugin.zsh
+zinit ice wait lucid
+zinit snippet OMZ::plugins/fzf/fzf.plugin.zsh
 
-zplugin ice wait svn lucid
-zplugin snippet OMZ::plugins/osx
+zinit ice wait svn lucid
+zinit snippet OMZ::plugins/osx
 
-zplugin ice wait lucid
-zplugin load djui/alias-tips
+zinit ice wait lucid
+zinit load djui/alias-tips
 
-zplugin ice wait lucid
-zplugin load t413/zsh-background-notify       
+zinit ice wait lucid
+zinit load t413/zsh-background-notify       
 
-zplugin ice wait lucid
-zplugin load wfxr/forgit
+zinit ice wait lucid
+zinit load wfxr/forgit
 
-zplugin ice wait lucid
-zplugin load mattmc3/zsh-safe-rm
+zinit ice wait lucid
+zinit load mattmc3/zsh-safe-rm
 
-zplugin ice wait pick"h.sh" lucid
-zplugin load paoloantinori/hhighlighter
+zinit ice wait pick"h.sh" lucid
+zinit load paoloantinori/hhighlighter
 
-zplugin ice wait as"completion" lucid
-zplugin snippet OMZ::plugins/docker/_docker
+zinit ice wait as"completion" lucid
+zinit snippet OMZ::plugins/docker/_docker
 
-zplugin ice wait lucid as"completion"
-zplugin snippet https://github.com/asdf-vm/asdf/blob/master/completions/_asdf
+zinit ice wait lucid as"completion"
+zinit snippet https://github.com/asdf-vm/asdf/blob/master/completions/_asdf
 
-zplugin ice wait blockf atpull'zplugin creinstall -q .' lucid
-zplugin load zsh-users/zsh-completions
+zinit ice wait blockf atpull'zinit creinstall -q .' lucid
+zinit load zsh-users/zsh-completions
 
-zplugin ice wait atinit"zpcompinit; zpcdreplay" lucid
-zplugin load zdharma/fast-syntax-highlighting
+zinit ice wait atinit"zpcompinit; zpcdreplay" lucid
+zinit load zdharma/fast-syntax-highlighting
 
-zplugin ice wait atload"_zsh_autosuggest_start" lucid
-zplugin load zsh-users/zsh-autosuggestions
+zinit ice wait atload"_zsh_autosuggest_start" lucid
+zinit load zsh-users/zsh-autosuggestions
 
-zplugin ice wait lucid
-zplugin load trystan2k/zsh-npm-plugin
+zinit ice wait lucid
+zinit load trystan2k/zsh-npm-plugin
 
-zplugin ice wait lucid
-zplugin load trystan2k/zsh-tab-title
+zinit ice wait lucid
+zinit load trystan2k/zsh-tab-title
 
-zplugin ice lucid
-zplugin load romkatv/powerlevel10k
+zinit ice lucid
+zinit load romkatv/powerlevel10k
 
 ### Powerline configuration
 POWERLEVEL9K_MODE="nerdfont-complete"
@@ -123,3 +126,6 @@ setopt SHARE_HISTORY         # Share history file amongst all Zsh sessions
 # Hook direnv into your shell.
 eval "$(asdf exec direnv hook zsh)"
 #. $(brew --prefix asdf)/asdf.sh
+
+# PERF: Uncoment these line and first one to get a performance report of terminal init
+#zprof

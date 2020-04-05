@@ -179,9 +179,7 @@ execute() {
 
     # Computer name
     info "Sharing - Computer name"
-    user "Would you like to set your computer name (as done via System Preferences >> Sharing)?  (y/n)"
-    read -r response
-    if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
+    if ask_question '"Would you like to set your computer name (as done via System Preferences >> Sharing)?'; then
         user "What would you like it to be?"
         read COMPUTER_NAME
         sudo scutil --set ComputerName $COMPUTER_NAME
@@ -226,6 +224,9 @@ execute() {
     info "Others - Avoid the creation of .DS_Store files on USB and network volumes"
     defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
     defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+    # Don’t automatically rearrange Spaces based on most recent use
+    defaults write com.apple.dock mru-spaces -bool false
 }
 
 execute

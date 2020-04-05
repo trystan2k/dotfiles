@@ -17,7 +17,7 @@ plugins=(
     java:adopt-openjdk-8u232-b09:false
     yarn:1.21.1:true
     ruby:2.7.0:true
-    direnv:2.2.0.0:true
+    direnv:2.21.2:true
 )
 
 # ---------------------------------------------
@@ -41,10 +41,7 @@ preInstall() {
 }
 
 install() {
-    user "This utility will install ASDF Plugins"
-    user "Proceed? (y/n)"
-    read resp
-    if [ "$resp" = 'y' -o "$resp" = 'Y' ] ; then
+    if ask_question 'Do you want to install ASDF Plugins?'; then
         info "Installing ASDF Plugins"
 
         # Unlink openssl on brew in linux to avoid issue with Ruby

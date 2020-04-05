@@ -1,6 +1,6 @@
 # Thiago’s dotfiles
 
-[![v6.3.0](https://img.shields.io/badge/version-6.3.0-brightgreen.svg)](https://github.com/trystan2k/dotfiles/tree/v6.3.0)
+[![v7.0.0](https://img.shields.io/badge/version-7.0.0-brightgreen.svg)](https://github.com/trystan2k/dotfiles/tree/v7.0.0)
 
 ## General Information
 
@@ -77,6 +77,15 @@ Some of initial configuration can be done executing the configuration script loc
 4. Pock (https://pock.dev/) - Customize Touch Bar
 5. Mosh (https://mosh.org/) - Mobile SSH client
 6. Karabiner (https://pqrs.org/osx/karabiner/) - Remap keybinds
+
+## Posibile issues
+
+1. For message `zsh compinit: insecure directories and files, run compaudit for list`, a posible solution is:
+    ```
+    $ cd /usr/local/share/
+    $ sudo chmod -R 755 zsh
+    $ sudo chown -R root:staff zsh
+    ```
 
 ## Thanks to...
 

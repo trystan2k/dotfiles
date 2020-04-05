@@ -14,7 +14,7 @@ execute() {
 
         case "$OSTYPE" in
             darwin*)  
-                /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+                sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
                 result=$?
                 ;;
             linux*)   

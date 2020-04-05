@@ -6,13 +6,13 @@ DOTFILES_FOLDER="$(cd -P ..; pwd)"
 ## Variables definitions
 
 # Tool name
-TOOL_NAME=tree
+TOOL_NAME=google-chrome
 
 # Tool extra information
-EXTRA_INFO=
+EXTRA_INFO="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 
 # Install methods by OS
-OS_METHODS="darwin:brew"
+OS_METHODS="linux:debFile"
 
 ## Pre-installation required steps
 preInstall() {

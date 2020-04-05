@@ -3,12 +3,47 @@
 # Include any exports
 [ -f "$HOME/.exports" ] && source "$HOME/.exports"
 
+# Alias function to backup current Brewfile and generate a new one, with currenct tools installed
+function updateBrewfile() {
+  if [[ -f $HOME/Brewfile ]]; then
+    local dateStr=$(date +%Y-%m-%d-%H%M)
+    mv $HOME/Brewfile $HOME/Brewfile_bkp_${dateStr}
+  fi
+
+  brew bundle dump
+}
+
+# Alias function to create and enter a folder
+function take() {
+  mkdir -p $@ && cd ${@:$#}
+}
+
 # Alias function for initial commit
 function initialCommit() {
-        git add .
-        git commit -m "Initial Commit"
-        git push
+  git add .
+  git commit -m "Initial Commit"
+  git push
 }
+
+# Function to create a .envrc file with the asdf current settings (used by direnv)
+function setenv() {
+  local envFile='.envrc'
+  if [[ ! -f "$envFile" ]]; then
+    echo "use asdf" > $envFile
+  fi
+  asdf exec direnv allow $envFile
+}
+
+# Function to fix ZSH permisions
+function fixZshPerms() {
+  cd /usr/local/share/
+  sudo chmod -R 755 zsh
+  sudo chown -R root:staff zsh
+  cd ~
+}
+
+# Alias to remove node installed in system
+alias removeNodeSystem="brew uninstall --ignore-dependencies node"
 
 # Alias personal
 alias kindlegen=/Applications/KindleGen/kindlegen
@@ -48,8 +83,14 @@ alias la="ls -la"
 # List only directories
 alias lsd="ls -ld"
 
-# Always use color output for `ls`
-alias ls="RUBYOPT='-W:no-deprecated -W:no-experimental' command colorls"
+# Use colorls output for `ls` if it is available, otherwise use default ls command
+function ls() {
+  if [ -x "$(command -v colorls)" ]; then
+    RUBYOPT='-W:no-deprecated -W:no-experimental' command colorls $@
+  else
+    /bin/ls $@
+  fi
+}
 
 # Always enable colored `grep` output
 # Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.

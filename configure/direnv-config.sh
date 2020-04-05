@@ -15,9 +15,6 @@ direnvrc() {
     info "Link direnvrc file to ~/.config/direnv/direnvrc"
     mkdir -p $HOME/.config/direnv
     ln -sv "${DOTFILES_FOLDER}/configure/direnvrc" $HOME/.config/direnv/direnvrc
-
-    info "Allow .envrc file execution"
-    asdf exec direnv allow $HOME/.envrc
 }
 
 execute() {

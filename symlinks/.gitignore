@@ -277,4 +277,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# ASDF .tool-versions
+.tool-versions
+
 # End of https://www.gitignore.io/api/node,java,linux,macos,maven,windows,eclipse,visualstudiocode
