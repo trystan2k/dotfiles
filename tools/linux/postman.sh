@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # dotfiles folder
-DOTFILES_FOLDER="$(cd -P ..; pwd)"
+DOTFILES_FOLDER="$(cd -P .. || exit; pwd)"
 
 ## Variables definitions
 
@@ -28,14 +28,15 @@ postInstall() {
 ## No need to change from this line on
 
 # Load functions
-source $DOTFILES_FOLDER/lib/functions
+#shellcheck source=/dev/null
+source "$DOTFILES_FOLDER"/lib/functions
 
 execute() {
     # Pre install steps
     preInstall $TOOL_NAME
 
     # Install tool
-    install "$OS_METHODS" $TOOL_NAME $EXTRA_INFO
+    install "$OS_METHODS" $TOOL_NAME "$EXTRA_INFO"
 
     # Post install steps
     postInstall $TOOL_NAME

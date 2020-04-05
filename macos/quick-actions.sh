@@ -1,13 +1,13 @@
-
 #!/usr/bin/env bash
 
 # Install Quick Actions on MacOS
 
 # dotfiles folder
-DOTFILES_FOLDER="$(cd -P ..; pwd)"
+DOTFILES_FOLDER="$(cd -P .. || exit; pwd)"
 
 # Load helper functions
-source $DOTFILES_FOLDER/lib/functions
+#shellcheck source=/dev/null
+source "$DOTFILES_FOLDER"/lib/functions
 
 execute() {
 
@@ -15,7 +15,7 @@ execute() {
 
     local DEST_FOLDER="$HOME/Library/Services"
 
-    cp -R $DOTFILES_FOLDER/macos/quick-actions/*  $DEST_FOLDER
+    cp -R "$DOTFILES_FOLDER"/macos/quick-actions/*  "$DEST_FOLDER"
 
     success "Quick Actions copied with success"
 }

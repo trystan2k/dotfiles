@@ -4,10 +4,11 @@
 # Specific setups for MacOS system
 
 # dotfiles folder
-DOTFILES_FOLDER="$(cd -P ..; pwd)"
+DOTFILES_FOLDER="$(cd -P .. || exit; pwd)"
 
 # Load helper functions
-source $DOTFILES_FOLDER/lib/functions
+#shellcheck source=/dev/null
+source "$DOTFILES_FOLDER"/lib/functions
 
 execute() {
 
@@ -181,11 +182,11 @@ execute() {
     info "Sharing - Computer name"
     if ask_question '"Would you like to set your computer name (as done via System Preferences >> Sharing)?'; then
         user "What would you like it to be?"
-        read COMPUTER_NAME
-        sudo scutil --set ComputerName $COMPUTER_NAME
-        sudo scutil --set HostName $COMPUTER_NAME
-        sudo scutil --set LocalHostName $COMPUTER_NAME
-        sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string $COMPUTER_NAME
+        read -r COMPUTER_NAME
+        sudo scutil --set ComputerName "$COMPUTER_NAME"
+        sudo scutil --set HostName "$COMPUTER_NAME"
+        sudo scutil --set LocalHostName "$COMPUTER_NAME"
+        sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$COMPUTER_NAME"
     fi
 
     ## Time machine
@@ -217,8 +218,8 @@ execute() {
 
     # Set default screenshot location to a specific folder
     info "Others - Set default screenshot location to a specific folder"
-    mkdir -p $SCREENSHOT_FOLDER
-    defaults write com.apple.screencapture location $SCREENSHOT_FOLDER
+    mkdir -p "$SCREENSHOT_FOLDER"
+    defaults write com.apple.screencapture location "$SCREENSHOT_FOLDER"
 
     # Avoid the creation of .DS_Store files on USB and network volumes
     info "Others - Avoid the creation of .DS_Store files on USB and network volumes"

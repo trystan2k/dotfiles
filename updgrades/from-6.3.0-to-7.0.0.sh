@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
 
 # Export dotfiles folder
-DOTFILES_FOLDER="$(cd -P ..; pwd)"
+DOTFILES_FOLDER="$(cd -P .. || exit; pwd)"
 
-source $DOTFILES_FOLDER/symlinks/.exports
-source $DOTFILES_FOLDER/lib/functions
+#shellcheck source=/dev/null
+source "$DOTFILES_FOLDER"/symlinks/.exports
 
 # Load functions
-source $DOTFILES_FOLDER/lib/functions
+#shellcheck source=/dev/null
+source "$DOTFILES_FOLDER"/lib/functions
 
 _remove() {
     # ---------------------------------------------
@@ -17,7 +18,7 @@ _remove() {
     info "Remove step"
 
     info "Remove .zplugin directory"
-    rm -rf $HOME/.zplugin
+    rm -rf "$HOME"/.zplugin
 
     info "Remove node installed globally"
     brew uninstall --ignore-dependencies node
@@ -53,7 +54,8 @@ _cleanup () {
 
     info "Cleanup step"
 
-    . $DOTFILES_FOLDER/macos/cleanup.sh
+    #shellcheck source=/dev/null
+    . "$DOTFILES_FOLDER"/macos/cleanup.sh
 }
 
 execute() {
@@ -63,4 +65,4 @@ execute() {
     _cleanup
 }
 
-execute 2>&1 | tee -a $DOTFILE_LOG_FILE
+execute 2>&1 | tee -a "$DOTFILE_LOG_FILE"

@@ -1,14 +1,16 @@
 #!/usr/bin/env bash
 
+# dotfiles folder
+DOTFILES_FOLDER="$(cd -P .. || exit; pwd)"
+
 # Load functions
-source $DOTFILES_FOLDER/lib/functions
+#shellcheck source=/dev/null
+source "$DOTFILES_FOLDER"/lib/functions
 
 execute() {
 
     # Install homebrew if it is not installed
-    which brew 1>&/dev/null
-
-    if [ ! "$?" -eq 0 ] ; then
+    if which brew 1>&/dev/null ; then
 
         info "Homebrew not installed. Attempting to install Homebrew"
 
@@ -30,12 +32,13 @@ execute() {
 
         if [ ! "$result" -eq 0 ] ; then
             fail "Error installing Homebrew. Exiting..." && exit 1
-        elif [ ! -z $linux ] ; then
+        elif [[ -n $linux ]] ; then
             info "Completing Linuxbrew installation..."
 
-            test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
-            test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+            test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
+            test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
             echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.exports.local 
+            #shellcheck source=/dev/null
             source ~/.exports.local
         fi    
 

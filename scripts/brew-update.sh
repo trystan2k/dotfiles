@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 # Load helper functions
-source $DOTFILES_FOLDER/lib/functions
+#shellcheck source=/dev/null
+source "$DOTFILES_FOLDER"/lib/functions
 
 # Update brew
 info "Update Brew"

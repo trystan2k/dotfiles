@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
 
 # Export dotfiles folder
-DOTFILES_FOLDER="$(cd -P ..; pwd)"
+DOTFILES_FOLDER="$(cd -P .. || exit; pwd)"
 
-source $DOTFILES_FOLDER/symlinks/.exports
-source $DOTFILES_FOLDER/lib/functions
+#shellcheck source=/dev/null
+source "$DOTFILES_FOLDER"/symlinks/.exports
 
 # Load functions
-source $DOTFILES_FOLDER/lib/functions
+#shellcheck source=/dev/null
+source "$DOTFILES_FOLDER"/lib/functions
 
 _remove() {
     # ---------------------------------------------
@@ -25,16 +26,19 @@ _add() {
     info "Add step"
 
     info "Install fx tool"
-    . $DOTFILES_FOLDER/tools/fx.sh
+    #shellcheck source=/dev/null
+    . "$DOTFILES_FOLDER"/tools/fx.sh
 
     info "Remove node dependency"
     brew uninstall node --ignore-dependencies
 
     info "Install Microsfot Edge"
-    . $DOTFILES_FOLDER/tools/microsoft-edge.sh
+    #shellcheck source=/dev/null
+    . "$DOTFILES_FOLDER"/tools/microsoft-edge.sh
 
     info "Install Caffeine"
-    . $DOTFILES_FOLDER/tools/caffeine.sh
+    #shellcheck source=/dev/null
+    . "$DOTFILES_FOLDER"/tools/caffeine.sh
 
     info "Install ASDF Direnv plugin and set it to global"
     asdf plugin-add direnv
@@ -50,10 +54,12 @@ _configure() {
     info "Configure step"
 
     info "Execute symlinks"
-    . $DOTFILES_FOLDER/scripts/symlinks.sh
+    #shellcheck source=/dev/null
+    . "$DOTFILES_FOLDER"/scripts/symlinks.sh
 
     info "Configure ASDF Direnv plugin"
-    . $DOTFILES_FOLDER/configure/direnv-config.sh
+    #shellcheck source=/dev/null
+    . "$DOTFILES_FOLDER"/configure/direnv-config.sh
 
     info "Add Microsoft Edge icon in dock"
     defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>file:///Applications/Microsoft%20Edge.app</string><key>_CFURLStringType</key><integer>15</integer></dict></dict></dict>'
@@ -75,4 +81,4 @@ execute() {
     _cleanup
 }
 
-execute 2>&1 | tee -a $DOTFILE_LOG_FILE
+execute 2>&1 | tee -a "$DOTFILE_LOG_FILE"

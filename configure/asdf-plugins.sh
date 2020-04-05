@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 
 # dotfiles folder
-DOTFILES_FOLDER="$(cd -P ..; pwd)"
+DOTFILES_FOLDER="$(cd -P .. || exit; pwd)"
 
 # Load helper functions
-source $DOTFILES_FOLDER/lib/functions
+#shellcheck source=/dev/null
+source "$DOTFILES_FOLDER/lib/functions"
 
 # ---------------------------------------------
 # Plugins list
@@ -31,7 +32,7 @@ preInstall() {
         info "Executing pre-install step for $1"
         
         # Add keys for nodejs
-        bash $HOME/.asdf/plugins/nodejs/bin/import-release-team-keyring
+        bash "$HOME/.asdf/plugins/nodejs/bin/import-release-team-keyring"
 
         success "Pre-install step for $1 completed"
     ;;
@@ -51,7 +52,7 @@ install() {
         
         for aux in "${plugins[@]}"; 
         do 
-            params=(${aux//:/ })
+            params=("${aux//:/ }")
             local PLUGIN_NAME=${params[0]}
             local PLUGIN_VERSION=${params[1]}
             local SET_GLOBAL=${params[2]}
@@ -59,20 +60,20 @@ install() {
             info "Installing $PLUGIN_NAME version $PLUGIN_VERSION"
 
             # Add plugin
-            asdf plugin-add $PLUGIN_NAME
+            asdf plugin-add "$PLUGIN_NAME"
 
             # Pre install step
-            preInstall $PLUGIN_NAME
+            preInstall "$PLUGIN_NAME"
 
             # Install current node version
-            asdf install $PLUGIN_NAME $PLUGIN_VERSION
+            asdf install "$PLUGIN_NAME $PLUGIN_VERSION"
 
             if [ "$SET_GLOBAL" == "true" ]
             then
                 info "Sets version $PLUGIN_VERSION for $PLUGIN_NAME as global"
                 
                 # Set current node version as global version
-                asdf global $PLUGIN_NAME $PLUGIN_VERSION
+                asdf global "$PLUGIN_NAME $PLUGIN_VERSION"
                 
                 success "Version $PLUGIN_VERSION set as global for $PLUGIN_NAME"
             fi
@@ -88,4 +89,4 @@ execute() {
     install
 }
 
-execute  2>&1 | tee -a $DOTFILE_LOG_FILE
+execute  2>&1 | tee -a "$DOTFILE_LOG_FILE"
