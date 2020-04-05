@@ -128,4 +128,4 @@ eval "$(asdf exec direnv hook zsh)"
 #. $(brew --prefix asdf)/asdf.sh
 
 # PERF: Uncoment these line and first one to get a performance report of terminal init
-zprof
+#zprof
