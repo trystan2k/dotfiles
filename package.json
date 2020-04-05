@@ -1,0 +1,25 @@
+{
+    "name": "@trystan2k/dotfiles",
+    "version": "7.1.0",
+    "description": "My personal dotfiles",
+    "keywords": [
+        "dotfiles",
+        "trystan2k",
+        "brew",
+        "macos",
+        "linux"
+    ],
+    "scripts": {
+        "lint": "bash shellcheck.sh",
+        "release": "npm --no-git-tag-version version"
+    },
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@github.com:trystan2k/dotfiles.git"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^7.5.2",
+        "@commitlint/config-conventional": "^7.5.0",
+        "husky": "^2.2.0"
+    }
+}
