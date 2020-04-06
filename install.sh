@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 user () {
     printf "\r [ %s ] [ \033[34m????\033[0m ] ""$1"" \n" "$(date "+%Y-%m-%d %H:%M:%S")"
@@ -39,8 +39,7 @@ GITHUB_URL="https://github.com/trystan2k/dotfiles.git"
 if ask_question 'Do you want to use SSH to clone the repo (No will use HTTPS)?'; then
     if [ ! -f "$HOME/.ssh/id_rsa.pub" ] ; then
         echo "The SSH key does not exist. Let´s create it."
-        echo "Press any key to start"
-        read -r
+        read -n 1 -s -r -p "Press any key to continue"
         ssh-keygen -t rsa -f "$HOME/.ssh/id_rsa" -q -P ""
     fi
 
@@ -54,8 +53,7 @@ if ask_question 'Do you want to use SSH to clone the repo (No will use HTTPS)?';
     echo "Once you have the key added, press any key to continue"
     echo ""
     cat "$HOME/.ssh/id_rsa.pub"
-    echo ""
-    read -r
+    read -n 1 -s -r -p "Press any key to continue"
 
     GITHUB_URL="git@github.com:trystan2k/dotfiles.git"
 fi
