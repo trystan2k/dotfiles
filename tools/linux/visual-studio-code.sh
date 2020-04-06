@@ -7,10 +7,10 @@ export DOTFILES_FOLDER
 ## Variables definitions
 
 # Tool name
-TOOL_NAME=visual-studio-code
+TOOL_NAME=code
 
 # Tool extra information
-EXTRA_INFO="--classic"
+EXTRA_INFO=
 
 # Install methods by OS
 OS_METHODS="linux:snap"
@@ -18,10 +18,6 @@ OS_METHODS="linux:snap"
 ## Pre-installation required steps
 preInstall() {
     info "Pre Install for $1"
-
-    if [[ $OSTYPE == linux* ]] ; then
-        TOOL_NAME=code
-    fi
 }
 
 ## Post-installation required steps
@@ -41,7 +37,7 @@ execute() {
     preInstall $TOOL_NAME
 
     # Install tool
-    install "$OS_METHODS" $TOOL_NAME $EXTRA_INFO
+    install "$OS_METHODS" $TOOL_NAME "$EXTRA_INFO"
 
     # Post install steps
     postInstall $TOOL_NAME
