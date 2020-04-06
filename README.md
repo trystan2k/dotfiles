@@ -1,6 +1,8 @@
 # Thiago’s dotfiles
 
-[![v7.0.0](https://img.shields.io/badge/version-7.0.0-brightgreen.svg)](https://github.com/trystan2k/dotfiles/tree/v7.0.0)
+[![v7.1.0](https://img.shields.io/badge/version-7.1.0-brightgreen.svg)](https://github.com/trystan2k/dotfiles/tree/v7.1.0)
+
+![](https://github.com/trystan2k/dotfiles/workflows/CI-workflow/badge.svg)
 
 ## General Information
 
@@ -34,7 +36,7 @@ a. Install tools: `cd dotfiles\scripts; ./tools.sh`
 
 b. Create/Recreate the symlinks to home folder: `cd dotfiles\scripts; ./symlinks.sh`
 
-c. Install any of the tools from tools folder executing the correspondent script, like for example Google Chrome: `cd dotfiles\tools; ./google-chrome.sh`
+c. Use the Brewfile to install all tools via Brew `cd dotfiles\tools\macos|linux; brew bundle`
 
 ## Apps installed by the script
 
@@ -52,14 +54,14 @@ I use [Homebrew](https://brew.sh/) to install packages I need in my MacOS. There
 
 ### Shell and Shell Manager
 
-I use ZSH as my current shell and to manage its plugin I am using [Zplugin](https://github.com/zdharma/zplugin)
+I use ZSH as my current shell and to manage its plugin I am using [Zinit](https://github.com/zdharma/zinit)
 
 ### Package Manager
 
-I am using [ASDF]() as package manager for tools like `node/npm`, `yarn`, `java`, `ruby`, etc. 
+I am using [ASDF](https://github.com/asdf-vm/asdf) as package manager for tools like `node/npm`, `yarn`, `java`, `ruby`, etc. 
 Some of initial configuration can be done executing the configuration script located at configure folder
 
-`cd dotfiles\configure; ./asdf.sh`
+`cd dotfiles\configure; ./asdf-plugins.sh`
 
 ## Apps that needs to be installed manually
 
@@ -72,20 +74,20 @@ Some of initial configuration can be done executing the configuration script loc
 ## Apps that are interesting but not sure if useful
 
 1. Captin (http://captin.strikingly.com/) - Show Mac caps lock status
-2. Mac App Store Cli [mas-cli] (https://github.com/mas-cli/mas) - App Store cli
-3. Mackup (https://github.com/lra/mackup) - Backup of Mac
-4. Pock (https://pock.dev/) - Customize Touch Bar
-5. Mosh (https://mosh.org/) - Mobile SSH client
-6. Karabiner (https://pqrs.org/osx/karabiner/) - Remap keybinds
+2. Mackup (https://github.com/lra/mackup) - Backup of Mac
+3. Pock (https://pock.dev/) - Customize Touch Bar
+4. Mosh (https://mosh.org/) - Mobile SSH client
+5. Karabiner (https://pqrs.org/osx/karabiner/) - Remap keybinds
 
-## Posibile issues
+## Possible issues
 
-1. For message `zsh compinit: insecure directories and files, run compaudit for list`, a posible solution is:
+1. For message `zsh compinit: insecure directories and files, run compaudit for list`, a possible solution is:
     ```
-    $ cd /usr/local/share/
-    $ sudo chmod -R 755 zsh
-    $ sudo chown -R root:staff zsh
+    cd /usr/local/share/
+    sudo chmod -R 755 zsh
+    sudo chown -R root:staff zsh
     ```
+    Or use defined alias `fixZshPerms`
 
 ## Thanks to...
 
@@ -93,6 +95,7 @@ This repo was based in the | [Mathias Bynens](https://mathiasbynens.be/) | one (
 
 The unassisted install script was based in the | [Mohammed Ajmal Siddiqui](https://github.com/ajmalsiddiqui/dotfiles) | one. I had added some tools I used and remove some I don't.
 
-The idea to split tools into separated files was inspired by | [Zach Holman](https://github.com/holman/dotfiles) |.
+The idea to split tools into separated files was inspired by | [Zach Holman](https://github.com/holman/dotfiles) |, which later was replaced
+by Brewfile usage.
 
 And many other folks that is always available to help in GitHub Issue, StackOverFlow questions, blog articles and sharing Gists with examples.
