@@ -6,7 +6,8 @@ user () {
 
 # Ask the user a Yes/No question
 ask_question() {
-    read -r "$(user "${1} (y/N) ")" user_selection
+    user "${1} (y/N) "
+    read -r user_selection
     case "$user_selection" in
         Y | y | Yes | YES | yes ) return 0; exit;;
         N | n | No | NO | no ) return 1; exit;;
