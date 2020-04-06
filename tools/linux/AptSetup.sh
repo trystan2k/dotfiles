@@ -22,7 +22,7 @@ sudo apt-get update
 
 # Font hard nerd
 mkdir -p "$HOME"/.local/share/fonts/ 
-wget -O "$HOME"/.local/share/fonts/Hack_Regular_Nerd_Font_Complete.ttf https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Hack/Regular/complete/Hack%20Regular%20Nerd%20Font%20Complete.ttf
+wget -O "$HOME"/.local/share/fonts/Hack_Regular_Nerd_Font_Complete.ttf https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/Hack/Regular/complete/Hack%20Regular%20Nerd%20Font%20Complete.ttf
 fc-cache -f -v
 
 # Sublime file
