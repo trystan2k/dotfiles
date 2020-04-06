@@ -1,18 +1,4 @@
-#!/usr/bin/env bash
-
-user () {
-    printf "\r [ %s ] [ \033[34m????\033[0m ] ""$1"" \n" "$(date "+%Y-%m-%d %H:%M:%S")"
-}
-
-# Ask the user a Yes/No question
-ask_question() {
-    read -r -p -n 1 "$(user "${1} (y/N) ")" user_selection
-    case "$user_selection" in
-        Y | y | Yes | YES | yes ) return 0; exit;;
-        N | n | No | NO | no ) return 1; exit;;
-        * ) return 2;;
-    esac
-}
+#!/bin/sh
 
 case $(uname -s) in
     Linux*)
@@ -35,27 +21,37 @@ fi
 
 GITHUB_URL="https://github.com/trystan2k/dotfiles.git"
 
-if ask_question 'Do you want to use SSH to clone the repo (No will use HTTPS)?'; then
-    if [ ! -f "$HOME/.ssh/id_rsa.pub" ] ; then
-        echo "The SSH key does not exist. Let´s create it."
-        read -n 1 -s -r -p "Press any key to continue"
-        ssh-keygen -t rsa -f "$HOME/.ssh/id_rsa" -q -P ""
-    fi
+echo "Do you want to use SSH to clone the repo (y/n) ? (No will use HTTPS) ?"
+read -r action
+    case "$action" in
+        y|Y )
+            if [ ! -f "$HOME/.ssh/id_rsa.pub" ] ; then
+                echo "The SSH key does not exist. Let´s create it."
+                echo "Press enter to start"
+                # shellcheck disable=SC2034
+                read -r response
+                ssh-keygen -t rsa -f "$HOME/.ssh/id_rsa" -q -P ""
+            fi
 
-    if [ ! -f "$HOME/.ssh/id_rsa.pub" ] ; then
-        echo "There was an error creating or reading your SSH key at $HOME/.ssh/id_rsa.pub."
-        echo "Please check if everything is ok and try again"
-        exit 2
-    fi
+            if [ ! -f "$HOME/.ssh/id_rsa.pub" ] ; then
+                echo "There was an error creating or reading your SSH key at $HOME/.ssh/id_rsa.pub."
+                echo "Please check if everything is ok and try again"
+                exit 2
+            fi
 
-    echo "Now, copy the SSH and add to your GitHub account, to be able to clone the repository via SSH"
-    echo "Once you have the key added, press any key to continue"
-    echo ""
-    cat "$HOME/.ssh/id_rsa.pub"
-    read -n 1 -s -r -p "Press any key to continue"
+            echo "Now, copy the SSH and add to your GitHub account, to be able to clone the repository via SSH"
+            echo "Once you have the key added, press enter to continue"
+            echo ""
+            cat "$HOME/.ssh/id_rsa.pub"
+            echo "Press enter to start"
+            # shellcheck disable=SC2034
+            read -r response
 
-    GITHUB_URL="git@github.com:trystan2k/dotfiles.git"
-fi
+            GITHUB_URL="git@github.com:trystan2k/dotfiles.git"
+        ;;
+        * )
+        ;;
+    esac            
 
 # Clone dotfiles repo and cd into it
 git clone $GITHUB_URL
