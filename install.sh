@@ -1,5 +1,9 @@
 #!/bin/sh
 
+user () {
+    printf "\r [ %s ] [ \033[34m????\033[0m ] ""$1"" \n" "$(date "+%Y-%m-%d %H:%M:%S")"
+}
+
 # Ask the user a Yes/No question
 ask_question() {
     read -r "$(user "${1} (y/N) ")" choice
