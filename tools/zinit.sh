@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
 # dotfiles folder
-DOTFILES_FOLDER="$(cd -P .. || exit; pwd)"
-export DOTFILES_FOLDER
+DOTFILES_FOLDER="$(pwd | grep -o '.*dotfiles')"
 
 ## Variables definitions
 

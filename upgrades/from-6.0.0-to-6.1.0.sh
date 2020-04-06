@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 
 # Export dotfiles folder
-# Export dotfiles folder
-DOTFILES_FOLDER="$(cd -P .. || exit; pwd)"
-export DOTFILES_FOLDER
+DOTFILES_FOLDER="$(pwd | grep -o '.*dotfiles')"
 
 #shellcheck source=/dev/null
 source "$DOTFILES_FOLDER"/symlinks/.exports

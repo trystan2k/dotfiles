@@ -3,8 +3,7 @@
 # Install Quick Actions on MacOS
 
 # dotfiles folder
-DOTFILES_FOLDER="$(cd -P .. || exit; pwd)"
-export DOTFILES_FOLDER
+DOTFILES_FOLDER="$(pwd | grep -o '.*dotfiles')"
 
 # Load helper functions
 #shellcheck source=/dev/null

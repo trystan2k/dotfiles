@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
 # dotfiles folder
-DOTFILES_FOLDER="$(cd -P ../.. || exit; pwd)"
-export DOTFILES_FOLDER
+DOTFILES_FOLDER="$(pwd | grep -o '.*dotfiles')"
 
 ## Variables definitions
 
@@ -10,10 +9,10 @@ export DOTFILES_FOLDER
 TOOL_NAME=code
 
 # Tool extra information
-EXTRA_INFO=
+EXTRA_INFO="https://go.microsoft.com/fwlink/?LinkID=760868"
 
 # Install methods by OS
-OS_METHODS="linux:snap"
+OS_METHODS="linux:debFile"
 
 ## Pre-installation required steps
 preInstall() {
@@ -28,10 +27,6 @@ postInstall() {
 ## Installation exeution. 
 ## No need to change from this line on
 
-# Load functions
-#shellcheck source=/dev/null
-source "$DOTFILES_FOLDER"/lib/functions
-
 execute() {
     # Pre install steps
     preInstall "$TOOL_NAME"
@@ -42,5 +37,17 @@ execute() {
     # Post install steps
     postInstall "$TOOL_NAME"
 }
+
+_is_func_imported() {
+
+    typeset TYPE_RESULT="$(type -t user)"
+
+    if [ "$TYPE_RESULT" != 'function' ]; then
+        #shellcheck source=/dev/null
+        source "$DOTFILES_FOLDER"/lib/functions
+    fi
+}
+
+_is_func_imported
 
 execute
