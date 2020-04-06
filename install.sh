@@ -21,7 +21,7 @@ fi
 
 GITHUB_URL="https://github.com/trystan2k/dotfiles.git"
 
-echo "Do you want to use SSH to clone the repo (y/n) ? (No will use HTTPS) ?"
+echo "Do you want to use SSH to clone the repo (y/n) ? (No will use HTTPS)"
 read -r action
     case "$action" in
         y|Y )
