@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 # dotfiles folder
-DOTFILES_FOLDER="$(cd -P .. || exit; pwd)"
+DOTFILES_FOLDER="$(cd -P ../.. || exit; pwd)"
+export DOTFILES_FOLDER
 
 ## Variables definitions
 

@@ -1,16 +1,12 @@
 #!/usr/bin/env bash
 
-# Export dotfiles folder
-DOTFILES_FOLDER="$(cd -P .. || exit; pwd)"
-export DOTFILES_FOLDER
-
-# Handle exports.local file
-if [[ ! -f $HOME/.exports.local ]] ; then
-    touch "$HOME"/.exports.local
+if [ -z "$DOTFILES_FOLDER" ]; then
+    fail "Dotfiles folder is not defined. Process cannot continue"
+    exit 99
 fi
 
 #shellcheck source=/dev/null
-source "$HOME"/.exports.local
+source "$DOTFILES_FOLDER"/symlinks/.exports
 
 # Ask the user a Yes/No question
 function ask_question() {
@@ -61,7 +57,7 @@ fail () {
 
 install() {
     installTypeByOS=$1
-    otherArguments="${*:2}"
+    otherArguments=("${@:2}")
 
     for i in $installTypeByOS
     do
@@ -71,20 +67,20 @@ install() {
         if [[ $OSTYPE == "$os_type"* ]] ; then
             case "$install_type" in
                 debFile*)
-                    _debFileInstall "$otherArguments"
+                    _debFileInstall "${otherArguments[@]}"
                     ;;
                 sh*)
-                    _shInstall "$otherArguments"
+                    _shInstall "${otherArguments[@]}"
                     ;;
                 appImage*)
-                    _appImageInstall "$otherArguments"
+                    _appImageInstall "${otherArguments[@]}"
                     ;;
                 snap*)
-                    _snapInstall "$otherArguments"
+                    _snapInstall "${otherArguments[@]}"
                     ;;                    
                 *)        
                     warn "Unknow Installatin type: '$install_type'"
-                    _errorInstall "$otherArguments" ;;
+                    _errorInstall "${otherArguments[@]}" ;;
             esac   
 
             _checkInstallStatus $?
@@ -103,9 +99,9 @@ _errorInstall() {
 
 _checkInstallStatus() {
     if [ "$1" -gt 0 ] ; then
-        _errorInstall "$otherArguments"
+        _errorInstall "${otherArguments[*]}"
     else
-        success "'$otherArguments' installation finished with success"
+        success "'${otherArguments[*]}' installation finished with success"
     fi
 }
 

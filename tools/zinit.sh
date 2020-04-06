@@ -2,6 +2,7 @@
 
 # dotfiles folder
 DOTFILES_FOLDER="$(cd -P .. || exit; pwd)"
+export DOTFILES_FOLDER
 
 ## Variables definitions
 

@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# dotfiles folder
+DOTFILES_FOLDER="$(cd -P .. || exit; pwd)"
+export DOTFILES_FOLDER
+
 # Load functions
 #shellcheck source=/dev/null
 source "$DOTFILES_FOLDER"/lib/functions
