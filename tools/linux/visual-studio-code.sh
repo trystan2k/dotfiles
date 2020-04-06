@@ -34,13 +34,13 @@ source "$DOTFILES_FOLDER"/lib/functions
 
 execute() {
     # Pre install steps
-    preInstall $TOOL_NAME
+    preInstall "$TOOL_NAME"
 
     # Install tool
     install "$OS_METHODS" $TOOL_NAME "$EXTRA_INFO"
 
     # Post install steps
-    postInstall $TOOL_NAME
+    postInstall "$TOOL_NAME"
 }
 
 execute
