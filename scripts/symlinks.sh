@@ -13,7 +13,7 @@ _link_file () {
 
 	local src=$1 dst=$2
 
-	local overwrite=backup=skip=action
+	local overwrite='' backup='' skip='' action=''
 
 	if [ -f "$dst" ] || [ -d "$dst" ] || [ -L "$dst" ]
 	then
@@ -91,10 +91,14 @@ install_dotfiles () {
 
 	for src in "$DOTFILES_FOLDER"/symlinks/.*;
 	do
-		dst="$HOME/$(basename "${src}")"
-		filePath="${DOTFILES_FOLDER}/symlinks/${src}"
+		local filename=''
+		filename=$(basename "${src}")
+		if [ ${#filename} -gt 2 ]; then
+			dst="$HOME/$filename"
+			filePath="${DOTFILES_FOLDER}/symlinks/${src}"
 
-		_link_file "$filePath" "$dst"
+			_link_file "$filePath" "$dst"
+		fi
 	done	
 
 	info "Allow .envrc file execution"
