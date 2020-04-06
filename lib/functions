@@ -94,7 +94,7 @@ install() {
 }
 
 _getCurrentDate() {
-    return "$(date "+%Y-%m-%d %H:%M:%S")"
+    date "+%Y-%m-%d %H:%M:%S"
 }
 
 _errorInstall() {
