@@ -1,5 +1,15 @@
 #!/bin/sh
 
+# Ask the user a Yes/No question
+ask_question() {
+    read -r "$(user "${1} (y/N) ")" choice
+    case "$choice" in
+        Y | y | Yes | YES | yes ) return 0; exit;;
+        N | n | No | NO | no ) return 1; exit;;
+        * ) return 2;;
+    esac
+}
+
 case $(uname -s) in
     Linux*)
         sudo apt install git -y
