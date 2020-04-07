@@ -8,12 +8,6 @@ tap "homebrew/core"
 # Binaries
 
 brew "asdf"
-brew "curl"
 brew "fx"
 brew "fzf"
-brew "git"
-brew "gnupg"
-brew "jq"
-brew "tree"
-brew "wget"
 

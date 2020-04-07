@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # dotfiles folder
-DOTFILES_FOLDER="$(cd -P ..; pwd)"
+DOTFILES_FOLDER="$(pwd | grep -o '.*dotfiles')"
 
 ## Variables definitions
 
@@ -27,18 +27,27 @@ postInstall() {
 ## Installation exeution. 
 ## No need to change from this line on
 
-# Load functions
-source $DOTFILES_FOLDER/lib/functions
-
 execute() {
     # Pre install steps
-    preInstall $TOOL_NAME
+    preInstall "$TOOL_NAME"
 
     # Install tool
-    install "$OS_METHODS" $TOOL_NAME $EXTRA_INFO
+    install "$OS_METHODS" $TOOL_NAME "$EXTRA_INFO"
 
     # Post install steps
-    postInstall $TOOL_NAME
+    postInstall "$TOOL_NAME"
 }
+
+_is_func_imported() {
+
+    typeset TYPE_RESULT="$(type -t user)"
+
+    if [ "$TYPE_RESULT" != 'function' ]; then
+        #shellcheck source=/dev/null
+        source "$DOTFILES_FOLDER"/lib/functions
+    fi
+}
+
+_is_func_imported
 
 execute

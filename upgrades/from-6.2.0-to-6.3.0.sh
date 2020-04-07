@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
 
 # Export dotfiles folder
-DOTFILES_FOLDER="$(cd -P ..; pwd)"
+DOTFILES_FOLDER="$(pwd | grep -o '.*dotfiles')"
 
-source $DOTFILES_FOLDER/symlinks/.exports
-source $DOTFILES_FOLDER/lib/functions
+#shellcheck source=/dev/null
+source "$DOTFILES_FOLDER"/symlinks/.exports
 
 # Load functions
-source $DOTFILES_FOLDER/lib/functions
+#shellcheck source=/dev/null
+source "$DOTFILES_FOLDER"/lib/functions
 
 _remove() {
     # ---------------------------------------------
@@ -15,12 +16,6 @@ _remove() {
     # ---------------------------------------------
 
     info "Remove step"
-
-    info "Remove .zplugin directory"
-    rm -rf $HOME/.zplugin
-
-    info "Remove node installed globally"
-    brew uninstall --ignore-dependencies node
 }
 
 _add() {
@@ -29,9 +24,6 @@ _add() {
     # ---------------------------------------------
 
     info "Add step"   
-
-    info "Install new Zinit"
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
 }
 
 _configure() {
@@ -41,9 +33,8 @@ _configure() {
 
     info "Configure step"
 
-    info "Setup spaces order"
-    # Don’t automatically rearrange Spaces based on most recent use
-    defaults write com.apple.dock mru-spaces -bool false
+    info "Backup current ZSH History file"
+    mv "${HOME}/.zsh_history" "${HOME}/.zsh_history_bad"
 }
 
 _cleanup () {
@@ -53,7 +44,8 @@ _cleanup () {
 
     info "Cleanup step"
 
-    . $DOTFILES_FOLDER/macos/cleanup.sh
+    #shellcheck source=/dev/null
+    . "$DOTFILES_FOLDER"/macos/cleanup.sh
 }
 
 execute() {
@@ -63,4 +55,4 @@ execute() {
     _cleanup
 }
 
-execute 2>&1 | tee -a $DOTFILE_LOG_FILE
+execute 2>&1 | tee -a "$DOTFILE_LOG_FILE"

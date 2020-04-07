@@ -1,13 +1,13 @@
-
 #!/usr/bin/env bash
 
 # Specific setups for MacOS system
 
 # dotfiles folder
-DOTFILES_FOLDER="$(cd -P ..; pwd)"
+DOTFILES_FOLDER="$(pwd | grep -o '.*dotfiles')"
 
 # Load helper functions
-source $DOTFILES_FOLDER/lib/functions
+#shellcheck source=/dev/null
+source "$DOTFILES_FOLDER"/lib/functions
 
 execute() {
 
@@ -29,4 +29,4 @@ execute() {
 
 }
 
-execute  2>&1 | tee -a $DOTFILE_LOG_FILE
+execute  2>&1 | tee -a "$DOTFILE_LOG_FILE"

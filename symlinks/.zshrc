@@ -4,19 +4,23 @@
 # PERF: Uncoment these line and last one to get a performance report of terminal init
 #zmodload zsh/zprof
 
-if [ -f $HOME/.aliases ]; then
-  . $HOME/.aliases
+if [ -f "$HOME"/.aliases ]; then
+  #shellcheck source=/dev/null
+  . "$HOME"/.aliases
 fi
 
-if [ -f $HOME/.exports ]; then
-  . $HOME/.exports
+if [ -f "$HOME"/.exports ]; then
+  #shellcheck source=/dev/null
+  . "$HOME"/.exports
 fi
 
 ### Zinit Section
 
 # Zinit Init
+#shellcheck source=/dev/null
 source "$HOME/.zinit/bin/zinit.zsh"
 autoload -Uz _zinit
+# shellcheck disable=SC2034,SC2154
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
 setopt promptsubst
@@ -85,24 +89,24 @@ zinit ice lucid
 zinit load romkatv/powerlevel10k
 
 ### Powerline configuration
-POWERLEVEL9K_MODE="nerdfont-complete"
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+export POWERLEVEL9K_MODE="nerdfont-complete"
+export POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs )
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs command_execution_time node_version)
-POWERLEVEL9K_NODE_VERSION_BACKGROUND='022'
+export POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs )
+export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs command_execution_time node_version)
+export POWERLEVEL9K_NODE_VERSION_BACKGROUND='022'
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+export ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Setup bgnotify plugin
-bgnotify_threshold=4  ## set your own notification threshold
+export bgnotify_threshold=4  ## set your own notification threshold
 
 function bgnotify_formatted {
   ## $1=exit_status, $2=command, $3=elapsed_time
-  [ $1 -eq 0 ] && title="Success!" || title="Failed!"
+  [ "$1" -eq 0 ] && title="Success!" || title="Failed!"
   bgnotify "$title -- after $3 s" "$2";
 }
 

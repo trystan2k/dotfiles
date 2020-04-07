@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 
 # Export dotfiles folder
-DOTFILES_FOLDER="$(cd -P ..; pwd)"
+DOTFILES_FOLDER="$(pwd | grep -o '.*dotfiles')"
 
-source $DOTFILES_FOLDER/symlinks/.exports
-source $DOTFILES_FOLDER/lib/functions
+#shellcheck source=/dev/null
+source "$DOTFILES_FOLDER"/symlinks/.exports
+#shellcheck source=/dev/null
+source "$DOTFILES_FOLDER"/lib/functions
 
 # Initialize a few things
 _init () {
@@ -13,26 +15,30 @@ _init () {
 }
 
 _link () {
-	. $DOTFILES_FOLDER/scripts/symlinks.sh
+  #shellcheck source=/dev/null
+	. "$DOTFILES_FOLDER"/scripts/symlinks.sh
 }
 
 _install_tools () {
-  . $DOTFILES_FOLDER/scripts/tools.sh
+  #shellcheck source=/dev/null
+  . "$DOTFILES_FOLDER"/scripts/tools.sh
 }
 
 _default_shell() {
   user "Set default shell to ZSH"
-  chsh -s $(which zsh)
+  chsh -s "$(command -v zsh)"
 }
 
 _configure() {
 
   if [[ $OSTYPE == darwin* ]] ; then
     # MacOS defaults
-    . $DOTFILES_FOLDER/macos/defaults.sh
+    #shellcheck source=/dev/null
+    . "$DOTFILES_FOLDER"/macos/defaults.sh
 
     # MacOS Quick Actions
-    . $DOTFILES_FOLDER/macos/quick-actions.sh
+    #shellcheck source=/dev/null
+    . "$DOTFILES_FOLDER"/macos/quick-actions.sh
 
   fi
 
@@ -57,4 +63,4 @@ execute() {
   _restart
 } 
 
-execute 2>&1 | tee -a $DOTFILE_LOG_FILE
+execute 2>&1 | tee -a "$DOTFILE_LOG_FILE"

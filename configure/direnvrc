@@ -1,5 +1,8 @@
+#!/usr/bin/env bash
+
 # File: ~/.config/direnv/direnvrc
-source $(asdf which direnv_use_asdf)
+#shellcheck source=/dev/null
+source "$(asdf which direnv_use_asdf)"
 
 # Uncomment the following line to make direnv silent by default.
 export DIRENV_LOG_FORMAT=""

@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 
 # dotfiles folder
-DOTFILES_FOLDER="$(cd -P ..; pwd)"
+DOTFILES_FOLDER="$(pwd | grep -o '.*dotfiles')"
 
 # Load helper functions
-source $DOTFILES_FOLDER/lib/functions
+#shellcheck source=/dev/null
+source "$DOTFILES_FOLDER/lib/functions"
 
 _configureColorLs() {
 
@@ -20,4 +21,4 @@ execute() {
     _configureColorLs
 }
 
-execute  2>&1 | tee -a $DOTFILE_LOG_FILE
+execute  2>&1 | tee -a "$DOTFILE_LOG_FILE"

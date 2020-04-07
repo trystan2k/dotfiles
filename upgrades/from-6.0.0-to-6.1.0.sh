@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
 
 # Export dotfiles folder
-DOTFILES_FOLDER="$(cd -P ..; pwd)"
+DOTFILES_FOLDER="$(pwd | grep -o '.*dotfiles')"
 
-source $DOTFILES_FOLDER/symlinks/.exports
-source $DOTFILES_FOLDER/lib/functions
+#shellcheck source=/dev/null
+source "$DOTFILES_FOLDER"/symlinks/.exports
 
 # Load functions
-source $DOTFILES_FOLDER/lib/functions
+#shellcheck source=/dev/null
+source "$DOTFILES_FOLDER"/lib/functions
 
 _remove() {
     # ---------------------------------------------
@@ -31,22 +32,28 @@ _add() {
     info "Add step"
 
     info "Install rectangle"
-    . $DOTFILES_FOLDER/tools/rectangle.sh
+    #shellcheck source=/dev/null
+    . "$DOTFILES_FOLDER"/tools/rectangle.sh
 
     info "Install licecap"
-    . $DOTFILES_FOLDER/tools/licecap.sh
+    #shellcheck source=/dev/null
+    . "$DOTFILES_FOLDER"/tools/licecap.sh
 
     info "Install skitch"
-    . $DOTFILES_FOLDER/tools/skitch.sh
+    #shellcheck source=/dev/null
+    . "$DOTFILES_FOLDER"/tools/skitch.sh
 
     info "Install daisydisk"
-    . $DOTFILES_FOLDER/tools/daisydisk.sh
+    #shellcheck source=/dev/null
+    . "$DOTFILES_FOLDER"/tools/daisydisk.sh
 
     info "Install pdf-expert"
-    . $DOTFILES_FOLDER/tools/pdf-expert.sh    
+    #shellcheck source=/dev/null
+    . "$DOTFILES_FOLDER"/tools/pdf-expert.sh    
 
     info "Install flycut"
-    . $DOTFILES_FOLDER/tools/flycut.sh        
+    #shellcheck source=/dev/null
+    . "$DOTFILES_FOLDER"/tools/flycut.sh        
 }
 
 _configure() {
@@ -64,7 +71,8 @@ _cleanup () {
 
     info "Cleanup step"
 
-    . $DOTFILES_FOLDER/macos/cleanup.sh
+    #shellcheck source=/dev/null
+    . "$DOTFILES_FOLDER"/macos/cleanup.sh
 }
 
 execute() {
@@ -74,4 +82,4 @@ execute() {
     _cleanup
 }
 
-execute 2>&1 | tee -a $DOTFILE_LOG_FILE
+execute 2>&1 | tee -a "$DOTFILE_LOG_FILE"

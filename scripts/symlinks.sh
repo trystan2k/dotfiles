@@ -1,26 +1,26 @@
 #!/usr/bin/env bash
 
 # dotfiles folder
-DOTFILES_FOLDER="$(cd -P ..; pwd)"
+DOTFILES_FOLDER="$(pwd | grep -o '.*dotfiles')"
 
 # Load helper functions
-source $DOTFILES_FOLDER/lib/functions
+#shellcheck source=/dev/null
+source "$DOTFILES_FOLDER"/lib/functions
 
 _link_file () {
 	dateStr=$(date +%Y-%m-%d-%H%M)
 
 	local src=$1 dst=$2
 
-	local overwrite= backup= skip=
-	local action=
+	local overwrite='' backup='' skip='' action=''
 
-	if [ -f "$dst" -o -d "$dst" -o -L "$dst" ]
+	if [ -f "$dst" ] || [ -d "$dst" ] || [ -L "$dst" ]
 	then
 
 		if [ "$overwrite_all" == "false" ] && [ "$backup_all" == "false" ] && [ "$skip_all" == "false" ]
 		then
 
-			local currentSrc="$(readlink $dst)"
+			currentSrc="$(readlink "$dst")"
 
 			if [ "$currentSrc" == "$src" ]
 			then
@@ -31,7 +31,7 @@ _link_file () {
 
 				user "File already exists: $dst ($(basename "$src")), what do you want to do?\n\
 				[s]kip, [S]kip all, [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all?"
-				read -n 1 action
+				read -r -n 1 action
 
 				case "$action" in
 					o )
@@ -78,8 +78,8 @@ _link_file () {
 
 	if [ "$skip" != "true" ]  # "false" or empty
 	then
-		success "Linking $1 to $2"
-		ln -sv "$1" "$2"
+		success "Linking $src to $dst"
+		ln -sv "$src" "$dst"
 	fi
 }
 
@@ -88,16 +88,20 @@ install_dotfiles () {
 
 	local overwrite_all=false backup_all=false skip_all=false
 
-	for src in $(ls -Ap ${DOTFILES_FOLDER}/symlinks)
+	for src in "$DOTFILES_FOLDER"/symlinks/.*;
 	do
-		dst="$HOME/$(basename "${src}")"
-		filePath="${DOTFILES_FOLDER}/symlinks/${src}"
+		local filename=''
+		filename=$(basename "${src}")
+		if [ ${#filename} -gt 2 ]; then
+			dst="$HOME/$filename"
+			filePath="${DOTFILES_FOLDER}/symlinks/${filename}"
 
-		_link_file "$filePath" "$dst"
+			_link_file "$filePath" "$dst"
+		fi
 	done	
 
 	info "Allow .envrc file execution"
-    asdf exec direnv allow $HOME/.envrc
+    asdf exec direnv allow "$HOME"/.envrc
 }
 
 execute() {

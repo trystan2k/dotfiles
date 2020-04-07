@@ -9,9 +9,10 @@ export HISTSIZE=10000000
 export SAVEHIST=10000000
 
 # Disable zsh-tab-title prefix
-ZSH_TAB_TITLE_DEFAULT_DISABLE_PREFIX=true
+export ZSH_TAB_TITLE_DEFAULT_DISABLE_PREFIX=true
 
 # This should be the last line of the file
 # For local changes
 # Don't make edits below this
+#shellcheck source=/dev/null
 [ -f "$HOME/.exports.local" ] && source "$HOME/.exports.local"

@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 
+# dotfiles folder
+DOTFILES_FOLDER="$(pwd | grep -o '.*dotfiles')"
+
 # Load functions
-source $DOTFILES_FOLDER/lib/functions
+#shellcheck source=/dev/null
+source "$DOTFILES_FOLDER"/lib/functions
 
 _remove() {
     # ---------------------------------------------
@@ -43,4 +47,4 @@ execute() {
     _cleanup
 }
 
-execute 2>&1 | tee -a $DOTFILE_LOG_FILE
+execute 2>&1 | tee -a "$DOTFILE_LOG_FILE"

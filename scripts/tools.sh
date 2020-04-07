@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 
 # dotfiles folder
-DOTFILES_FOLDER="$(cd -P ..; pwd)"
+DOTFILES_FOLDER="$(pwd | grep -o '.*dotfiles')"
 
 # Load helper functions
-source $DOTFILES_FOLDER/lib/functions
-source $DOTFILES_FOLDER/symlinks/.exports
+#shellcheck source=/dev/null
+source "$DOTFILES_FOLDER"/lib/functions
+#shellcheck source=/dev/null
+source "$DOTFILES_FOLDER"/symlinks/.exports
 
 # ---------------------------------------------
 # Install process
@@ -15,7 +17,8 @@ install() {
     if ask_question 'Do you want to install all tools using Homebrew/Git/others?'; then
 
         info "Install HomeBrew"
-        . $DOTFILES_FOLDER/tools/homebrew.sh
+        #shellcheck source=/dev/null
+        . "$DOTFILES_FOLDER"/tools/homebrew.sh
 
         if [[ $OSTYPE == darwin* ]] ; then
             info "Installing tools for MacOS"
@@ -25,31 +28,34 @@ install() {
 
             # Install all our dependencies with bundle (See Brewfile)
             brew tap homebrew/bundle
-            brew bundle -v --file=$DOTFILES_FOLDER/tools/macos/Brewfile
+            brew bundle -v --file="$DOTFILES_FOLDER"/tools/macos/Brewfile
 
         elif [[ $OSTYPE == linux* ]] ; then
             info "Installing tools for Linux"
 
             brew tap homebrew/bundle
-            brew bundle -v --file=$DOTFILES_FOLDER/tools/linux/Brewfile
+            brew bundle -v --file="$DOTFILES_FOLDER"/tools/linux/Brewfile
 
             info "Setup APT before install"
-            . $DOTFILES_FOLDER/tools/linux/AptSetup.sh
+            #shellcheck source=/dev/null
+            . "$DOTFILES_FOLDER"/tools/linux/AptSetup.sh
 
-            while read file; do
+            while read -r file; do
                 info "Installing $file"
-                sudo apt install -y $file
-            done < $DOTFILES_FOLDER/tools/linux/Aptfile
+                sudo apt install -y "$file"
+            done < "$DOTFILES_FOLDER"/tools/linux/Aptfile
 
             info "Install other tools"
 
-            for file in `/bin/ls $DOTFILES_FOLDER/tools/linux/*.sh |grep -v AptSetup.sh`; do 
-                . $file
+            for file in $(/bin/ls "$DOTFILES_FOLDER"/tools/linux/*.sh |grep -v AptSetup.sh); do 
+                #shellcheck source=/dev/null
+                . "$file"
             done
         fi;
 
         info "Install Zinit"
-        . $DOTFILES_FOLDER/tools/zinit.sh
+        #shellcheck source=/dev/null
+        . "$DOTFILES_FOLDER"/tools/zinit.sh
     else
         warn "Tools installation cancelled by user"
     fi
@@ -64,10 +70,14 @@ cleanup() {
     info "Brew Cleanup"
     brew cleanup
 
-    if [[ $OSTYPE == linux* ]] ; then
+    if [[ "$OSTYPE" == linux* ]] ; then
         info "Apt remove"
         sudo apt autoremove -y
     fi
+
+    # Remove node installed in system
+    info "Removing Node installed in system"
+    brew uninstall --ignore-dependencies node
 }
 
 # ---------------------------------------------
@@ -78,13 +88,16 @@ configure() {
     info "ASDF Configuration"
 
     if ask_question 'Do you want to configure ASDF and install plugins?'; then
-        . $DOTFILES_FOLDER/configure/asdf-plugins.sh
-        . $DOTFILES_FOLDER/configure/direnv-config.sh
+        #shellcheck source=/dev/null
+        . "$DOTFILES_FOLDER"/configure/asdf-plugins.sh
+        #shellcheck source=/dev/null
+        . "$DOTFILES_FOLDER"/configure/direnv-config.sh
     fi
 
     info "Install Ruby Gems"
     if ask_question 'Do you want to install Ruby Gems?'; then
-        . $DOTFILES_FOLDER/configure/ruby-gems.sh
+        #shellcheck source=/dev/null
+        . "$DOTFILES_FOLDER"/configure/ruby-gems.sh
     fi
 }
 
