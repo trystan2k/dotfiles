@@ -51,7 +51,7 @@ install() {
     
     for aux in "${plugins[@]}"; 
     do 
-        params=("${aux//:/ }")
+        IFS=':' read -r -a params <<< "$aux"
         local PLUGIN_NAME=${params[0]}
         local PLUGIN_VERSION=${params[1]}
         local SET_GLOBAL=${params[2]}
@@ -65,14 +65,14 @@ install() {
         preInstall "$PLUGIN_NAME"
 
         # Install current node version
-        asdf install "$PLUGIN_NAME $PLUGIN_VERSION"
+        asdf install "$PLUGIN_NAME" "$PLUGIN_VERSION"
 
         if [ "$SET_GLOBAL" == "true" ]
         then
             info "Sets version $PLUGIN_VERSION for $PLUGIN_NAME as global"
             
             # Set current node version as global version
-            asdf global "$PLUGIN_NAME $PLUGIN_VERSION"
+            asdf global "$PLUGIN_NAME" "$PLUGIN_VERSION"
             
             success "Version $PLUGIN_VERSION set as global for $PLUGIN_NAME"
         fi

@@ -78,8 +78,8 @@ _link_file () {
 
 	if [ "$skip" != "true" ]  # "false" or empty
 	then
-		success "Linking $1 to $2"
-		ln -sv "$1" "$2"
+		success "Linking $src to $dst"
+		ln -sv "$src" "$dst"
 	fi
 }
 
@@ -94,7 +94,7 @@ install_dotfiles () {
 		filename=$(basename "${src}")
 		if [ ${#filename} -gt 2 ]; then
 			dst="$HOME/$filename"
-			filePath="${DOTFILES_FOLDER}/symlinks/${src}"
+			filePath="${DOTFILES_FOLDER}/symlinks/${filename}"
 
 			_link_file "$filePath" "$dst"
 		fi
