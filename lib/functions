@@ -57,7 +57,7 @@ fail () {
 
 install() {
     installTypeByOS=$1
-    otherArguments=("${@:2}")
+    read -r -a otherArguments <<< "${@:2}"
 
     for i in $installTypeByOS
     do
