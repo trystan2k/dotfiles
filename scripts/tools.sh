@@ -74,6 +74,10 @@ cleanup() {
         info "Apt remove"
         sudo apt autoremove -y
     fi
+
+    # Remove node installed in system
+    info "Removing Node installed in system"
+    brew uninstall --ignore-dependencies node
 }
 
 # ---------------------------------------------
