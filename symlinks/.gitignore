@@ -278,6 +278,7 @@ $RECYCLE.BIN/
 *.lnk
 
 # ASDF .tool-versions
+.envrc
 .tool-versions
 
 # Brewfile lock
