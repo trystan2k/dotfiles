@@ -131,5 +131,8 @@ setopt SHARE_HISTORY         # Share history file amongst all Zsh sessions
 eval "$(asdf exec direnv hook zsh)"
 #. $(brew --prefix asdf)/asdf.sh
 
+# Maybe this shoudl be necessary if it does not auto load in IDEs, for example
+#asdf exec direnv reload
+
 # PERF: Uncoment these line and first one to get a performance report of terminal init
 #zprof

@@ -86,8 +86,14 @@ alias la="ls -la"
 # List only directories
 alias lsd="ls -ld"
 
-# Use exa as ls
-alias ls="exa"
+# Use colorls output for `ls` if it is available, otherwise use default ls command
+function ls() {
+  if [ -x "$(command -v colorls)" ]; then
+    RUBYOPT='-W:no-deprecated -W:no-experimental' command colorls "$@"
+  else
+    exa "$@"
+  fi
+}
 
 # Always enable colored `grep` output
 # Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
