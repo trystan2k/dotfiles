@@ -43,6 +43,7 @@ cask "flycut"
 cask "licecap"
 cask "notion"
 cask "parallels"
+cask "Transmission"
 
 ## Dev
 cask "docker"
