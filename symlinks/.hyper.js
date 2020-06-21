@@ -45,7 +45,9 @@ module.exports = {
         "memory",                                                                   
         "battery"
       ]                                                                          
-    }
+    },
+
+    activeTab: '🌕'
   },
 
 
@@ -65,7 +67,8 @@ module.exports = {
     "hyper-search",
     "hyper-fading-scrollbar", 
     "hyper-font-ligatures",
-    "hyper-tab-touchbar"
+    "hyper-tab-touchbar",
+    "hyper-active-tab"
   ],
 
   // in development, you can create a directory under

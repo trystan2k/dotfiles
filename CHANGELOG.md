@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Add new alias to ICloud folder
 - Add .envrc file to .gitignore list
 - Add exa, fd, ripgrep and transmission brew tools
+- Add Hyper plugin hyper-active-tab to show an icon in active tab
 
 ### Changed
 
