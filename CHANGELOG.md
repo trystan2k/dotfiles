@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [8.0.0] - 2020-06-22
+
+### Added
+
+- Add new alias to ICloud folder
+- Add .envrc file to .gitignore list
+- Add exa, fd, ripgrep and transmission brew tools
+
+### Changed
+
+- Change ls alias to use exa as fallback to colorls
+
 ## [7.1.0] - 2020-04-06
 
 ### Added
@@ -352,6 +364,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Add file for bash aliases
 - Documentation.
 
+[8.0.0]: https://github.com/trystan2k/dotfiles/compare/v7.1.0...v8.0.0
+[7.1.0]: https://github.com/trystan2k/dotfiles/compare/v7.0.0...v7.1.0
 [7.0.0]: https://github.com/trystan2k/dotfiles/compare/v6.3.0...v7.0.0
 [6.3.0]: https://github.com/trystan2k/dotfiles/compare/v6.2.0...v6.3.0
 [6.2.0]: https://github.com/trystan2k/dotfiles/compare/v6.1.0...v6.2.0
