@@ -89,6 +89,12 @@ Some of initial configuration can be done executing the configuration script loc
     ```
     Or use defined alias `fixZshPerms`
 
+2. When use IDEs like VSCode, due to how direnv loads, the asdf tools are not loaded correctly. It this starts to happen,
+just reload direnv:
+    ```
+    direnv reload
+    ```
+
 ## Thanks to...
 
 This repo was based in the | [Mathias Bynens](https://mathiasbynens.be/) | one (https://github.com/mathiasbynens/dotfiles). I had remove some setup I do not need and add some I found over internet.

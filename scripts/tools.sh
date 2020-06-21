@@ -93,6 +93,12 @@ configure() {
         #shellcheck source=/dev/null
         . "$DOTFILES_FOLDER"/configure/direnv-config.sh
     fi
+
+    info "Install Ruby Gems"
+    if ask_question 'Do you want to install Ruby Gems?'; then
+        #shellcheck source=/dev/null
+        . "$DOTFILES_FOLDER"/configure/ruby-gems.sh
+    fi    
 }
 
 execute() {
