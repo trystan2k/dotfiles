@@ -9,17 +9,69 @@
         "macos",
         "linux"
     ],
-    "scripts": {
-        "lint": "bash shellcheck.sh",
-        "release": "npm --no-git-tag-version version"
+    "homepage": "https://github.com/trystan2k/dotfiles#readme",
+    "bugs": {
+        "url": "https://github.com/trystan2k/dotfiles/issues"
     },
     "repository": {
         "type": "git",
         "url": "ssh://git@github.com:trystan2k/dotfiles.git"
     },
+    "scripts": {
+        "lint": "npm run lint:bash & npm run lint:eslint",
+        "lint:bash": "bash shellcheck.sh",
+        "lint:eslint": "eslint --ext .json,.md . --fix",
+        "release": "standard-version"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged",
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+        }
+    },
+    "commitlint": {
+        "extends": [
+            "@commitlint/config-conventional"
+        ],
+        "rules": {
+            "header-max-length": [
+                2,
+                "always",
+                100
+            ]
+        }
+    },
+    "lint-staged": {
+        "*.sh": [
+            "npm run lint",
+            "git add"
+        ],
+        "package.json": [
+            "sort-package-json",
+            "git add"
+        ]
+    },
+    "eslintConfig": {
+        "plugins": [
+            "markdown",
+            "json"
+        ],
+        "extends": [
+            "plugin:json/recommended"
+        ]
+    },
     "devDependencies": {
         "@commitlint/cli": "^7.5.2",
         "@commitlint/config-conventional": "^7.5.0",
-        "husky": "^2.2.0"
+        "eslint": "^7.3.0",
+        "eslint-plugin-json": "^2.1.1",
+        "eslint-plugin-markdown": "^1.0.2",
+        "husky": "^2.2.0",
+        "lint-staged": "^10.2.11",
+        "sort-package-json": "^1.44.0",
+        "standard-version": "^8.0.0"
+    },
+    "standard-version": {
+        "releaseCommitMessageFormat": "chore: release {{currentTag}}"
     }
 }
