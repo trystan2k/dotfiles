@@ -1,377 +1,391 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
-See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [8.3.0](https://github.com/trystan2k/dotfiles/compare/v8.2.0...v8.3.0) (2020-06-22)
+
+### Features
+
+* **markdownlint:** update line lenght ([ad1822f](https://github.com/trystan2k/dotfiles/commit/ad1822f06baebf5965e6a1b84ac64ef3af8bfdf4))
+
+## [8.3.0](https://github.com/trystan2k/dotfiles/compare/v8.2.0...v8.3.0) (2020-06-22)
+
+### Features
+
+* **markdownlint:** update line lenght ([ad1822f](https://github.com/trystan2k/dotfiles/commit/ad1822f06baebf5965e6a1b84ac64ef3af8bfdf4))
 
 ## [8.2.0] - 2020-06-22
 
 ### Added
 
-- Add example for local config files (aliases, exports and gitconfig)
+* Add example for local config files (aliases, exports and gitconfig)
 
 ## [8.1.0] - 2020-06-22
 
 ### Added
 
-- Add Cobalt2 configuration for Sublime, Slack and Alfred
+* Add Cobalt2 configuration for Sublime, Slack and Alfred
 
 ## [8.0.0] - 2020-06-22
 
 ### Added
 
-- Add new alias to ICloud folder
-- Add .envrc file to .gitignore list
-- Add exa, fd, ripgrep and transmission brew tools
-- Add Hyper plugin hyper-active-tab to show an icon in active tab
+* Add new alias to ICloud folder
+* Add .envrc file to .gitignore list
+* Add exa, fd, ripgrep and transmission brew tools
+* Add Hyper plugin hyper-active-tab to show an icon in active tab
 
 ### Changed
 
-- Change ls alias to use exa as fallback to colorls
+* Change ls alias to use exa as fallback to colorls
 
 ## [7.1.0] - 2020-04-06
 
 ### Added
 
-- Add husky and commitlint to lint shell scripts using git hooks
-- Add GitHubActions to do continuous integration
+* Add husky and commitlint to lint shell scripts using git hooks
+* Add GitHubActions to do continuous integration
 
 ## [7.0.0] - 2020-04-05
 
 ### Added
 
-- Migrate from Zplugin to Zinit
-- Add new aliases `updateBrewfile`, `setenv`, `fixZshPerms`, `removeNodeSystem`
-- Add macos default to not rearrange Spaces based on most recent use
+*-* Migrate from Zplugin to Zinit
+
+* Add new aliases `updateBrewfile`, `setenv`, `fixZshPerms`, `removeNodeSystem`
+* Add macos default to not rearrange Spaces based on most recent use
 
 ### Changed
 
-- Fix `ls` command when outside ruby environment (fallback to /bin/ls)
-- Change how brew formulas are installed, now using Brewfile
-- Move some linux tools to use APT instead of Brew or other things
+*-* Fix `ls` command when outside ruby environment (fallback to /bin/ls)
+
+* Change how brew formulas are installed, now using Brewfile
+* Move some linux tools to use APT instead of Brew or other things
 
 ## [6.3.0] - 2020-03-09
 
 ### Added
 
-- Add ZSH History settings, to extend its functionality
+* Add ZSH History settings, to extend its functionality
 
 ### Removed
 
-- Remove sudo script for macos
+* Remove sudo script for macos
 
 ## [6.2.0] - 2020-02-10
 
 ### Added
 
-- Add sudo script for macos to enable touch id to authorize sudo
-- Add default window size to Hyper, to always open in the same size no matter what happened in past
+* Add sudo script for macos to enable touch id to authorize sudo
+* Add default window size to Hyper, to always open in the same size no matter what happened in past
 
 ## [6.1.0] - 2020-02-03
 
 ### Added
 
-- Add rectangle installation instructions
-- Add licecap installation instructions
-- Add skitch installation instructions
-- Add daisydisk installation instructions
-- Add pdf-expert installation instructions
-- Add flycut installation instructions
-- Add download github subfolder alias
+* Add rectangle installation instructions
+* Add licecap installation instructions
+* Add skitch installation instructions
+* Add daisydisk installation instructions
+* Add pdf-expert installation instructions
+* Add flycut installation instructions
+* Add download github subfolder alias
 
 ## [6.0.0] - 2020-01-20
 
 ### Added
 
-- Add fx tools installation instructions
-- Add Microsoft Edge installation instructions
-- Add asdf direnv plugin, to better manager versions
-- Add alias to get a folder size
-- Add alias to change mac address
+* Add fx tools installation instructions
+* Add Microsoft Edge installation instructions
+* Add asdf direnv plugin, to better manager versions
+* Add alias to get a folder size
+* Add alias to change mac address
 
 ## [5.10.0] - 2020-01-06
 
 ### Added
 
-- Add MacOS quick actions installation
+* Add MacOS quick actions installation
 
 ## [5.9.0] - 2020-01-05
 
 ### Changed
 
-- Move `functions` file to `lib` folder
-- Move `Cobal2.terminal` file to `macos` folder
-- Change ASDF plugins install process to be more maintainable
+* Move `functions` file to `lib` folder
+* Move `Cobal2.terminal` file to `macos` folder
+* Change ASDF plugins install process to be more maintainable
 
 ## [5.8.0] - 2020-01-05
 
 ### Added
 
-- Add ASDF Ruby installation
-- Add Ruby gem installation configure file, with 'colorls'
+* Add ASDF Ruby installation
+* Add Ruby gem installation configure file, with 'colorls'
 
 ### Changed
 
-- Change ls alias to use colorls gem
-- Change gitconfig to point to global gitignore
+* Change ls alias to use colorls gem
+* Change gitconfig to point to global gitignore
 
 ## [5.7.0] - 2020-01-04
 
 ### Added
 
-- Add hyper-tab-touchbar Hyper plugin
-- Add zsh-tab-title ZSH plugin
+* Add hyper-tab-touchbar Hyper plugin
+* Add zsh-tab-title ZSH plugin
 
 ## [5.6.0] - 2020-01-03
 
 ### Added
 
-- Add script to upgrade tools installed via Homebrew and Homebrew cask
+* Add script to upgrade tools installed via Homebrew and Homebrew cask
 
 ## [5.5.0] - 2020-01-02
 
 ### Added
 
-- Add [Notion](https://www.notion.so/) app installation script
+* Add [Notion](https://www.notion.so/) app installation script
 
 ## [5.4.0] - 2019-12-23
 
 ### Added
 
-- Add option to install (clone repo) via SSH or HTTPS
+* Add option to install (clone repo) via SSH or HTTPS
 
 ## [5.3.0] - 2019-12-23
 
 ### Added
 
-- Add Cobalt2 theme profile for MacOS terminal
+* Add Cobalt2 theme profile for MacOS terminal
 
 ### Changed
 
-- Change install script to create SSH key and clone repo via SSH
+* Change install script to create SSH key and clone repo via SSH
 
 ## [5.2.0] - 2019-12-23
 
 ### Added
 
-- Add ASDF Java installation
+* Add ASDF Java installation
 
 ### Changed
 
-- Change ASDF Node.js installation version to 8.17.0
+* Change ASDF Node.js installation version to 8.17.0
 
 ## [5.1.0] - 2019-12-23
 
 ### Added
 
-- Add MacOS default setup via script (as requested in issue [#36](https://github.com/trystan2k/dotfiles/issues/36))
-- Add new tools like postman, snapd, svn
+* Add MacOS default setup via script (as requested in issue [#36](https://github.com/trystan2k/dotfiles/issues/36))
+* Add new tools like postman, snapd, svn
 
 ### Changed
 
-- Better manage script execution using absolute path
+* Better manage script execution using absolute path
 
 ## [5.0.0] - 2019-12-22
 
 ### Changed
 
-- Refactor to install tools in a smarter way
-- Refactor how symlinks for dotfiles are created
+* Refactor to install tools in a smarter way
+* Refactor how symlinks for dotfiles are created
 
 ### Added
 
-- Add functions file with all common functions used everywhere
-- Add logging system, so installation can be reviewed easily
+* Add functions file with all common functions used everywhere
+* Add logging system, so installation can be reviewed easily
 
 ### Removed
 
-- Remove Zplug plugin manager
+* Remove Zplug plugin manager
 
 ## [4.0.0] - 2019-12-19
 
 ### Added
 
-- Add Zplugin to manage the ZSH plugins
+* Add Zplugin to manage the ZSH plugins
 
 ### Removed
 
-- Remove Zplug plugin manager
+* Remove Zplug plugin manager
 
 ## [3.0.0] - 2019-12-17
 
 ### Added
 
-- Add Zplug to manage the ZSH plugins
-- Add ASDF to manage version of tools (Node, Java, Yarn, Ruby, etc)
+* Add Zplug to manage the ZSH plugins
+* Add ASDF to manage version of tools (Node, Java, Yarn, Ruby, etc)
 
 ### Removed
 
-- Remove Oh-My-ZSH framework
-- Remove NVM as node version manager in favor of ASDF
+* Remove Oh-My-ZSH framework
+* Remove NVM as node version manager in favor of ASDF
 
 ## [2.0.0] - 2019-12-15
 
 ### Added
 
-- Add scripts to handle installations in OSX, Linux and WSL
+* Add scripts to handle installations in OSX, Linux and WSL
 
 ## [1.15.0] - 2019-12-13
 
 ### Added
 
-- Add script to do the symlinks independently
+* Add script to do the symlinks independently
 
 ## [1.14.0] - 2019-12-13
 
 ### Removed
 
-- Remove settings in .gitconfig that were causing issues
+* Remove settings in .gitconfig that were causing issues
 
 ## [1.13.0] - 2019-12-10
 
 ### Added
 
-- Add gitignore file to be included in the symlink process
-- Add common aliases in the .aliases file
+* Add gitignore file to be included in the symlink process
+* Add common aliases in the .aliases file
 
 ### Changed
 
-- Disable webGLRenderer in Hyper.js
-- Change right margin in Hyper.js
+* Disable webGLRenderer in Hyper.js
+
+* Change right margin in Hyper.js
 
 ## [1.12.0] - 2019-12-09
 
 ### Added
 
-- Add config for [zsh-nvm](https://github.com/lukechilds/zsh-nvm) plugin
-- Add [AppCleaner](https://freemacsoft.net/appcleaner/) install instructions via brew
-- Add [Station](https://getstation.com/) install instructions via brew
+* Add config for [zsh-nvm](https://github.com/lukechilds/zsh-nvm) plugin
+* Add [AppCleaner](https://freemacsoft.net/appcleaner/) install instructions via brew
+* Add [Station](https://getstation.com/) install instructions via brew
 
 ### Changed
 
-- Change how NVM installs, from brew to [zsh-nvm](https://github.com/lukechilds/zsh-nvm) plugin
-- Change how `thefuck` plugin is loaded
-- Move source of .aliases and .exports to beginning of the .zshrc file
+* Change how NVM installs, from brew to [zsh-nvm](https://github.com/lukechilds/zsh-nvm) plugin
+* Change how `thefuck` plugin is loaded
+* Move source of .aliases and .exports to beginning of the .zshrc file
 
 ## [1.11.0] - 2019-12-09
 
 ### Added
 
-- Add instructions to install Sublime Text
+* Add instructions to install Sublime Text
 
 ### Changed
 
-- Change Hyper.js to use WebGLRender
+* Change Hyper.js to use WebGLRender
 
 ### Removed
 
-- Remove Hyper.js plugins not used
-- Remove Hyper.js settings not needed
+* Remove Hyper.js plugins not used
+* Remove Hyper.js settings not needed
 
 ## [1.10.0] - 2019-12-08
 
 ### Changed
 
-- Change ZSH_THEME to [powerlevel10k](https://github.com/romkatv/powerlevel10k)
+* Change ZSH_THEME to [powerlevel10k](https://github.com/romkatv/powerlevel10k)
 
 ## [1.9.0] - 2019-12-08
 
 ### Added
 
-- Add new Hyper theme `hyperterm-cobalt2-theme`
-- Add new bootstrap and tools script to help to setup new machine
+* Add new Hyper theme `hyperterm-cobalt2-theme`
+* Add new bootstrap and tools script to help to setup new machine
 
 ### Removed
 
-- Remove cells-completation file, not in use
+* Remove cells-completation file, not in use
 
 ## [1.8.0] - 2019-10-29
 
 ### Added
 
-- Add new Hyper plugin `hyper-font-ligatures`
+* Add new Hyper plugin `hyper-font-ligatures`
 
 ### Changed
 
-- Change Hyper default font to `Fira Code`
+* Change Hyper default font to `Fira Code`
 
 ### Removed
 
-- Remove .bash_profile as currently using ZSH
-- Remove .fonts folder, as it is not needed anymore
+* Remove .bash_profile as currently using ZSH
+* Remove .fonts folder, as it is not needed anymore
 
 ## [1.7.0] - 2019-10-21
 
 ### Added
 
-- Add new Oh-My-ZSH plugins, alias-finder and fzf
-- Add new alias for initial commit
+* Add new Oh-My-ZSH plugins, alias-finder and fzf
+* Add new alias for initial commit
 
 ## [1.6.0] - 2019-10-13
 
 ### Added
 
-- Add gitconfig configuration per folder
+* Add gitconfig configuration per folder
 
 ## [1.5.0] - 2019-10-12
 
 ### Changed
 
-- Update zshrc to use correct home directory and remove not used plugins
+* Update zshrc to use correct home directory and remove not used plugins
 
 ## [1.4.0] - 2019-08-07
 
 ### Added
 
-- Add global .gitignore file generated at [gitignore.io](http://www.gitignore.io/)
+* Add global .gitignore file generated at [gitignore.io](http://www.gitignore.io/)
 
 ### Changed
 
-- Update aliaes, gitconfig, hyper.js and zshrc files
+* Update aliaes, gitconfig, hyper.js and zshrc files
 
 ## [1.3.0] - 2019-03-30
 
 ### Added
 
-- Add config file for [Hyper terminal](https://hyper.is)
+* Add config file for [Hyper terminal](https://hyper.is)
 
 ## [1.2.0] - 2018-07-17
 
 ### Added
 
-- Add new files for Hack font
+* Add new files for Hack font
 
 ### Changed
 
-- Add more plugins for Oh-My-Zsh
-- Update ZSH folder to be relative
-- Change gitconfig alias to be more OS independent.
+* Add more plugins for Oh-My-Zsh
+* Update ZSH folder to be relative
+* Change gitconfig alias to be more OS independent.
 
 ### Removed
 
-- Remove completion files not used anymore
-- Remove bash files not used anymore
+* Remove completion files not used anymore
+* Remove bash files not used anymore
 
 ## [1.1.0] - 2017-07-01
 
 ### Added
 
-- Instructions to install Oh My ZSH
-- Config file for Oh My ZSH
-- Font files to be used with Oh My ZSH
+* Instructions to install Oh My ZSH
+* Config file for Oh My ZSH
+* Font files to be used with Oh My ZSH
 
 ## [1.0.0] - 2017-07-01
 
 ### Added
 
-- Initial release
-- Add file for git configuration
-- Add file for git-flow completion
-- Add file for git completion
-- Add file for cells completion
-- Add file for bash prompt
-- Add file for bash profile
-- Add file for bash aliases
-- Documentation.
+* Initial release
+* Add file for git configuration
+* Add file for git-flow completion
+* Add file for git completion
+* Add file for cells completion
+* Add file for bash prompt
+* Add file for bash profile
+* Add file for bash aliases
+* Documentation.
 
 [8.2.0]: https://github.com/trystan2k/dotfiles/compare/v8.1.0...v8.2.0
 [8.1.0]: https://github.com/trystan2k/dotfiles/compare/v8.0.0...v8.1.0
