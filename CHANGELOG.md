@@ -1,6 +1,7 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to this project will be documented in this file.
+See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 ## [8.2.0] - 2020-06-22
 
@@ -169,8 +170,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 - Better manage script execution using absolute path
 
-###
-
 ## [5.0.0] - 2019-12-22
 
 ### Changed
@@ -219,7 +218,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Added
 
-- Add script to do the symlinks independently 
+- Add script to do the symlinks independently
 
 ## [1.14.0] - 2019-12-13
 
