@@ -1,0 +1,2 @@
+# Use to load specific files, for example your work aliases
+[ -f "$HOME/.aliases.work" ] && source "$HOME/.aliases.work"
