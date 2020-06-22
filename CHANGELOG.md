@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [8.1.0] - 2020-06-22
+
+### Added
+
+- Add Cobalt2 configuration for Sublime, Slack and Alfred
+
 ## [8.0.0] - 2020-06-22
 
 ### Added
@@ -365,6 +371,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Add file for bash aliases
 - Documentation.
 
+[8.1.0]: https://github.com/trystan2k/dotfiles/compare/v8.0.0...v8.1.0
 [8.0.0]: https://github.com/trystan2k/dotfiles/compare/v7.1.0...v8.0.0
 [7.1.0]: https://github.com/trystan2k/dotfiles/compare/v7.0.0...v7.1.0
 [7.0.0]: https://github.com/trystan2k/dotfiles/compare/v6.3.0...v7.0.0
