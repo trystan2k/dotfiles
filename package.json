@@ -1,6 +1,6 @@
 {
     "name": "@trystan2k/dotfiles",
-    "version": "8.2.0",
+    "version": "8.3.0",
     "description": "My personal dotfiles",
     "keywords": [
         "dotfiles",
@@ -22,7 +22,9 @@
         "lint:bash": "bash shellcheck.sh",
         "lint:eslint": "eslint --ext json . --fix",
         "lint:md": "markdownlint --fix -i node_modules .",
-        "release": "standard-version"
+        "push": "git push && git push --tags",
+        "release": "standard-version",
+        "release:as": "standard-version --release-as"
     },
     "husky": {
         "hooks": {
