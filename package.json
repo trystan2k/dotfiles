@@ -18,9 +18,10 @@
         "url": "ssh://git@github.com:trystan2k/dotfiles.git"
     },
     "scripts": {
-        "lint": "npm run lint:bash & npm run lint:eslint",
+        "lint": "npm run lint:bash && npm run lint:eslint && npm run lint:md",
         "lint:bash": "bash shellcheck.sh",
-        "lint:eslint": "eslint --ext .json,.md . --fix",
+        "lint:eslint": "eslint --ext json . --fix",
+        "lint:md": "markdownlint --fix -i node_modules .",
         "release": "standard-version"
     },
     "husky": {
@@ -42,13 +43,31 @@
         }
     },
     "lint-staged": {
+        "*.json": [
+            "npm run lint:eslint",
+            "git add"
+        ],
+        "*.md": [
+            "npm run lint:md",
+            "git add"
+        ],
         "*.sh": [
-            "npm run lint",
+            "npm run lint:bash",
             "git add"
         ],
         "package.json": [
             "sort-package-json",
             "git add"
+        ]
+    },
+    "prettier": {
+        "overrides": [
+            {
+                "files": "*.json",
+                "options": {
+                    "parser": "json-stringify"
+                }
+            }
         ]
     },
     "eslintConfig": {
@@ -64,10 +83,14 @@
         "@commitlint/cli": "^7.5.2",
         "@commitlint/config-conventional": "^7.5.0",
         "eslint": "^7.3.0",
+        "eslint-config-prettier": "^6.11.0",
         "eslint-plugin-json": "^2.1.1",
         "eslint-plugin-markdown": "^1.0.2",
         "husky": "^2.2.0",
         "lint-staged": "^10.2.11",
+        "markdownlint": "^0.20.3",
+        "markdownlint-cli": "^0.23.1",
+        "prettier": "^2.0.5",
         "sort-package-json": "^1.44.0",
         "standard-version": "^8.0.0"
     },
