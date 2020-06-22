@@ -71,6 +71,32 @@ Some of initial configuration can be done executing the configuration script loc
 1. System Preferences -> Users & Groups -> Login Options => Change 'Show fast user switching menu as' to `Icon`
 2. System Preferences -> Security & Privacy -> General => Change 'Require password' to `5 seconds`
 
+### Cobalt Theme
+
+1. Sublime
+
+```
+Open package control tools → Command Palette and type Install Package
+
+Search for Cobalt2 and hit enter
+
+Lastly, open Preferences → Settings - User. Add the following two lines:
+
+"color_scheme": "Packages/Theme - Cobalt2/cobalt2.tmTheme",
+"theme": "Cobalt2.sublime-theme",
+```
+
+2. Slack
+
+```
+Preferences → Sidebar Theme
+Paste #182E40,#1F4662,#1D425D,#FFFFFF,#988026,#FFFFFF,#2CDB00,#FEBD29
+```
+
+3. Alfred
+
+https://github.com/wesbos/Cobalt2-Alfred-Theme/blob/master/Cobalt2-alfred3.x.alfredappearance
+
 ## Apps that are interesting but not sure if useful
 
 1. Captin (http://captin.strikingly.com/) - Show Mac caps lock status
