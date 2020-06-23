@@ -1,6 +1,7 @@
 {
     "default": true,
     "no-duplicate-header": false,
+    "header-increment": false,
     "line-length": {
         "line_length": 180,
         "code_blocks": false,
