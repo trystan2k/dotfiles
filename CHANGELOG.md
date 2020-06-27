@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.4.0](https://github.com/trystan2k/dotfiles/compare/v8.3.2...v8.4.0) (2020-06-27)
+
+### Features
+
+* **symlinks:** add gitmessage template ([83e3f15](https://github.com/trystan2k/dotfiles/commit/83e3f1599f6fddc6b2a3bf71fadb5a7c00fd6cc7))
+
 ### [8.3.2](https://github.com/trystan2k/dotfiles/compare/v8.3.1...v8.3.2) (2020-06-23)
 
 ### [8.3.1](https://github.com/trystan2k/dotfiles/compare/v8.3.0...v8.3.1) (2020-06-23)
