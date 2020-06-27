@@ -6,6 +6,9 @@
 [core]
 	excludesfile = ~/.gitignore
 
+[commit]
+	template = ~/.gitmessage
+
 [alias]
 
 	st = status
