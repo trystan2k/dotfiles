@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.5.0](https://github.com/trystan2k/dotfiles/compare/v8.4.0...v8.5.0) (2020-07-20)
+
+### Features
+
+* **tools:** add bat and hub tools for macos ([acabdec](https://github.com/trystan2k/dotfiles/commit/acabdec17520ac06f2e181b7510692db30812a10))
+* **upgrdes:** add upgrade file from 8.4.0 to latest version ([8e32d82](https://github.com/trystan2k/dotfiles/commit/8e32d82021dd46ec55ee9a4b14879df89d7fa2ee))
+
 ## [8.4.0](https://github.com/trystan2k/dotfiles/compare/v8.3.2...v8.4.0) (2020-06-27)
 
 ### Features
