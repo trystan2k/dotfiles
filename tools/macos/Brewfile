@@ -51,7 +51,6 @@ brew "hub"
 cask "docker"
 cask "hyper"
 cask "postman"
-cask "zeplin"
 
 ## Browsers
 cask "firefox"
@@ -65,6 +64,7 @@ cask "pdf-expert"
 cask "rectangle"
 
 ## Movies
+cask "iina"
 cask "stremio"
 
 ## Editors
