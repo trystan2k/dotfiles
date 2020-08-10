@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.6.0](https://github.com/trystan2k/dotfiles/compare/v8.5.0...v8.6.0) (2020-08-10)
+
+### Features
+
+* **tools,upgrades:** add iina and remove zepling tools ([3b5f1ce](https://github.com/trystan2k/dotfiles/commit/3b5f1ce3b71b22ba7511ce5981ee04c7706c53a2))
+
 ## [8.5.0](https://github.com/trystan2k/dotfiles/compare/v8.4.0...v8.5.0) (2020-07-20)
 
 ### Features
