@@ -12,13 +12,11 @@ source "$DOTFILES_FOLDER/lib/functions"
 # ---------------------------------------------
 
 plugins=(
-    nodejs:12.14.0:true
-    nodejs:8.17.0:false
-    java:adopt-openjdk-13+33:true
-    java:adopt-openjdk-8u232-b09:false
-    yarn:1.21.1:true
+    nodejs:14.8.0:true
+    java:adoptopenjdk-14.0.2+12:true
+    yarn:1.22.4:true
     ruby:2.7.0:true
-    direnv:2.21.2:true
+    direnv:2.21.3:true
 )
 
 # ---------------------------------------------
