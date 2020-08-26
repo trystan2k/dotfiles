@@ -129,6 +129,7 @@ setopt SHARE_HISTORY         # Share history file amongst all Zsh sessions
 
 # Hook direnv into your shell.
 eval "$(asdf exec direnv hook zsh)"
+direnv() { asdf exec direnv "$@"; }
 #. $(brew --prefix asdf)/asdf.sh
 
 # Maybe this shoudl be necessary if it does not auto load in IDEs, for example
