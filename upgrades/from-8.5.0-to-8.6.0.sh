@@ -17,6 +17,9 @@ _remove() {
 
     info "Remove step"
     brew uninstall --ignore-dependencies node
+
+    info "Uninstall zeplin"
+    brew cask uninstall zeplin
 }
 
 _add() {
@@ -25,6 +28,9 @@ _add() {
     # ---------------------------------------------
 
     info "Add step"   
+
+    info "Install iina"
+    brew cask install iina
 }
 
 _configure() {
@@ -34,25 +40,6 @@ _configure() {
 
     info "Configure step"
 
-    info "Install new asdf-plugins version"
-    asdf install nodejs 14.8.0
-    asdf install java adoptopenjdk-14.0.2+12
-    asdf install yarn 1.22.4
-    asdf install direnv 2.21.3
-
-    asdf global nodejs 14.8.0
-    asdf global java adoptopenjdk-14.0.2+12
-    asdf global yarn 1.22.4
-    asdf global direnv 2.21.3
-
-    info "Uninstall old versions of asdf-plugins"
-
-    asdf install nodejs 12.14.0
-    asdf install nodejs 8.17.0
-    asdf install java adopt-openjdk-13+33
-    asdf install java adopt-openjdk-8u232-b09
-    asdf install yarn 1.21.1
-    asdf install direnv 2.21.2    
 }
 
 _cleanup () {
