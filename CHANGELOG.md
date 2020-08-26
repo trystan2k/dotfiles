@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.0.0](https://github.com/trystan2k/dotfiles/compare/v8.6.0...v9.0.0) (2020-08-26)
+
+### ⚠ BREAKING CHANGES
+
+* **asdf:** asdf-direnv new version use different setup in direnv config file
+
+### Features
+
+* **asdf:** update asdf-direnv setup and asdf plugins versions ([5c1c0e4](https://github.com/trystan2k/dotfiles/commit/5c1c0e458a89bd69bdf6c84218dc5c5180846437))
+* **upgrades:** update upgrade script for new release ([5e5933f](https://github.com/trystan2k/dotfiles/commit/5e5933f09c8583cc2bbbd6944ac8f8016631d106))
+
 ## [8.6.0](https://github.com/trystan2k/dotfiles/compare/v8.5.0...v8.6.0) (2020-08-10)
 
 ### Features
