@@ -99,6 +99,13 @@ configure() {
         #shellcheck source=/dev/null
         . "$DOTFILES_FOLDER"/configure/ruby-gems.sh
     fi    
+
+    info "Fix ZSH permissions"
+    if ask_question 'Do you want execute the script to fix possible ZSH permissions issue?'; then
+        #shellcheck source=/dev/null
+        sudo chmod -R 755 /usr/local/share/zsh
+        sudo chown -R root:staff /usr/local/share/zsh
+    fi   
 }
 
 execute() {
