@@ -34,6 +34,9 @@ _configure() {
 
     info "Configure step"
 
+    info "Install svn"
+    brew install svn
+
     info "Install new asdf-plugins version"
     asdf install nodejs 14.8.0
     asdf install java adoptopenjdk-14.0.2+12
