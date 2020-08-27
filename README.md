@@ -123,7 +123,14 @@ Some of initial configuration can be done executing the configuration script loc
 
     Or use defined alias `fixZshPerms`
 
-2. When use IDEs like VSCode, due to how direnv loads, the asdf tools are not loaded correctly. It this starts to happen,
+2. It is possible that `colorls` Ruby Gem fail to install in a fresh installation due to folder permissions.
+If that happens, just execute the ruby-gems.sh script after reboot.
+
+    ```bash
+    . configure/ruby-gems.sh
+    ```
+
+3. When use IDEs like VSCode, due to how direnv loads, the asdf tools are not loaded correctly. It this starts to happen,
 just reload direnv:
 
     ```bash
