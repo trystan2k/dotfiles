@@ -17,6 +17,9 @@ _remove() {
 
     info "Remove step"
     brew uninstall --ignore-dependencies node
+
+    info "Remove Microsoft Teams"
+    brew cask uninstall microsft-teams
 }
 
 _add() {

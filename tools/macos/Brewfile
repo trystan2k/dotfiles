@@ -59,7 +59,6 @@ cask "google-chrome"
 cask "microsoft-edge"
 
 ## Chats
-cask "microsoft-teams"
 cask "station"
 cask "pdf-expert"
 cask "rectangle"
