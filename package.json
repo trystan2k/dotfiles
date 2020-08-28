@@ -46,20 +46,16 @@
     },
     "lint-staged": {
         "*.json": [
-            "npm run lint:eslint",
-            "git add"
+            "npm run lint:eslint"
         ],
         "*.md": [
-            "npm run lint:md",
-            "git add"
+            "npm run lint:md"
         ],
         "*.sh": [
-            "npm run lint:bash",
-            "git add"
+            "npm run lint:bash"
         ],
         "package.json": [
-            "sort-package-json",
-            "git add"
+            "sort-package-json"
         ]
     },
     "prettier": {
