@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.1.0](https://github.com/trystan2k/dotfiles/compare/v9.0.0...v9.1.0) (2020-08-28)
+
+### Features
+
+* **symlinks:** add npmrc and update gituser config ([ac52d0e](https://github.com/trystan2k/dotfiles/commit/ac52d0ed5d0198b300a6462ca9a794b9e240d803))
+* **tools:** add configure step to fix possible zsh permission issue on installation script ([ca2fae4](https://github.com/trystan2k/dotfiles/commit/ca2fae4a073808630342542460799db2d6498e37))
+* **tools:** add svn installation ([4f2005c](https://github.com/trystan2k/dotfiles/commit/4f2005cebd4364613f87f8489f8a04d1f4d36142))
+* **tools:** remove microsoft teams ([73a16b9](https://github.com/trystan2k/dotfiles/commit/73a16b970646bebef87c3751cf5f8898274e39d0))
+
 ## [9.0.0](https://github.com/trystan2k/dotfiles/compare/v8.6.0...v9.0.0) (2020-08-26)
 
 ### ⚠ BREAKING CHANGES
