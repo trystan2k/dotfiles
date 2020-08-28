@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.2.0](https://github.com/trystan2k/dotfiles/compare/v9.1.0...v9.2.0) (2020-08-28)
+
+### Features
+
+* **tools:** add fanny tool ([3914084](https://github.com/trystan2k/dotfiles/commit/39140849f5930a26953b1358cde3cbd144b58dde))
+* **upgrades:** update upgrade script for new release ([88b25fe](https://github.com/trystan2k/dotfiles/commit/88b25fe78a688789599beef547e7113e48f4e2e5))
+
 ## [9.1.0](https://github.com/trystan2k/dotfiles/compare/v9.0.0...v9.1.0) (2020-08-28)
 
 ### Features
