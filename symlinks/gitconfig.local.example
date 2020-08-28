@@ -7,5 +7,6 @@
 
 # Then in the .gituser-work* file, you must load the specific config, like for example
 [user]
-	email = thiago.bovi.contractor@bbva.com
-	name = xe65707
+	email = thiago.bovi@work.com
+	user = thbovi
+	name = Thiago Bovi
