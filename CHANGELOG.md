@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.3.0](https://github.com/trystan2k/dotfiles/compare/v9.2.0...v9.3.0) (2020-09-08)
+
+### Features
+
+* **tools, symlinks:** add git-lft tool ([a637243](https://github.com/trystan2k/dotfiles/commit/a6372437f4eaae4347ebe1ffc6db2aec213467e5))
+
 ## [9.2.0](https://github.com/trystan2k/dotfiles/compare/v9.1.0...v9.2.0) (2020-08-28)
 
 ### Features
