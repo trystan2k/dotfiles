@@ -137,6 +137,15 @@ just reload direnv:
     direnv reload
     ```
 
+4. When something is updated with ASDF or direnv, is possible that the error message `Unknown command:`asdf direnv hook asdf`` pops up.
+One possible solution is to remove direnv plugin from ASDF and reinstall it
+
+    ```bash
+    asdf plugin-remove direnv
+    asdf plugin-add direnv
+    asdf install direnv xx.xx.xx
+    ```
+
 ## Thanks to
 
 This repo was based in the | [Mathias Bynens](https://mathiasbynens.be/) | one (<https://github.com/mathiasbynens/dotfiles).> I had remove some
