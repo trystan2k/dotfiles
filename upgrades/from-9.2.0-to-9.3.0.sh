@@ -26,8 +26,9 @@ _add() {
 
     info "Add step"   
 
-    info "Install fanny"
+    info "Install git-lfs"
     brew install git-lfs
+    git lfs install
 }
 
 _configure() {

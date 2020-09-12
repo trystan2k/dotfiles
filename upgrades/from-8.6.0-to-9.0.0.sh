@@ -48,12 +48,12 @@ _configure() {
 
     info "Uninstall old versions of asdf-plugins"
 
-    asdf install nodejs 12.14.0
-    asdf install nodejs 8.17.0
-    asdf install java adopt-openjdk-13+33
-    asdf install java adopt-openjdk-8u232-b09
-    asdf install yarn 1.21.1
-    asdf install direnv 2.21.2    
+    asdf uninstall nodejs 12.14.0
+    asdf uninstall nodejs 8.17.0
+    asdf uninstall java adopt-openjdk-13+33
+    asdf uninstall java adopt-openjdk-8u232-b09
+    asdf uninstall yarn 1.21.1
+    asdf uninstall direnv 2.21.2    
 }
 
 _cleanup () {
