@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.4.0](https://github.com/trystan2k/dotfiles/compare/v9.3.0...v9.4.0) (2020-09-12)
+
+### Features
+
+* **.gitconfig:** add default pull strategy to merge ([aa66357](https://github.com/trystan2k/dotfiles/commit/aa66357a80856e8da3597d13647bfb4367deeef0))
+* **hyper.js:** enable webGLRenderer ([115ce3c](https://github.com/trystan2k/dotfiles/commit/115ce3ceeef36fd2057cd381ec8e4271f2c4b1c9))
+* **tools/macos:** add openconnect, android-platform-tools, scrcpy tools ([c3f95db](https://github.com/trystan2k/dotfiles/commit/c3f95dbf52bc2215d18a94cc69955390e3f8f217))
+* **tools/macos:** update brewfile with latest tools ([08ae11b](https://github.com/trystan2k/dotfiles/commit/08ae11b715c008d7ee543828fe8eea80e705f5c4))
+* **upgrades:** add upgrade file for next release ([431a3dd](https://github.com/trystan2k/dotfiles/commit/431a3dd166554bfb84cd880584118a02f6c1f94f))
+* **upgrades:** update upgrages files fixing typo issues ([1b1e7a8](https://github.com/trystan2k/dotfiles/commit/1b1e7a89c4afdae0383799f2a8e3d694e8be89b0))
+
 ## [9.3.0](https://github.com/trystan2k/dotfiles/compare/v9.2.0...v9.3.0) (2020-09-08)
 
 ### Features
