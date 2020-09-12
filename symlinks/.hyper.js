@@ -4,7 +4,7 @@
 
 module.exports = {
   config: {
-    webGLRenderer: false, 
+    webGLRenderer: true, 
     
     // choose either `'stable'` for receiving highly polished,
     // or `'canary'` for less polished but more frequent updates
