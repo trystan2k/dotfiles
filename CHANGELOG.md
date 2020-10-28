@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.5.0](https://github.com/trystan2k/dotfiles/compare/v9.4.0...v9.5.0) (2020-10-28)
+
+### Features
+
+* **macos:** add overkill tool ([3ae0ffe](https://github.com/trystan2k/dotfiles/commit/3ae0ffe25a005d5d04ed8ec2c6c6afcf3dd50e5d))
+
 ## [9.4.0](https://github.com/trystan2k/dotfiles/compare/v9.3.0...v9.4.0) (2020-09-12)
 
 ### Features
