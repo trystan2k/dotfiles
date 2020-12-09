@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [9.6.1](https://github.com/trystan2k/dotfiles/compare/v9.6.0...v9.6.1) (2020-12-09)
+
 ## [9.6.0](https://github.com/trystan2k/dotfiles/compare/v9.4.0...v9.6.0) (2020-12-09)
 
 ### Features
