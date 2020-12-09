@@ -16,7 +16,7 @@ configureGPG() {
 passstore() {
     info "Initialize pass-store"
 
-    passstore=$(which pass)
+    passstore=$(command -v pass)
 
     if [ -z "$passstore" ]
     then
