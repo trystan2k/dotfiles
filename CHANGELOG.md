@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.6.0](https://github.com/trystan2k/dotfiles/compare/v9.4.0...v9.6.0) (2020-12-09)
+
+### Features
+
+* **macos:** add overkill tool ([0b05f2e](https://github.com/trystan2k/dotfiles/commit/0b05f2e27744b422db22bda4a31862f46f544eed))
+* **tools:** add password store and it initial configuration ([9c2db60](https://github.com/trystan2k/dotfiles/commit/9c2db60459f0658a441644ed231f62ed59dcf136))
+
 ## [9.5.0](https://github.com/trystan2k/dotfiles/compare/v9.4.0...v9.5.0) (2020-10-28)
 
 ### Features
