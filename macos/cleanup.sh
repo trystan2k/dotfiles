@@ -23,8 +23,7 @@ execute() {
 
     # now diagnotic
     info "Diagnostic Brew"
-    brew doctor
-    brew cask doctor
+    brew doctor --verbose
     brew missing
 
 }
