@@ -26,7 +26,7 @@ brew "httpie"
 brew "hub"
 brew "jq"
 brew "mas"
-brew "openconnect"
+brew "pass"
 brew "ripgrep"
 brew "scrcpy"
 brew "shellcheck"
@@ -77,7 +77,6 @@ cask "stremio"
 ## Editors
 cask "sublime-text"
 cask "visual-studio-code"
-cask "webstorm"
 
 # Fonts
 

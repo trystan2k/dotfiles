@@ -98,7 +98,13 @@ configure() {
     if ask_question 'Do you want to install Ruby Gems?'; then
         #shellcheck source=/dev/null
         . "$DOTFILES_FOLDER"/configure/ruby-gems.sh
-    fi    
+    fi   
+
+    info "Configure Password store"
+    if ask_question 'Do you want to configure password store ?'; then
+        #shellcheck source=/dev/null
+        . "$DOTFILES_FOLDER"/configure/pass-store.sh
+    fi       
 
     info "Fix ZSH permissions"
     if ask_question 'Do you want execute the script to fix possible ZSH permissions issue?'; then
