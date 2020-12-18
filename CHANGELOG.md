@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.7.0](https://github.com/trystan2k/dotfiles/compare/v9.6.1...v9.7.0) (2020-12-18)
+
+### Features
+
+* **.gitconfig:** add alias to list branches by date ([d631b8b](https://github.com/trystan2k/dotfiles/commit/d631b8b87fabff07e366e8cffda948eff92bb32b))
+* **macos:** replace brew cask doctor for brew doctor verbose ([fb613fd](https://github.com/trystan2k/dotfiles/commit/fb613fd6a3c1b8b670173f4de3a9d7759b77b7f5))
+
 ### [9.6.1](https://github.com/trystan2k/dotfiles/compare/v9.6.0...v9.6.1) (2020-12-09)
 
 ## [9.6.0](https://github.com/trystan2k/dotfiles/compare/v9.4.0...v9.6.0) (2020-12-09)
