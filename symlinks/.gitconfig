@@ -121,6 +121,9 @@
 		fi \
 	}; f"
 
+	# Show a list of which branches you worked on last
+	gbs = git branch --sort=-committerdate
+
 [help]
 
 	# Automatically correct and execute mistyped commands
