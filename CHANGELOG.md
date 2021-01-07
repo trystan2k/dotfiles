@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.8.0](https://github.com/trystan2k/dotfiles/compare/v9.7.0...v9.8.0) (2021-01-07)
+
+### Features
+
+* **tools:** add fkill npm tool ([83393df](https://github.com/trystan2k/dotfiles/commit/83393df7829884d2ce83dea20d5c51413df99b50))
+
 ## [9.7.0](https://github.com/trystan2k/dotfiles/compare/v9.6.1...v9.7.0) (2020-12-18)
 
 ### Features
