@@ -100,6 +100,12 @@ configure() {
         . "$DOTFILES_FOLDER"/configure/ruby-gems.sh
     fi   
 
+    info "Install NPM global tools"
+    if ask_question 'Do you want to install NPM global tools?'; then
+        #shellcheck source=/dev/null
+        . "$DOTFILES_FOLDER"/tools/npm-global-tools.sh
+    fi       
+
     info "Configure Password store"
     if ask_question 'Do you want to configure password store ?'; then
         #shellcheck source=/dev/null
