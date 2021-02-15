@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.9.0](https://github.com/trystan2k/dotfiles/compare/v9.8.0...v9.9.0) (2021-02-15)
+
+### Features
+
+* **tools:** add meetingbar and pock tools ([1de2566](https://github.com/trystan2k/dotfiles/commit/1de256656c1013b629a07ebe6fe8de226c606498))
+
 ## [9.8.0](https://github.com/trystan2k/dotfiles/compare/v9.7.0...v9.8.0) (2021-01-07)
 
 ### Features
