@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.10.0](https://github.com/trystan2k/dotfiles/compare/v9.9.0...v9.10.0) (2021-02-22)
+
+### Features
+
+* **tools:** add bitwarden and bitwarden-cli ([0599fe5](https://github.com/trystan2k/dotfiles/commit/0599fe50c71b41a55eb664c4c641e010b1328b24))
+
 ## [9.9.0](https://github.com/trystan2k/dotfiles/compare/v9.8.0...v9.9.0) (2021-02-15)
 
 ### Features
