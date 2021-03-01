@@ -35,6 +35,7 @@ brew "subversion"
 brew "terminal-notifier"
 brew "tree"
 brew "wget"
+brew "youtube-dl"
 brew "zsh"
 
 # Apps
