@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.11.0](https://github.com/trystan2k/dotfiles/compare/v9.10.0...v9.11.0) (2021-03-01)
+
+### Features
+
+* **tools:** add youtube-dl ([160e6dc](https://github.com/trystan2k/dotfiles/commit/160e6dc5c35c20f38910b074190f7ea5fccd1a21))
+
 ## [9.10.0](https://github.com/trystan2k/dotfiles/compare/v9.9.0...v9.10.0) (2021-02-22)
 
 ### Features
