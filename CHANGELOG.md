@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.12.0](https://github.com/trystan2k/dotfiles/compare/v9.11.0...v9.12.0) (2021-04-02)
+
+### Features
+
+* **tools:** add dropbox ([1d7bfaa](https://github.com/trystan2k/dotfiles/commit/1d7bfaab6bef51fab80e72684eb4ea48ff6f1ccc))
+* **upgrades:** remove old files ([7d8cd3c](https://github.com/trystan2k/dotfiles/commit/7d8cd3c6c1929a35eff830215dfccdf451468c32))
+
 ## [9.11.0](https://github.com/trystan2k/dotfiles/compare/v9.10.0...v9.11.0) (2021-03-01)
 
 ### Features
