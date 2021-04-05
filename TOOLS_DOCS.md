@@ -36,3 +36,26 @@ hub is an extension to command-line git that helps you do everyday GitHub tasks 
 ```
 
 <https://hub.github.com/>
+
+## Password Store
+
+pass is a very simple password store that keeps passwords inside gpg2(1) encrypted files inside a simple directory tree residing at ~/.password-store.
+The pass utility provides a series of commands for manipulating the password store, allowing the user to add, remove, edit, synchronize, generate, and manipulate passwords
+
+```bash
+    pass init "$masterpass"
+
+    # To insert a new password
+    pass insert Category/Name
+
+    # To delete a password
+    pass rm Category/Name
+
+    # To edit a password
+    pass edit Category/Name
+
+    # To see current password
+    pass Category/Name
+```
+
+<https://git.zx2c4.com/password-store/about/>
