@@ -8,6 +8,7 @@ tap "homebrew/core"
 # Binaries
 
 brew "asdf"
+brew "detox"
 brew "fx"
 brew "fzf"
 
