@@ -60,7 +60,7 @@ module.exports = {
   plugins: [
     "hyperterm-cobalt2-theme",
     "hyper-quit",
-    "hyperline",
+    // "hyperline",
     "hypercwd",
     "hyperlinks",
     "hyperterm-safepaste",
