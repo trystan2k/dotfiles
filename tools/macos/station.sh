@@ -9,10 +9,10 @@ DOTFILES_FOLDER="$(pwd | grep -o '.*dotfiles')"
 TOOL_NAME=station
 
 # Tool extra information
-EXTRA_INFO="https://github.com/getstation/desktop-app/releases/download/v2.0.9/Station-x86_64.AppImage https://avatars2.githubusercontent.com/u/27734877?s=200&v=4"
+EXTRA_INFO="https://github.com/getstation/desktop-app/releases/download/v2.0.9/Station.dmg"
 
 # Install methods by OS
-OS_METHODS="linux:appImage"
+OS_METHODS="darwin:dmg"
 
 ## Pre-installation required steps
 preInstall() {

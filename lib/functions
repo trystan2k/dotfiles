@@ -77,7 +77,10 @@ install() {
                     ;;
                 snap*)
                     _snapInstall "${otherArguments[@]}"
-                    ;;                    
+                    ;;     
+                dmg*)
+                    _dmgInstall "${otherArguments[@]}"
+                    ;;               
                 *)        
                     warn "Unknow Installatin type: '$install_type'"
                     _errorInstall "${otherArguments[@]}" ;;
@@ -192,6 +195,41 @@ _appImageInstall() {
     sudo sh -c "echo 'Type=Application' >> /usr/share/applications/$1.desktop"
     sudo sh -c "echo 'Categories=Application;' >> /usr/share/applications/$1.desktop"
     sudo sh -c "echo 'StartupNotify=true' >> /usr/share/applications/$1.desktop"
+
+    return 0
+}
+
+_dmgInstall() {
+
+    if [ -z "$1" ]; then
+        warn "The name of the tool to install must be informed."
+        return 1
+    fi
+
+    if [ -z "$2" ]; then
+        warn "To install .dmg files, a URL must be informed, to obtain the .dmg file from"
+        return 2
+    fi     
+
+    info "Installing '$1' via DMG, from $2"
+
+    filename="$HOME"/Downloads/"$1".dmg
+
+    wget -O "$filename" "$2"
+    listing=$(hdiutil attach "$filename" | grep Volumes)
+    volume=$(echo "$listing" | cut -f 3)
+
+    appFileCount=$(find "$volume" -name "*.app" 2>/dev/null | wc -l)
+    pkgFileCount=$(find "$volume" -name "*.pkg" 2>/dev/null | wc -l)
+    if [  "$appFileCount" != 0 ]; then
+        cp -rf "$volume"/*.app /Applications    
+    elif [ "$pkgFileCount" != 0 ]; then
+        package=$(find "$volume" -name "*.pkg" | head -1)
+        installer -pkg "$volume"/"$package" -target /
+    fi
+
+    hdiutil unmount "$(echo "$listing" | cut -f 1 | awk '{$1=$1};1')"
+    rm "$filename"
 
     return 0
 }

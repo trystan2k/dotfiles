@@ -30,6 +30,13 @@ install() {
             brew tap homebrew/bundle
             brew bundle -v --file="$DOTFILES_FOLDER"/tools/macos/Brewfile
 
+            info "Install other tools"
+
+            for file in $(/bin/ls "$DOTFILES_FOLDER"/tools/macos/*.sh |grep -v AptSetup.sh); do 
+                #shellcheck source=/dev/null
+                . "$file"
+            done            
+
         elif [[ $OSTYPE == linux* ]] ; then
             info "Installing tools for Linux"
 
