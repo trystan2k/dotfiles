@@ -9,6 +9,7 @@ tap "homebrew/core"
 
 brew "asdf"
 brew "detox"
+brew "exa"
 brew "fx"
 brew "fzf"
 
