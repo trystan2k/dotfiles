@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.14.0](https://github.com/trystan2k/dotfiles/compare/v9.13.0...v9.14.0) (2021-08-08)
+
+### Features
+
+* **hyper:** comment hiperline plugin due to performance issue on hyper 3.1.1 ([f3e510c](https://github.com/trystan2k/dotfiles/commit/f3e510c715b3cca6ec8a3c46301833fbafceb3b1))
+* **tools:** add exa for linux ([a2cd8dc](https://github.com/trystan2k/dotfiles/commit/a2cd8dc6c3488d3906186d621f22e289354f7bbc))
+* **tools:** move station installation from brew to shell script ([05aba56](https://github.com/trystan2k/dotfiles/commit/05aba56f57856373d8476306b607874b737dcb56))
+
 ## [9.13.0](https://github.com/trystan2k/dotfiles/compare/v9.12.1...v9.13.0) (2021-05-20)
 
 ### Features
