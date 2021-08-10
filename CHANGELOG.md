@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.16.0](https://github.com/trystan2k/dotfiles/compare/v9.15.0...v9.16.0) (2021-08-10)
+
+### Features
+
+* **tools:** remove ferdi and add slack ([c794e89](https://github.com/trystan2k/dotfiles/commit/c794e890c3602eb4b3c27b966c6b9f75c2258f21))
+
 ## [9.15.0](https://github.com/trystan2k/dotfiles/compare/v9.14.0...v9.15.0) (2021-08-10)
 
 ### Features
