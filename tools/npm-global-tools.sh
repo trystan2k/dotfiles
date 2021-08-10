@@ -14,7 +14,14 @@ install() {
     # Install
     npm install --global fkill-cli
 
-    success "'fkill' installed."        
+    success "'fkill' installed."       
+
+    info "Installing npm tool 'emoj'"
+    
+    # Install
+    npm install --global emoj
+
+    success "'emoj' installed."          
 }
 
 execute() {

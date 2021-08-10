@@ -21,6 +21,7 @@ ENABLE_SCRIPTS_FOLDER_SRC="$SCRIPT_COMMANDS_FOLDER"/commands
 
 scripts=(
     browsing/shorten-url.sh
+    communication/emojis/emojis-search.sh
     developer-utils/base64-decode-input.sh
     developer-utils/base64-encode-input.sh
     developer-utils/prettify-json.sh
