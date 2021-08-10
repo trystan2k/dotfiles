@@ -49,10 +49,8 @@ cask "bitwarden"
 cask "caffeine"
 cask "daisydisk"
 cask "dozer"
-cask "dropbox"
 cask "duplicati"
 cask "fanny"
-cask "flycut"
 cask "licecap"
 cask "meetingbar"
 cask "notion"
@@ -76,7 +74,6 @@ cask "microsoft-edge"
 
 ## Chats
 cask "pdf-expert"
-cask "rectangle"
 
 ## Movies
 cask "iina"
