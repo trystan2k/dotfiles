@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.15.0](https://github.com/trystan2k/dotfiles/compare/v9.14.0...v9.15.0) (2021-08-10)
+
+### Features
+
+* **tools:** add duplicati and ferdi tools ([76ef9da](https://github.com/trystan2k/dotfiles/commit/76ef9da68d384004aa9ef602f37ee9d49e4be9da))
+* **tools:** add emojis search script to raycast ([f48b6c3](https://github.com/trystan2k/dotfiles/commit/f48b6c39863cddd2199bcc3fe84f75f47ec56ae0))
+* **tools:** remove station tool ([78b786b](https://github.com/trystan2k/dotfiles/commit/78b786b500c654f70a9883672ce5ca84e0f9680e))
+* **tools:** replace alfred with raycast ([1e9d25e](https://github.com/trystan2k/dotfiles/commit/1e9d25e0a204e93c6e1a4f8bc190807bb3f760d1))
+
 ## [9.14.0](https://github.com/trystan2k/dotfiles/compare/v9.13.0...v9.14.0) (2021-08-08)
 
 ### Features
