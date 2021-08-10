@@ -30,23 +30,13 @@ module.exports = {
 
     // for advanced config flags please refer to https://hyper.is/#cfg  
 
-    hyperTabs: {
-      trafficButtons: true,
-      border: true,
-      tabIconsColored: true,
-      closeAlign: "right",
-      activityColor: 'salmon',
-    }, 
+    /* Plugins configuration */
 
-    hyperline: {                                                            
-      plugins: [ 
-        "hostname",
-        "ip",                                                                    
-        "memory",                                                                   
-        "battery"
-      ]                                                                          
-    },
-
+    // hyper-fading-scrollbar
+    scrollbarColor: '#ffc600', // any valid css color
+    scrollbarOpacity: 0.3, // value between 0 and 1
+    
+    // hyper-active-tab
     activeTab: '🌕'
   },
 
@@ -60,23 +50,16 @@ module.exports = {
   plugins: [
     "hyperterm-cobalt2-theme",
     "hyper-quit",
-    // "hyperline",
     "hypercwd",
-    "hyperlinks",
     "hyperterm-safepaste",
-    "hyper-search",
     "hyper-fading-scrollbar",
-    // "hyper-font-ligatures",
-    "hyper-tab-touchbar",
     "hyper-active-tab"
   ],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
   // to load it and avoid it being `npm install`ed
-  localPlugins: [
-    // "hyper-font-ligatures"
-  ],
+  localPlugins: [],
 
   keymaps: {
     // Example
