@@ -4,7 +4,7 @@
 
 module.exports = {
   config: {
-    webGLRenderer: true, 
+    webGLRenderer: false, 
     
     // choose either `'stable'` for receiving highly polished,
     // or `'canary'` for less polished but more frequent updates
@@ -65,8 +65,8 @@ module.exports = {
     "hyperlinks",
     "hyperterm-safepaste",
     "hyper-search",
-    "hyper-fading-scrollbar", 
-    "hyper-font-ligatures",
+    "hyper-fading-scrollbar",
+    // "hyper-font-ligatures",
     "hyper-tab-touchbar",
     "hyper-active-tab"
   ],
@@ -74,7 +74,9 @@ module.exports = {
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
   // to load it and avoid it being `npm install`ed
-  localPlugins: [],
+  localPlugins: [
+    // "hyper-font-ligatures"
+  ],
 
   keymaps: {
     // Example
