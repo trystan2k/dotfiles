@@ -117,7 +117,7 @@ zstyle ':completion:*' menu yes select
 setopt auto_cd
 
 # Add ASDF Bin into path, to use with direnv
-export PATH="$HOME/.asdf/bin:$PATH"
+export PATH="$PATH:$HOME/.asdf/bin"
 
 # ZSH_HISTORY Setup
 setopt HIST_VERIFY
@@ -130,7 +130,7 @@ setopt SHARE_HISTORY         # Share history file amongst all Zsh sessions
 # Hook direnv into your shell.
 eval "$(asdf exec direnv hook zsh)"
 direnv() { asdf exec direnv "$@"; }
-#. $(brew --prefix asdf)/asdf.sh
+. $(brew --prefix asdf)/asdf.sh
 
 # Maybe this shoudl be necessary if it does not auto load in IDEs, for example
 #asdf exec direnv reload
