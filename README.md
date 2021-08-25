@@ -105,11 +105,10 @@ Some of initial configuration can be done executing the configuration script loc
 
 ## Apps that are interesting but not sure if useful
 
-1. Captin (<http://captin.strikingly.com/)> - Show Mac caps lock status
+1. ZX - (<https://github.com/google/zx)> - Allow to write shells scripts with Javascript
 2. Mackup (<https://github.com/lra/mackup)> - Backup of Mac
-3. Pock (<https://pock.dev/)> - Customize Touch Bar
+3. Karabiner (<https://pqrs.org/osx/karabiner/)> - Remap keybinds
 4. Mosh (<https://mosh.org/)> - Mobile SSH client
-5. Karabiner (<https://pqrs.org/osx/karabiner/)> - Remap keybinds
 
 ## Possible issues
 
