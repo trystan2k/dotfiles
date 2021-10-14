@@ -11,6 +11,9 @@ export SAVEHIST=10000000
 # Disable zsh-tab-title prefix
 export ZSH_TAB_TITLE_DEFAULT_DISABLE_PREFIX=true
 
+export MCFLY_FUZZY=true
+export MCFLY_INTERFACE_VIEW=BOTTOM
+
 # This should be the last line of the file
 # For local changes
 # Don't make edits below this
