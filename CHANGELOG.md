@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.17.0](https://github.com/trystan2k/dotfiles/compare/v9.16.0...v9.17.0) (2021-10-14)
+
+### Features
+
+* **symlinks:** disable webGLRenderer to use font ligatures ([00344d4](https://github.com/trystan2k/dotfiles/commit/00344d498ce0fcabc96c1ca8d5a53fc1b1e6f4b9))
+* **symlinks:** remove hyper plugins not used anymore ([b234639](https://github.com/trystan2k/dotfiles/commit/b23463920b45fc273b5affa1540a53e3b3cfe4bb))
+* **symlinks:** source asdf.sh file to set ASDF_DIR env variable ([9ec1029](https://github.com/trystan2k/dotfiles/commit/9ec102922b335ebb5663f474a856b1dac3f247ca))
+* **tools:** add Friendly Streaming Browser and HP Smart tools ([51a7333](https://github.com/trystan2k/dotfiles/commit/51a733337a9dd119f0625e48d8d2f7a2d185bd09))
+* **tools:** add hidden bar ([c3b0841](https://github.com/trystan2k/dotfiles/commit/c3b0841b14bed62fdcf20096bd95096633244b1d))
+* **tools:** add mcfly fuzzy search ([26cedbc](https://github.com/trystan2k/dotfiles/commit/26cedbc88bf90e526e0bcf3742c5203a8609cee4))
+* **tools:** remove bitwarden and bitwarden-cli ([5465ac7](https://github.com/trystan2k/dotfiles/commit/5465ac73fb44e6aca1817dec4604f072da085270))
+* **tools:** remove rectangle, dropbox and flycut ([a1a503e](https://github.com/trystan2k/dotfiles/commit/a1a503e8df251d38b1e8cdda72c4bd14c0064efe))
+
 ## [9.16.0](https://github.com/trystan2k/dotfiles/compare/v9.15.0...v9.16.0) (2021-08-10)
 
 ### Features
