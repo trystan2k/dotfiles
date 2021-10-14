@@ -43,9 +43,6 @@ zinit snippet OMZ::plugins/encode64/encode64.plugin.zsh
 zinit ice wait lucid
 zinit snippet OMZ::plugins/extract/extract.plugin.zsh
 
-zinit ice wait lucid
-zinit snippet OMZ::plugins/fzf/fzf.plugin.zsh
-
 zinit ice wait svn lucid
 zinit snippet OMZ::plugins/osx
 
@@ -131,6 +128,8 @@ setopt SHARE_HISTORY         # Share history file amongst all Zsh sessions
 eval "$(asdf exec direnv hook zsh)"
 direnv() { asdf exec direnv "$@"; }
 . $(brew --prefix asdf)/asdf.sh
+
+eval "$(mcfly init zsh)"
 
 # Maybe this shoudl be necessary if it does not auto load in IDEs, for example
 #asdf exec direnv reload

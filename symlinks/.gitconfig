@@ -47,6 +47,8 @@
 
 	ls = "log --pretty=format:\"%C(yellow)%h %C(green)%s %Creset(%ad)\" --date=relative"
 
+	lc = "log --pretty=oneline --graph --decorate --all"
+
 	# View the current working tree status using the short format
 	s = status -s
 
@@ -127,7 +129,7 @@
 [help]
 
 	# Automatically correct and execute mistyped commands
-	autocorrect = 1	
+	autocorrect = 2
 	
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
