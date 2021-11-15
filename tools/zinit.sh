@@ -9,7 +9,7 @@ DOTFILES_FOLDER="$(pwd | grep -o '.*dotfiles')"
 TOOL_NAME=zinit
 
 # Tool extra information
-EXTRA_INFO="https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh"
+EXTRA_INFO="https://raw.githubusercontent.com/zdharma-continuum/zinit/master/doc/install.sh"
 
 # Install methods by OS
 OS_METHODS="darwin:sh linux:sh"

@@ -71,7 +71,7 @@ zinit ice wait blockf atpull'zinit creinstall -q .' lucid
 zinit load zsh-users/zsh-completions
 
 zinit ice wait atinit"zpcompinit; zpcdreplay" lucid
-zinit load zdharma/fast-syntax-highlighting
+zinit load zdharma-continuum/fast-syntax-highlighting
 
 zinit ice wait atload"_zsh_autosuggest_start" lucid
 zinit load zsh-users/zsh-autosuggestions

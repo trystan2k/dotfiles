@@ -40,7 +40,8 @@ execute() {
 
 _is_func_imported() {
 
-    typeset TYPE_RESULT="$(type -t user)"
+    typeset TYPE_RESULT
+    TYPE_RESULT="$(type -t user)"
 
     if [ "$TYPE_RESULT" != 'function' ]; then
         #shellcheck source=/dev/null
