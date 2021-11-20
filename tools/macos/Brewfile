@@ -1,14 +1,12 @@
 # Trystan2k's Brewfile
 
 # Taps
-
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
 
 # Binaries
-
 brew "ack"
 brew "coreutils"
 brew "asdf"
@@ -27,6 +25,7 @@ brew "httpie"
 brew "hub"
 brew "jq"
 brew "mas"
+cask "mcfly"
 brew "pass"
 brew "ripgrep"
 brew "scrcpy"
@@ -82,6 +81,5 @@ cask "sublime-text"
 cask "visual-studio-code"
 
 # Fonts
-
 cask "font-fira-code"
 cask "font-hack-nerd-font"
