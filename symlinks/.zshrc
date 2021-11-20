@@ -18,12 +18,23 @@ fi
 
 # Zinit Init
 #shellcheck source=/dev/null
-source "$HOME/.zinit/bin/zinit.zsh"
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+source "${ZINIT_HOME}/zinit.zsh"
 autoload -Uz _zinit
 # shellcheck disable=SC2034,SC2154
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
 setopt promptsubst
+
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zinit light-mode for \
+    zdharma-continuum/zinit-annex-as-monitor \
+    zdharma-continuum/zinit-annex-bin-gem-node \
+    zdharma-continuum/zinit-annex-patch-dl \
+    zdharma-continuum/zinit-annex-rust
+
+### End of Zinit's installer chunk
 
 zinit ice wait lucid
 zinit snippet OMZ::lib/git.zsh
@@ -43,8 +54,8 @@ zinit snippet OMZ::plugins/encode64/encode64.plugin.zsh
 zinit ice wait lucid
 zinit snippet OMZ::plugins/extract/extract.plugin.zsh
 
-zinit ice wait svn lucid
-zinit snippet OMZ::plugins/osx
+# zinit ice wait svn lucid
+# zinit snippet OMZ::plugins/macos
 
 zinit ice wait lucid
 zinit load djui/alias-tips
