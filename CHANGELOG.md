@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [9.18.1](https://github.com/trystan2k/dotfiles/compare/v9.18.0...v9.18.1) (2021-11-20)
+
+### Bug Fixes
+
+* **tools:** change homebrew install command ([1d9416b](https://github.com/trystan2k/dotfiles/commit/1d9416b9eb987c338bfa8a3cad68cb7a15ec8ce1))
+
 ## [9.18.0](https://github.com/trystan2k/dotfiles/compare/v9.17.0...v9.18.0) (2021-11-20)
 
 ### Features
