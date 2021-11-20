@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.18.0](https://github.com/trystan2k/dotfiles/compare/v9.17.0...v9.18.0) (2021-11-20)
+
+### Features
+
+* **tools:** migrate zinit to new url ([21078e4](https://github.com/trystan2k/dotfiles/commit/21078e46786af84913375fc0e2fe164ceef07816))
+
 ## [9.17.0](https://github.com/trystan2k/dotfiles/compare/v9.16.0...v9.17.0) (2021-10-14)
 
 ### Features
