@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.19.0](https://github.com/trystan2k/dotfiles/compare/v9.18.2...v9.19.0) (2021-11-20)
+
+### Features
+
+* **configure:** update asdf plugins versions ([9b4e51b](https://github.com/trystan2k/dotfiles/commit/9b4e51b3bc522694522c8973cf3f6eb7e0583f62))
+* **symlinks:** update zinit installatio dir ([25b8683](https://github.com/trystan2k/dotfiles/commit/25b86830deb969815ced72febb73ec3f61360bfb))
+* **tools:** add mcfly ([fc599f2](https://github.com/trystan2k/dotfiles/commit/fc599f2b50527d85ca3ca1d8b2a0d4934bc9e5ea))
+
 ### [9.18.2](https://github.com/trystan2k/dotfiles/compare/v9.18.1...v9.18.2) (2021-11-20)
 
 ### Bug Fixes
