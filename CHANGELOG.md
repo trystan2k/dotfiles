@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [9.18.2](https://github.com/trystan2k/dotfiles/compare/v9.18.1...v9.18.2) (2021-11-20)
+
+### Bug Fixes
+
+* **tools:** change zinit install url ([0742433](https://github.com/trystan2k/dotfiles/commit/0742433fc51b460dfc3775525ac7e544bda1420e))
+
 ### [9.18.1](https://github.com/trystan2k/dotfiles/compare/v9.18.0...v9.18.1) (2021-11-20)
 
 ### Bug Fixes
