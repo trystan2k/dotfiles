@@ -16,12 +16,12 @@ execute() {
 
         case "$OSTYPE" in
             darwin*)  
-                sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+                /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
                 result=$?
                 ;;
             linux*)   
                 linux=1
-                sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+                /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
                 result=$?
                 ;;   
             *)        
