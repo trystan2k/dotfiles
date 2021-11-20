@@ -5,6 +5,7 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
+tap "cantino/mcfly"
 
 # Binaries
 brew "ack"
@@ -83,3 +84,7 @@ cask "visual-studio-code"
 # Fonts
 cask "font-fira-code"
 cask "font-hack-nerd-font"
+
+# App Store
+mas "Friendly Streaming", id: 553245401
+mas "HP Smart", id: 1474276998
