@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.20.0](https://github.com/trystan2k/dotfiles/compare/v9.19.0...v9.20.0) (2021-11-20)
+
+### Features
+
+* **tools:** remove station tool ([1b2a9c6](https://github.com/trystan2k/dotfiles/commit/1b2a9c61612f2e570c80b92f9ecb0616ca6f5ec4))
+
 ## [9.19.0](https://github.com/trystan2k/dotfiles/compare/v9.18.2...v9.19.0) (2021-11-20)
 
 ### Features
