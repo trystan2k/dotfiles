@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.21.0](https://github.com/trystan2k/dotfiles/compare/v9.20.0...v9.21.0) (2021-12-07)
+
+### Features
+
+* **tools:** add tools from App store ([9937b17](https://github.com/trystan2k/dotfiles/commit/9937b1767dafc3d736d3ba35694a4b7c73736497))
+
+### Bug Fixes
+
+* **tools:** correct mcfly install type ([7efe565](https://github.com/trystan2k/dotfiles/commit/7efe565e05a951cec2d980febab19c07a94bce54))
+
 ## [9.20.0](https://github.com/trystan2k/dotfiles/compare/v9.19.0...v9.20.0) (2021-11-20)
 
 ### Features
