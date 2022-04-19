@@ -49,7 +49,6 @@ cask "daisydisk"
 cask "duplicati"
 cask "fanny"
 cask "hiddenbar"
-cask "licecap"
 cask "meetingbar"
 cask "notion"
 cask "overkill"
@@ -70,14 +69,14 @@ cask "firefox"
 cask "google-chrome"
 cask "microsoft-edge"
 
-## Chats
-cask "pdf-expert"
-
-## Movies
+## Multimedia
 cask "iina"
+cask "licecap"
+cask "LosslessCut"
 cask "stremio"
 
 ## Editors
+cask "pdf-expert"
 cask "sublime-text"
 cask "visual-studio-code"
 
