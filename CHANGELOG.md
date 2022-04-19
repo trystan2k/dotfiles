@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.22.0](https://github.com/trystan2k/dotfiles/compare/v9.21.0...v9.22.0) (2022-04-19)
+
+### Features
+
+* **tools:** add losslesscut ([79916f8](https://github.com/trystan2k/dotfiles/commit/79916f8af43497ff8c5efcd647e6b19fe9325d85))
+
 ## [9.21.0](https://github.com/trystan2k/dotfiles/compare/v9.20.0...v9.21.0) (2021-12-07)
 
 ### Features
