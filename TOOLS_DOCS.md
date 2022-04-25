@@ -59,3 +59,29 @@ The pass utility provides a series of commands for manipulating the password sto
 ```
 
 <https://git.zx2c4.com/password-store/about/>
+
+## Duplicati
+
+Currently (April/2022) Duplicati has an issue related to Python.
+In MacOS 12.3.1 (Monterey), Python 2.7 was removed from the OS, which cause Duplicati to not work, as it relies on this python version installed system wide.
+To temporarily solve this, follow these instructions:
+
+1. Install Mono
+2. Install Duplicati
+3. Open Terminal
+    sudo pip3 install pyobjc
+    cd /Applications/Duplicati.app/Contents/Resources/OSXTrayHost
+    2to3 -w osx-trayicon-rumps.py
+    2to3 -w rumps.py
+4. Reboot or Logout/Login
+5. RUMPS_PYTHON=/usr/bin/python3 /Applications/Duplicati.app/Contents/MacOS/duplicati
+
+Depending on permissions and user setup, you may also have to add the Duplicati app to the Login Items in the 'Users & groups' submit in Settings.
+
+Or if want to continue with Python 2.7:
+
+1. Install Duplicati
+2. Download & install Python 2.7
+3. Install Python dependencies pip install pyobjc==5.3 & pip install rumps==0.3.0
+4. Reboot/make sure Duplicate isn't already running
+5. Open up Terminal and run RUMPS_PYTHON=/Library/Frameworks/Python.framework/Versions/2.7/bin/python open /Applications/Duplicati.app
