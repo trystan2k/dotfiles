@@ -139,3 +139,21 @@
 	
 [pull]
 	rebase = false
+
+[push]
+  	default = current
+
+[interactive]
+  	diffFilter = delta --color-only
+
+[commit]
+  	verbose = true
+
+[init]
+  	defaultBranch = main
+
+[fetch]
+  	prune = true
+
+[delta]
+  	side-by-side = true
