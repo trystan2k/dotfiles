@@ -21,8 +21,12 @@ execute() {
 
     ## General
 
+    # Allow moving window by dragging at any place
+    info "General - Allow moving window by dragging at any place"
+    defaults write -g NSWindowShouldDragOnGesture -bool true   
+
     # Set dark interface style"
-    info "Geneeral - Set Dark interface style"
+    info "General - Set Dark interface style"
     defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
 
     ## Desktop & Screensaver
