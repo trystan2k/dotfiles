@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.23.0](https://github.com/trystan2k/dotfiles/compare/v9.22.0...v9.23.0) (2022-05-07)
+
+### Features
+
+* **macos:** add default setting to allow moving window by dragging ([dfa5577](https://github.com/trystan2k/dotfiles/commit/dfa5577b59c9c3ee9e982bbfeb404a87ba0fc680))
+* **symlinks:** add gitconfig and npm settings ([7c5fb43](https://github.com/trystan2k/dotfiles/commit/7c5fb43f0a01c4416abdaad4d968003181a0a3ee))
+
 ## [9.22.0](https://github.com/trystan2k/dotfiles/compare/v9.21.0...v9.22.0) (2022-04-19)
 
 ### Features
