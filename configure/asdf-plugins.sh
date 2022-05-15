@@ -16,7 +16,7 @@ plugins=(
     java:adoptopenjdk-14.0.2+12:true
     yarn:1.22.15:true
     ruby:2.7.1:true
-    direnv:2.28.0:true
+    direnv:2.31.0:true
 )
 
 # ---------------------------------------------
@@ -33,6 +33,22 @@ preInstall() {
         bash "$HOME/.asdf/plugins/nodejs/bin/import-release-team-keyring"
 
         success "Pre-install step for $1 completed"
+    ;;
+    *)
+    ;;
+    esac
+}
+
+postInstall() {
+
+    case $1 in
+    direnv)
+        info "Executing post-install step for $1"
+        
+        # Configure direnv
+        asdf direnv setup --shell zsh --version "$2"
+
+        success "Post-install step for $1 completed"
     ;;
     *)
     ;;
@@ -74,6 +90,9 @@ install() {
             
             success "Version $PLUGIN_VERSION set as global for $PLUGIN_NAME"
         fi
+
+        # Post install step
+        postInstall "$PLUGIN_NAME" "$PLUGIN_VERSION"
 
         success "ASDF Plugin $PLUGIN_NAME version $PLUGIN_VERSION installed."
     done
