@@ -142,6 +142,8 @@ direnv() { asdf exec direnv "$@"; }
 
 eval "$(mcfly init zsh)"
 
+source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
+
 # Maybe this shoudl be necessary if it does not auto load in IDEs, for example
 #asdf exec direnv reload
 
