@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.24.0](https://github.com/trystan2k/dotfiles/compare/v9.23.0...v9.24.0) (2022-05-15)
+
+### Features
+
+* **configure:** update nodejs version ([7e344ff](https://github.com/trystan2k/dotfiles/commit/7e344ffb5b22b7f6f30a4c89e59e54879935d1ce))
+* **scripts:** add postinstall script ([05c2512](https://github.com/trystan2k/dotfiles/commit/05c2512997fde0947063376e6542aa1086d3ec0c))
+* **symlinks, configure:** update direnv configuration ([7a9adea](https://github.com/trystan2k/dotfiles/commit/7a9adeab02d521085a79bb3ceaa379b2485efa8b))
+* **tools:** add python scripts ([e51c69a](https://github.com/trystan2k/dotfiles/commit/e51c69a8b4394a2d1036a7fa28fb56d19da998d7))
+
 ## [9.23.0](https://github.com/trystan2k/dotfiles/compare/v9.22.0...v9.23.0) (2022-05-07)
 
 ### Features
