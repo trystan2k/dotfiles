@@ -99,19 +99,7 @@ configure() {
         . "$DOTFILES_FOLDER"/configure/asdf-plugins.sh
         #shellcheck source=/dev/null
         . "$DOTFILES_FOLDER"/configure/direnv-config.sh
-    fi
-
-    info "Install Ruby Gems"
-    if ask_question 'Do you want to install Ruby Gems?'; then
-        #shellcheck source=/dev/null
-        . "$DOTFILES_FOLDER"/configure/ruby-gems.sh
-    fi   
-
-    info "Install NPM global tools"
-    if ask_question 'Do you want to install NPM global tools?'; then
-        #shellcheck source=/dev/null
-        . "$DOTFILES_FOLDER"/tools/npm-global-tools.sh
-    fi       
+    fi     
 
     info "Configure Password store"
     if ask_question 'Do you want to configure password store ?'; then
