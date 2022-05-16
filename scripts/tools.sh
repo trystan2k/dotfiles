@@ -26,9 +26,22 @@ install() {
             # Update Homebrew recipes
             brew update
 
-            # Install all our dependencies with bundle (See Brewfile)
+            user "Install tools for 'work' or 'personal' machine?"
+            read -r COMPUTER_NAME
+
+            if [ "$COMPUTER_NAME" != "work" ] && [ "$COMPUTER_NAME" != "work" ] ; then
+                COMPUTER_NAME="personal"
+            fi
+
+            info "Installing tools for '$COMPUTER_NAME' machine"
+
             brew tap homebrew/bundle
+
+            # Install common tools
             brew bundle -v --file="$DOTFILES_FOLDER"/tools/macos/Brewfile
+
+            # Install tools for 'work' or 'personal' machine
+            brew bundle -v --file="$DOTFILES_FOLDER"/tools/macos/Brewfile."$COMPUTER_NAME"
 
             info "Install other tools"
 
