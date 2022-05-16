@@ -25,8 +25,10 @@ _install_tools () {
 }
 
 _default_shell() {
-  user "Set default shell to ZSH"
-  chsh -s "$(command -v zsh)"
+  if [[ $OSTYPE == linux* ]] ; then
+    user "Set default shell to ZSH"
+    chsh -s "$(command -v zsh)"
+  fi
 }
 
 _configure() {
