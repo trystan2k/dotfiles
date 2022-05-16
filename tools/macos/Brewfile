@@ -25,7 +25,6 @@ brew "gnupg"
 brew "httpie"
 brew "hub"
 brew "jq"
-brew "mas"
 brew "mcfly"
 brew "pass"
 brew "ripgrep"
@@ -35,7 +34,6 @@ brew "subversion"
 brew "terminal-notifier"
 brew "tree"
 brew "wget"
-brew "youtube-dl"
 brew "zsh"
 
 # Apps
@@ -45,22 +43,15 @@ cask "android-file-transfer"
 cask "android-platform-tools"
 cask "appcleaner"
 cask "caffeine"
-cask "daisydisk"
-cask "duplicati"
 cask "fanny"
 cask "hiddenbar"
 cask "meetingbar"
 cask "notion"
 cask "overkill"
-cask "parallels"
-cask "pock"
 cask "raycast"
-cask "slack"
-cask "transmission"
-cask "vidrio"
 
 ## Dev
-cask "docker"
+cask "figma"
 cask "hyper"
 cask "postman"
 
@@ -70,20 +61,13 @@ cask "google-chrome"
 cask "microsoft-edge"
 
 ## Multimedia
-cask "iina"
 cask "licecap"
 cask "LosslessCut"
-cask "stremio"
 
 ## Editors
-cask "pdf-expert"
 cask "sublime-text"
 cask "visual-studio-code"
 
 # Fonts
 cask "font-fira-code"
 cask "font-hack-nerd-font"
-
-# App Store
-mas "Friendly Streaming", id: 553245401
-mas "HP Smart", id: 1474276998
