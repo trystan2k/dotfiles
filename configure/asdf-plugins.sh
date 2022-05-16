@@ -17,6 +17,7 @@ plugins=(
     yarn:1.22.15:true
     ruby:2.7.1:true
     direnv:2.31.0:true
+    python:3.9.12:true
 )
 
 # ---------------------------------------------
