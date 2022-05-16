@@ -44,6 +44,13 @@ b. Create/Recreate the symlinks to home folder: `cd dotfiles\scripts; ./symlinks
 
 c. Use the Brewfile to install all tools via Brew `cd dotfiles\tools\macos|linux; brew bundle`
 
+## Post Installation
+
+Due to some limitations, some tools needs to be installed after the terminal is restarted, so it gets difficult to automatize.
+After the reboot of the computer (after the dotfiles install script is finished or the last step is executed and terminal restarted), execute the post-install script:
+
+`cd dotfiles\scripts; ./post-install.sh`
+
 ## Apps installed by the script
 
 ### Terminal
