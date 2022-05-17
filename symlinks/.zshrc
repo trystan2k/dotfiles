@@ -4,6 +4,13 @@
 # PERF: Uncoment these line and last one to get a performance report of terminal init
 #zmodload zsh/zprof
 
+# Load brew from /opt/homebrew/bin/brew if in Mac M1
+if [[ $(uname -m) == 'arm64' ]]; then
+    if [ -d /opt/homebrew/bin ]; then
+        eval "$(/opt/homebrew/bin/brew shellenv)"
+    fi
+fi
+
 if [ -f "$HOME"/.aliases ]; then
   #shellcheck source=/dev/null
   . "$HOME"/.aliases
