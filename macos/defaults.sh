@@ -147,8 +147,11 @@ execute() {
     ## Security & Privacy
 
     # Set Lock Message to show on login screen
+    
     info "Security & Privacy - Set Lock Message to show on login screen"
-    sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText -string "Found me? Shoot a mail to trystan2k@gmail.com to return me. Thanks."
+    if ask_question '"Would you like to a Lock Message ? (as done via System Preferences >> Security & Privacy)?'; then
+        sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText -string "Found me? Shoot a mail to trystan2k@gmail.com to return me. Thanks."
+    fi
 
     ## Keyboard
 
