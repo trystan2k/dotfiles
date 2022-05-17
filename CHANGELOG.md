@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [10.1.0](https://github.com/trystan2k/dotfiles/compare/v10.0.0...v10.1.0) (2022-05-17)
+
+### Features
+
+* **configure:** update asdf java version ([d3c5837](https://github.com/trystan2k/dotfiles/commit/d3c58379949d11b653a80bfa3905495c43a7551e))
+* **tools:** remove fanny and add hot ([09071a7](https://github.com/trystan2k/dotfiles/commit/09071a70009554359a6503686db762792e03f5d0))
+
 ## [10.0.0](https://github.com/trystan2k/dotfiles/compare/v9.24.0...v10.0.0) (2022-05-17)
 
 ### Features
