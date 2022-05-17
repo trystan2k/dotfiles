@@ -144,14 +144,19 @@ just reload direnv:
     direnv reload
     ```
 
-4. When something is updated with ASDF or direnv, is possible that the error message `Unknown command:`asdf direnv hook asdf`` pops up.
-One possible solution is to remove direnv plugin from ASDF and reinstall it
+4. When installing Ruby via ASDF in a M1 Mac, add this to .exports.local file
 
     ```bash
-    asdf plugin-remove direnv
-    asdf plugin-add direnv
-    asdf install direnv xx.xx.xx
+        export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+        export LDFLAGS="-L/opt/homebrew/opt/readline/lib:$LDFLAGS"
+        export CPPFLAGS="-I/opt/homebrew/opt/readline/include:$CPPFLAGS"
+        export PKG_CONFIG_PATH="/opt/homebrew/opt/readline/lib/pkgconfig:$PKG_CONFIG_PATH"
+        export optflags="-Wno-error=implicit-function-declaration"
+        export LDFLAGS="-L/opt/homebrew/opt/libffi/lib:$LDFLAGS"
+        export CPPFLAGS="-I/opt/homebrew/opt/libffi/include:$CPPFLAGS"
+        export PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig:$PKG_CONFIG_PATH"
     ```
+
 
 ## Thanks to
 
