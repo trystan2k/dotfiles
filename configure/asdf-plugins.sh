@@ -13,7 +13,7 @@ source "$DOTFILES_FOLDER/lib/functions"
 
 plugins=(
     nodejs:16.15.0:true
-    java:adoptopenjdk-14.0.2+12:true
+    java:oracle-17.0.3.1:true
     yarn:1.22.15:true
     ruby:2.7.1:true
     direnv:2.31.0:true
