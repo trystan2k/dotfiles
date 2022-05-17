@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [10.1.1](https://github.com/trystan2k/dotfiles/compare/v10.1.0...v10.1.1) (2022-05-17)
+
+### Features
+
+* **scripts:** remove tools installation done via post-install ([f80bea1](https://github.com/trystan2k/dotfiles/commit/f80bea148cced712078c16a981ee2e3475657417))
+* **symlinks:** add brew load when in ARM CPU ([fa4b76b](https://github.com/trystan2k/dotfiles/commit/fa4b76bb4ed1e166f050d18337ece4a2900a742c))
+
 ## [10.1.0](https://github.com/trystan2k/dotfiles/compare/v10.0.0...v10.1.0) (2022-05-17)
 
 ### Features
