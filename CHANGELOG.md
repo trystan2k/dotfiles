@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [10.0.0](https://github.com/trystan2k/dotfiles/compare/v9.24.0...v10.0.0) (2022-05-17)
+
+### Features
+
+* **configure:** add python asdf plugin ([aa43fc0](https://github.com/trystan2k/dotfiles/commit/aa43fc0ac0d91edd7d5bfdeb6cffc8d134b4e1aa))
+* **configure:** remove pre-install step for nodejs in asdf ([84a93bc](https://github.com/trystan2k/dotfiles/commit/84a93bc207c863f6d309eb813619fa6d1836085e))
+* **macos:** add conditional change lock message ([88f76ee](https://github.com/trystan2k/dotfiles/commit/88f76ee55d069bd4a0f8bc84722f1cf1bdc7d6fa))
+* **scripts:** change default shell only in linux OS ([9ea622e](https://github.com/trystan2k/dotfiles/commit/9ea622e4cdbc6cf6b4a5ba9663c87fc7f38a6a4e))
+* **symlinks:** update direnv configuration ([a5c14bf](https://github.com/trystan2k/dotfiles/commit/a5c14bfe097ae7706028d98870acd565b776770a))
+* **tools:** split Brewfile into work and personal types ([c349be0](https://github.com/trystan2k/dotfiles/commit/c349be04e7f0287b91562a888303e8a5f76ba270))
+
 ## [9.24.0](https://github.com/trystan2k/dotfiles/compare/v9.23.0...v9.24.0) (2022-05-15)
 
 ### Features
