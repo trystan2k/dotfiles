@@ -42,14 +42,7 @@ install() {
 
             # Install tools for 'work' or 'personal' machine
             brew bundle -v --file="$DOTFILES_FOLDER"/tools/macos/Brewfile."$COMPUTER_NAME"
-
-            info "Install other tools"
-
-            for file in $(/bin/ls "$DOTFILES_FOLDER"/tools/macos/*.sh |grep -v AptSetup.sh); do 
-                #shellcheck source=/dev/null
-                . "$file"
-            done            
-
+    
         elif [[ $OSTYPE == linux* ]] ; then
             info "Installing tools for Linux"
 
