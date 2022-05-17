@@ -157,7 +157,6 @@ just reload direnv:
         export PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig:$PKG_CONFIG_PATH"
     ```
 
-
 ## Thanks to
 
 This repo was based in the | [Mathias Bynens](https://mathiasbynens.be/) | one (<https://github.com/mathiasbynens/dotfiles).> I had remove some
