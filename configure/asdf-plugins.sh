@@ -25,19 +25,7 @@ plugins=(
 # ---------------------------------------------
 
 preInstall() {
-
-    case $1 in
-    nodejs)
-        info "Executing pre-install step for $1"
-        
-        # Add keys for nodejs
-        bash "$HOME/.asdf/plugins/nodejs/bin/import-release-team-keyring"
-
-        success "Pre-install step for $1 completed"
-    ;;
-    *)
-    ;;
-    esac
+    info "Executing pre-installation steps..."
 }
 
 postInstall() {
