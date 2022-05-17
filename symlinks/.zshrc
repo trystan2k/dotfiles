@@ -135,9 +135,6 @@ setopt HIST_REDUCE_BLANKS
 setopt INC_APPEND_HISTORY    # this is default, but set for share_history
 setopt SHARE_HISTORY         # Share history file amongst all Zsh sessions
 
-# Hook direnv into your shell.
-eval "$(asdf exec direnv hook zsh)"
-direnv() { asdf exec direnv "$@"; }
 . $(brew --prefix asdf)/asdf.sh
 
 eval "$(mcfly init zsh)"
