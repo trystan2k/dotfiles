@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [10.3.0](https://github.com/trystan2k/dotfiles/compare/v10.2.0...v10.3.0) (2022-05-26)
+
+### Features
+
+* **symlinks:** add env variables in npmrc configuration ([a0d51d5](https://github.com/trystan2k/dotfiles/commit/a0d51d517aa6ede0acdafbb1af71dab87d286d79))
+
 ## [10.2.0](https://github.com/trystan2k/dotfiles/compare/v10.1.0...v10.2.0) (2022-05-26)
 
 ### Features
