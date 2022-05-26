@@ -236,5 +236,10 @@ function dl_github_sub() {
   rm -rf "./$folder/.svn"
 }
 
+# Convert a video file to MP4 using ffmpeg
+function convert_to_mp4() {
+  ffmpeg -i "$1" -c:v libx264 -c:a aac -movflags +faststart -vf format=yuv420p "${1%.*}.mp4"
+}
+
 #shellcheck source=/dev/null
 [ -f "$HOME/.aliases.local" ] && source "$HOME/.aliases.local"
