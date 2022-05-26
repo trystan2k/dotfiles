@@ -63,6 +63,7 @@ cask "microsoft-edge"
 ## Multimedia
 cask "licecap"
 cask "LosslessCut"
+cask "blackhole-16ch"
 
 ## Editors
 cask "sublime-text"
