@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [10.4.0](https://github.com/trystan2k/dotfiles/compare/v10.3.0...v10.4.0) (2022-05-28)
+
+### Features
+
+* **tools:** add lulu firewall ([ea97a21](https://github.com/trystan2k/dotfiles/commit/ea97a2186f57cec935c17b52101a27bc6289f01a))
+* **tools:** add plist file for duplicate and instructions on how to use ([6767190](https://github.com/trystan2k/dotfiles/commit/67671906587ea746ae4171f7c96206d36735967c))
+
 ## [10.3.0](https://github.com/trystan2k/dotfiles/compare/v10.2.0...v10.3.0) (2022-05-26)
 
 ### Features
