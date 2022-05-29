@@ -113,10 +113,11 @@ Some of initial configuration can be done executing the configuration script loc
 ## Apps that are interesting but not sure if useful
 
 1. Rust Desk (<https://rustdesk.com/>) - Remote connection
-2. ZX - (<https://github.com/google/zx)> - Allow to write shells scripts with Javascript
-3. Mackup (<https://github.com/lra/mackup)> - Backup of Mac
-4. Karabiner (<https://pqrs.org/osx/karabiner/)> - Remap keybinds
-5. Mosh (<https://mosh.org/)> - Mobile SSH client
+2. Sound Control (<https://staticz.com/soundcontrol/>) - Sound control
+3. ZX - (<https://github.com/google/zx)> - Allow to write shells scripts with Javascript
+4. Mackup (<https://github.com/lra/mackup)> - Backup of Mac
+5. Karabiner (<https://pqrs.org/osx/karabiner/)> - Remap keybinds
+6. Mosh (<https://mosh.org/)> - Mobile SSH client
 
 ## Possible issues
 
