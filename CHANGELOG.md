@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [10.6.0](https://github.com/trystan2k/dotfiles/compare/v10.5.0...v10.6.0) (2022-06-10)
+
+### Features
+
+* **symlinks:** add alias to batch convert video files to mp4 ([aff989a](https://github.com/trystan2k/dotfiles/commit/aff989a8e11f477e2739081f51b8f918051c3517))
+
 ## [10.5.0](https://github.com/trystan2k/dotfiles/compare/v10.4.0...v10.5.0) (2022-06-10)
 
 ### Features
