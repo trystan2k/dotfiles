@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [10.5.0](https://github.com/trystan2k/dotfiles/compare/v10.4.0...v10.5.0) (2022-06-10)
+
+### Features
+
+* **symlinks:** add zsh-prioritize-cwd-history ([82efa03](https://github.com/trystan2k/dotfiles/commit/82efa03b73fc8f67b8f35c66ed266ddca967598c))
+* **tools:** add procs tool ([9677202](https://github.com/trystan2k/dotfiles/commit/9677202bd32ef0838ca762d911514d7ee9d8b98c))
+
 ## [10.4.0](https://github.com/trystan2k/dotfiles/compare/v10.3.0...v10.4.0) (2022-05-28)
 
 ### Features
