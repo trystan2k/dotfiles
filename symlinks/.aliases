@@ -238,7 +238,20 @@ function dl_github_sub() {
 
 # Convert a video file to MP4 using ffmpeg
 function convert_to_mp4() {
-  ffmpeg -i "$1" -c:v libx264 -c:a aac -movflags +faststart -vf format=yuv420p "${1%.*}.mp4"
+  mkdir -p converted
+  ffmpeg -i "$1" -nostdin -c:v libx264 -c:a aac -movflags +faststart -vf format=yuv420p "converted/${1%.*}.mp4"
+}
+
+# Convert all video files in current folder to MP4 using ffmpeg
+function convert_all_to_mp4() {
+  find . -type f -exec file --mime-type {} + | grep "video/" | awk -F ":" '{print $1}' | while read line; do
+    convert_to_mp4 $line
+    retVal=$?
+    if [ $retVal -eq 0 ]; then
+      mkdir -p to_delete
+      mv $line to_delete
+    fi
+  done
 }
 
 #shellcheck source=/dev/null
