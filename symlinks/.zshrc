@@ -61,9 +61,6 @@ zinit snippet OMZ::plugins/encode64/encode64.plugin.zsh
 zinit ice wait lucid
 zinit snippet OMZ::plugins/extract/extract.plugin.zsh
 
-# zinit ice wait svn lucid
-# zinit snippet OMZ::plugins/macos
-
 zinit ice wait lucid
 zinit load djui/alias-tips
 
@@ -99,6 +96,9 @@ zinit load trystan2k/zsh-npm-plugin
 
 zinit ice wait lucid
 zinit load trystan2k/zsh-tab-title
+
+zinit ice wait lucid
+zinit load gezalore/zsh-prioritize-cwd-history
 
 zinit ice lucid
 zinit load romkatv/powerlevel10k
