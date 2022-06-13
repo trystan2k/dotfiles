@@ -22,6 +22,13 @@ install() {
     npm install --global emoj
 
     success "'emoj' installed."          
+
+    info "Installing npm tool 'qnm'"
+    
+    # Install
+    npm install --global qnm
+
+    success "'qnm' installed."      
 }
 
 execute() {
