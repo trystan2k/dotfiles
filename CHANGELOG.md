@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [10.7.0](https://github.com/trystan2k/dotfiles/compare/v10.6.0...v10.7.0) (2022-06-13)
+
+### Features
+
+* **tools:** add qnm npm tool ([a7d5730](https://github.com/trystan2k/dotfiles/commit/a7d5730cca908980e5ee223f06926bd7633ededc))
+
 ## [10.6.0](https://github.com/trystan2k/dotfiles/compare/v10.5.0...v10.6.0) (2022-06-10)
 
 ### Features
