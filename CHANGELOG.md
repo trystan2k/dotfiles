@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [10.8.0](https://github.com/trystan2k/dotfiles/compare/v10.7.0...v10.8.0) (2022-07-08)
+
+### Features
+
+* **tools:** add Picsee and m-cli ([dd0708d](https://github.com/trystan2k/dotfiles/commit/dd0708d5936942b0bcd0ccb1e8b30d5d7e6806c5))
+
 ## [10.7.0](https://github.com/trystan2k/dotfiles/compare/v10.6.0...v10.7.0) (2022-06-13)
 
 ### Features
