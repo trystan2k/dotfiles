@@ -22,15 +22,10 @@
         "lint:bash": "bash shellcheck.sh",
         "lint:eslint": "eslint --ext json . --fix",
         "lint:md": "markdownlint --fix -i node_modules .",
+        "prepare": "husky install",
         "push": "git push && git push --tags",
         "release": "standard-version -a",
         "release:as": "standard-version --release-as"
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged",
-            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-        }
     },
     "commitlint": {
         "extends": [
@@ -78,19 +73,19 @@
         ]
     },
     "devDependencies": {
-        "@commitlint/cli": "^7.5.2",
-        "@commitlint/config-conventional": "^7.5.0",
-        "eslint": "^7.3.0",
-        "eslint-config-prettier": "^6.11.0",
-        "eslint-plugin-json": "^2.1.1",
-        "eslint-plugin-markdown": "^1.0.2",
-        "husky": "^2.2.0",
-        "lint-staged": "^10.2.11",
-        "markdownlint": "^0.20.3",
-        "markdownlint-cli": "^0.23.1",
-        "prettier": "^2.0.5",
-        "sort-package-json": "^1.44.0",
-        "standard-version": "^8.0.0"
+        "@commitlint/cli": "^17.0.3",
+        "@commitlint/config-conventional": "^17.0.3",
+        "eslint": "^8.19.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-json": "^3.1.0",
+        "eslint-plugin-markdown": "^2.2.1",
+        "husky": "^8.0.1",
+        "lint-staged": "^13.0.3",
+        "markdownlint": "^0.26.0",
+        "markdownlint-cli": "^0.31.1",
+        "prettier": "^2.7.1",
+        "sort-package-json": "^1.57.0",
+        "standard-version": "^9.5.0"
     },
     "standard-version": {
         "releaseCommitMessageFormat": "chore: release {{currentTag}}"
