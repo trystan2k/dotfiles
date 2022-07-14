@@ -231,7 +231,16 @@ execute() {
     defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
     # Don’t automatically rearrange Spaces based on most recent use
+    info "Others - Don’t automatically rearrange Spaces based on most recent use"
     defaults write com.apple.dock mru-spaces -bool false
+
+    # Disable the sound effects on boot
+    info "Others - Disable the sound effects on boot"
+    sudo nvram SystemAudioVolume=" "
+
+    # Automatically quit printer app once the print jobs complete
+    info "Others - Automatically quit printer app once the print jobs complete"
+    defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 }
 
 execute
