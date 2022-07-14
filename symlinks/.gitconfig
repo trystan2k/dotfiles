@@ -142,6 +142,7 @@
 
 [push]
   	default = current
+	autoSetupRemote = true
 
 [interactive]
   	diffFilter = delta --color-only
