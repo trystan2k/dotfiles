@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [11.1.1](https://github.com/trystan2k/dotfiles/compare/v11.1.0...v11.1.1) (2022-07-21)
+
+### Bug Fixes
+
+* add NPM_AUTH default export ([b34ae7a](https://github.com/trystan2k/dotfiles/commit/b34ae7add8015893a438da22dfdf763e70f45992))
+
 ## [11.1.0](https://github.com/trystan2k/dotfiles/compare/v11.0.1...v11.1.0) (2022-07-14)
 
 ### Features
