@@ -19,6 +19,7 @@ export NPM_REGISTRY_URL=https://registry.npmjs.org/
 export NPM_ALWAYS_AUTH=false
 export NPM_SCRIPTS_PREPEND_NODE_PATH=false
 export NPM_AUDIT=false
+export NPM_AUTH=false
 
 # This should be the last line of the file
 # For local changes
