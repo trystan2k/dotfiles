@@ -138,10 +138,10 @@
 	clean = git-lfs clean -- %f
 	
 [pull]
-	rebase = false
+	rebase = true
 
 [push]
-  	default = current
+	default = simple
 	autoSetupRemote = true
 
 [interactive]
