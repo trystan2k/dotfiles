@@ -91,7 +91,7 @@ function ls() {
   if [ -x "$(command -v colorls)" ]; then
     RUBYOPT='-W:no-deprecated -W:no-experimental' command colorls "$@"
   else
-    exa "$@"
+    exa "$@" --git --icons
   fi
 }
 
@@ -253,6 +253,15 @@ function convert_all_to_mp4() {
     fi
   done
 }
+
+# Alias suffix to open file in cat, when file is 'executed'
+alias -s {js,json,env,gitignore,md,html,css,toml}=cat
+
+# Alias suffix to execute git clone when a git url is 'executed'
+alias -s git="git clone"
+
+# colored cat command
+alias cat='bat'
 
 #shellcheck source=/dev/null
 [ -f "$HOME/.aliases.local" ] && source "$HOME/.aliases.local"
