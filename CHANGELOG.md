@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [11.3.1](https://github.com/trystan2k/dotfiles/compare/v11.3.0...v11.3.1) (2022-08-03)
+
+### Bug Fixes
+
+* **symlinks:** remove uneeded gitignore rule ([e20ac8f](https://github.com/trystan2k/dotfiles/commit/e20ac8faa62c2c4b5f75a7e371e8e7e3116ca993))
+
 ## [11.3.0](https://github.com/trystan2k/dotfiles/compare/v11.2.0...v11.3.0) (2022-08-03)
 
 ### Features
