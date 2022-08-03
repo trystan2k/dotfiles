@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [11.2.0](https://github.com/trystan2k/dotfiles/compare/v11.1.1...v11.2.0) (2022-08-03)
+
+### Features
+
+* **symlinks:** add alias suffix to get clone and cat text files ([4a7a9b9](https://github.com/trystan2k/dotfiles/commit/4a7a9b9f8d1073d2ea4f0fc442dd5b96411c4b60))
+* **symlinks:** add git rebase as default strategy ([8cb3127](https://github.com/trystan2k/dotfiles/commit/8cb3127229f2de38725f20943afb361bb0637d99))
+
 ### [11.1.1](https://github.com/trystan2k/dotfiles/compare/v11.1.0...v11.1.1) (2022-07-21)
 
 ### Bug Fixes
