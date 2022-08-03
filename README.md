@@ -114,10 +114,11 @@ Some of initial configuration can be done executing the configuration script loc
 
 1. Rust Desk (<https://rustdesk.com/>) - Remote connection
 2. Sound Control (<https://staticz.com/soundcontrol/>) - Sound control
-3. ZX - (<https://github.com/google/zx)> - Allow to write shells scripts with Javascript
-4. Mackup (<https://github.com/lra/mackup)> - Backup of Mac
-5. Karabiner (<https://pqrs.org/osx/karabiner/)> - Remap keybinds
-6. Mosh (<https://mosh.org/)> - Mobile SSH client
+3. ZX - (<https://github.com/google/zx>) - Allow to write shells scripts with Javascript
+4. Mackup (<https://github.com/lra/mackup>) - Backup of Mac
+5. Karabiner (<https://pqrs.org/osx/karabiner/>) - Remap keybinds
+6. Mosh (<https://mosh.org/>) - Mobile SSH client
+7. Presentify (<https://apps.apple.com/app/id1507246666>) - Annotations in Screen $$
 
 ## Possible issues
 
