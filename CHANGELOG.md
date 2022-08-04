@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [11.4.0](https://github.com/trystan2k/dotfiles/compare/v11.3.1...v11.4.0) (2022-08-04)
+
+### Features
+
+* **tools:** add kap and alt-tab, remove licecap ([5f526c5](https://github.com/trystan2k/dotfiles/commit/5f526c5b1d2e5d0b15f261a627255490cb3c225b))
+
 ### [11.3.1](https://github.com/trystan2k/dotfiles/compare/v11.3.0...v11.3.1) (2022-08-03)
 
 ### Bug Fixes
