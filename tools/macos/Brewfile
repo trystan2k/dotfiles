@@ -42,6 +42,7 @@ brew "zsh"
 # Apps
 
 ## Utils
+cask "alt-tab"
 cask "android-file-transfer"
 cask "android-platform-tools"
 cask "appcleaner"
@@ -65,7 +66,7 @@ cask "google-chrome"
 cask "microsoft-edge"
 
 ## Multimedia
-cask "licecap"
+cask "kap"
 cask "LosslessCut"
 cask "blackhole-16ch"
 
