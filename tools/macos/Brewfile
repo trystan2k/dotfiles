@@ -54,6 +54,7 @@ cask "meetingbar"
 cask "notion"
 cask "overkill"
 cask "raycast"
+cask "unclack"
 
 ## Dev
 cask "figma"

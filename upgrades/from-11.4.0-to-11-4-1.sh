@@ -26,8 +26,8 @@ _add() {
 
     info "Add step"
 
-    info "Install detox"
-    brew install detox
+    info "Install Unclack"
+    brew install unclack
 }
 
 _configure() {
