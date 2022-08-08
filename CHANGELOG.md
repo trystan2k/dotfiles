@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [11.5.0](https://github.com/trystan2k/dotfiles/compare/v11.4.0...v11.5.0) (2022-08-08)
+
+### Features
+
+* **tools:** add unclack ([fd8fc2c](https://github.com/trystan2k/dotfiles/commit/fd8fc2c6206aecb61a7677b0f3e4a527a2cb6871))
+
 ## [11.4.0](https://github.com/trystan2k/dotfiles/compare/v11.3.1...v11.4.0) (2022-08-04)
 
 ### Features
