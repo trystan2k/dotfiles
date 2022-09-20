@@ -119,6 +119,7 @@ Some of initial configuration can be done executing the configuration script loc
 5. Karabiner (<https://pqrs.org/osx/karabiner/>) - Remap keybinds
 6. Mosh (<https://mosh.org/>) - Mobile SSH client
 7. Presentify (<https://apps.apple.com/app/id1507246666>) - Annotations in Screen $$
+8. DisplayBuddy (<https://displaybuddy.app/>) - Control external monitors via software
 
 ## Possible issues
 
