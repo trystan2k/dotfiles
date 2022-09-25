@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [11.6.0](https://github.com/trystan2k/dotfiles/compare/v11.5.0...v11.6.0) (2022-09-25)
+
+### Features
+
+* **tools:** add around ([27819bc](https://github.com/trystan2k/dotfiles/commit/27819bc97aebfa0033c2ab71b1cd21458a5f6bff))
+
 ## [11.5.0](https://github.com/trystan2k/dotfiles/compare/v11.4.0...v11.5.0) (2022-08-08)
 
 ### Features
