@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [11.7.0](https://github.com/trystan2k/dotfiles/compare/v11.6.0...v11.7.0) (2022-10-10)
+
+### Features
+
+* **symlinks:** add kill port alias ([0aba21c](https://github.com/trystan2k/dotfiles/commit/0aba21c627e75ef30024a6100f41f90aa8e683ba))
+
 ## [11.6.0](https://github.com/trystan2k/dotfiles/compare/v11.5.0...v11.6.0) (2022-09-25)
 
 ### Features
