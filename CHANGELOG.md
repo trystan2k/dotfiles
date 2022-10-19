@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [11.8.0](https://github.com/trystan2k/dotfiles/compare/v11.7.0...v11.8.0) (2022-10-19)
+
+### Features
+
+* **tools:** add utm virtual machine tool ([f063dec](https://github.com/trystan2k/dotfiles/commit/f063dec622db66b836f3fc5e1230363559fc0fb3))
+
 ## [11.7.0](https://github.com/trystan2k/dotfiles/compare/v11.6.0...v11.7.0) (2022-10-10)
 
 ### Features
