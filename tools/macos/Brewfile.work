@@ -1,4 +1,14 @@
 # Work File
 
-## Editors
-cask "visual-studio-code"
+## Taps
+tap "sidneys/homebrew"
+
+## Binaries
+brew "aria2"
+brew "cabextract"
+brew "cdrtools"
+brew "sidneys/homebrew/chntpw"
+brew "wimlib"
+
+## Utils
+cask "utm"
