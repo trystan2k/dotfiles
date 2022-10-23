@@ -68,7 +68,6 @@ cask "google-chrome"
 cask "microsoft-edge"
 
 ## Multimedia
-cask "kap"
 cask "LosslessCut"
 cask "blackhole-16ch"
 

@@ -12,7 +12,6 @@ cask "parallels"
 cask "pock"
 cask "slack"
 cask "transmission"
-cask "vidrio"
 
 # Dev
 cask "docker"
@@ -25,6 +24,5 @@ cask "stremio"
 cask "pdf-expert"
 
 # App Store
-mas "Friendly Streaming", id: 553245401
 mas "HP Smart", id: 1474276998
 mas "Picsee", id: 1454805783
