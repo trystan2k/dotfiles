@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [11.9.0](https://github.com/trystan2k/dotfiles/compare/v11.8.0...v11.9.0) (2022-10-23)
+
+### Features
+
+* **tools:** remove kap and vidrio tools ([e47e8f8](https://github.com/trystan2k/dotfiles/commit/e47e8f8307988b039d03e77598577b925f51d60b))
+
 ## [11.8.0](https://github.com/trystan2k/dotfiles/compare/v11.7.0...v11.8.0) (2022-10-19)
 
 ### Features
