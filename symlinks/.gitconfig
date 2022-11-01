@@ -26,6 +26,8 @@
 
 	comaster = checkout master
 
+	comain = checkout main
+
 	cofeature = "!cofeature() { git checkout feature/$1; }; cofeature"
 
 	crfeature = "!crfeature() { git checkout -b feature/$1; }; crfeature"
@@ -34,13 +36,16 @@
 
 	crrelease = "!crrelease() { git checkout -b release/$1; }; crrelease"
 
-	# Delete any branches (except the actual, master and develop) that have been merged into master
+	# Delete any branches (except the actual, master, maon and develop) that have been merged into default branch
 	# See also: https://gist.github.com/robmiller/5133264
 	# delete-merged-branches
-	dmb = "!git fetch && git branch --merged | grep -v "master" | grep -v "develop" | grep -v "\\*" | xargs -n 1 git branch -d"
+	dmb = "!git fetch && git branch --merged | grep -v "master" | grep -v "main" | grep -v "develop" | grep -v "\\*" | xargs -n 1 git branch -d"
 
 	# Sync fork repo
-	sync-fork = !git fetch upstream && git checkout master && git merge upstream/master
+	sync-fork-master = !git fetch upstream && git checkout master && git merge upstream/master
+
+		# Sync fork repo
+	sync-fork-main = !git fetch upstream && git checkout main && git merge upstream/main
 
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit

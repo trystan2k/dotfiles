@@ -797,4 +797,4 @@ All notable changes to this project will be documented in this file. See [standa
 [1.3.0]: https://github.com/trystan2k/dotfiles/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/trystan2k/dotfiles/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/trystan2k/dotfiles/compare/v1.0.0...v1.1.0
-[1.0.0]: https://github.com/trystan2k/dotfiles/compare/master...v1.0.0
+[1.0.0]: https://github.com/trystan2k/dotfiles/compare/main...v1.0.0

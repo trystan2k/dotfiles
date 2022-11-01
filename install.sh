@@ -59,7 +59,7 @@ git clone $GITHUB_URL
 cd dotfiles || exit
 
 # Go to branch
-git checkout master
+git checkout main
 
 # Cd into scripts folder and execute bootstrap
 cd scripts || exit
