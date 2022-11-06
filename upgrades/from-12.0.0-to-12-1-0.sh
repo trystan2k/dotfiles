@@ -26,8 +26,9 @@ _add() {
 
     info "Add step"
 
-    info "Install Unclack"
-    brew install unclack
+    info "Install espanso"
+    brew tap espanso/espanso
+    brew install espanso
 }
 
 _configure() {
@@ -36,6 +37,9 @@ _configure() {
     # ---------------------------------------------
 
     info "Configure step"
+    
+    #shellcheck source=/dev/null
+    . "$DOTFILES_FOLDER"/configure/espanso/espanso.sh
 }
 
 _cleanup () {

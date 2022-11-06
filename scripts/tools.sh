@@ -111,6 +111,13 @@ configure() {
     if ask_question 'Do you want to configure password store ?'; then
         #shellcheck source=/dev/null
         . "$DOTFILES_FOLDER"/configure/pass-store.sh
+    fi      
+
+    info "Espanso Configuration"
+
+    if ask_question 'Do you want to configure Espanso and install packages?'; then
+        #shellcheck source=/dev/null
+        . "$DOTFILES_FOLDER"/configure/espanso/espanso.sh
     fi       
 
     info "Fix ZSH permissions"
