@@ -131,7 +131,7 @@ install() {
         info "Installing $aux"
 
         # Install step
-        # espanso install "$aux"
+        espanso install "$aux"
 
         success "Espanso Package $aux installed."
     done
