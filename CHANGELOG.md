@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [12.2.0](https://github.com/trystan2k/dotfiles/compare/v12.1.0...v12.2.0) (2022-11-06)
+
+### Features
+
+* **configure:** update asdf plugins versions ([48e629b](https://github.com/trystan2k/dotfiles/commit/48e629b50d925a6cd35340c081a8639dd61bd400))
+* **scripts:** move espanso configuration to post-install ([24b1269](https://github.com/trystan2k/dotfiles/commit/24b1269ee05ff44484f0a37501aaa3b92032714a))
+
+### Bug Fixes
+
+* **symlinks:** update asdf source path ([41ab695](https://github.com/trystan2k/dotfiles/commit/41ab69554ace14239f90569786507f221dcd3f45))
+* **tools:** fix espanso name ([83a961e](https://github.com/trystan2k/dotfiles/commit/83a961ec8a3d88eb88289200816ba13a800d213d))
+
 ## [12.1.0](https://github.com/trystan2k/dotfiles/compare/v12.0.0...v12.1.0) (2022-11-06)
 
 ### Features
