@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [12.1.0](https://github.com/trystan2k/dotfiles/compare/v12.0.0...v12.1.0) (2022-11-06)
+
+### Features
+
+* **tools:** add espanso tool ([de1cce3](https://github.com/trystan2k/dotfiles/commit/de1cce33753de898a6bee6108441bae7116f13ce))
+
 ## [12.0.0](https://github.com/trystan2k/dotfiles/compare/v11.9.0...v12.0.0) (2022-11-01)
 
 ## [11.9.0](https://github.com/trystan2k/dotfiles/compare/v11.8.0...v11.9.0) (2022-10-23)
