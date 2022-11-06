@@ -113,13 +113,6 @@ configure() {
         . "$DOTFILES_FOLDER"/configure/pass-store.sh
     fi      
 
-    info "Espanso Configuration"
-
-    if ask_question 'Do you want to configure Espanso and install packages?'; then
-        #shellcheck source=/dev/null
-        . "$DOTFILES_FOLDER"/configure/espanso/espanso.sh
-    fi       
-
     info "Fix ZSH permissions"
     if ask_question 'Do you want execute the script to fix possible ZSH permissions issue?'; then
         #shellcheck source=/dev/null
