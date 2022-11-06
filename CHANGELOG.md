@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [12.3.0](https://github.com/trystan2k/dotfiles/compare/v12.2.0...v12.3.0) (2022-11-06)
+
+### Features
+
+* **scripts:** add raycast postinstall ([fd1767a](https://github.com/trystan2k/dotfiles/commit/fd1767ae1026f65fd37a722fee40f43144081c27))
+
 ## [12.2.0](https://github.com/trystan2k/dotfiles/compare/v12.1.0...v12.2.0) (2022-11-06)
 
 ### Features
