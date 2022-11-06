@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [12.3.1](https://github.com/trystan2k/dotfiles/compare/v12.3.0...v12.3.1) (2022-11-06)
+
+### Bug Fixes
+
+* **configure:** uncomment espanso install packages command ([dad5e98](https://github.com/trystan2k/dotfiles/commit/dad5e98d33719104403840368cdac542362d4a8b))
+
 ## [12.3.0](https://github.com/trystan2k/dotfiles/compare/v12.2.0...v12.3.0) (2022-11-06)
 
 ### Features
