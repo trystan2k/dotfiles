@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [12.4.0](https://github.com/trystan2k/dotfiles/compare/v12.3.1...v12.4.0) (2022-11-15)
+
+### Features
+
+* **tools:** add flameshot tool ([3d7ce36](https://github.com/trystan2k/dotfiles/commit/3d7ce368eef44a95b4c549419fead09e1e462d78))
+
 ### [12.3.1](https://github.com/trystan2k/dotfiles/compare/v12.3.0...v12.3.1) (2022-11-06)
 
 ### Bug Fixes
