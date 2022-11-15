@@ -26,8 +26,8 @@ _add() {
 
     info "Add step"
 
-    info "Install Around"
-    brew install around
+    info "Install flameshot"
+    brew install flameshot
 }
 
 _configure() {
