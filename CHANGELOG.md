@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [12.5.0](https://github.com/trystan2k/dotfiles/compare/v12.4.0...v12.5.0) (2022-12-25)
+
+### Features
+
+* **tools:** remove flameshot and add shottr ([7d9463e](https://github.com/trystan2k/dotfiles/commit/7d9463e69c4bb978562ff456a1e2aed8b65c86dc))
+
 ## [12.4.0](https://github.com/trystan2k/dotfiles/compare/v12.3.1...v12.4.0) (2022-11-15)
 
 ### Features
