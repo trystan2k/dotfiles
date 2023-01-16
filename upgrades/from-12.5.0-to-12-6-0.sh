@@ -26,9 +26,8 @@ _add() {
 
     info "Add step"
 
-    info "Install espanso"
-    brew tap espanso/espanso
-    brew install espanso
+    info "Install BetterSnapTool"
+    mas install 417375580
 }
 
 _configure() {
@@ -37,9 +36,6 @@ _configure() {
     # ---------------------------------------------
 
     info "Configure step"
-    
-    #shellcheck source=/dev/null
-    . "$DOTFILES_FOLDER"/configure/espanso/espanso.sh
 }
 
 _cleanup () {

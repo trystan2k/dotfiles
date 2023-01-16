@@ -18,8 +18,8 @@ scan_file(){
         if [ $exit_code -eq 0 ] ; then
             printf "%b" "Successfully scanned ${file_path} 🙌\n"
         else
-            exit $exit_code
             printf "\e[31m ERROR: ShellCheck detected issues in %s.\e[0m\n" "${file_path} 🐛"
+            exit $exit_code
         fi
     else
         printf "\n\e[33m ⚠️  Warning: '%s' is not a valid shell script. Make sure shebang is on the first line.\e[0m\n" "$file_path"
