@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [12.6.1](https://github.com/trystan2k/dotfiles/compare/v12.6.0...v12.6.1) (2023-01-16)
+
+### Features
+
+* **tools:** move mas install to global brew file ([7a97a8c](https://github.com/trystan2k/dotfiles/commit/7a97a8c121ba29cd538de534fcb1a8e4639e53ec))
+
 ## [12.6.0](https://github.com/trystan2k/dotfiles/compare/v12.5.0...v12.6.0) (2023-01-16)
 
 ### Features
