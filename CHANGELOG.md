@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [12.6.0](https://github.com/trystan2k/dotfiles/compare/v12.5.0...v12.6.0) (2023-01-16)
+
+### Features
+
+* **tools:** add BetterSnapTool ([1be31bf](https://github.com/trystan2k/dotfiles/commit/1be31bf63b522311f41d7e0075e9fa4b66531a6c))
+
 ## [12.5.0](https://github.com/trystan2k/dotfiles/compare/v12.4.0...v12.5.0) (2022-12-25)
 
 ### Features
