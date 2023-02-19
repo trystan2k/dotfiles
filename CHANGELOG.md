@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [12.7.0](https://github.com/trystan2k/dotfiles/compare/v12.6.1...v12.7.0) (2023-02-19)
+
+### Features
+
+* **tools:** add scriptkit ([7b4822e](https://github.com/trystan2k/dotfiles/commit/7b4822efd9a3e9c7b3874df354fa0684b0a359da))
+
 ### [12.6.1](https://github.com/trystan2k/dotfiles/compare/v12.6.0...v12.6.1) (2023-01-16)
 
 ### Features
