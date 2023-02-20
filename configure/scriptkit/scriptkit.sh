@@ -95,6 +95,9 @@ preInstall() {
 
 postInstall() {
     info "Executing post-install steps..."
+
+		cd "${HOME}/.kenv/kenvs/thiago" || exit
+		npm install
 }
 
 install() {

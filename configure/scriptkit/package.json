@@ -1,0 +1,8 @@
+{
+  "type": "module",
+  "devDependencies": {
+    "@johnlindquist/kit": "file:~/.kit",
+    "kill-port": "^2.0.1",
+    "youtube-dl-exec": "^2.2.3"
+  }
+}
