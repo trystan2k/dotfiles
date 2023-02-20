@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [12.9.0](https://github.com/trystan2k/dotfiles/compare/v12.8.0...v12.9.0) (2023-02-20)
+
+### Features
+
+* **configure:** adjust jira issue scriptkit ([56633d8](https://github.com/trystan2k/dotfiles/commit/56633d8bad62bc96e3276e491b656062a687a987))
+* **configure:** update scriptkit scripts shortcuts ([7dbdfe4](https://github.com/trystan2k/dotfiles/commit/7dbdfe42c0f6e9c6f699d0427f7beb0f99b0b0d3))
+
 ## [12.8.0](https://github.com/trystan2k/dotfiles/compare/v12.7.0...v12.8.0) (2023-02-20)
 
 ### Features
