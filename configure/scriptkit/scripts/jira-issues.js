@@ -26,10 +26,10 @@ const JIRA_API_URL = `${JIRA_HOST}/rest/api/latest`;
 const JIRA_ISSUES_QUERY = `/search?orderBy=-created&jql=assignee=%22${JIRA_USERNAME.replaceAll(
   " ",
   "%20"
-)}%22&maxResults=10&startAt=0`;
+)}%22+and+status+not+in(Finalizada, Descartada, Cerrado)&maxResults=25&startAt=0`;
 
 let headersList = {
-  Authorization: AUTH,
+  Authorization: `Bearer ${AUTH}`,
 };
 
 let response = await get(`${JIRA_API_URL}${JIRA_ISSUES_QUERY}`, {
