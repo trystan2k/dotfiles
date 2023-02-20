@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [12.8.0](https://github.com/trystan2k/dotfiles/compare/v12.7.0...v12.8.0) (2023-02-20)
+
+### Features
+
+* **configure:** add package.json to scriptkit ([bc9769d](https://github.com/trystan2k/dotfiles/commit/bc9769d77eb3edcd5f3bd5b7fd265e1cafedb021))
+* **symlinks:** remove bin folder from gitignore ([481b33e](https://github.com/trystan2k/dotfiles/commit/481b33e08304bbf5fcf4679298c4af9a93e245b6))
+
 ## [12.7.0](https://github.com/trystan2k/dotfiles/compare/v12.6.1...v12.7.0) (2023-02-19)
 
 ### Features
