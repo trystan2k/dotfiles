@@ -1,93 +1,93 @@
 {
-    "name": "@trystan2k/dotfiles",
-    "version": "12.7.0",
-    "description": "My personal dotfiles",
-    "keywords": [
-        "dotfiles",
-        "trystan2k",
-        "brew",
-        "macos",
-        "linux"
+  "name": "@trystan2k/dotfiles",
+  "version": "12.7.0",
+  "description": "My personal dotfiles",
+  "keywords": [
+    "dotfiles",
+    "trystan2k",
+    "brew",
+    "macos",
+    "linux"
+  ],
+  "homepage": "https://github.com/trystan2k/dotfiles#readme",
+  "bugs": {
+    "url": "https://github.com/trystan2k/dotfiles/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:trystan2k/dotfiles.git"
+  },
+  "scripts": {
+    "lint": "npm run lint:bash && npm run lint:eslint && npm run lint:md",
+    "lint:bash": "bash shellcheck.sh",
+    "lint:eslint": "eslint --ext json . --fix",
+    "lint:md": "markdownlint --fix .",
+    "prepare": "husky install",
+    "push": "git push && git push --tags",
+    "release": "standard-version -a",
+    "release:as": "standard-version --release-as"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
     ],
-    "homepage": "https://github.com/trystan2k/dotfiles#readme",
-    "bugs": {
-        "url": "https://github.com/trystan2k/dotfiles/issues"
-    },
-    "repository": {
-        "type": "git",
-        "url": "ssh://git@github.com:trystan2k/dotfiles.git"
-    },
-    "scripts": {
-        "lint": "npm run lint:bash && npm run lint:eslint && npm run lint:md",
-        "lint:bash": "bash shellcheck.sh",
-        "lint:eslint": "eslint --ext json . --fix",
-        "lint:md": "markdownlint --fix -i node_modules .",
-        "prepare": "husky install",
-        "push": "git push && git push --tags",
-        "release": "standard-version -a",
-        "release:as": "standard-version --release-as"
-    },
-    "commitlint": {
-        "extends": [
-            "@commitlint/config-conventional"
-        ],
-        "rules": {
-            "header-max-length": [
-                2,
-                "always",
-                100
-            ]
-        }
-    },
-    "lint-staged": {
-        "*.json": [
-            "npm run lint:eslint"
-        ],
-        "*.md": [
-            "npm run lint:md"
-        ],
-        "*.sh": [
-            "npm run lint:bash"
-        ],
-        "package.json": [
-            "sort-package-json"
-        ]
-    },
-    "prettier": {
-        "overrides": [
-            {
-                "files": "*.json",
-                "options": {
-                    "parser": "json-stringify"
-                }
-            }
-        ]
-    },
-    "eslintConfig": {
-        "plugins": [
-            "markdown",
-            "json"
-        ],
-        "extends": [
-            "plugin:json/recommended"
-        ]
-    },
-    "devDependencies": {
-        "@commitlint/cli": "^17.0.3",
-        "@commitlint/config-conventional": "^17.0.3",
-        "eslint": "^8.19.0",
-        "eslint-config-prettier": "^8.5.0",
-        "eslint-plugin-json": "^3.1.0",
-        "eslint-plugin-markdown": "^2.2.1",
-        "husky": "^8.0.1",
-        "lint-staged": "^13.0.3",
-        "markdownlint": "^0.26.0",
-        "markdownlint-cli": "^0.31.1",
-        "prettier": "^2.7.1",
-        "sort-package-json": "^1.57.0",
-        "standard-version": "^9.5.0"
-    },
-    "standard-version": {
-        "releaseCommitMessageFormat": "chore: release {{currentTag}}"
+    "rules": {
+      "header-max-length": [
+        2,
+        "always",
+        100
+      ]
     }
+  },
+  "lint-staged": {
+    "*.json": [
+      "npm run lint:eslint"
+    ],
+    "*.md": [
+      "npm run lint:md"
+    ],
+    "*.sh": [
+      "npm run lint:bash"
+    ],
+    "package.json": [
+      "sort-package-json"
+    ]
+  },
+  "prettier": {
+    "overrides": [
+      {
+        "files": "*.json",
+        "options": {
+          "parser": "json-stringify"
+        }
+      }
+    ]
+  },
+  "eslintConfig": {
+    "plugins": [
+      "markdown",
+      "json"
+    ],
+    "extends": [
+      "plugin:json/recommended"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "eslint": "^8.19.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-json": "^3.1.0",
+    "eslint-plugin-markdown": "^2.2.1",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "markdownlint": "^0.26.0",
+    "markdownlint-cli": "^0.31.1",
+    "prettier": "^2.7.1",
+    "sort-package-json": "^1.57.0",
+    "standard-version": "^9.5.0"
+  },
+  "standard-version": {
+    "releaseCommitMessageFormat": "chore: release {{currentTag}}"
+  }
 }
