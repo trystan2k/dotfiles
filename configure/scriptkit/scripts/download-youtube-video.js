@@ -2,6 +2,7 @@
 // Description: Download a video from a YouTube URL as .mp4
 // Author: Vogelino
 // Twitter: @soyvogelino
+// Shortcut: cmd option shift y
 
 import "@johnlindquist/kit";
 

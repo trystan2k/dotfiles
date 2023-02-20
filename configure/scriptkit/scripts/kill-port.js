@@ -1,6 +1,7 @@
 // Name: Port kill
 // Description: Enter port number to kill process listening on port.
 // Author: kyo young
+// Shortcut: cmd shift k
 // GitHub:
 
 import '@johnlindquist/kit';

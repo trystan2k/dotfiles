@@ -8,7 +8,7 @@
 
 // Name: 🏷️ Jira issues
 // Description: List issues assigned to me in Jira
-// Shortcut:
+// Shortcut: cmd option shift j
 // Author: WaelNalouti
 
 import "@johnlindquist/kit";

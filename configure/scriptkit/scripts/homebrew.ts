@@ -1,57 +1,33 @@
 // Name: Search Homebrew
+// Shortcut: cmd option shift h
 
 import "@johnlindquist/kit"
 
-let response = await get(`https://formulae.brew.sh/api/formula.json`)
+let query = await arg("Search homebrew")
 
-let homebrewChoices = response.data.map(({name, tap}) => {
-    return {
-        name,
-        value: name,
-        description: tap,
-        preview: async ()=> {
-            let response = await get(`https://formulae.brew.sh/api/formula/${name}.json`)
-            let {full_name, tap, desc, homepage, versions, urls} = response.data
-            return md(`## ${full_name}
-### ${tap}
-
-${desc}
-[${homepage}](${homepage})
-
-* Version - ${versions?.stable}
-* URLs - ${urls?.stable?.url}
-
-
- `)
-        }
-
-    }
-})
-
-let formula = await arg("Search homebrew", homebrewChoices)
+let response = await get(`https://formulae.brew.sh/api/formula/${query.trim()}.json`)
+let { name } = response.data;
 
 let bins = await readdir(`/opt/homebrew/bin`)
 
-let installed = bins.includes(formula)
+let installed = bins.includes(name)
 
 if(installed){
-    setDescription(`${formula} already installed`)
+    setDescription(`${name} already installed`)
 }
 
-let message = `${installed ? `Uninstall` : `Install`} ${formula}?`
+let message = `${installed ? `Uninstall` : `Install`} ${name}?`
 
 let confirm = await arg(message, [
     {name: `[y]es`, value: true},
     {name: `[n]o`, value: false}
 ])
 
-setChoices(null)
 setPlaceholder(`Please wait...`)
 
-
 if(confirm){
-    setDescription(`${installed ? `Uninstalling` : `Installing`} ${formula}`)
-    await exec(`/opt/homebrew/bin/brew ${installed ? `uninstall` : `install`} ${formula}`)
+    setDescription(`${installed ? `Uninstalling` : `Installing`} ${name}`)
+    await exec(`/opt/homebrew/bin/brew ${installed ? `uninstall` : `install`} ${name}`)
 }
 
 
