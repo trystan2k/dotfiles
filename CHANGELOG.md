@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [12.12.1](https://github.com/trystan2k/dotfiles/compare/v12.12.0...v12.12.1) (2023-03-19)
+
+### Features
+
+* **symlinks:** remove export for NPM ([f48c7f0](https://github.com/trystan2k/dotfiles/commit/f48c7f0a77df062c7992ef66064e4076530d3986))
+
 ## [12.12.0](https://github.com/trystan2k/dotfiles/compare/v12.11.0...v12.12.0) (2023-03-19)
 
 ### Features
