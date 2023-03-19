@@ -148,6 +148,24 @@ eval "$(mcfly init zsh)"
 
 source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
 
+# Handle nppmrc config according to ENV variable
+autoload -U add-zsh-hook
+
+set-npmrc-config-hook() {
+
+  if ! type npmrc > /dev/null; then
+    return
+  fi
+
+  if [ -z ${NPMRC_NAME+x} ]; then 
+    npmrc default > /dev/null;
+  else 
+    npmrc $NPMRC_NAME > /dev/null; 
+  fi
+}
+
+add-zsh-hook chpwd set-npmrc-config-hook
+
 # Maybe this shoudl be necessary if it does not auto load in IDEs, for example
 #asdf exec direnv reload
 

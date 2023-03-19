@@ -16,12 +16,12 @@ install() {
 
     success "'fkill' installed."       
 
-    info "Installing npm tool 'emoj'"
+    info "Installing npm tool 'npmrc'"
     
     # Install
-    npm install --global emoj
+    npm install --global npmrc
 
-    success "'emoj' installed."          
+    success "'npmrc' installed."          
 
     info "Installing npm tool 'qnm'"
     
