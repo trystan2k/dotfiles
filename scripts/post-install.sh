@@ -25,13 +25,7 @@ postinstall() {
     if ask_question 'Do you want to install NPM global tools?'; then
         #shellcheck source=/dev/null
         . "$DOTFILES_FOLDER"/tools/npm-global-tools.sh
-    fi  
-
-    info "Raycast Configuration"
-    if ask_question 'Do you want to configure Raycast and install packages?'; then
-        #shellcheck source=/dev/null
-        . "$DOTFILES_FOLDER"/configure/raycast.sh
-    fi       
+    fi   
 }
 
 execute() {
