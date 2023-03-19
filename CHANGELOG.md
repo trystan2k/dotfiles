@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [12.10.0](https://github.com/trystan2k/dotfiles/compare/v12.9.0...v12.10.0) (2023-03-19)
+
+### Features
+
+* **symlinks,tools:** add npmrc tool and config to change npmrc config base on env variable ([dd22111](https://github.com/trystan2k/dotfiles/commit/dd22111c479baf14e578cf9c85a8f60eec375f7f))
+* **tools:** add hyperfine ([0dba27b](https://github.com/trystan2k/dotfiles/commit/0dba27b1c7b8fc8b5453f66fc67dd643edce6c5f))
+* **tools:** remove scriptkit ([8550037](https://github.com/trystan2k/dotfiles/commit/85500377ff8e1b5a0f8f617be83f2a93ba26cbe6))
+
 ## [12.9.0](https://github.com/trystan2k/dotfiles/compare/v12.8.0...v12.9.0) (2023-02-20)
 
 ### Features
