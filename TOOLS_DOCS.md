@@ -68,15 +68,3 @@ To be able to run it (and when the computer is started)
 
 1. Copy the net.duplicati.server.plist file from 'tools' folder and save it to `/Library/LaunchAgents`
 2. Access Duplicate in the browser with [http://localhost:8200](http://localhost:8200/)
-
-## ScriptKit
-
-ScriptKit is a command-line tool that allows you to run JavaScript scripts from the command line. It is built on top of the V8 JavaScript engine and Node.js.
-
-It needs to be installed manually as there is no Homebrew formula for it.
-
-Download the latest version from [here](https://www.scriptkit.com/) and then execute the configure script to install all custom scripts
-
-```bash
-    ./configure/scriptkit/scriptkit.sh
-```
