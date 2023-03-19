@@ -72,9 +72,20 @@ I use ZSH as my current shell and to manage its plugin I am using [Zinit](https:
 ### Package Manager
 
 I am using [ASDF](https://github.com/asdf-vm/asdf) as the package manager for tools like `node/npm`, `yarn`, `java`, `ruby`, etc.
-Some of the initial configuration can be done by executing the configuration script located in configure folder
+Some of the initial configurations can be done by executing the configuration script located in configure folder
 
 `cd dotfiles\configure; ./asdf-plugins.sh`
+
+### NPMRC
+
+As I work with multiple projects, I need to have different configurations for NPM. To do that, I am using [NPMRC](https://www.npmjs.com/package/npmrc) to manage the different configurations.
+
+To make it more automatically possible, with the help of `direnv`, it changes the npmrc when an environment variable called `NPMRC_NAME` is set.
+After finishing the installation, need to create the default NPMRC config (based on the .npmrc file from symlink). To do this, just
+execute `npmrc` in the terminal.
+
+For each different project, create a npmrc entry for it, with `npmrc -c <name>` and then set the `NPMRC_NAME` variable to the name of the
+npmrc entry in the .envrc file of the folder of the project.
 
 ## Apps that need to be installed manually
 
