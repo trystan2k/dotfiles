@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [12.11.0](https://github.com/trystan2k/dotfiles/compare/v12.10.0...v12.11.0) (2023-03-19)
+
+### Features
+
+* **tools:** remove espanso and around ([c9354c4](https://github.com/trystan2k/dotfiles/commit/c9354c4d9ba2ecdef2fee076d602a6b7a8e4349e))
+
 ## [12.10.0](https://github.com/trystan2k/dotfiles/compare/v12.9.0...v12.10.0) (2023-03-19)
 
 ### Features
