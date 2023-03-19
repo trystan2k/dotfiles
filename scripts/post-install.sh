@@ -27,12 +27,6 @@ postinstall() {
         . "$DOTFILES_FOLDER"/tools/npm-global-tools.sh
     fi  
 
-    info "Espanso Configuration"
-    if ask_question 'Do you want to configure Espanso and install packages?'; then
-        #shellcheck source=/dev/null
-        . "$DOTFILES_FOLDER"/configure/espanso/espanso.sh
-    fi  
-
     info "Raycast Configuration"
     if ask_question 'Do you want to configure Raycast and install packages?'; then
         #shellcheck source=/dev/null
