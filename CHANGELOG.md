@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [12.12.0](https://github.com/trystan2k/dotfiles/compare/v12.11.0...v12.12.0) (2023-03-19)
+
+### Features
+
+* **scripts:** remove raycast postinstall ([3215233](https://github.com/trystan2k/dotfiles/commit/32152336472a67f3fd6481dca8a319ca66c7f912))
+* **tools:** add plz-cli tool ([da5f020](https://github.com/trystan2k/dotfiles/commit/da5f020adf94df34f667f492964bad2740491b36))
+
 ## [12.11.0](https://github.com/trystan2k/dotfiles/compare/v12.10.0...v12.11.0) (2023-03-19)
 
 ### Features
