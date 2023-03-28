@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [12.13.0](https://github.com/trystan2k/dotfiles/compare/v12.12.1...v12.13.0) (2023-03-28)
+
+### Features
+
+* **macos:** add touchid in sudo, disable powerchime and change crash report to notification ([4883a4a](https://github.com/trystan2k/dotfiles/commit/4883a4ad5743a476cb6cb2de3c773277b472c8f9))
+
 ### [12.12.1](https://github.com/trystan2k/dotfiles/compare/v12.12.0...v12.12.1) (2023-03-19)
 
 ### Features
