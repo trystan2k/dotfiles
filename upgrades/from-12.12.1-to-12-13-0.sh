@@ -26,8 +26,18 @@ _add() {
 
     info "Add step"
 
-    info "Install flameshot"
-    brew install flameshot
+    # Convert crash report to be a notification
+    info "Others - Convert crash report to be a notification"
+    defaults write com.apple.CrashReporter UseUNC 1
+
+    # Disable PowerChime sound
+    info "Others - Disable PowerChime sound"
+    defaults write com.apple.PowerChime ChimeOnNoHardware -bool TRUE;
+    killall PowerChime
+
+    # Enable Touch ID for sudo
+    info "Others - Enable Touch ID for sudo"
+    sudo sed -i .bak $'2i\\\nauth       sufficient     pam_tid.so\\\n' /etc/pam.d/sudo
 }
 
 _configure() {
