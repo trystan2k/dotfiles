@@ -260,7 +260,7 @@ function kill_port() {
 }
 
 # Alias suffix to open file in cat, when file is 'executed'
-alias -s {js,json,env,gitignore,md,html,css,toml}=cat
+alias -s {json,env,gitignore,md,html,css,toml}=cat
 
 # Alias suffix to execute git clone when a git url is 'executed'
 alias -s git="git clone"
