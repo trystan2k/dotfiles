@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [12.14.0](https://github.com/trystan2k/dotfiles/compare/v12.13.0...v12.14.0) (2023-07-24)
+
+### Features
+
+* **symlinks:** add alias to calculate command execution time ([a7edbd3](https://github.com/trystan2k/dotfiles/commit/a7edbd37f1003c388ce5c139c31ec780105bded2))
+* **symlinks:** remove alias to open js files ([955abeb](https://github.com/trystan2k/dotfiles/commit/955abeb21b77bf84510be7e64a5b6bd893a73308))
+
 ## [12.13.0](https://github.com/trystan2k/dotfiles/compare/v12.12.1...v12.13.0) (2023-03-28)
 
 ### Features
