@@ -58,6 +58,7 @@ cask "notion"
 cask "overkill"
 cask "raycast"
 cask "shottr"
+brew "homeport/tap/termshot"
 cask "unclack"
 
 ## Dev
