@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [12.15.0](https://github.com/trystan2k/dotfiles/compare/v12.14.0...v12.15.0) (2023-10-29)
+
+### Features
+
+* **macos:** add termshot brew ([0216d77](https://github.com/trystan2k/dotfiles/commit/0216d7732d0900db62237eae157b4c598e6500d6))
+
 ## [12.14.0](https://github.com/trystan2k/dotfiles/compare/v12.13.0...v12.14.0) (2023-07-24)
 
 ### Features
