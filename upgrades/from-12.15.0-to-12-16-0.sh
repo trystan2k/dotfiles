@@ -18,8 +18,17 @@ _remove() {
     info "Remove step"
     brew uninstall --ignore-dependencies node
 
-    info "Remove flameshot"
-    brew uninstall flameshot
+    info "Uninstall meetingbar"
+    brew uninstall meetingbar
+
+    info "Uninstall overkill"
+    brew uninstall overkill
+
+    info "Uninstall unclack"
+    brew uninstall unclack
+
+    info "Uninstall caffeine"
+    brew uninstall caffeine
 }
 
 _add() {
@@ -29,8 +38,8 @@ _add() {
 
     info "Add step"
 
-    info "Install shottr"
-    brew install shottr
+    info "Install orbstack"
+    brew install orbstack
 }
 
 _configure() {

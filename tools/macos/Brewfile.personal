@@ -13,7 +13,7 @@ cask "slack"
 cask "transmission"
 
 # Dev
-cask "docker"
+cask "orbstack"
 
 ## Multimedia
 cask "iina"
