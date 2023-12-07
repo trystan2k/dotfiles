@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [12.16.0](https://github.com/trystan2k/dotfiles/compare/v12.15.0...v12.16.0) (2023-12-07)
+
+### Features
+
+* **macos:** remove apps not used and add orbstack ([bc42f65](https://github.com/trystan2k/dotfiles/commit/bc42f65771b817ea62c39271c369aa7e7995f6a7))
+
 ## [12.15.0](https://github.com/trystan2k/dotfiles/compare/v12.14.0...v12.15.0) (2023-10-29)
 
 ### Features
