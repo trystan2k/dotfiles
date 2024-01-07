@@ -59,6 +59,7 @@ brew "homeport/tap/termshot"
 ## Dev
 cask "figma"
 cask "hyper"
+brew "kitty"
 cask "postman"
 
 ## Browsers
