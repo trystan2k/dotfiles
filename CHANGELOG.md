@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [12.17.0](https://github.com/trystan2k/dotfiles/compare/v12.16.0...v12.17.0) (2024-01-07)
+
+### Features
+
+* **macos:** add kitty terminal and update readme ([7571173](https://github.com/trystan2k/dotfiles/commit/7571173a844e1371b9a89f68d060bc3df52863f3))
+
 ## [12.16.0](https://github.com/trystan2k/dotfiles/compare/v12.15.0...v12.16.0) (2023-12-07)
 
 ### Features
