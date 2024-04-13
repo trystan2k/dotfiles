@@ -9,6 +9,19 @@ source "$DOTFILES_FOLDER/lib/functions"
 
 install() {
 
+    info "Enabling corepack"
+
+    corepack enable
+
+    success "corepack enabled"
+
+    info "Installing npm tool 'pnpm'"
+
+    # Install
+    npm install --global pnpm
+
+    success "'pnpm' installed."
+
     info "Installing npm tool 'fkill'"
     
     # Install

@@ -12,12 +12,12 @@ source "$DOTFILES_FOLDER/lib/functions"
 # ---------------------------------------------
 
 plugins=(
-    nodejs:18.12.1:true
-    java:oracle-19.0.1:true
-    yarn:1.22.19:true
-    ruby:2.7.6:true
-    direnv:2.32.1:true
-    python:3.9.15:true
+    nodejs:lts:true
+    java:oracle-21.0.1:true
+    yarn:latest:true
+    ruby:latest:true
+    direnv:latest:true
+    python:3.9.18:true
 )
 
 # ---------------------------------------------
