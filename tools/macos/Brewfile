@@ -60,7 +60,6 @@ brew "termshot"
 cask "bruno"
 cask "figma"
 cask "kitty"
-cask "postman"
 
 ## Browsers
 cask "firefox"
