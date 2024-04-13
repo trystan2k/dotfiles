@@ -2,6 +2,12 @@
 
 This document will have support documentation about the tools installed.
 
+## All
+
+Some applications requires to be moved to the App Folder and for this to work the terminal need to have permissions to install Apps.
+
+This can be done by going to System Preferences > Privacy & Security > App Management and add the terminal to the list.
+
 ## Hub
 
 hub is an extension to command-line git that helps you do everyday GitHub tasks without ever leaving the terminal.

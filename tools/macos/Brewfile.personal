@@ -2,7 +2,7 @@
 
 
 ## Binaries
-brew "youtube-dl"
+brew "yt-dlp"
 
 ## Utils
 cask "daisydisk"
@@ -24,4 +24,3 @@ cask "pdf-expert"
 
 # App Store
 mas "HP Smart", id: 1474276998
-mas "Picsee", id: 1454805783
