@@ -1,10 +1,8 @@
 # Trystan2k's Brewfile
 
 # Taps
-tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/cask-fonts"
-tap "homebrew/core"
+tap "homeport/tap"
 
 # Binaries
 brew "ack"
@@ -14,7 +12,7 @@ brew "autojump"
 brew "bat"
 brew "curl"
 brew "detox"
-brew "exa"
+brew "eza"
 brew "fd"
 brew "fx"
 brew "fzf"
@@ -52,14 +50,16 @@ cask "hot"
 cask "hiddenbar"
 cask "lulu"
 cask "notion"
+cask "onyx"
+cask "overkill"
 cask "raycast"
 cask "shottr"
-brew "homeport/tap/termshot"
+brew "termshot"
 
 ## Dev
+cask "bruno"
 cask "figma"
-cask "hyper"
-brew "kitty"
+cask "kitty"
 cask "postman"
 
 ## Browsers
