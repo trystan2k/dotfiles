@@ -76,9 +76,6 @@ zinit load mattmc3/zsh-safe-rm
 zinit ice wait pick"h.sh" lucid
 zinit load paoloantinori/hhighlighter
 
-zinit ice wait as"completion" lucid
-zinit snippet OMZ::plugins/docker/_docker
-
 zinit ice wait lucid as"completion"
 zinit snippet https://github.com/asdf-vm/asdf/blob/master/completions/_asdf
 
