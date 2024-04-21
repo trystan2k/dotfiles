@@ -163,6 +163,20 @@ set-npmrc-config-hook() {
 
 add-zsh-hook chpwd set-npmrc-config-hook
 
+
+# Check if not inside a Zellij session, and if not, check if there is any session to attach
+if [ -z "$ZELLIJ" ]; then
+    ZJ_SESSIONS=$(zellij list-sessions)
+    NO_SESSIONS=$(echo "${ZJ_SESSIONS}" | wc -l)
+
+    if [ "${NO_SESSIONS}" -ge 2 ]; then
+        SESSION_TO_ATTACH=$(echo "${ZJ_SESSIONS}" | fzf --ansi | sed 's/ .*//')
+        zellij attach $SESSION_TO_ATTACH
+    else
+        zellij attach -c
+    fi
+fi
+
 if [ -f "$HOME"/.exports.path ]; then
   #shellcheck source=/dev/null
   . "$HOME"/.exports.path

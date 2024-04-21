@@ -303,5 +303,12 @@ updateNPMDependencies() {
   npx npm-check-updates $@
 }
 
+# Zellij alias
+alias zej="zellij"
+alias zejl="zellij list-sessions"
+alias zejkill="zellij kill-all-sessions"
+alias zejdel="zellij delete-all-sessions"
+alias zejkd="zellij kill-all-sessions && zellij delete-all-sessions" 
+
 #shellcheck source=/dev/null
 [ -f "$HOME/.aliases.local" ] && source "$HOME/.aliases.local"
