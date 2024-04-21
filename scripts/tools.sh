@@ -42,28 +42,6 @@ install() {
 
             # Install tools for 'work' or 'personal' machine
             brew bundle -v --file="$DOTFILES_FOLDER"/tools/macos/Brewfile."$COMPUTER_NAME"
-    
-        elif [[ $OSTYPE == linux* ]] ; then
-            info "Installing tools for Linux"
-
-            brew tap homebrew/bundle
-            brew bundle -v --file="$DOTFILES_FOLDER"/tools/linux/Brewfile
-
-            info "Setup APT before install"
-            #shellcheck source=/dev/null
-            . "$DOTFILES_FOLDER"/tools/linux/AptSetup.sh
-
-            while read -r file; do
-                info "Installing $file"
-                sudo apt install -y "$file"
-            done < "$DOTFILES_FOLDER"/tools/linux/Aptfile
-
-            info "Install other tools"
-
-            for file in $(/bin/ls "$DOTFILES_FOLDER"/tools/linux/*.sh |grep -v AptSetup.sh); do 
-                #shellcheck source=/dev/null
-                . "$file"
-            done
         fi;
 
         info "Install Zinit"
@@ -82,11 +60,6 @@ cleanup() {
     # Remove outdated versions from the cellar
     info "Brew Cleanup"
     brew cleanup
-
-    if [[ "$OSTYPE" == linux* ]] ; then
-        info "Apt remove"
-        sudo apt autoremove -y
-    fi
 
     # Remove node installed in system
     info "Removing Node installed in system"

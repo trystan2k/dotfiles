@@ -6,8 +6,7 @@
     "dotfiles",
     "trystan2k",
     "brew",
-    "macos",
-    "linux"
+    "macos"
   ],
   "homepage": "https://github.com/trystan2k/dotfiles#readme",
   "bugs": {

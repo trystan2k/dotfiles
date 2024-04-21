@@ -9,9 +9,9 @@
 **Warning** The idea of this repository is to be a reference to others. **NEVER** run the installation script or any other script without
 reading it first and adjust according to your needs. This is my very personal configuration and may not be suitable for you.
 I highly recommend you fork or clone and edit this repo before trying it. I am not responsible for any problem it may cause you. Use at your own risk!
-This script set up a MacOS (tested in Catalina 10.15.x) or a Linux (tested in Elementary OS Hera 5.1).
-It installs the same software (if available for the OS) and do the dotfiles symlink to the home folder.
-Specifically for MacOS, it also does some initial configuration like adding icons to the Dock, set languages, etc.
+This script set up a MacOS (tested in Sonoma 14.4.x).
+It installs the softwares and do the dotfiles symlink to the home folder.
+It also does some initial configuration like adding icons to the Dock, set languages, etc.
 
 ## Installation
 
@@ -41,7 +41,7 @@ a. Install tools: `cd dotfiles\scripts; ./tools.sh`
 
 b. Create/Recreate the symlinks to the home folder: `cd dotfiles\scripts; ./symlinks.sh`
 
-c. Use the Brewfile to install all tools via Brew `cd dotfiles\tools\macos|linux; brew bundle`
+c. Use the Brewfile to install all tools via Brew `cd dotfiles\tools\macos; brew bundle`
 
 ## Post Installation
 
@@ -62,8 +62,7 @@ The symlink step link the `kitty.conf` file with my current configuration, theme
 
 ### Homebrew
 
-I use [Homebrew](https://brew.sh/) to install packages I need in my MacOS. There are alternatives for Linux([https://linuxbrew.sh]) that can
-also be used in Windows 10 with Windows Subsystem for Linux (WSL)
+I use [Homebrew](https://brew.sh/) to install packages I need in my MacOS.
 
 ### Shell and Shell Manager
 

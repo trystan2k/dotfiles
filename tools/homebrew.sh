@@ -19,27 +19,14 @@ execute() {
                 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
                 result=$?
                 ;;
-            linux*)   
-                linux=1
-                /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-                result=$?
-                ;;   
             *)        
-                warn "Unknown OS type: $OSTYPE" 
+                warn "OS type: $OSTYPE not supported. Exiting..." 
                 result=1
                 ;;
         esac
 
         if [ ! "$result" -eq 0 ] ; then
             fail "Error installing Homebrew. Exiting..." && exit 1
-        elif [[ -n $linux ]] ; then
-            info "Completing Linuxbrew installation..."
-
-            test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
-            test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-            echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.exports.local 
-            #shellcheck source=/dev/null
-            source ~/.exports.local
         fi    
 
     fi

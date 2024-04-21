@@ -24,13 +24,6 @@ _install_tools () {
   . "$DOTFILES_FOLDER"/scripts/tools.sh
 }
 
-_default_shell() {
-  if [[ $OSTYPE == linux* ]] ; then
-    user "Set default shell to ZSH"
-    chsh -s "$(command -v zsh)"
-  fi
-}
-
 _configure() {
 
   if [[ $OSTYPE == darwin* ]] ; then
@@ -50,9 +43,6 @@ _restart() {
   if [[ $OSTYPE == darwin* ]] ; then
     user "Restarting system to apply settings..."
     osascript -e 'tell app "loginwindow" to «event aevtrrst»'
-  elif [[ $OSTYPE == linux* ]] ; then
-    user "Restarting system to apply settings..."
-    shutdown +1 -r
   fi
 }
 
@@ -61,7 +51,6 @@ execute() {
   _install_tools
   _link
   _configure
-  _default_shell
   _restart
 } 
 
