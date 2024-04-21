@@ -46,11 +46,6 @@ postInstall() {
 
 install() {
     info "Installing ASDF Plugins"
-
-    # Unlink openssl on brew in linux to avoid issue with Ruby
-    if [[ $OSTYPE == linux* ]] ; then
-        brew unlink openssl
-    fi
     
     for aux in "${plugins[@]}"; 
     do 

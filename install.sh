@@ -1,9 +1,6 @@
 #!/bin/sh
 
 case $(uname -s) in
-    Linux*)
-        sudo apt install git -y
-        ;;
     Darwin*)
         git >/dev/null
         ;;

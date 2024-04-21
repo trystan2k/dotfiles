@@ -12,7 +12,7 @@ TOOL_NAME=zinit
 EXTRA_INFO="https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh"
 
 # Install methods by OS
-OS_METHODS="darwin:sh linux:sh"
+OS_METHODS="darwin:sh"
 
 ## Pre-installation required steps
 preInstall() {
