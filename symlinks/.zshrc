@@ -163,9 +163,7 @@ set-npmrc-config-hook() {
 
 add-zsh-hook chpwd set-npmrc-config-hook
 
-
-# Check if not inside a Zellij session, and if not, check if there is any session to attach
-if [ -z "$ZELLIJ" ]; then
+if [ -z "$ZELLIJ" ] && [ "$TERM" = "xterm-kitty" ]; then
     ZJ_SESSIONS=$(zellij list-sessions)
     NO_SESSIONS=$(echo "${ZJ_SESSIONS}" | wc -l)
 
