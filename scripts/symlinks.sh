@@ -100,6 +100,22 @@ install_dotfiles () {
 		fi
 	done	
 
+	info 'installing config files'
+
+	local overwrite_all=false backup_all=false skip_all=false
+
+	for src in "$DOTFILES_FOLDER"/symlinks/config/*;
+	do
+		local filename=''
+		filename=$(basename "${src}")
+		if [ ${#filename} -gt 2 ]; then
+			dst="$HOME/.config/$filename"
+			filePath="${DOTFILES_FOLDER}/symlinks/config/${filename}"
+
+			_link_file "$filePath" "$dst"
+		fi
+	done
+
 	info "Allow .envrc file execution"
     asdf exec direnv allow "$HOME"/.envrc
 }
