@@ -12,7 +12,7 @@
 			<key>NSMenuItem</key>
 			<dict>
 				<key>default</key>
-				<string>Open in Hyper Terminal</string>
+				<string>Open in Kitty Terminal</string>
 			</dict>
 			<key>NSMessage</key>
 			<string>runWorkflowAsService</string>

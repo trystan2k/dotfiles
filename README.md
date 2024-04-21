@@ -54,8 +54,8 @@ After the reboot of the computer (after the dotfiles install script is finished 
 
 ### Terminal
 
-I am currently using [Hyper Terminal](https://hyper.is/).
-The symlink step link the `.hyper.js` file with my current configuration, themes, etc.
+I am currently using [Kitty Terminal](https://sw.kovidgoyal.net/kitty/).
+The symlink step link the `kitty.conf` file with my current configuration, themes, etc.
 
 **Theme**: [powerlevel10k theme](https://github.com/romkatv/powerlevel10k)
 **Fonts**: [Nerd Font](https://github.com/ryanoasis/nerd-fonts) and [Fira Code](https://github.com/tonsky/FiraCode)

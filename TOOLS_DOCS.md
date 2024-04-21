@@ -74,3 +74,15 @@ To be able to run it (and when the computer is started)
 
 1. Copy the net.duplicati.server.plist file from 'tools' folder and save it to `/Library/LaunchAgents`
 2. Access Duplicate in the browser with [http://localhost:8200](http://localhost:8200/)
+
+## Quick Actions
+
+Quick Actions are a way to automate tasks in MacOS.
+
+To create a new Quick Action, open Automator and create a new Quick Action.
+
+1. Open Automator
+2. Create a new Quick Action
+3. Add a new action: Open Finder Items
+4. Select as Open With the app you want to use
+5. Save the Quick Action
