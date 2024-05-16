@@ -58,8 +58,26 @@ git clone $GITHUB_URL
 
 cd dotfiles || exit
 
+echo "Which branch should be used to install the dotfiles ? (Default: main)"
+read -r branch2Use
+branch2Use="${branch2Use:=main}"
+
+# Check if branch exist
+git ls-remote --exit-code --heads --quiet origin refs/heads/"$branch2Use" > /dev/null
+result=$?
+if [ ! "$result" -eq 0 ] ; then
+    echo "Branch $branch2Use does not exist. Fallback to main branch"
+    echo "Press any key to continue"
+    read -r
+    branch2Use="main"
+fi
+
 # Go to branch
-git checkout main
+git checkout "$branch2Use"
+
+# Ensure Terminal has right permissions
+echo "Add Terminal to have App Management permissions (System > Privacy & Security > App Management). Press any key to continue"
+read -r
 
 # Cd into scripts folder and execute bootstrap
 cd scripts || exit
