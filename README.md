@@ -126,6 +126,7 @@ npmrc entry in the .envrc file of the folder of the project.
 7. Presentify (<https://apps.apple.com/app/id1507246666>) - Annotations in Screen $$
 8. DisplayBuddy (<https://displaybuddy.app/>) - Control external monitors via software
 9. Presentify (<https://presentify.compzets.com/>) - Allow annotations in screen
+10. Ente (<https://ente.io/>) - Alternative to Google Photos
 
 ## Possible issues
 
