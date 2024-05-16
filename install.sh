@@ -76,10 +76,6 @@ git checkout "$branch2Use"
 echo "Add Terminal to have App Management permissions (System > Privacy & Security > App Management). Press any key to continue"
 read -r
 
-# Ensure Terminal has right permissions
-echo "Add Terminal to have App Management permissions (System > Privacy & Security > App Management). Press any key to continue"
-read -r
-
 # Cd into scripts folder and execute bootstrap
 cd scripts || exit
 bash bootstrap.sh
