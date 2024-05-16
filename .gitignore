@@ -277,9 +277,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-#package-lock.json
-package-lock.json
-
 # Brewfile lock
 Brewfile.lock.json
 

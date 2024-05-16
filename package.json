@@ -13,10 +13,13 @@
     "url": "https://github.com/trystan2k/dotfiles/issues"
   },
   "repository": "github:trystan2k/dotfiles",
+  "type": "module",
   "scripts": {
+    "clean": "rm -rf node_modules",
+    "commit": "git-cz",
     "lint": "npm run lint:bash && npm run lint:eslint && npm run lint:md",
     "lint:bash": "bash shellcheck.sh",
-    "lint:eslint": "eslint --ext json . --fix",
+    "lint:eslint": "eslint . --fix",
     "lint:md": "markdownlint --fix .",
     "prepare": "husky install",
     "push": "git push && git push --tags",
@@ -49,6 +52,11 @@
       "sort-package-json"
     ]
   },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
+  },
   "prettier": {
     "overrides": [
       {
@@ -59,28 +67,20 @@
       }
     ]
   },
-  "eslintConfig": {
-    "plugins": [
-      "markdown",
-      "json"
-    ],
-    "extends": [
-      "plugin:json/recommended"
-    ]
-  },
   "devDependencies": {
-    "@commitlint/cli": "^17.0.3",
-    "@commitlint/config-conventional": "^17.0.3",
-    "eslint": "^8.19.0",
-    "eslint-config-prettier": "^8.5.0",
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@commitlint/cz-commitlint": "^19.2.0",
+    "eslint": "^9.2.0",
+    "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-json": "^3.1.0",
-    "eslint-plugin-markdown": "^2.2.1",
-    "husky": "^8.0.1",
-    "lint-staged": "^13.0.3",
-    "markdownlint": "^0.26.0",
-    "markdownlint-cli": "^0.31.1",
-    "prettier": "^2.7.1",
-    "sort-package-json": "^1.57.0",
+    "eslint-plugin-markdown": "^5.0.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "markdownlint": "^0.34.0",
+    "markdownlint-cli": "^0.40.0",
+    "prettier": "^3.2.5",
+    "sort-package-json": "^2.10.0",
     "standard-version": "^9.5.0"
   },
   "standard-version": {
