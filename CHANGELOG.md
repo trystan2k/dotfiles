@@ -522,8 +522,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [8.3.1](https://github.com/trystan2k/dotfiles/compare/v8.3.0...v8.3.1) (2020-06-23)
 
-## [8.3.0](https://github.com/trystan2k/dotfiles/compare/v8.2.0...v8.3.0) (2020-06-22)
-
 ### Features
 
 * **markdownlint:** update line lenght ([ad1822f](https://github.com/trystan2k/dotfiles/commit/ad1822f06baebf5965e6a1b84ac64ef3af8bfdf4))
