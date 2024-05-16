@@ -1,6 +1,6 @@
 {
   "name": "@trystan2k/dotfiles",
-  "version": "12.17.0",
+  "version": "12.17.1",
   "description": "My personal dotfiles",
   "keywords": [
     "dotfiles",
@@ -13,10 +13,7 @@
   "bugs": {
     "url": "https://github.com/trystan2k/dotfiles/issues"
   },
-  "repository": {
-    "type": "git",
-    "url": "ssh://git@github.com:trystan2k/dotfiles.git"
-  },
+  "repository": "github:trystan2k/dotfiles",
   "scripts": {
     "lint": "npm run lint:bash && npm run lint:eslint && npm run lint:md",
     "lint:bash": "bash shellcheck.sh",
