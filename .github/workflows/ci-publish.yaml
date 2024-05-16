@@ -18,7 +18,6 @@ jobs:
           node-version: 'lts/*'
       - run: npm ci
       - run: npm run lint:eslint
-      - run: npm run lint:md
 
   release:
 
