@@ -16,7 +16,7 @@
   "type": "module",
   "scripts": {
     "clean": "rm -rf node_modules",
-    "commit": "git-cz",
+    "cz": "git-cz",
     "lint": "npm run lint:bash && npm run lint:eslint && npm run lint:md",
     "lint:bash": "bash shellcheck.sh",
     "lint:eslint": "eslint . --fix",
