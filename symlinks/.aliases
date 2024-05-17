@@ -242,6 +242,17 @@ function convert_to_mp4() {
   ffmpeg -i "$1" -nostdin -c:v libx264 -c:a aac -movflags +faststart -vf format=yuv420p "converted/${1%.*}.mp4"
 }
 
+# Convert a video file to GIF using ffmpeg
+function convert_to_gif() {
+  mkdir -p converted
+  ffmpeg -i "$1" -filter_complex "[0:v] fps=12,scale=1024:-1,split [a][b];[a] palettegen [p];[b][p] paletteuse" "converted/${1%.*}-temp.gif"
+  gifsicle -O3 --lossy=100 "converted/${1%.*}-temp.gif" -o "converted/${1%.*}.gif"
+  rm "converted/${1%.*}-temp.gif"
+  mkdir -p to_delete
+  mv $1 to_delete
+
+}
+
 # Convert all video files in current folder to MP4 using ffmpeg
 function convert_all_to_mp4() {
   find . -type f -exec file --mime-type {} + | grep "video/" | awk -F ":" '{print $1}' | while read line; do
