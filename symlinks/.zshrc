@@ -166,6 +166,11 @@ set-npmrc-config-hook() {
 
 add-zsh-hook chpwd set-npmrc-config-hook
 
+if [ -f "$HOME"/.exports.path ]; then
+  #shellcheck source=/dev/null
+  . "$HOME"/.exports.path
+fi
+
 # Maybe this shoudl be necessary if it does not auto load in IDEs, for example
 #asdf exec direnv reload
 
