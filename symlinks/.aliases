@@ -293,5 +293,15 @@ precmd() {
   fi
 }
 
+updateNPMDependencies() {
+  if [[ $@ == *"--help"* ]]; then
+    echo "Example: updateNPMDependencies --filter /^@client-components/ --upgrade --deep --format group --target minor"
+    echo "For more information, check https://github.com/raineorshine/npm-check-updates"
+    return 0;
+  fi
+
+  npx npm-check-updates $@
+}
+
 #shellcheck source=/dev/null
 [ -f "$HOME/.aliases.local" ] && source "$HOME/.aliases.local"
