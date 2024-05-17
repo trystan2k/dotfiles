@@ -62,7 +62,7 @@ brew "termshot"
 cask "bruno"
 cask "figma"
 cask "kitty"
-cask "zellij"
+brew "zellij"
 
 ## Browsers
 cask "firefox"
