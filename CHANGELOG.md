@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [12.19.0](https://github.com/trystan2k/dotfiles/compare/v12.18.0...v12.19.0) (2024-05-17)
+
+### Features
+
+* **symlinks:** add alias to update npm dependencies of a project ([0905b76](https://github.com/trystan2k/dotfiles/commit/0905b76d2609fb113d504f460b5c04b64dd81123))
+
 ## [12.18.0](https://github.com/trystan2k/dotfiles/compare/v12.17.0...v12.18.0) (2024-05-17)
 
 ### Features
