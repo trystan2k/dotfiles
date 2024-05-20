@@ -167,6 +167,12 @@ just reload direnv:
         export PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig:$PKG_CONFIG_PATH"
     ```
 
+5. As of May 2024 the package control in Sublime Text 4 is not working properly. To be able to install it, need to download and install manually.
+
+- download latest release from <https://github.com/wbond/package_control/releases>
+- rename it to Package Control.sublime-package
+- place it to ST's Installed Packages directory
+
 ## Thanks to
 
 This repo was based on the | [Mathias Bynens](https://mathiasbynens.be/) | one (<https://github.com/mathiasbynens/dotfiles).>
