@@ -68,9 +68,6 @@ zinit ice wait lucid
 zinit load t413/zsh-background-notify       
 
 zinit ice wait lucid
-zinit load wfxr/forgit
-
-zinit ice wait lucid
 zinit load mattmc3/zsh-safe-rm
 
 zinit ice wait pick"h.sh" lucid

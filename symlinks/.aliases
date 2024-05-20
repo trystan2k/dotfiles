@@ -63,9 +63,15 @@ alias -- -="cd -"
 alias icloud="cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias g="git"
 alias hist="history"
 alias foldersize="du -sch ./*"
+
+# Git Shortcuts
+alias g="git"
+alias gco="git checkout"
+alias gcb="git checkout -b"
+alias gl="git pull"
+alias gf="git fetch"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
