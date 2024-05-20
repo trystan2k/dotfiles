@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.1.0](https://github.com/trystan2k/dotfiles/compare/v13.0.0...v13.1.0) (2024-05-20)
+
+### Features
+
+* **symlinks:** remove forgit and add missing git alias ([37d4cc5](https://github.com/trystan2k/dotfiles/commit/37d4cc5e13e99f232438d13f8c1e2a0e4a6895c9))
+
 ## [13.0.0](https://github.com/trystan2k/dotfiles/compare/v12.19.0...v13.0.0) (2024-05-20)
 
 ### Features
