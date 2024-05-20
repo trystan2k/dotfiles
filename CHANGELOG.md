@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.0.0](https://github.com/trystan2k/dotfiles/compare/v12.19.0...v13.0.0) (2024-05-20)
+
+### Features
+
+* **macos:** remove edge and firefox from dock ([01c9a87](https://github.com/trystan2k/dotfiles/commit/01c9a87421346e5442fa279bee382b675162f170))
+* **macos:** update energy saver settings ([678bc91](https://github.com/trystan2k/dotfiles/commit/678bc913dda86bec255e930e908bb519a29afea9))
+* remove any linux reference and configuration as it is not supported any more ([500aa74](https://github.com/trystan2k/dotfiles/commit/500aa741fe97bd1de0887e2bcd6a42cd13cd789d))
+* replace hyper terminal with kitty ([a1c3bc3](https://github.com/trystan2k/dotfiles/commit/a1c3bc33266e3675314640efdbe6401748fe22fc))
+* **symlinks:** add check to only auto open zellij in kitty terminal ([4546f3a](https://github.com/trystan2k/dotfiles/commit/4546f3adfddd31c1394495b6b7947b37e1d66517))
+* **symlinks:** add export paths file and alias to convert video to gif ([a64d87e](https://github.com/trystan2k/dotfiles/commit/a64d87e139c351c91da03c517787d0608c99ef49))
+* **symlinks:** add npmrc config to boost performance ([cdad877](https://github.com/trystan2k/dotfiles/commit/cdad877009afe90b5219b5f0d2a1d9aef438ecda))
+* **symlinks:** add zellij and kitty configs ([45dca78](https://github.com/trystan2k/dotfiles/commit/45dca78aec1f436744dc87b154f5cf53ec9ba626))
+* **symlinks:** remove docker plugin ([a381084](https://github.com/trystan2k/dotfiles/commit/a381084aae2c0eca59f8fcb0bed39dee0e9ed240))
+* **tools:** add balenaetcher tool ([095f62e](https://github.com/trystan2k/dotfiles/commit/095f62e036da9d181ee8e449cddf7bee78752bf8))
+* **tools:** add piphero and dust ([b101980](https://github.com/trystan2k/dotfiles/commit/b10198082d96b015e6a2efccf0fe53847fee8136))
+* **tools:** remove slack tool ([f0af090](https://github.com/trystan2k/dotfiles/commit/f0af0903dfa10fd82026953ec3d3e748d3f986b9))
+* **tools:** remove yarn, add pnpn and correct brew zellij install instruction ([f02534f](https://github.com/trystan2k/dotfiles/commit/f02534fbb1df226401bb5240462299deed7744cb))
+* **tools:** update tools ([b37619c](https://github.com/trystan2k/dotfiles/commit/b37619c225379a5a13ff93b731b144b5a55c34c5))
+* update tools versions ([ade0628](https://github.com/trystan2k/dotfiles/commit/ade06280a5c6d350f91c8c7fe8c171157c80bbb5))
+
 ## [12.19.0](https://github.com/trystan2k/dotfiles/compare/v12.18.0...v12.19.0) (2024-05-17)
 
 ### Features
