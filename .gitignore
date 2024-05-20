@@ -278,6 +278,6 @@ $RECYCLE.BIN/
 *.lnk
 
 # Brewfile lock
-Brewfile.lock.json
+Brewfile.*.lock.json
 
 # End of https://www.gitignore.io/api/node,java,linux,macos,maven,windows,eclipse,visualstudiocode
