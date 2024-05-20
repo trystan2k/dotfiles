@@ -15,12 +15,12 @@ install() {
 
     success "corepack enabled"
 
-    info "Installing npm tool 'pnpm'"
+    info "Installing npm tool 'npkill'"
 
     # Install
-    npm install --global pnpm
+    npm install --global npkill
 
-    success "'pnpm' installed."
+    success "'npkill' installed."
 
     info "Installing npm tool 'fkill'"
     
