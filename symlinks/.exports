@@ -10,6 +10,10 @@ export SAVEHIST=10000000
 
 # Disable zsh-tab-title prefix
 export ZSH_TAB_TITLE_DEFAULT_DISABLE_PREFIX=true
+# Enable full command in tab title
+export ZSH_TAB_TITLE_ENABLE_FULL_COMMAND=true
+# Enable concat folder process in tab title
+export ZSH_TAB_TITLE_CONCAT_FOLDER_PROCESS=true
 
 export MCFLY_FUZZY=true
 export MCFLY_INTERFACE_VIEW=BOTTOM
