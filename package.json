@@ -20,7 +20,7 @@
     "lint": "npm run lint:bash && npm run lint:eslint",
     "lint:bash": "bash shellcheck.sh",
     "lint:eslint": "eslint . --fix",
-    "prepare": "husky install",
+    "prepare": "husky",
     "push": "git push && git push --tags",
     "release": "standard-version -a",
     "release:as": "standard-version --release-as"
@@ -70,7 +70,7 @@
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
     "@commitlint/cz-commitlint": "^19.2.0",
-    "eslint": "^9.2.0",
+    "eslint": "^9.3.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-json": "^3.1.0",
     "eslint-plugin-markdownlint": "^0.6.0",
