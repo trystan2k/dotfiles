@@ -65,7 +65,8 @@ result=$?
 if [ ! "$result" -eq 0 ] ; then
     echo "Branch $branch2Use does not exist. Fallback to main branch"
     echo "Press any key to continue"
-    read -r
+    # shellcheck disable=SC2034
+    read -r temp
     branch2Use="main"
 fi
 
@@ -74,7 +75,8 @@ git checkout "$branch2Use"
 
 # Ensure Terminal has right permissions
 echo "Add Terminal to have App Management permissions (System > Privacy & Security > App Management). Press any key to continue"
-read -r
+# shellcheck disable=SC2034
+read -r temp
 
 # Cd into scripts folder and execute bootstrap
 cd scripts || exit
