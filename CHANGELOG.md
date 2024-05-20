@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.2.0](https://github.com/trystan2k/dotfiles/compare/v13.1.0...v13.2.0) (2024-05-20)
+
+### Features
+
+* **macos:** update cobalt2 theme for terminal app ([39ec55a](https://github.com/trystan2k/dotfiles/commit/39ec55ab5a120f93e7ca1a03f2f12ec4a7d9663b))
+* **symlinks:** add config for zsh tab title plugin ([e70e109](https://github.com/trystan2k/dotfiles/commit/e70e10944b81742288fb2b0addcc8fb2431d9d1f))
+
 ## [13.1.0](https://github.com/trystan2k/dotfiles/compare/v13.0.0...v13.1.0) (2024-05-20)
 
 ### Features
