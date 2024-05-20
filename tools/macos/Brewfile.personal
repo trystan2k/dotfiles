@@ -10,7 +10,6 @@ cask "daisydisk"
 cask "duplicati"
 cask "parallels"
 cask "pock"
-cask "slack"
 cask "transmission"
 
 # Dev
