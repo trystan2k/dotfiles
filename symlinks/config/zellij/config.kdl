@@ -145,48 +145,7 @@ keybinds {
     }
     shared_except "locked" {
         bind "Alt y" {
-            LaunchOrFocusPlugin "file:~/.config/zellij/plugins/zellij_forgot.wasm" {
-                "lock"                  "alt + g"
-                "unlock"                "alt + g"
-                "new pane"              "alt + p + n"
-                "change focus of pane"  "alt + p + arrow key"
-                "close pane"            "alt + p + x"
-                "rename pane"           "alt + p + c"
-                "toggle fullscreen"     "alt + p + f"
-                "toggle floating pane"  "alt + p + w"
-                "toggle embed pane"     "alt + p + e"
-                "choose right pane"     "alt + p + l"
-                "choose left pane"      "alt + p + r"
-                "choose upper pane"     "alt + p + k"
-                "choose lower pane"     "alt + p + j"
-                "new tab"               "alt + t + n"
-                "close tab"             "alt + t + x"
-                "change focus of tab"   "alt + t + arrow key"
-                "rename tab"            "alt + t + r"
-                "sync tab"              "alt + t + s"
-                "brake pane to new tab" "alt + t + b"
-                "brake pane left"       "alt + t + ["
-                "brake pane right"      "alt + t + ]"
-                "toggle tab"            "alt + t + tab"
-                "increase pane size"    "alt + n + +"
-                "decrease pane size"    "alt + n + -"
-                "increase pane top"     "alt + n + k"
-                "increase pane right"   "alt + n + l"
-                "increase pane bottom"  "alt + n + j"
-                "increase pane left"    "alt + n + h"
-                "decrease pane top"     "alt + n + K"
-                "decrease pane right"   "alt + n + L"
-                "decrease pane bottom"  "alt + n + J"
-                "decrease pane left"    "alt + n + H"
-                "move pane to top"      "alt + m + k"
-                "move pane to right"    "alt + m + l"
-                "move pane to bottom"   "alt + m + j"
-                "move pane to left"     "alt + m + h"
-                "search"                "alt + s + s"
-                "go into edit mode"     "alt + s + e"
-                "detach session"        "alt + o + w"
-                "open session manager"  "alt + o + w"
-                "quit zellij"           "alt + q"
+            LaunchOrFocusPlugin "zellij_forgot" {
                 floating true
             }
         }
@@ -201,6 +160,11 @@ keybinds {
         bind "Alt -" { Resize "Decrease"; }
         bind "Alt [" { PreviousSwapLayout; }
         bind "Alt ]" { NextSwapLayout; }
+        bind "Alt q" {
+            LaunchOrFocusPlugin "zj-quit" {
+                floating true
+            }
+        }
     }
     shared_except "normal" "locked" {
         bind "Enter" "Esc" { SwitchToMode "Normal"; }
@@ -234,6 +198,53 @@ plugins {
     strider { path "strider"; }
     compact-bar { path "compact-bar"; }
     session-manager { path "session-manager"; }
+    zj-quit location="file:~/.config/zellij/plugins/zj-quit.wasm" {
+        confirm_key "q"
+        cancel_key "Esc"
+    }
+    zellij_forgot location="file:~/.config/zellij/plugins/zellij_forgot.wasm" {
+        "lock"                  "alt + g"
+        "unlock"                "alt + g"
+        "new pane"              "alt + p + n"
+        "change focus of pane"  "alt + p + arrow key"
+        "close pane"            "alt + p + x"
+        "rename pane"           "alt + p + c"
+        "toggle fullscreen"     "alt + p + f"
+        "toggle floating pane"  "alt + p + w"
+        "toggle embed pane"     "alt + p + e"
+        "choose right pane"     "alt + p + l"
+        "choose left pane"      "alt + p + r"
+        "choose upper pane"     "alt + p + k"
+        "choose lower pane"     "alt + p + j"
+        "new tab"               "alt + t + n"
+        "close tab"             "alt + t + x"
+        "change focus of tab"   "alt + t + arrow key"
+        "rename tab"            "alt + t + r"
+        "sync tab"              "alt + t + s"
+        "brake pane to new tab" "alt + t + b"
+        "brake pane left"       "alt + t + ["
+        "brake pane right"      "alt + t + ]"
+        "toggle tab"            "alt + t + tab"
+        "increase pane size"    "alt + n + +"
+        "decrease pane size"    "alt + n + -"
+        "increase pane top"     "alt + n + k"
+        "increase pane right"   "alt + n + l"
+        "increase pane bottom"  "alt + n + j"
+        "increase pane left"    "alt + n + h"
+        "decrease pane top"     "alt + n + K"
+        "decrease pane right"   "alt + n + L"
+        "decrease pane bottom"  "alt + n + J"
+        "decrease pane left"    "alt + n + H"
+        "move pane to top"      "alt + m + k"
+        "move pane to right"    "alt + m + l"
+        "move pane to bottom"   "alt + m + j"
+        "move pane to left"     "alt + m + h"
+        "search"                "alt + s + s"
+        "go into edit mode"     "alt + s + e"
+        "detach session"        "alt + o + w"
+        "open session manager"  "alt + o + w"
+        "quit zellij"           "alt + q"
+    }
 }
 
 // Choose what to do when zellij receives SIGTERM, SIGINT, SIGQUIT or SIGHUP
