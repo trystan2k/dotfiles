@@ -161,15 +161,7 @@ set-npmrc-config-hook() {
 add-zsh-hook chpwd set-npmrc-config-hook
 
 if [ -z "$ZELLIJ" ] && [ "$TERM" = "xterm-kitty" ]; then
-    ZJ_SESSIONS=$(zellij list-sessions)
-    NO_SESSIONS=$(echo "${ZJ_SESSIONS}" | wc -l)
-
-    if [ "${NO_SESSIONS}" -ge 2 ]; then
-        SESSION_TO_ATTACH=$(echo "${ZJ_SESSIONS}" | fzf --ansi | sed 's/ .*//')
-        zellij attach $SESSION_TO_ATTACH
-    else
-        zellij attach -c
-    fi
+    zellij -l welcome
 fi
 
 if [ -f "$HOME"/.exports.path ]; then
