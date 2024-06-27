@@ -94,11 +94,7 @@ alias lsd="ls -ld"
 
 # Use colorls output for `ls` if it is available, otherwise use default ls command
 function ls() {
-  if [ -x "$(command -v colorls)" ]; then
-    RUBYOPT='-W:no-deprecated -W:no-experimental' command colorls "$@"
-  else
-    eza "$@" --git --icons
-  fi
+  eza "$@" --git --icons=always --color=always
 }
 
 # Always enable colored `grep` output
