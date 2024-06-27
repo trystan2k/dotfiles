@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.3.0](https://github.com/trystan2k/dotfiles/compare/v13.2.0...v13.3.0) (2024-06-27)
+
+### Features
+
+* **symlinks:** add new zj-quit plugin ([fa53ed6](https://github.com/trystan2k/dotfiles/commit/fa53ed6c2890c7483f591a89024fd80c83efff27))
+* **symlinks:** change how zellij is started, to open welcome page ([be5ccfa](https://github.com/trystan2k/dotfiles/commit/be5ccfaed3e16d508a750d02837e012e08ca416f))
+* **symlinks:** change ls alias to only use eza ([3129e26](https://github.com/trystan2k/dotfiles/commit/3129e266f911e7d7dec3397081501791e3be20f0))
+* **tools:** add deskpad tool ([01967f9](https://github.com/trystan2k/dotfiles/commit/01967f91c039c0c4963eb68947793b2df646f1b2))
+
 ## [13.2.0](https://github.com/trystan2k/dotfiles/compare/v13.1.0...v13.2.0) (2024-05-20)
 
 ### Features
