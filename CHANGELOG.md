@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.4.0](https://github.com/trystan2k/dotfiles/compare/v13.3.0...v13.4.0) (2024-07-03)
+
+### Features
+
+* **tools:** replace hiddenbar for ice ([5e74d57](https://github.com/trystan2k/dotfiles/commit/5e74d57af122aaeb3483869a5cf5e6867d2ff1ee))
+
 ## [13.3.0](https://github.com/trystan2k/dotfiles/compare/v13.2.0...v13.3.0) (2024-06-27)
 
 ### Features
