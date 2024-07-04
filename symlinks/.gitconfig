@@ -12,12 +12,12 @@
 [alias]
 
 	st = status
-    ci = commit
-    br = branch
-    co = checkout
-    df = diff
-    dc = diff --cached
-    lg = log -p
+	ci = commit
+	br = branch
+	co = checkout
+	df = diff
+	dc = diff --cached
+	lg = log -p
 	sw = switch
 
 	cmsg = "!f() { git commit -m $1; }; f"
@@ -130,6 +130,8 @@
 
 	# Show a list of which branches you worked on last
 	gbs = git branch --sort=-committerdate
+
+	uncommmit = reset --soft HEAD^
 
 [help]
 
