@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.5.0](https://github.com/trystan2k/dotfiles/compare/v13.4.0...v13.5.0) (2024-07-06)
+
+### Features
+
+* **symlinks:** add uncommit alias for git ([01a42c5](https://github.com/trystan2k/dotfiles/commit/01a42c56db50a59b69c5acf476bc8da58066bbfb))
+
 ## [13.4.0](https://github.com/trystan2k/dotfiles/compare/v13.3.0...v13.4.0) (2024-07-03)
 
 ### Features
