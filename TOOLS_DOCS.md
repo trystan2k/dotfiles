@@ -86,3 +86,31 @@ To create a new Quick Action, open Automator and create a new Quick Action.
 3. Add a new action: Open Finder Items
 4. Select as Open With the app you want to use
 5. Save the Quick Action
+
+## Rsync between 2 folders
+
+To sync 2 folders, you can use the rsync command.
+
+```bash
+    rsync -avhPz Folder_1/ Folder_2 --exclude '.Spotlight-V100' --exclude '.DS_Store' --exclude '.Trashes'
+```
+
+Check if folders are the same:
+
+```bash
+    rsync -avhPunc Folder_1/ Folder_2 --exclude '.Spotlight-V100' --exclude '.DS_Store' --exclude '.Trashes'
+```
+
+## Find and remove files/folders
+
+There are some ways to find and remove files/folders.
+
+### Find
+
+```bash
+    # With exec option
+    find . -name "filename" -exec rm -rf {} \;
+
+    # With -delete argument
+    find . -name "filename" -delete
+```
