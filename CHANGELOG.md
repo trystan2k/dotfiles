@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.6.0](https://github.com/trystan2k/dotfiles/compare/v13.5.0...v13.6.0) (2024-07-21)
+
+### Features
+
+* **tools:** remove obstack and add rancher as docker alternative ([6d8ebdc](https://github.com/trystan2k/dotfiles/commit/6d8ebdc2d7be16c104f8ece18ebc0c356049e04d))
+
 ## [13.5.0](https://github.com/trystan2k/dotfiles/compare/v13.4.0...v13.5.0) (2024-07-06)
 
 ### Features
