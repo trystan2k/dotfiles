@@ -169,6 +169,9 @@ if [ -f "$HOME"/.exports.path ]; then
   . "$HOME"/.exports.path
 fi
 
+# Add Rancher Desktop bin into path
+export PATH="$PATH:$HOME/.rd/bin"
+
 # Maybe this shoudl be necessary if it does not auto load in IDEs, for example
 #asdf exec direnv reload
 

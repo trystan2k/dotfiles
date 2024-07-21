@@ -57,11 +57,13 @@ cask "piphero"
 cask "raycast"
 cask "shottr"
 brew "termshot"
+brew "trex"
 
 ## Dev
 cask "bruno"
 cask "figma"
 cask "kitty"
+brew "rancher"
 brew "zellij"
 
 ## Browsers

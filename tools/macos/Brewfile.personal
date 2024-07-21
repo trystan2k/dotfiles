@@ -13,9 +13,6 @@ cask "parallels"
 cask "pock"
 cask "transmission"
 
-# Dev
-cask "orbstack"
-
 ## Multimedia
 cask "iina"
 cask "stremio"
