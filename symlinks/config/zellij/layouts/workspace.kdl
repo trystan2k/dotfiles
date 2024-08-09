@@ -1,0 +1,71 @@
+layout {
+    cwd "/Users/todd"
+    tab name="shell" focus=true hide_floating_panes=true {
+        pane split_direction="vertical" {
+            pane focus=true size="50%" 
+            pane size="50%" {
+                pane size="50%"
+                pane size="50%"
+            }
+        }
+        pane size=2 borderless=true {
+            plugin location="file:/Users/todd/.config/zellij/plugins/zjstatus.wasm" {
+            border_char "─"
+            border_enabled "true"
+            border_format "#[fg=#ff2c70]{char}"
+            border_position "top"
+            format_center "{session}"
+            format_left "{tabs}"
+            format_right "{mode}"
+            format_space ""
+            hide_frame_for_single_pane "true"
+            mode_enter_search "#[fg=#000000,bg=#3AD900,bold] {name} "
+            mode_locked "#[fg=#000000,bg=#3AD900,bold]{name}"
+            mode_move "#[fg=#000000,bg=#3AD900,bold] {name} "
+            mode_normal "#[fg=#c7c7c7,bold]{name}"
+            mode_pane "#[fg=#000000,bg=#3AD900,bold] {name} "
+            mode_prompt "#[fg=#000000,bg=#3AD900,bold] {name} "
+            mode_rename_pane "#[fg=#000000,bg=#3AD900,bold] {name} "
+            mode_rename_tab "#[fg=#000000,bg=#3AD900,bold] {name} "
+            mode_resize "#[fg=#000000,bg=#3AD900,bold] {name} "
+            mode_scroll "#[fg=#000000,bg=#3AD900,bold] {name} "
+            mode_search "#[fg=#000000,bg=#3AD900,bold] {name} "
+            mode_session "#[fg=#000000,bg=#3AD900,bold] {name} "
+            mode_tab "#[fg=#000000,bg=#3AD900,bold] {name} "
+            tab_active "#[bg=#1478DB,bold,italic] {name} "
+            tab_normal "#[fg=#c7c7c7] {name} "
+            }
+        }
+    }
+    new_tab_template {
+        pane cwd="/Users/todd"
+        pane size=2 borderless=true {
+            plugin location="file:/Users/todd/.config/zellij/plugins/zjstatus.wasm" {
+            border_char "─"
+            border_enabled "true"
+            border_format "#[fg=#ff2c70]{char}"
+            border_position "top"
+            format_center "{session}"
+            format_left "{tabs}"
+            format_right "{mode}"
+            format_space ""
+            hide_frame_for_single_pane "true"
+            mode_enter_search "#[fg=#000000,bg=#3AD900,bold] {name} "
+            mode_locked "#[fg=#000000,bg=#3AD900,bold]{name}"
+            mode_move "#[fg=#000000,bg=#3AD900,bold] {name} "
+            mode_normal "#[fg=#c7c7c7,bold]{name}"
+            mode_pane "#[fg=#000000,bg=#3AD900,bold] {name} "
+            mode_prompt "#[fg=#000000,bg=#3AD900,bold] {name} "
+            mode_rename_pane "#[fg=#000000,bg=#3AD900,bold] {name} "
+            mode_rename_tab "#[fg=#000000,bg=#3AD900,bold] {name} "
+            mode_resize "#[fg=#000000,bg=#3AD900,bold] {name} "
+            mode_scroll "#[fg=#000000,bg=#3AD900,bold] {name} "
+            mode_search "#[fg=#000000,bg=#3AD900,bold] {name} "
+            mode_session "#[fg=#000000,bg=#3AD900,bold] {name} "
+            mode_tab "#[fg=#000000,bg=#3AD900,bold] {name} "
+            tab_active "#[bg=#1478DB,bold,italic] {name} "
+            tab_normal "#[fg=#c7c7c7] {name} "
+            }
+        }
+    }
+}
