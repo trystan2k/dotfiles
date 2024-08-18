@@ -82,6 +82,3 @@ cask "visual-studio-code"
 # Fonts
 cask "font-fira-code"
 cask "font-hack-nerd-font"
-
-# App Store
-mas "BetterSnapTool", id: 417375580
