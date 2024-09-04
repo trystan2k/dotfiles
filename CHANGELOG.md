@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.8.0](https://github.com/trystan2k/dotfiles/compare/v13.7.0...v13.8.0) (2024-09-04)
+
+### Features
+
+* **tools:** add load homebrew env after its installation ([0ae7115](https://github.com/trystan2k/dotfiles/commit/0ae71157273adee889349f58ea368970262f8e2d))
+
 ## [13.7.0](https://github.com/trystan2k/dotfiles/compare/v13.6.0...v13.7.0) (2024-09-04)
 
 ### Features
