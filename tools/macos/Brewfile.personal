@@ -10,7 +10,6 @@ cask "daisydisk"
 cask "duplicati"
 cask "onyx"
 cask "parallels"
-cask "pock"
 cask "transmission"
 
 ## Multimedia
