@@ -31,6 +31,9 @@ execute() {
 
     fi
 
+    info "Load Homebrew environment"
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+
     # Execute brew update
     info "Executing brew update"
     brew update
