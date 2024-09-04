@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.7.0](https://github.com/trystan2k/dotfiles/compare/v13.6.0...v13.7.0) (2024-09-04)
+
+### Features
+
+* **symlinks:** add workspace layout to zellij ([d349db9](https://github.com/trystan2k/dotfiles/commit/d349db9e6137fec8f59189901e9daaaba2e35598))
+* **tools:** remove bettersnaptool ([de3737b](https://github.com/trystan2k/dotfiles/commit/de3737b16863d8e8ed81079dc08202308791620b))
+
 ## [13.6.0](https://github.com/trystan2k/dotfiles/compare/v13.5.0...v13.6.0) (2024-07-21)
 
 ### Features
