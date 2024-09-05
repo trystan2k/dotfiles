@@ -114,33 +114,50 @@ execute() {
 
     # Configure menu bar icons, including fast user switch, battery %, time/date, bluetooth
     info "Users & Groups - Configure menu bar icons, including fast user switch, battery percentege, time/date, bluetooth"
-    defaults write com.apple.systemuiserver menuExtras -array-add '<string>/System/Library/CoreServices/Menu Extras/Clock.menu</string>'
-    defaults write com.apple.systemuiserver menuExtras -array-add '<string>/System/Library/CoreServices/Menu Extras/Battery.menu</string>'
-    defaults write com.apple.systemuiserver menuExtras -array-add '<string>/System/Library/CoreServices/Menu Extras/AirPort.menu</string>'
-    defaults write com.apple.systemuiserver menuExtras -array-add '<string>/System/Library/CoreServices/Menu Extras/User.menu</string>'
-    defaults write com.apple.systemuiserver menuExtras -array-add '<string>/System/Library/CoreServices/Menu Extras/Bluetooth.menu</string>'
-    defaults write com.apple.systemuiserver menuExtras -array-add '<string>/System/Library/CoreServices/Menu Extras/Volume.menu</string>'
-    defaults write com.apple.systemuiserver menuExtras -array-add '<string>/System/Library/CoreServices/Menu Extras/Displays.menu</string>'
 
-    defaults write com.apple.systemuiserver "NSStatusItem Preferred Position Item-0" 23
-    defaults write com.apple.systemuiserver "NSStatusItem Preferred Position Siri" 61
-    defaults write com.apple.systemuiserver "NSStatusItem Preferred Position com.apple.menuextra.airport" 401
-    defaults write com.apple.systemuiserver "NSStatusItem Preferred Position com.apple.menuextra.appleuser" "131.5"
-    defaults write com.apple.systemuiserver "NSStatusItem Preferred Position com.apple.menuextra.battery" "321.5"
-    defaults write com.apple.systemuiserver "NSStatusItem Preferred Position com.apple.menuextra.bluetooth" 463
-    defaults write com.apple.systemuiserver "NSStatusItem Preferred Position com.apple.menuextra.clock" 219
-    defaults write com.apple.systemuiserver "NSStatusItem Preferred Position com.apple.menuextra.volume" 371
+    # Show battery percentage
+    defaults -currentHost write com.apple.controlcenter BatteryShowPercentage -bool true
 
-    defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.airplay" 1
-    defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.airport" 1
-    defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.appleuser" 1
-    defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.battery" 1
-    defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.bluetooth" 1
-    defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.clock" 1
-    defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.volume" 1
+    # Show bluetooth
+    defaults -currentHost write com.apple.controlcenter Bluetooth -int 18
+
+    # Show volume
+    defaults -currentHost write com.apple.controlcenter Sound -int 18
+
+    # Hide spotlight
+    defaults -currentHost write com.apple.Spotlight MenuItemHidden -int 1
+
+    # Hide Siri
+    defaults write com.apple.Siri SiriPrefStashedStatusMenuVisible -bool false
+    defaults write com.apple.Siri VoiceTriggerUserEnabled -bool false
+
+    # TODO: Check in next installation if this is necessary or not
+    # defaults write com.apple.systemuiserver menuExtras -array-add '<string>/System/Library/CoreServices/Menu Extras/Clock.menu</string>'
+    # defaults write com.apple.systemuiserver menuExtras -array-add '<string>/System/Library/CoreServices/Menu Extras/Battery.menu</string>'
+    # defaults write com.apple.systemuiserver menuExtras -array-add '<string>/System/Library/CoreServices/Menu Extras/AirPort.menu</string>'
+    # defaults write com.apple.systemuiserver menuExtras -array-add '<string>/System/Library/CoreServices/Menu Extras/User.menu</string>'
+    # defaults write com.apple.systemuiserver menuExtras -array-add '<string>/System/Library/CoreServices/Menu Extras/Bluetooth.menu</string>'
+    # defaults write com.apple.systemuiserver menuExtras -array-add '<string>/System/Library/CoreServices/Menu Extras/Volume.menu</string>'
+    # defaults write com.apple.systemuiserver menuExtras -array-add '<string>/System/Library/CoreServices/Menu Extras/Displays.menu</string>'
+
+    # defaults write com.apple.systemuiserver "NSStatusItem Preferred Position Item-0" 23
+    # defaults write com.apple.systemuiserver "NSStatusItem Preferred Position Siri" 61
+    # defaults write com.apple.systemuiserver "NSStatusItem Preferred Position com.apple.menuextra.airport" 401
+    # defaults write com.apple.systemuiserver "NSStatusItem Preferred Position com.apple.menuextra.appleuser" "131.5"
+    # defaults write com.apple.systemuiserver "NSStatusItem Preferred Position com.apple.menuextra.battery" "321.5"
+    # defaults write com.apple.systemuiserver "NSStatusItem Preferred Position com.apple.menuextra.bluetooth" 463
+    # defaults write com.apple.systemuiserver "NSStatusItem Preferred Position com.apple.menuextra.clock" 219
+    # defaults write com.apple.systemuiserver "NSStatusItem Preferred Position com.apple.menuextra.volume" 371
+
+    # defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.airplay" 1
+    # defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.airport" 1
+    # defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.appleuser" 1
+    # defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.battery" 1
+    # defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.bluetooth" 1
+    # defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.clock" 1
+    # defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.volume" 1
 
     sudo defaults write /Library/Preferences/.GlobalPreferences MultipleSessionEnabled 1
-    defaults write com.apple.menuextra.battery ShowPercent -bool true
 
     ## Security & Privacy
 
@@ -251,7 +268,7 @@ execute() {
 
     # Enable Touch ID for sudo
     info "Others - Enable Touch ID for sudo"
-    sudo sed -i .bak $'2i\\\nauth       sufficient     pam_tid.so\\\n' /etc/pam.d/sudo
+    sed "s/^#auth/auth/" /etc/pam.d/sudo_local.template | sudo tee /etc/pam.d/sudo_local
 }
 
 execute
