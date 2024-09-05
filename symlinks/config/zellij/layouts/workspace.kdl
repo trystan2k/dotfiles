@@ -1,5 +1,5 @@
 layout {
-    cwd "/Users/todd"
+    cwd "~"
     tab name="shell" focus=true hide_floating_panes=true {
         pane split_direction="vertical" {
             pane focus=true size="50%" 
@@ -9,7 +9,7 @@ layout {
             }
         }
         pane size=2 borderless=true {
-            plugin location="file:/Users/todd/.config/zellij/plugins/zjstatus.wasm" {
+            plugin location="file:~/.config/zellij/plugins/zjstatus.wasm" {
             border_char "─"
             border_enabled "true"
             border_format "#[fg=#ff2c70]{char}"
@@ -38,9 +38,9 @@ layout {
         }
     }
     new_tab_template {
-        pane cwd="/Users/todd"
+        pane cwd="~"
         pane size=2 borderless=true {
-            plugin location="file:/Users/todd/.config/zellij/plugins/zjstatus.wasm" {
+            plugin location="file:~/.config/zellij/plugins/zjstatus.wasm" {
             border_char "─"
             border_enabled "true"
             border_format "#[fg=#ff2c70]{char}"
