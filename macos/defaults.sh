@@ -181,12 +181,12 @@ execute() {
     info "Energy Saver - Set energy save settings"
     # Battery
     sudo pmset -b disksleep 20
-    sudo pmset -b displaysleep 15
+    sudo pmset -b displaysleep 10
     sudo pmset -b sleep 20
 
     # Power supply
     sudo pmset -c disksleep 60
-    sudo pmset -c displaysleep 55
+    sudo pmset -c displaysleep 60
     sudo pmset -c sleep 60
 
     ## Date & Time

@@ -63,7 +63,7 @@ brew "trex"
 cask "bruno"
 cask "figma"
 cask "kitty"
-brew "rancher"
+cask "rancher"
 brew "zellij"
 
 ## Browsers
