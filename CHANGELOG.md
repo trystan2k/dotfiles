@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [13.9.0](https://github.com/trystan2k/dotfiles/compare/v13.8.0...v13.9.0) (2024-09-06)
+
+### Features
+
+* **macos:** update default settings in macos ([6faf30c](https://github.com/trystan2k/dotfiles/commit/6faf30cb50bfd005eac80f4b27ba05b1e3d3c65b))
+* **macos:** update rancher install instructions and update default sleep times ([83e9229](https://github.com/trystan2k/dotfiles/commit/83e9229cd15661027fff11cfc94238ed9d46d066))
+* **tools:** remove pock tool ([97d50de](https://github.com/trystan2k/dotfiles/commit/97d50de86cb9639ea3934c2303f3848284ee0209))
+
+### Bug Fixes
+
+* **symlinks:** fix zellij plugins folder path ([af52da7](https://github.com/trystan2k/dotfiles/commit/af52da74f413cf3d0090f121d845bbbde791f26c))
+
 ## [13.8.0](https://github.com/trystan2k/dotfiles/compare/v13.7.0...v13.8.0) (2024-09-04)
 
 ### Features
