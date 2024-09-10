@@ -175,6 +175,3 @@
 
 [fetch]
   	prune = true
-
-[delta]
-  	side-by-side = true
