@@ -5,9 +5,22 @@
 
 [core]
 	excludesfile = ~/.gitignore
+	pager = delta
 
 [commit]
 	template = ~/.gitmessage
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true    # use n and N to move between diff sections
+		side-by-side = true
+		line-numbers = true
+		hyperlinks = true
+
+[merge]
+    conflictstyle = diff3
 
 [alias]
 
