@@ -143,8 +143,6 @@ eval "$(mcfly init zsh)"
 source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
 
 # Handle nppmrc config according to ENV variable
-autoload -U add-zsh-hook
-
 set-npmrc-config-hook() {
 
   if ! type npmrc > /dev/null; then
@@ -158,7 +156,13 @@ set-npmrc-config-hook() {
   fi
 }
 
+autoload -U add-zsh-hook
 add-zsh-hook chpwd set-npmrc-config-hook
+
+# Edit the current command line in $EDITOR
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey '\C-x\C-e' edit-command-line
 
 if [ -z "$ZELLIJ" ] && [ "$TERM" = "xterm-kitty" ]; then
     zellij -l welcome
