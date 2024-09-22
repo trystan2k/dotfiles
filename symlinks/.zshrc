@@ -1,8 +1,8 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 # PERF: Uncoment these line and last one to get a performance report of terminal init
 #zmodload zsh/zprof
+
+# Avoid duplicate entries in PATH
+typeset -U PATH
 
 # Load brew from /opt/homebrew/bin/brew if in Mac M1
 if [[ $(uname -m) == 'arm64' ]]; then
@@ -11,15 +11,16 @@ if [[ $(uname -m) == 'arm64' ]]; then
     fi
 fi
 
+if [ -f "$HOME"/.exports ]; then
+  #shellcheck source=/dev/null
+  . "$HOME"/.exports
+fi
+
 if [ -f "$HOME"/.aliases ]; then
   #shellcheck source=/dev/null
   . "$HOME"/.aliases
 fi
 
-if [ -f "$HOME"/.exports ]; then
-  #shellcheck source=/dev/null
-  . "$HOME"/.exports
-fi
 
 ### Zinit Section
 
@@ -168,13 +169,13 @@ if [ -z "$ZELLIJ" ] && [ "$TERM" = "xterm-kitty" ]; then
     zellij -l welcome
 fi
 
+# Add Rancher Desktop bin into path
+export PATH="$PATH:$HOME/.rd/bin"
+
 if [ -f "$HOME"/.exports.path ]; then
   #shellcheck source=/dev/null
   . "$HOME"/.exports.path
 fi
-
-# Add Rancher Desktop bin into path
-export PATH="$PATH:$HOME/.rd/bin"
 
 # Maybe this shoudl be necessary if it does not auto load in IDEs, for example
 #asdf exec direnv reload

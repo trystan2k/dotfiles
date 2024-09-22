@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-# Include any exports
-#shellcheck source=/dev/null
-[ -f "$HOME/.exports" ] && source "$HOME/.exports"
-
 # Alias function to backup current Brewfile and generate a new one, with currenct tools installed
 function updateBrewfile() {
   if [[ -f $HOME/Brewfile ]]; then
