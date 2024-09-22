@@ -25,18 +25,6 @@
     "release": "standard-version -a",
     "release:as": "standard-version --release-as"
   },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ],
-    "rules": {
-      "header-max-length": [
-        2,
-        "always",
-        100
-      ]
-    }
-  },
   "lint-staged": {
     "*.json": [
       "npm run lint:eslint"
