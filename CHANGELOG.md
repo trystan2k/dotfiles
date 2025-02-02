@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [14.0.0](https://github.com/trystan2k/dotfiles/compare/v13.9.0...v14.0.0) (2025-02-02)
+
+### Features
+
+* **macos:** disable power on when lid is opened or power is connected ([3020dde](https://github.com/trystan2k/dotfiles/commit/3020ddeda2926f4a89d435d770aa8d6ccc570621))
+* **symlinks:** add delta as git diff ([3622f15](https://github.com/trystan2k/dotfiles/commit/3622f15a956aacc90139153857a103bc430b6380))
+* **symlinks:** add key binding to edit line command in default editor ([27e4683](https://github.com/trystan2k/dotfiles/commit/27e46837924e2d09fae17d76fa690b0df3be79b2))
+* **symlinks:** adjust export load order and path definition order ([8c32bb7](https://github.com/trystan2k/dotfiles/commit/8c32bb7389ed6142cf4e375f1dff7085d5fed127))
+* **symlinks:** remove duplicate entry in gitconfig ([12e1b2a](https://github.com/trystan2k/dotfiles/commit/12e1b2a1f7122806f76787c05ab9c9438c70acf2))
+
 ## [13.9.0](https://github.com/trystan2k/dotfiles/compare/v13.8.0...v13.9.0) (2024-09-06)
 
 ### Features
