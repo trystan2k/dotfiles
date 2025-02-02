@@ -269,6 +269,10 @@ execute() {
     # Enable Touch ID for sudo
     info "Others - Enable Touch ID for sudo"
     sed "s/^#auth/auth/" /etc/pam.d/sudo_local.template | sudo tee /etc/pam.d/sudo_local
+
+    # Disable power on when lid is opened or power is connected
+    info "Others - Disable power on when lid is opened or power is connected"
+    sudo nvram BootPreference=%00
 }
 
 execute
