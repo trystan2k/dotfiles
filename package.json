@@ -17,7 +17,8 @@
   "scripts": {
     "clean": "rm -rf node_modules",
     "cz": "git-cz",
-    "lint": "npm run lint:bash && npm run lint:eslint",
+    "preinstall": "npx only-allow pnpm",
+    "lint": "pnpm run lint:bash && pnpm run lint:eslint",
     "lint:bash": "bash shellcheck.sh",
     "lint:eslint": "eslint . --fix",
     "prepare": "husky",
@@ -27,13 +28,13 @@
   },
   "lint-staged": {
     "*.json": [
-      "npm run lint:eslint"
+      "pnpm run lint:eslint"
     ],
     "*.md": [
-      "npm run lint:eslint"
+      "pnpm run lint:eslint"
     ],
     "*.sh": [
-      "npm run lint:bash"
+      "pnpm run lint:bash"
     ],
     "package.json": [
       "sort-package-json"
@@ -55,17 +56,17 @@
     ]
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.3.0",
-    "@commitlint/config-conventional": "^19.2.2",
-    "@commitlint/cz-commitlint": "^19.2.0",
-    "eslint": "^9.6.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-json": "^4.0.0",
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@commitlint/cz-commitlint": "^19.6.1",
+    "eslint": "^9.19.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-json": "^4.0.1",
     "eslint-plugin-markdownlint": "^0.6.0",
-    "husky": "^9.0.11",
-    "lint-staged": "^15.2.7",
-    "prettier": "^3.3.2",
-    "sort-package-json": "^2.10.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
+    "prettier": "^3.4.2",
+    "sort-package-json": "^2.14.0",
     "standard-version": "^9.5.0"
   },
   "standard-version": {
