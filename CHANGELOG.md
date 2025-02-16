@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [14.1.0](https://github.com/trystan2k/dotfiles/compare/v14.0.0...v14.1.0) (2025-02-16)
+
+### Features
+
+* **tools:** remove duplicati ([7f35396](https://github.com/trystan2k/dotfiles/commit/7f35396a20bc66e59015fa83d1032a7aac78655d))
+
 ## [14.0.0](https://github.com/trystan2k/dotfiles/compare/v13.9.0...v14.0.0) (2025-02-02)
 
 ### Features
