@@ -7,7 +7,6 @@ brew "yt-dlp"
 ## Utils
 cask "balenaetcher"
 cask "daisydisk"
-cask "duplicati"
 cask "onyx"
 cask "parallels"
 cask "transmission"

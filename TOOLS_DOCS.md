@@ -66,15 +66,6 @@ The pass utility provides a series of commands for manipulating the password sto
 
 <https://git.zx2c4.com/password-store/about/>
 
-## Duplicati
-
-Currently (April/2022) Duplicati has an issue related to Python.
-In MacOS 12.3.1 (Monterey), Python 2.7 was removed from the OS, which cause Duplicati to not work, as it relies on this python version installed system wide.
-To be able to run it (and when the computer is started)
-
-1. Copy the net.duplicati.server.plist file from 'tools' folder and save it to `/Library/LaunchAgents`
-2. Access Duplicate in the browser with [http://localhost:8200](http://localhost:8200/)
-
 ## Quick Actions
 
 Quick Actions are a way to automate tasks in MacOS.
