@@ -35,8 +35,6 @@ install() {
 
             info "Installing tools for '$COMPUTER_NAME' machine"
 
-            brew tap homebrew/bundle
-
             # Install common tools
             brew bundle -v --file="$DOTFILES_FOLDER"/tools/macos/Brewfile
 
