@@ -19,6 +19,7 @@ cask "blackhole-64ch"
 ## Utils
 cask "balenaetcher"
 cask "daisydisk"
+cask "lulu"
 cask "onyx"
 cask "parallels"
 cask "transmission"

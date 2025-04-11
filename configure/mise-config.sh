@@ -13,7 +13,7 @@ source "$DOTFILES_FOLDER/lib/functions"
 
 devtools=(
     nodejs:latest:true
-    java@zulu-24.28.87:true
+    java:zulu-24.28.87:true
     pnpm:latest:true
     ruby:latest:true
     python:3.9.18:true
