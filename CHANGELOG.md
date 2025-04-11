@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.3.0](https://github.com/trystan2k/dotfiles/compare/v15.2.0...v15.3.0) (2025-04-11)
+
+### Features
+
+* fix wrong java name and version and move lulu to personal brew profile ([75b6ea7](https://github.com/trystan2k/dotfiles/commit/75b6ea7f84bf5d6d740f3c4df52851a254961e98))
+
 ## [15.2.0](https://github.com/trystan2k/dotfiles/compare/v15.1.0...v15.2.0) (2025-04-11)
 
 ### Features
