@@ -1,9 +1,5 @@
 # Trystan2k's Brewfile
 
-# Taps
-tap "homebrew/cask-fonts"
-tap "homeport/tap"
-
 # Binaries
 brew "ack"
 brew "coreutils"
