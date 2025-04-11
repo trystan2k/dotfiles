@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.2.0](https://github.com/trystan2k/dotfiles/compare/v15.1.0...v15.2.0) (2025-04-11)
+
+### Features
+
+* **tools:** remove deprecated homebrew taps ([d63b891](https://github.com/trystan2k/dotfiles/commit/d63b891d8cba0c4de4952c40e5c1cc7e32a8321b))
+
 ## [15.1.0](https://github.com/trystan2k/dotfiles/compare/v15.0.0...v15.1.0) (2025-04-11)
 
 ### Features
