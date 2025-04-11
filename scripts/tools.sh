@@ -71,14 +71,11 @@ cleanup() {
 # ---------------------------------------------
 configure() {
 
-    info "ASDF Configuration"
-
-    if ask_question 'Do you want to configure ASDF and install plugins?'; then
+    info "MISE Configure"
+    if ask_question 'Do you want to configure Mise?'; then
         #shellcheck source=/dev/null
-        . "$DOTFILES_FOLDER"/configure/asdf-plugins.sh
-        #shellcheck source=/dev/null
-        . "$DOTFILES_FOLDER"/configure/direnv-config.sh
-    fi     
+        . "$DOTFILES_FOLDER"/configure/mise-config.sh
+    fi
 
     info "Configure Password store"
     if ask_question 'Do you want to configure password store ?'; then

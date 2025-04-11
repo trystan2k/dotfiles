@@ -22,15 +22,6 @@ function initialCommit() {
   git push
 }
 
-# Function to create a .envrc file with the asdf current settings (used by direnv)
-function setenv() {
-  local envFile='.envrc'
-  if [[ ! -f "$envFile" ]]; then
-    echo "use asdf" > $envFile
-  fi
-  asdf exec direnv allow $envFile
-}
-
 # Function to fix ZSH permisions
 function fixZshPerms() {
   cd /usr/local/share/ || exit
@@ -88,7 +79,7 @@ alias la="ls -la"
 # List only directories
 alias lsd="ls -ld"
 
-# Use colorls output for `ls` if it is available, otherwise use default ls command
+# Use eza output for `ls` if it is available, otherwise use default ls command
 function ls() {
   eza "$@" --git --icons=always --color=always
 }

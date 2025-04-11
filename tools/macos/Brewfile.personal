@@ -4,6 +4,18 @@
 ## Binaries
 brew "yt-dlp"
 
+## Dev
+cask "rancher"
+
+## Browsers
+cask "firefox"
+cask "google-chrome"
+cask "microsoft-edge"
+
+## Multimedia
+cask "LosslessCut"
+cask "blackhole-64ch"
+
 ## Utils
 cask "balenaetcher"
 cask "daisydisk"
@@ -17,6 +29,7 @@ cask "stremio"
 
 ## Editors
 cask "pdf-expert"
+cask "visual-studio-code"
 
 # App Store
 mas "HP Smart", id: 1474276998

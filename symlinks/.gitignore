@@ -273,9 +273,10 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# ASDF .tool-versions
+# MISE devtools
 .envrc
 .tool-versions
+mise.toml
 
 # Brewfile lock
 Brewfile.lock.json

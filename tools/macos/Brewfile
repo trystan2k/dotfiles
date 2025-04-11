@@ -7,7 +7,6 @@ tap "homeport/tap"
 # Binaries
 brew "ack"
 brew "coreutils"
-brew "asdf"
 brew "autojump"
 brew "bat"
 brew "curl"
@@ -26,11 +25,12 @@ brew "httpie"
 brew "hub"
 brew "hyperfine"
 brew "jq"
+brew "libyaml"
 brew "m-cli"
 brew "mas"
 brew "mcfly"
+brew "mise"
 brew "pass"
-brew "plz-cli"
 brew "procs"
 brew "ripgrep"
 brew "scrcpy"
@@ -64,21 +64,10 @@ brew "trex"
 cask "bruno"
 cask "figma"
 cask "kitty"
-cask "rancher"
 brew "zellij"
-
-## Browsers
-cask "firefox"
-cask "google-chrome"
-cask "microsoft-edge"
-
-## Multimedia
-cask "LosslessCut"
-cask "blackhole-16ch"
 
 ## Editors
 cask "sublime-text"
-cask "visual-studio-code"
 
 # Fonts
 cask "font-fira-code"

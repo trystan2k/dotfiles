@@ -74,9 +74,6 @@ zinit load mattmc3/zsh-safe-rm
 zinit ice wait pick"h.sh" lucid
 zinit load paoloantinori/hhighlighter
 
-zinit ice wait lucid as"completion"
-zinit snippet https://github.com/asdf-vm/asdf/blob/master/completions/_asdf
-
 zinit ice wait blockf atpull'zinit creinstall -q .' lucid
 zinit load zsh-users/zsh-completions
 
@@ -126,9 +123,6 @@ zstyle ':completion:*' menu yes select
 # enable auto cd
 setopt auto_cd
 
-# Add ASDF Bin into path, to use with direnv
-export PATH="$PATH:$HOME/.asdf/bin"
-
 # ZSH_HISTORY Setup
 setopt HIST_VERIFY
 setopt EXTENDED_HISTORY      # save each command's beginning timestamp and the duration to the history file
@@ -137,11 +131,9 @@ setopt HIST_REDUCE_BLANKS
 setopt INC_APPEND_HISTORY    # this is default, but set for share_history
 setopt SHARE_HISTORY         # Share history file amongst all Zsh sessions
 
-. $(brew --prefix asdf)/libexec/asdf.sh
+eval "$(mise activate zsh)"
 
 eval "$(mcfly init zsh)"
-
-source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
 
 # Handle nppmrc config according to ENV variable
 set-npmrc-config-hook() {
@@ -176,9 +168,6 @@ if [ -f "$HOME"/.exports.path ]; then
   #shellcheck source=/dev/null
   . "$HOME"/.exports.path
 fi
-
-# Maybe this shoudl be necessary if it does not auto load in IDEs, for example
-#asdf exec direnv reload
 
 # PERF: Uncoment these line and first one to get a performance report of terminal init
 #zprof

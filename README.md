@@ -70,10 +70,13 @@ I use ZSH as my current shell and to manage its plugin I am using [Zinit](https:
 
 ### Package Manager
 
-I am using [ASDF](https://github.com/asdf-vm/asdf) as the package manager for tools like `node/npm`, `yarn`, `java`, `ruby`, etc.
+I am using [MISE](https://mise.jdx.dev/) as the package manager for tools like `node/npm`, `yarn`, `java`, `ruby`, etc.
 Some of the initial configurations can be done by executing the configuration script located in configure folder
 
-`cd dotfiles\configure; ./asdf-plugins.sh`
+```zsh
+cd dotfiles\configure
+./mise-config.sh
+```
 
 ### NPMRC
 
@@ -152,34 +155,7 @@ npmrc entry in the .envrc file of the folder of the project.
 
     Or use defined alias `fixZshPerms`
 
-2. It is possible that `colorls` Ruby Gem fail to install in a fresh install due to folder permissions.
-If that happens, just execute the ruby-gems.sh script after reboot.
-
-    ```bash
-    . configure/ruby-gems.sh
-    ```
-
-3. When using IDEs like VSCode, due to how direnv loads, the asdf tools are not loaded correctly. If this starts to happen,
-just reload direnv:
-
-    ```bash
-    direnv reload
-    ```
-
-4. When installing Ruby via ASDF in an M1 Mac, add this to .exports.local file
-
-    ```bash
-        export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
-        export LDFLAGS="-L/opt/homebrew/opt/readline/lib:$LDFLAGS"
-        export CPPFLAGS="-I/opt/homebrew/opt/readline/include:$CPPFLAGS"
-        export PKG_CONFIG_PATH="/opt/homebrew/opt/readline/lib/pkgconfig:$PKG_CONFIG_PATH"
-        export optflags="-Wno-error=implicit-function-declaration"
-        export LDFLAGS="-L/opt/homebrew/opt/libffi/lib:$LDFLAGS"
-        export CPPFLAGS="-I/opt/homebrew/opt/libffi/include:$CPPFLAGS"
-        export PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig:$PKG_CONFIG_PATH"
-    ```
-
-5. As of May 2024 the package control in Sublime Text 4 is not working properly. To be able to install it, need to download and install manually.
+2. As of May 2024 the package control in Sublime Text 4 is not working properly. To be able to install it, need to download and install manually.
 
 - download latest release from <https://github.com/wbond/package_control/releases>
 - rename it to Package Control.sublime-package
