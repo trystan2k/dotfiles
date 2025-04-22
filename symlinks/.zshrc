@@ -157,10 +157,6 @@ autoload -U edit-command-line
 zle -N edit-command-line
 bindkey '\C-x\C-e' edit-command-line
 
-if [ -z "$ZELLIJ" ] && [ "$TERM" = "xterm-kitty" ]; then
-    zellij -l welcome
-fi
-
 # Add Rancher Desktop bin into path
 export PATH="$PATH:$HOME/.rd/bin"
 

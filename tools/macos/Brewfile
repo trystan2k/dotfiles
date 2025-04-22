@@ -58,8 +58,7 @@ brew "trex"
 ## Dev
 cask "bruno"
 cask "figma"
-cask "kitty"
-brew "zellij"
+cask "ghostty"
 
 ## Editors
 cask "sublime-text"

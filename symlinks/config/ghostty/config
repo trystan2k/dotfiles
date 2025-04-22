@@ -1,0 +1,28 @@
+# The syntax is "key = value". The whitespace around the
+# equals doesn't matter.
+
+# Resets
+shell-integration-features = no-cursor
+
+# Set Theme
+theme = Cobalt2-custom
+split-divider-color = #3AD900
+window-padding-x = 5
+window-padding-y = 5
+
+# Set Font
+font-family = ""
+font-family = Fira Code
+font-size = 13
+
+# Settings
+maximize = true
+window-inherit-working-directory = true
+window-save-state = always
+
+# Keybindings
+keybind = shift+alt+up=goto_split:up
+keybind = shift+alt+down=goto_split:down
+keybind = shift+alt+left=goto_split:left
+keybind = shift+alt+right=goto_split:right
+keybind = alt+p>f=toggle_split_zoom
