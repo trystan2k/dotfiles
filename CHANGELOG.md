@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.1.0](https://github.com/trystan2k/dotfiles/compare/v16.0.0...v16.1.0) (2025-04-22)
+
+### Features
+
+* **macos:** add open in Ghostty quick action workflow ([b4dc8cb](https://github.com/trystan2k/dotfiles/commit/b4dc8cb493fcce483c1d79eff929e3ff42f0c98e))
+
 ## [16.0.0](https://github.com/trystan2k/dotfiles/compare/v15.3.0...v16.0.0) (2025-04-22)
 
 ### Features
