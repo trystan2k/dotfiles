@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.0.0](https://github.com/trystan2k/dotfiles/compare/v15.3.0...v16.0.0) (2025-04-22)
+
+### Features
+
+* **tools:** remove zellij and kitty and add ghostty as new terminal ([129fcda](https://github.com/trystan2k/dotfiles/commit/129fcda9ee64ab9733f1af99d5347b93bdf7539c))
+
 ## [15.3.0](https://github.com/trystan2k/dotfiles/compare/v15.2.0...v15.3.0) (2025-04-11)
 
 ### Features
