@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.2.0](https://github.com/trystan2k/dotfiles/compare/v16.1.0...v16.2.0) (2025-07-22)
+
+### Features
+
+* **symlinks:** add task-master command aliases ([c896bc0](https://github.com/trystan2k/dotfiles/commit/c896bc04dbc6736c50208b7b4949598399f96a93))
+
 ## [16.1.0](https://github.com/trystan2k/dotfiles/compare/v16.0.0...v16.1.0) (2025-04-22)
 
 ### Features
