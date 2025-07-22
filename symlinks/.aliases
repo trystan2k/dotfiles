@@ -303,5 +303,8 @@ updateNPMDependencies() {
   npx npm-check-updates $@
 }
 
+alias tm='task-master'
+alias taskmaster='task-master'
+
 #shellcheck source=/dev/null
 [ -f "$HOME/.aliases.local" ] && source "$HOME/.aliases.local"
