@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.3.0](https://github.com/trystan2k/dotfiles/compare/v16.2.0...v16.3.0) (2025-08-04)
+
+### Features
+
+* **symlinks:** add AI tools configuration/installation ([e8f37b1](https://github.com/trystan2k/dotfiles/commit/e8f37b1996729971e342391f1e3501094a65886e))
+
 ## [16.2.0](https://github.com/trystan2k/dotfiles/compare/v16.1.0...v16.2.0) (2025-07-22)
 
 ### Features
