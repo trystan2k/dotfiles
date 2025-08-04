@@ -303,6 +303,12 @@ updateNPMDependencies() {
   npx npm-check-updates $@
 }
 
+installAITools() {
+  npm install -g @gemini/cli
+  npm install -g task-master-ai
+  npm install -g repomix
+}
+
 alias tm='task-master'
 alias taskmaster='task-master'
 

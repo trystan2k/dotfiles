@@ -167,3 +167,7 @@ fi
 
 # PERF: Uncoment these line and first one to get a performance report of terminal init
 #zprof
+
+# Task Master aliases added on 8/1/2025
+alias tm='task-master'
+alias taskmaster='task-master'
