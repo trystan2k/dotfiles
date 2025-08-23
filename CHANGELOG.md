@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.4.0](https://github.com/trystan2k/dotfiles/compare/v16.3.0...v16.4.0) (2025-08-23)
+
+### Features
+
+* add global node modules support and new tools ([f2b62bf](https://github.com/trystan2k/dotfiles/commit/f2b62bf73ecedea029529c1a9ce75932f9062312))
+
 ## [16.3.0](https://github.com/trystan2k/dotfiles/compare/v16.2.0...v16.3.0) (2025-08-04)
 
 ### Features
