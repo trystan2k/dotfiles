@@ -278,6 +278,10 @@ alias -s git="git clone"
 # colored cat command
 alias cat='bat'
 
+# Task Master
+alias tm='task-master'
+alias taskmaster='task-master'
+
 # Hooks to show execution time of commands
 preexec() {
   timer=$(gdate +%s.%N)
@@ -293,6 +297,8 @@ precmd() {
   fi
 }
 
+# NPM Alias
+
 updateNPMDependencies() {
   if [[ $@ == *"--help"* ]]; then
     echo "Example: updateNPMDependencies --filter /^@client-components/ --upgrade --deep --format group --target minor"
@@ -303,14 +309,31 @@ updateNPMDependencies() {
   npx npm-check-updates $@
 }
 
-installAITools() {
-  npm install -g @gemini/cli
-  npm install -g task-master-ai
-  npm install -g repomix
+# Alias for npm install -g, to install global tools into $PATH_TO_GLOBAL_NODE_MODULES
+npmig() {
+    if [ -z "$PATH_TO_GLOBAL_NODE_MODULES" ]; then
+        echo "Error: PATH_TO_GLOBAL_NODE_MODULES environment variable is not set"
+        return 1
+    fi
+    
+    if [ ! -d "$PATH_TO_GLOBAL_NODE_MODULES" ]; then
+        mkdir -p "$PATH_TO_GLOBAL_NODE_MODULES"
+    fi
+    
+    local action=$1
+    if [ -z "$action" ]; then
+        action="install"
+    else if [ "$action" = "update" ] || [ "$action" = "upgrade" ]; then
+        action="update"
+        shift  # Remove the action from arguments
+    else if [ "$action" = "info" ] || [ "$action" = "list" ] || [ "$action" = "outdated" ]; then
+        shift
+    fi
+    fi
+    fi
+    
+    npm "$action" --prefix "$PATH_TO_GLOBAL_NODE_MODULES" "$@"
 }
-
-alias tm='task-master'
-alias taskmaster='task-master'
 
 #shellcheck source=/dev/null
 [ -f "$HOME/.aliases.local" ] && source "$HOME/.aliases.local"

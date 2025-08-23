@@ -18,30 +18,51 @@ install() {
     info "Installing npm tool 'npkill'"
 
     # Install
-    npm install --global npkill
+    npmig npkill
 
     success "'npkill' installed."
 
     info "Installing npm tool 'fkill'"
     
     # Install
-    npm install --global fkill-cli
+    npmig fkill-cli
 
     success "'fkill' installed."       
 
     info "Installing npm tool 'npmrc'"
     
     # Install
-    npm install --global npmrc
+    npmig npmrc
 
     success "'npmrc' installed."          
 
     info "Installing npm tool 'qnm'"
     
     # Install
-    npm install --global qnm
+    npmig qnm
 
-    success "'qnm' installed."      
+    success "'qnm' installed."     
+    
+    info "Installing npm tool 'gemini'"
+
+    # Install
+    npmig @gemini/cli
+
+    success "'@gemini/cli' installed."
+
+    info "Installing npm tool 'task-master-ai'"
+
+    # Install
+    npmig task-master-ai
+
+    success "'task-master-ai' installed."
+    
+    info "Installing npm tool 'repomix'"
+
+    # Install
+    npmig repomix 
+
+    success "'repomix' installed."
 }
 
 execute() {

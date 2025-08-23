@@ -165,6 +165,10 @@ if [ -f "$HOME"/.exports.path ]; then
   . "$HOME"/.exports.path
 fi
 
+if [ -d "$PATH_TO_GLOBAL_NODE_MODULES" ]; then
+  export PATH="$PATH_TO_GLOBAL_NODE_MODULES/node_modules/.bin:$PATH"
+fi
+
 # PERF: Uncoment these line and first one to get a performance report of terminal init
 #zprof
 
