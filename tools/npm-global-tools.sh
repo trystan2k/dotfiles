@@ -46,9 +46,9 @@ install() {
     info "Installing npm tool 'gemini'"
 
     # Install
-    npmig @gemini/cli
+    npmig @google/gemini-cli
 
-    success "'@gemini/cli' installed."
+    success "'@google/gemini-cli' installed."
 
     info "Installing npm tool 'task-master-ai'"
 
