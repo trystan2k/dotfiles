@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.4.1](https://github.com/trystan2k/dotfiles/compare/v16.4.0...v16.4.1) (2025-08-25)
+
+### Bug Fixes
+
+* update npm package name from @gemini/cli to @google/gemini-cli ([acb506d](https://github.com/trystan2k/dotfiles/commit/acb506d6c5a5da62e5dedcea09e4571da4404c15))
+
 ## [16.4.0](https://github.com/trystan2k/dotfiles/compare/v16.3.0...v16.4.0) (2025-08-23)
 
 ### Features
