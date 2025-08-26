@@ -17,6 +17,9 @@ importers:
       '@commitlint/cz-commitlint':
         specifier: ^19.8.1
         version: 19.8.1(@types/node@22.13.0)(commitizen@4.3.1(@types/node@22.13.0)(typescript@5.7.3))(inquirer@9.3.7)(typescript@5.7.3)
+      commitizen:
+        specifier: ^4.3.1
+        version: 4.3.1(@types/node@22.13.0)(typescript@5.7.3)
       eslint:
         specifier: ^9.31.0
         version: 9.31.0(jiti@2.4.2)
