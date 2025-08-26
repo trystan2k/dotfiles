@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.4.2](https://github.com/trystan2k/dotfiles/compare/v16.4.1...v16.4.2) (2025-08-26)
+
+### Bug Fixes
+
+* **tools:** replace incorrect command 'npmig' with 'npm install' for global npm tools installation ([73e978e](https://github.com/trystan2k/dotfiles/commit/73e978e5c21a393ba6e9e79c2aa3739298610b61))
+
 ## [16.4.1](https://github.com/trystan2k/dotfiles/compare/v16.4.0...v16.4.1) (2025-08-25)
 
 ### Bug Fixes
