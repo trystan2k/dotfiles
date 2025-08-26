@@ -18,49 +18,49 @@ install() {
     info "Installing npm tool 'npkill'"
 
     # Install
-    npmig npkill
+    npm install --prefix "$PATH_TO_GLOBAL_NODE_MODULES" npkill
 
     success "'npkill' installed."
 
     info "Installing npm tool 'fkill'"
     
     # Install
-    npmig fkill-cli
+    npm install --prefix "$PATH_TO_GLOBAL_NODE_MODULES" fkill-cli
 
     success "'fkill' installed."       
 
     info "Installing npm tool 'npmrc'"
     
     # Install
-    npmig npmrc
+    npm install --prefix "$PATH_TO_GLOBAL_NODE_MODULES" npmrc
 
     success "'npmrc' installed."          
 
     info "Installing npm tool 'qnm'"
     
     # Install
-    npmig qnm
+    npm install --prefix "$PATH_TO_GLOBAL_NODE_MODULES" qnm
 
     success "'qnm' installed."     
     
     info "Installing npm tool 'gemini'"
 
     # Install
-    npmig @google/gemini-cli
+    npm install --prefix "$PATH_TO_GLOBAL_NODE_MODULES" @google/gemini-cli
 
     success "'@google/gemini-cli' installed."
 
     info "Installing npm tool 'task-master-ai'"
 
     # Install
-    npmig task-master-ai
+    npm install --prefix "$PATH_TO_GLOBAL_NODE_MODULES" task-master-ai
 
     success "'task-master-ai' installed."
     
     info "Installing npm tool 'repomix'"
 
     # Install
-    npmig repomix 
+    npm install --prefix "$PATH_TO_GLOBAL_NODE_MODULES" repomix 
 
     success "'repomix' installed."
 }
