@@ -26,7 +26,16 @@ export default [
     ...markdownLintConfig,
   },
   {
-    files: ["**/CHANGELOG.md"],
+    files: ['symlinks/config/opencode/**/*.md'],
+    ...markdownLintConfig,
+    rules: {
+      ...markdownLintConfig.rules,
+      'markdownlint/md013': 0,
+      'markdownlint/md041': 0
+    },
+  },
+  {
+    files: ['**/CHANGELOG.md'],
     ...markdownLintConfig,
     rules: {
       ...markdownLintConfig.rules,
