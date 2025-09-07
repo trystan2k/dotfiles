@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.5.0](https://github.com/trystan2k/dotfiles/compare/v16.4.2...v16.5.0) (2025-09-07)
+
+### Features
+
+* **symlinks:** add opencode agent configurations ([2d49daa](https://github.com/trystan2k/dotfiles/commit/2d49daa16a8c0d56c094f136e80969ef0f52c219))
+
+### Bug Fixes
+
+* **symlinks:** correct npmig action from update to install ([a172633](https://github.com/trystan2k/dotfiles/commit/a1726336ed40ecf42e243c3ba38d9dd357a168d4))
+
 ## [16.4.2](https://github.com/trystan2k/dotfiles/compare/v16.4.1...v16.4.2) (2025-08-26)
 
 ### Bug Fixes
