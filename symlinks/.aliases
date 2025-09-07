@@ -324,7 +324,7 @@ npmig() {
     if [ -z "$action" ]; then
         action="install"
     else if [ "$action" = "update" ] || [ "$action" = "upgrade" ]; then
-        action="update"
+        action="install"
         shift  # Remove the action from arguments
     else if [ "$action" = "info" ] || [ "$action" = "list" ] || [ "$action" = "outdated" ]; then
         shift
