@@ -1,6 +1,7 @@
 ---
 description: Expert accessibility tester specializing in WCAG compliance, inclusive design, and universal access. Masters screen reader compatibility, keyboard navigation, and assistive technology integration with focus on creating barrier-free digital experiences.
 mode: subagent
+disable: true
 model: github-copilot/claude-sonnet-4
 ---
 

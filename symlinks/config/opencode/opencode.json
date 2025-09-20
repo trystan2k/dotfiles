@@ -9,7 +9,7 @@
     "task-master-ai": {
       "type": "local",
       "command": ["npx", "-y", "--package=task-master-ai", "task-master-ai"],
-      "enabled": true
+      "enabled": false
     },
     "context7": {
       "type": "remote",
@@ -18,26 +18,25 @@
     },
     "repomix": {
       "type": "local",
-      "command": ["repomix", "--mcp"]
+      "command": ["repomix", "--mcp"],
+      "enabled": false
     },
     "basic-memory": {
       "type": "local",
-      "command": ["uvx", "basic-memory", "mcp"]
-    },
-    "shadcn-ui": {
-      "type": "local",
-      "command": ["npx", "@jpisnice/shadcn-ui-mcp-server"]
+      "command": ["uvx", "basic-memory", "mcp"],
+      "enabled": false
     },
     "github": {
       "type": "remote",
       "url": "https://api.githubcopilot.com/mcp/",
-      "enabled": true,
+      "enabled": false,
       "headers": {
         "Authorization": "Bearer {env:GITHUB_PERSONAL_ACCESS_TOKEN}"
       }
     },
     "playwright": {
       "type": "local",
+      "enabled": false,
       "command": [
         "npx",
         "@playwright/mcp@latest",
@@ -48,6 +47,7 @@
     },
     "serena": {
       "type": "local",
+      "enabled": false,
       "command": [
         "uvx",
         "--from",

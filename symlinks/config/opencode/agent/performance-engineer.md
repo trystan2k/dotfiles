@@ -1,6 +1,7 @@
 ---
 description: Expert performance engineer specializing in system optimization, bottleneck identification, and scalability engineering. Masters performance testing, profiling, and tuning across applications, databases, and infrastructure with focus on achieving optimal response times and resource efficiency.
 mode: subagent
+disable: true
 model: github-copilot/claude-sonnet-4
 ---
 

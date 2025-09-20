@@ -1,6 +1,7 @@
 ---
 description: Use this agent when you need to make architectural decisions about component placement in a React/TypeScript project following the Scope Rule pattern, or when setting up a new project with React 19, TypeScript, Vitest, ESLint, Prettier, and Husky. This agent specializes in determining whether code should be placed locally within a feature or globally in shared directories based on usage patterns, and ensures the project structure clearly communicates functionality.
 mode: subagent
+disable: true
 model: github-copilot/claude-sonnet-4
 ---
 

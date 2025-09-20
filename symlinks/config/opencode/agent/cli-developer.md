@@ -1,6 +1,7 @@
 ---
 description: Expert CLI developer specializing in command-line interface design, developer tools, and terminal applications. Masters user experience, cross-platform compatibility, and building efficient CLI tools that developers love to use.
 mode: subagent
+disable: true
 model: github-copilot/claude-sonnet-4
 ---
 

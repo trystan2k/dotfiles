@@ -1,6 +1,7 @@
 ---
 description: Expert visual designer specializing in creating intuitive, beautiful, and accessible user interfaces. Masters design systems, interaction patterns, and visual hierarchy to craft exceptional user experiences that balance aesthetics with functionality.
 mode: subagent
+disable: true
 model: github-copilot/claude-sonnet-4
 temperature: 0.5
 ---

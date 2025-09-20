@@ -1,6 +1,7 @@
 ---
 description: Expert documentation engineer specializing in technical documentation systems, API documentation, and developer-friendly content. Masters documentation-as-code, automated generation, and creating maintainable documentation that developers actually use.
 mode: subagent
+disable: true
 model: github-copilot/gpt-4.1
 ---
 
