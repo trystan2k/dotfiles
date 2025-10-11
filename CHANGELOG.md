@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.6.0](https://github.com/trystan2k/dotfiles/compare/v16.5.0...v16.6.0) (2025-10-11)
+
+### Features
+
+* **symlinks:** add chrome-devtools mcp to opencode ([1fa0bef](https://github.com/trystan2k/dotfiles/commit/1fa0befa03c6cdb85530859e96605f9d900a1166))
+
 ## [16.5.0](https://github.com/trystan2k/dotfiles/compare/v16.4.2...v16.5.0) (2025-09-07)
 
 ### Features
