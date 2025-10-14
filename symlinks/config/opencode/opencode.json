@@ -1,10 +1,26 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "ollama": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama (local)",
+      "options": {
+        "baseURL": "http://localhost:8080/v1",
+        "includeUsage": true
+      },
+      "models": {
+        "Qwen3-8B-GGUF": {
+          "tool_call": true,
+          "name": "Qwen/Qwen3-8B"
+        }
+      }
+    }
+  },
   "instructions": [
     "AGENTS.md"
   ],
   "theme": "cobalt2",
-  "model": "github-copilot/claude-sonnet-4",
+  "model": "github-copilot/claude-sonnet-4.5",
   "small_model": "github-copilot/gpt-4.1",
   "autoupdate": true,
   "mcp": {
