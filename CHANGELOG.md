@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.7.0](https://github.com/trystan2k/dotfiles/compare/v16.6.0...v16.7.0) (2025-10-14)
+
+### Features
+
+* **symlinks:** update default opencode model to sonnet 4.5 ([37b7fd1](https://github.com/trystan2k/dotfiles/commit/37b7fd153be9f6758c8529aba49858d443d8c41c))
+
 ## [16.6.0](https://github.com/trystan2k/dotfiles/compare/v16.5.0...v16.6.0) (2025-10-11)
 
 ### Features
