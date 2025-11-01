@@ -146,6 +146,8 @@
 
 	uncommmit = reset --soft HEAD^
 
+  zup = for-each-ref --sort='authordate:iso8601' --format='%(color:green)%(authordate:relative)%09%(color:white)%(refname:short) / %(contents:subject)' refs/heads
+
 [help]
 
 	# Automatically correct and execute mistyped commands

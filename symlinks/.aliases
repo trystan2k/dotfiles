@@ -12,7 +12,7 @@ function updateBrewfile() {
 
 # Alias function to create and enter a folder
 function take() {
-  mkdir -p "$@" && cd "${@:$#}" || exit
+  mkdir -vp "$@" && cd "${@:$#}" || exit
 }
 
 # Alias function for initial commit
@@ -22,19 +22,10 @@ function initialCommit() {
   git push
 }
 
-# Function to fix ZSH permisions
-function fixZshPerms() {
-  cd /usr/local/share/ || exit
-  sudo chmod -R 755 zsh
-  sudo chown -R root:staff zsh
-  cd ~ || exit
-}
-
 # Alias to remove node installed in system
 alias removeNodeSystem="brew uninstall --ignore-dependencies node"
 
 # Alias personal
-alias kindlegen=/Applications/KindleGen/kindlegen
 alias thiago="cd ~/Documents/Thiago"
 alias home="cd ~/"
 
@@ -59,6 +50,32 @@ alias gco="git checkout"
 alias gcb="git checkout -b"
 alias gl="git pull"
 alias gf="git fetch"
+alias gzup="git zup"
+alias gmend="git amend"
+
+gsmart() {
+  # Check if there are staged changes
+  if [ -z "$(git diff --cached --name-only)" ]; then
+    echo "No staged changes found. Use 'git add' to stage files first."
+    exit 1
+  fi
+
+  # Check if opencode command is available
+  if ! command -v opencode >/dev/null 2>&1; then
+    echo "Error: Failed to find opencode command. Is it installed?"
+    exit 1
+  fi
+
+  # Generate commit message using claude
+  commit_message=$(opencode run "Look at the staged git changes and create a concise commit message (following the pattern used in the current repo) that describes what was changed. Return only the commit message, nothing else.")
+
+  if [ -z "$commit_message" ]; then
+    echo "Error: Failed to generate commit message"
+    exit 1
+  fi
+
+  git commit -m "$commit_message" --edit
+}
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -95,6 +112,9 @@ alias sudo='sudo '
 
 # Get week number
 alias week='date +%V'
+
+# Get current date in format YYYY-MM-DD
+alias today="date +%Y-%m-%d"
 
 # Stopwatch
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
@@ -133,16 +153,11 @@ command -v md5sum > /dev/null || alias md5sum="md5"
 # macOS has no `sha1sum`, so use `shasum` as a fallback
 command -v sha1sum > /dev/null || alias sha1sum="shasum"
 
-# JavaScriptCore REPL
-jscbin="/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resources/jsc";
-[ -e "${jscbin}" ] && alias jsc='${jscbin}';
-unset jscbin;
-
 # Trim new lines and copy to clipboard
 alias c="tr -d '\n' | pbcopy"
 
 # Recursively delete `.DS_Store` files
-alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+alias ds-del="find . -type f -name '*.DS_Store' -ls -delete"
 
 # Empty the Trash on all mounted volumes and the main HDD.
 # Also, clear Apple’s System Logs to improve shell startup speed.
@@ -160,20 +175,10 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 # URL-encode strings
 alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
 
-# Merge PDF files
-# Usage: `mergepdf -o output.pdf input{1,2,3}.pdf`
-alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py'
-
 # Disable Spotlight
 alias spotoff="sudo mdutil -a -i off"
 # Enable Spotlight
 alias spoton="sudo mdutil -a -i on"
-
-# PlistBuddy alias, because sometimes `defaults` just doesn’t cut it
-alias plistbuddy="/usr/libexec/PlistBuddy"
-
-# Airport CLI alias
-alias airport='/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport'
 
 # Ring the terminal bell, and put a badge on Terminal.app’s Dock icon
 # (useful when executing time-consuming commands)
@@ -188,9 +193,6 @@ alias map="xargs -n1"
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
 	alias '$method'='lwp-request -m "$method"'
 done
-
-# Make Grunt print stack traces by default
-command -v grunt > /dev/null && alias grunt="grunt --stack"
 
 # Stuff I never really use but cannot delete either because of http://xkcd.com/530/
 alias stfu="osascript -e 'set volume output muted true'"
@@ -334,6 +336,13 @@ npmig() {
     
     npm "$action" --prefix "$PATH_TO_GLOBAL_NODE_MODULES" "$@"
 }
+
+# Copy current folder path to clipboard
+alias cpwd="pwd | tr -d '\n' | pbcopy"
+
+# Move and copy files with more information/confirmation
+alias mv="mv -iv"
+alias cp="cp -riv"
 
 #shellcheck source=/dev/null
 [ -f "$HOME/.aliases.local" ] && source "$HOME/.aliases.local"
