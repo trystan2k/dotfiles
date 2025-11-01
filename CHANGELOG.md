@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.9.0](https://github.com/trystan2k/dotfiles/compare/v16.7.0...v16.9.0) (2025-11-01)
+
+### Features
+
+* **symlinks:** add gsmart function and enhance shell aliases ([150d1a6](https://github.com/trystan2k/dotfiles/commit/150d1a63a743d7bb9b2510e932b211e65aabeac0))
+
 ## [16.8.0](https://github.com/trystan2k/dotfiles/compare/v16.7.0...v16.8.0) (2025-11-01)
 
 ### Features
