@@ -10,7 +10,7 @@ export default {
       const subdirs = files.filter(file => {
         return file.isDirectory() && !file.name.startsWith('.') && file.name !== 'node_modules' && file.name !== 'dist' && file.name !== 'logs';
       }).map(dir => dir.name);
-      return [2, 'always', [...subdirs, '*']];
+      return [2, 'always', [...subdirs, 'deps', '*']];
     },
     'header-max-length': [2, 'always', 100],
   },
