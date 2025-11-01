@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.9.1](https://github.com/trystan2k/dotfiles/compare/v16.9.0...v16.9.1) (2025-11-01)
+
+### Bug Fixes
+
+* **symlinks:** preview commit message before editing in gsmart function ([2b3f64e](https://github.com/trystan2k/dotfiles/commit/2b3f64ed8200a527b83f336b4d6a5d782348c27c))
+
 ## [16.9.0](https://github.com/trystan2k/dotfiles/compare/v16.7.0...v16.9.0) (2025-11-01)
 
 ### Features
