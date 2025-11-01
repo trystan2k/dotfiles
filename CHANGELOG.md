@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.8.0](https://github.com/trystan2k/dotfiles/compare/v16.7.0...v16.8.0) (2025-11-01)
+
+### Features
+
+* **symlinks:** add git-cco function and enhance shell aliases ([b1286b9](https://github.com/trystan2k/dotfiles/commit/b1286b953bb17b51d65d3902cf9559e51f4f52f4))
+
 ## [16.7.0](https://github.com/trystan2k/dotfiles/compare/v16.6.0...v16.7.0) (2025-10-14)
 
 ### Features
