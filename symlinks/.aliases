@@ -74,6 +74,8 @@ gsmart() {
     exit 1
   fi
 
+  echo "$commit_message"
+
   git commit -m "$commit_message" --edit
 }
 
