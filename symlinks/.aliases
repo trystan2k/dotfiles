@@ -57,13 +57,13 @@ gsmart() {
   # Check if there are staged changes
   if [ -z "$(git diff --cached --name-only)" ]; then
     echo "No staged changes found. Use 'git add' to stage files first."
-    exit 1
+    return 1
   fi
 
   # Check if opencode command is available
   if ! command -v opencode >/dev/null 2>&1; then
     echo "Error: Failed to find opencode command. Is it installed?"
-    exit 1
+    return 1
   fi
 
   # Generate commit message using claude
@@ -71,7 +71,7 @@ gsmart() {
 
   if [ -z "$commit_message" ]; then
     echo "Error: Failed to generate commit message"
-    exit 1
+    return 1
   fi
 
   echo "$commit_message"
