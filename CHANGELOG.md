@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.10.0](https://github.com/trystan2k/dotfiles/compare/v16.9.1...v16.10.0) (2025-11-03)
+
+### Bug Fixes
+
+* enable agents by setting disable to false in configuration files ([cb0413e](https://github.com/trystan2k/dotfiles/commit/cb0413eae79e355c85c85f2605a191fdf0bbfd46))
+
 ## [16.9.1](https://github.com/trystan2k/dotfiles/compare/v16.9.0...v16.9.1) (2025-11-01)
 
 ### Bug Fixes
