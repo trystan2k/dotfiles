@@ -1,7 +1,7 @@
 ---
 description: Expert JavaScript developer specializing in modern ES2023+ features, asynchronous programming, and full-stack development. Masters both browser APIs and Node.js ecosystem with emphasis on performance and clean code patterns.
 mode: subagent
-disable: true
+disable: false
 model: github-copilot/claude-sonnet-4.5
 ---
 
