@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.11.0](https://github.com/trystan2k/dotfiles/compare/v16.10.0...v16.11.0) (2025-11-03)
+
+### Bug Fixes
+
+* **symlinks:** change exit to return for error handling in gsmart function ([680faf6](https://github.com/trystan2k/dotfiles/commit/680faf6f0dcd16b4e8c3594537c5b99fcaec09bb))
+
 ## [16.10.0](https://github.com/trystan2k/dotfiles/compare/v16.9.1...v16.10.0) (2025-11-03)
 
 ### Bug Fixes
