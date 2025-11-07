@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.12.0](https://github.com/trystan2k/dotfiles/compare/v16.11.0...v16.12.0) (2025-11-07)
+
+### Features
+
+* **symlinks:** add jira and pr description commands to opencode ([53a1005](https://github.com/trystan2k/dotfiles/commit/53a1005c4b60fa0d5098088dc1444fdfd1fcde69))
+* **symlinks:** enable test automator agent specialist in opencode ([9a33a5b](https://github.com/trystan2k/dotfiles/commit/9a33a5b6db5cdf05d0a66d6c83536c9ebc2ef802))
+
 ## [16.11.0](https://github.com/trystan2k/dotfiles/compare/v16.10.0...v16.11.0) (2025-11-03)
 
 ### Bug Fixes
