@@ -31,10 +31,10 @@
   ],
   "theme": "cobalt2",
   "model": "github-copilot/claude-sonnet-4.5",
-  "small_model": "github-copilot/gpt-4.1",
+  "small_model": "github-copilot/gpt-5-mini",
   "autoupdate": true,
   "mcp": {
-    "chrome-devtools": {
+    "mcp_chrome-devtools": {
       "type": "local",
       "command": [
         "npx",
@@ -42,7 +42,7 @@
       ],
       "enabled": false
     },
-    "task-master-ai": {
+    "mcp_task-master-ai": {
       "type": "local",
       "command": [
         "npx",
@@ -52,12 +52,12 @@
       ],
       "enabled": false
     },
-    "context7": {
+    "mcp_context7": {
       "type": "remote",
       "url": "https://mcp.context7.com/mcp",
-      "enabled": true
+      "enabled": false
     },
-    "repomix": {
+    "mcp_repomix": {
       "type": "local",
       "command": [
         "repomix",
@@ -65,7 +65,7 @@
       ],
       "enabled": false
     },
-    "basic-memory": {
+    "mcp_basic-memory": {
       "type": "local",
       "command": [
         "uvx",
@@ -74,7 +74,7 @@
       ],
       "enabled": false
     },
-    "github": {
+    "mcp_github": {
       "type": "remote",
       "url": "https://api.githubcopilot.com/mcp/",
       "enabled": false,
@@ -82,7 +82,7 @@
         "Authorization": "Bearer {env:GITHUB_PERSONAL_ACCESS_TOKEN}"
       }
     },
-    "playwright": {
+    "mcp_playwright": {
       "type": "local",
       "enabled": false,
       "command": [
@@ -93,7 +93,7 @@
         "--output-dir=./playwright"
       ]
     },
-    "serena": {
+    "mcp_serena": {
       "type": "local",
       "enabled": false,
       "command": [
@@ -102,6 +102,14 @@
         "git+https://github.com/oraios/serena",
         "serena",
         "start-mcp-server"
+      ]
+    },
+    "mcp_shadcn-ui": {
+      "enabled": false,
+      "type": "local",
+      "command": [
+        "npx",
+        "@jpisnice/shadcn-ui-mcp-server"
       ]
     }
   }
