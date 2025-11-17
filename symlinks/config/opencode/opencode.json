@@ -1,5 +1,9 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "plugin": [
+    "opencode-gemini-auth",
+    "opencode-alibaba-qwen3-auth"
+  ],
   "provider": {
     "ollama": {
       "npm": "@ai-sdk/openai-compatible",
@@ -112,5 +116,9 @@
         "@jpisnice/shadcn-ui-mcp-server"
       ]
     }
+  },
+  "keybinds": {
+    "session_child_cycle": "ctrl+s",
+    "session_child_cycle_reverse": "ctrl+a"
   }
 }
