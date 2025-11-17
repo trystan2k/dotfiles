@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.13.0](https://github.com/trystan2k/dotfiles/compare/v16.12.0...v16.13.0) (2025-11-17)
+
+### Features
+
+* **symlinks:** add new plugins, keybinds and agent configurations ([4b73964](https://github.com/trystan2k/dotfiles/commit/4b7396434ad6ace831b0596d7cb2ac40724c1a96))
+
 ## [16.12.0](https://github.com/trystan2k/dotfiles/compare/v16.11.0...v16.12.0) (2025-11-07)
 
 ### Features
