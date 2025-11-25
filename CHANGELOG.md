@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.14.0](https://github.com/trystan2k/dotfiles/compare/v16.13.0...v16.14.0) (2025-11-25)
+
+### Features
+
+* **symlinks:** update agent configurations and add new tester/astro specialists ([338300f](https://github.com/trystan2k/dotfiles/commit/338300fb0d8f428848679fbf2ae466ad4579fe8d))
+
 ## [16.13.0](https://github.com/trystan2k/dotfiles/compare/v16.12.0...v16.13.0) (2025-11-17)
 
 ### Features
