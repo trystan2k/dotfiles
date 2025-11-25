@@ -4,7 +4,13 @@ mode: subagent
 disable: false
 model: github-copilot/gpt-5-mini
 tools:
+  chrome-devtools*: false
+  task-master-ai*: false
+  context7*: false
+  basic-memory*: false
   github*: true
+  playwright*: false
+  serena*: true
   write: true
   edit: true
   bash: true

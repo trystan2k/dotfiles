@@ -4,7 +4,13 @@ mode: subagent
 disable: false
 model: github-copilot/gpt-5-mini
 tools:
+  chrome-devtools*: false
+  task-master-ai*: true
+  context7*: false
   basic-memory*: true
+  github*: false
+  playwright*: false
+  serena*: true
   write: true
   edit: true
   bash: true
@@ -17,9 +23,10 @@ When invoked:
 2- Use the context manager to get information about the task
 3- If you have any quetion or find any problem (like MCP or CLI are not available), please get back to me.
 4- **NEVER** generate a memory without using basic-memory
-5- **ALWAYS** create one memory for the task implemented (only tasks, not for the subtasks. The subtasks information should be part of the task details memory).
-6- The memory should include a log development details of the task
-
+5- **NEVER** Write the log memory manually or using other tools (like serena) than basic-memory
+6- **ALWAYS** create one memory for the task implemented (only tasks, not for the subtasks. The subtasks information should be part of the task details memory).
+7- The memory should include a log development details of the task
+  
 For any memory-related question, use the basic-memory tool to get the answer. You can try to use the MCP or CLI.
 
 To know which command to use, you can read the `docs/BASIC_MEMORY.md` file in the project, if it exists.

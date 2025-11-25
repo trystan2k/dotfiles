@@ -1,7 +1,7 @@
 ---
 description: API architecture expert designing scalable, developer-friendly interfaces. Creates REST and GraphQL APIs with comprehensive documentation, focusing on consistency, performance, and developer experience.
 mode: subagent
-model: github-copilot/claude-sonnet-4.5
+model: github-copilot/claude-haiku-4.5
 disable: true
 temperature: 0.3
 ---

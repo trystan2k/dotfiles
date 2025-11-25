@@ -1,7 +1,7 @@
 ---
 description: Generate a description for JIRA based on the changes made.
 agent: plan
-model: github-copilot/gpt-4.1
+model: github-copilot/gpt-5-mini
 ---
 
 Based on the changes staged (if any) or from the lasts commits compared with develop branch, generate a description for a JIRA ticket. The description should summarize what would have been the requirements that would result in the implementation done in these changes. Ensure the description is informative and helps develpers understand the what needs to be done. It should be written in a professional, neutral tone and in Spanish. It should be written in markdown format.
