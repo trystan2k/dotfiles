@@ -38,7 +38,7 @@
   "small_model": "github-copilot/gpt-5-mini",
   "autoupdate": true,
   "mcp": {
-    "mcp_chrome-devtools": {
+    "chrome-devtools": {
       "type": "local",
       "command": [
         "npx",
@@ -46,7 +46,7 @@
       ],
       "enabled": false
     },
-    "mcp_task-master-ai": {
+    "task-master-ai": {
       "type": "local",
       "command": [
         "npx",
@@ -56,12 +56,12 @@
       ],
       "enabled": false
     },
-    "mcp_context7": {
+    "context7": {
       "type": "remote",
       "url": "https://mcp.context7.com/mcp",
       "enabled": false
     },
-    "mcp_repomix": {
+    "repomix": {
       "type": "local",
       "command": [
         "repomix",
@@ -69,7 +69,7 @@
       ],
       "enabled": false
     },
-    "mcp_basic-memory": {
+    "basic-memory": {
       "type": "local",
       "command": [
         "uvx",
@@ -78,7 +78,7 @@
       ],
       "enabled": false
     },
-    "mcp_github": {
+    "github": {
       "type": "remote",
       "url": "https://api.githubcopilot.com/mcp/",
       "enabled": false,
@@ -86,7 +86,7 @@
         "Authorization": "Bearer {env:GITHUB_PERSONAL_ACCESS_TOKEN}"
       }
     },
-    "mcp_playwright": {
+    "playwright": {
       "type": "local",
       "enabled": false,
       "command": [
@@ -97,7 +97,7 @@
         "--output-dir=./playwright"
       ]
     },
-    "mcp_serena": {
+    "serena": {
       "type": "local",
       "enabled": false,
       "command": [
@@ -105,10 +105,12 @@
         "--from",
         "git+https://github.com/oraios/serena",
         "serena",
-        "start-mcp-server"
+        "start-mcp-server",
+        "--enable-web-dashboard",
+        "false"
       ]
     },
-    "mcp_shadcn-ui": {
+    "shadcn-ui": {
       "enabled": false,
       "type": "local",
       "command": [

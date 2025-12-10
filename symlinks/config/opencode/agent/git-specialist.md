@@ -4,13 +4,13 @@ mode: subagent
 disable: false
 model: github-copilot/gpt-5-mini
 tools:
-  chrome-devtools*: false
-  task-master-ai*: false
-  context7*: false
-  basic-memory*: false
-  github*: true
-  playwright*: false
-  serena*: true
+  "chrome-devtools": false
+  "task-master-ai": false
+  context7: false
+  "basic-memory": false
+  github: true
+  playwright: false
+  serena: true
   write: true
   edit: true
   bash: true
@@ -56,18 +56,18 @@ For specific tasks detailed:
 
 ## Create a pull request description
 
-1- Follow the pull request description best practices for the current project
-2- Use the context manager to get information about the changes made in the code
-3- Create a pull request description that accurately describes the changes made in the code
-4- Do not include any Agent/LLM information in the pull request description
-5- Do not include any unnecessary information in the pull request description
-6- Do not include any sensitive information in the pull request description
-7- Do not include any task number information in the pull request description, unless it is explicitly requested
-8- If the project is using Github, use Github MCP
+1- If the project is using Github, use Github MCP or CLI
+2- Follow the pull request description best practices for the current project
+3- Use the context manager to get information about the changes made in the code
+4- Create a pull request description that accurately describes the changes made in the code
+5- Do not include any Agent/LLM information in the pull request description
+6- Do not include any unnecessary information in the pull request description
+7- Do not include any sensitive information in the pull request description
+8- Do not include any task number information in the pull request description, unless it is explicitly requested
 
 ## PR review
 
-1- If the project uses Github, use Github MCP to Copilot review the pull request
+1- If the project uses Github, use Github MCP or CLI to Copilot review the pull request
 2- If the project does not use Github, ask the user for help to review the pull request
 
 ## Any other git command

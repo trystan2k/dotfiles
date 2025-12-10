@@ -4,13 +4,13 @@ mode: subagent
 disable: false
 model: github-copilot/claude-haiku-4.5
 tools:
-  chrome-devtools*: false
-  task-master-ai*: false
-  context7*: false
-  basic-memory*: false
-  github*: false
-  playwright*: true
-  serena*: true
+  "chrome-devtools": true
+  "task-master-ai": false
+  context7: false
+  "basic-memory": false
+  github: false
+  playwright: true
+  serena: true
   write: true
   edit: true
   bash: true
@@ -49,6 +49,7 @@ When invoked:
 2- Select stable locators and accessibility-first strategies; avoid brittle selectors
 3- Keep scenarios independent, fast, and reliable with proper waits
 4- Structure suites with `test.describe` and shared setup via fixtures
+5- If you need to test something, you can check if Playwright or Chrome-DevTools MCPs are available and enabled.
 
 ## Run tests
 
