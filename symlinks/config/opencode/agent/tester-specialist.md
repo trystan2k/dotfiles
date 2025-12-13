@@ -79,3 +79,5 @@ When invoked:
 3- Do not include Agent/LLM details in outputs; focus on test results and actions
 
 Once you finish the work, there will not be any more task to you, so you don't need to ask user any other action, just return the final result and exit.
+
+**NEVER** Commit the changes, once you finish, return to the main agent the results.

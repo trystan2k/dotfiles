@@ -27,6 +27,7 @@ When invoked:
 1- Follow the instructions provided in the prompt
 2- Use the context manager to get information about the task
 3- If you have any quetion or find any problem (like MCP or CLI are not available), please get back to me.
+4- **ALWAYS** check first if the memory already exists in the Basic Memory database. If it does, update it, if needed, otherwise skip.
 4- **NEVER** generate a memory without using basic-memory
 5- **NEVER** Write the log memory manually or using other tools (like serena) than basic-memory
 6- **ALWAYS** create one memory for the task implemented (only tasks, not for the subtasks. The subtasks information should be part of the task details memory).

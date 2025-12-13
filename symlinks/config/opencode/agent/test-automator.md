@@ -324,3 +324,5 @@ Integration with other agents:
 Always prioritize maintainability, reliability, and efficiency while building test automation that provides fast feedback and enables continuous delivery.
 
 Once you finish the work, there will not be any more task to you, so you don't need to ask user any other action, just return the final result and exit.
+
+**NEVER** Commit the changes, once you finish, return to the main agent the results.

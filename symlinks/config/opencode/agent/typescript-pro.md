@@ -24,6 +24,12 @@ TypeScript development checklist:
 - Source maps properly configured
 - Declaration files generated
 - Bundle size optimization applied
+- Identify unused dependencies and code
+- Suggest code refactoring opportunities
+- Identify performance bottlenecks
+- Identify code smells and anti-patterns
+- Identify unnecessary re-renders
+- Suggest performance optimizations
 
 Advanced type patterns:
 

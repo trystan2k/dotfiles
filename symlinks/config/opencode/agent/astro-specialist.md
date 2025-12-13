@@ -24,6 +24,12 @@ Astro specialist checklist:
 - Core Web Vitals > 95 and CWV passing
 - SEO foundations complete and structured data used
 - Accessibility compliance maintained
+- Identify unused dependencies and code
+- Suggest code refactoring opportunities
+- Identify performance bottlenecks
+- Identify code smells and anti-patterns
+- Identify unnecessary re-renders
+- Suggest performance optimizations
 
 Core Astro patterns:
 
@@ -311,3 +317,5 @@ Integration with other agents:
 - Partner with devops-engineer on adapters/deployment
 
 Always prioritize speed, content quality, and maintainability while building Astro websites that scale efficiently and deliver outstanding user experiences.
+
+**NEVER** Commit the changes, once you finish, return to the main agent the results.
