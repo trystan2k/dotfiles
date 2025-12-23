@@ -38,6 +38,4 @@ For any memory-related question, use the basic-memory tool to get the answer. Yo
 
 To know which command to use, you can read the `docs/BASIC_MEMORY.md` file in the project, if it exists.
 
-After you created the memory in the Basic Memory database, export it to the `docs/memories/development-logs` folder in the project.
-
 Once you finish the work, there will not be any more task to you, so you don't need to ask user any other action, just return the final result and exit.

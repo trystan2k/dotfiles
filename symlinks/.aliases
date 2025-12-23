@@ -285,6 +285,8 @@ alias cat='bat'
 # Task Master
 alias tm='task-master'
 alias taskmaster='task-master'
+alias basic-memory='~/.local/bin/bm-wrapper'
+alias bm='~/.local/bin/bm-wrapper'
 
 # Hooks to show execution time of commands
 preexec() {
