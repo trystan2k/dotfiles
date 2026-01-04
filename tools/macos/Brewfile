@@ -1,7 +1,6 @@
 # Trystan2k's Brewfile
 
 #Taps
-tap "basicmachines-co/basic-memory"
 tap "sst/tap"
 
 # Binaries
@@ -51,6 +50,7 @@ cask "appcleaner"
 cask "deskpad"
 cask "hot"
 cask "jordanbaird-ice"
+brew "killport"
 cask "notion"
 cask "overkill"
 cask "piphero"
@@ -74,5 +74,4 @@ cask "font-fira-code"
 cask "font-hack-nerd-font"
 
 # AI Tools
-brew "basicmachines-co/basic-memory/basic-memory"
 brew "sst/tap/opencode"

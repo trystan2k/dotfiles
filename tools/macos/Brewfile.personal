@@ -1,5 +1,8 @@
 # Personal File
 
+#Taps
+tap "basicmachines-co/basic-memory"
+tap "steipete/tap"
 
 ## Binaries
 brew "yt-dlp"
@@ -31,6 +34,10 @@ cask "stremio"
 ## Editors
 cask "pdf-expert"
 cask "visual-studio-code"
+
+# AI Tools
+brew "basicmachines-co/basic-memory/basic-memory"
+cask "steipete/tap/codexbar"
 
 # App Store
 mas "HP Smart", id: 1474276998
