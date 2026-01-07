@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.17.0](https://github.com/trystan2k/dotfiles/compare/v16.16.0...v16.17.0) (2026-01-07)
+
 ## [16.16.0](https://github.com/trystan2k/dotfiles/compare/v16.15.0...v16.16.0) (2026-01-04)
 
 ## [16.15.0](https://github.com/trystan2k/dotfiles/compare/v16.14.0...v16.15.0) (2025-12-23)
