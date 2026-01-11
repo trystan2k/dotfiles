@@ -37,6 +37,9 @@ _add() {
 
     info "Install antidote"
     brew install antidote
+
+    info "Install antigravity"
+    brew install antigravity
 }
 
 _configure() {
