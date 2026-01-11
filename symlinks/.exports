@@ -20,6 +20,9 @@ export ZSH_TAB_TITLE_CONCAT_FOLDER_PROCESS=true
 export MCFLY_FUZZY=true
 export MCFLY_INTERFACE_VIEW=BOTTOM
 
+export ZOXIDE_CMD_OVERRIDE=j
+export _ZO_ECHO=1
+
 # This should be the last line of the file
 # For local changes
 # Don't make edits below this

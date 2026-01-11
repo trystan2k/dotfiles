@@ -18,8 +18,8 @@ _remove() {
     info "Remove step"
     brew uninstall --ignore-dependencies node
 
-    info "Removing ASDF"
-    brew uninstall asdf
+    info "Removing Autojump"
+    brew uninstall autojump
 }
 
 _add() {
@@ -29,11 +29,8 @@ _add() {
 
     info "Add step"
 
-    info "Install MISE"
-    brew install mise
-
-    info "Install libyaml"
-    brew install libyaml
+    info "Install Zoxide"
+    brew install zoxide
 }
 
 _configure() {
@@ -42,13 +39,6 @@ _configure() {
     # ---------------------------------------------
 
     info "Configure step"
-
-    info "Configure MISE"
-    . "$DOTFILES_FOLDER"/configure/mise-config.sh
-
-    info "Remove .tools-version and .envrc files"
-    rm "$HOME"/.tools-version
-    rm "$HOME"/.envrc
 }
 
 _cleanup () {

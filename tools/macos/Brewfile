@@ -6,7 +6,6 @@ tap "sst/tap"
 # Binaries
 brew "ack"
 brew "coreutils"
-brew "autojump"
 brew "bat"
 brew "curl"
 brew "delta"
@@ -38,6 +37,7 @@ brew "subversion"
 brew "terminal-notifier"
 brew "tree"
 brew "wget"
+brew "zoxide"
 brew "zsh"
 
 # Apps

@@ -51,7 +51,7 @@ zinit ice wait atload"unalias grv" lucid
 zinit snippet OMZ::plugins/git/git.plugin.zsh
 
 zinit ice wait lucid
-zinit snippet OMZ::plugins/autojump/autojump.plugin.zsh
+zinit snippet OMZ::plugins/zoxide/zoxide.plugin.zsh
 
 zinit ice wait lucid
 zinit snippet OMZ::plugins/docker-compose/docker-compose.plugin.zsh
@@ -157,9 +157,6 @@ autoload -U edit-command-line
 zle -N edit-command-line
 bindkey '\C-x\C-e' edit-command-line
 
-# Add Rancher Desktop bin into path
-export PATH="$PATH:$HOME/.rd/bin"
-
 if [ -f "$HOME"/.exports.path ]; then
   #shellcheck source=/dev/null
   . "$HOME"/.exports.path
@@ -171,4 +168,3 @@ fi
 
 # PERF: Uncoment these line and first one to get a performance report of terminal init
 #zprof
-

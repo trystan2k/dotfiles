@@ -29,6 +29,9 @@ alias removeNodeSystem="brew uninstall --ignore-dependencies node"
 alias thiago="cd ~/Documents/Thiago"
 alias home="cd ~/"
 
+# Alias to cd to a directory using fzf
+alias cdls='cd $(zoxide query --list | fzf --header "Choose directory:")'
+
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
