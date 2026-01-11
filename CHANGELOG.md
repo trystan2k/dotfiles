@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.0.0](https://github.com/trystan2k/dotfiles/compare/v16.17.0...v17.0.0) (2026-01-11)
+
+### Features
+
+* **symlinks:** update opencode config ([d5b3604](https://github.com/trystan2k/dotfiles/commit/d5b3604e1a89f7fd94d3a4de04ffa317c14e0449))
+* **tools:** add antigravity brew package ([bd58ea1](https://github.com/trystan2k/dotfiles/commit/bd58ea1126f8cf9397ad7e241710a0e10514467f))
+* **tools:** migrate from Zinit to Antidote ([d253ada](https://github.com/trystan2k/dotfiles/commit/d253ada6ff7c5f1e045d2d2b6ca91b631155bca5))
+* **tools:** remove autojump and replace with zoxide ([85a96f3](https://github.com/trystan2k/dotfiles/commit/85a96f3608aa670c9a75df2b674c5c5572a8b54a))
+
 ## [16.17.0](https://github.com/trystan2k/dotfiles/compare/v16.16.0...v16.17.0) (2026-01-07)
 
 ## [16.16.0](https://github.com/trystan2k/dotfiles/compare/v16.15.0...v16.16.0) (2026-01-04)
