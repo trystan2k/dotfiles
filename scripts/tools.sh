@@ -41,10 +41,6 @@ install() {
             # Install tools for 'work' or 'personal' machine
             brew bundle -v --file="$DOTFILES_FOLDER"/tools/macos/Brewfile."$COMPUTER_NAME"
         fi;
-
-        info "Install Zinit"
-        #shellcheck source=/dev/null
-        . "$DOTFILES_FOLDER"/tools/zinit.sh
     else
         warn "Tools installation cancelled by user"
     fi

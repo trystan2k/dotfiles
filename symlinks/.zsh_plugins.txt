@@ -1,0 +1,35 @@
+# ezcompinit
+mattmc3/ez-compinit
+
+# Oh My Zsh Library
+getantidote/use-omz 
+ohmyzsh/ohmyzsh path:lib
+
+# Oh My Zsh Plugins
+ohmyzsh/ohmyzsh path:plugins/git kind:defer
+ohmyzsh/ohmyzsh path:plugins/docker-compose kind:defer
+ohmyzsh/ohmyzsh path:plugins/encode64 kind:defer
+ohmyzsh/ohmyzsh path:plugins/extract kind:defer
+
+# Add macOS specific plugins
+ohmyzsh/ohmyzsh path:plugins/brew kind:defer
+ohmyzsh/ohmyzsh path:plugins/macos kind:defer
+
+# Powerlevel10k
+romkatv/powerlevel10k
+
+# set up Zsh completions with plugins
+zsh-users/zsh-completions kind:fpath path:src kind:defer
+zsh-users/zsh-autosuggestions kind:defer
+zdharma-continuum/fast-syntax-highlighting kind:defer
+
+# Third Party Plugins
+ajeetdsouza/zoxide kind:defer
+djui/alias-tips kind:defer
+t413/zsh-background-notify kind:defer
+mattmc3/zsh-safe-rm kind:defer
+paoloantinori/hhighlighter path:h.sh kind:defer
+trystan2k/zsh-npm-plugin path:npm.plugin.sh kind:defer
+trystan2k/zsh-tab-title kind:defer
+gezalore/zsh-prioritize-cwd-history kind:defer
+

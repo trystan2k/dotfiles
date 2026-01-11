@@ -5,6 +5,7 @@ tap "sst/tap"
 
 # Binaries
 brew "ack"
+brew "antidote"
 brew "coreutils"
 brew "bat"
 brew "curl"

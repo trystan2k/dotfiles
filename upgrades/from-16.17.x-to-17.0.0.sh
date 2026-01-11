@@ -20,6 +20,9 @@ _remove() {
 
     info "Removing Autojump"
     brew uninstall autojump
+
+    info "Removing zinit"
+    rm -rf "$HOME/.local/share/zinit"
 }
 
 _add() {
@@ -31,6 +34,9 @@ _add() {
 
     info "Install Zoxide"
     brew install zoxide
+
+    info "Install antidote"
+    brew install antidote
 }
 
 _configure() {

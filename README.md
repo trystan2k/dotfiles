@@ -66,7 +66,7 @@ I use [Homebrew](https://brew.sh/) to install packages I need in my MacOS.
 
 ### Shell and Shell Manager
 
-I use ZSH as my current shell and to manage its plugin I am using [Zinit](https://github.com/zdharma/zinit)
+I use ZSH as my current shell and to manage its plugin I am using [Antidot](https://antidote.sh/)
 
 ### Package Manager
 
@@ -100,34 +100,34 @@ npmrc entry in the .envrc file of the folder of the project.
 
 1. Sublime
 
-    ```bash
-    Open package control tools → Command Palette and type Install Package
+   ```bash
+   Open package control tools → Command Palette and type Install Package
 
-    Search for Cobalt2 and hit enter
+   Search for Cobalt2 and hit enter
 
-    Lastly, open Preferences → Settings - User. Add the following two lines:
+   Lastly, open Preferences → Settings - User. Add the following two lines:
 
-    "color_scheme": "Packages/Theme - Cobalt2/cobalt2.tmTheme",
-    "theme": "Cobalt2.sublime-theme",   
-    "highlight_line": true,
-    "indent_guide_options": [ "draw_normal", "draw_active" ],
-    "highlight_modified_tabs": true,
-    "line_padding_bottom": 1,
-    "line_padding_top": 1,
-    "wide_caret": true,
-    "caret_extra_bottom": 2,
-    "caret_extra_top": 2,
-    "caret_extra_width": 3,
-    "caret_style": "phase",
-    "bold_folder_labels": true,
-    ```
+   "color_scheme": "Packages/Theme - Cobalt2/cobalt2.tmTheme",
+   "theme": "Cobalt2.sublime-theme",
+   "highlight_line": true,
+   "indent_guide_options": [ "draw_normal", "draw_active" ],
+   "highlight_modified_tabs": true,
+   "line_padding_bottom": 1,
+   "line_padding_top": 1,
+   "wide_caret": true,
+   "caret_extra_bottom": 2,
+   "caret_extra_top": 2,
+   "caret_extra_width": 3,
+   "caret_style": "phase",
+   "bold_folder_labels": true,
+   ```
 
 2. Slack
 
-    ```bash
-    Preferences → Sidebar Theme
-    Paste #182E40,#1F4662,#1D425D,#FFFFFF,#988026,#FFFFFF,#2CDB00,#FEBD29
-    ```
+   ```bash
+   Preferences → Sidebar Theme
+   Paste #182E40,#1F4662,#1D425D,#FFFFFF,#988026,#FFFFFF,#2CDB00,#FEBD29
+   ```
 
 ## Apps that are interesting but not sure if useful
 
@@ -147,13 +147,13 @@ npmrc entry in the .envrc file of the folder of the project.
 
 1. For message `zsh compinit: insecure directories and files, run compaudit for list`, a possible solution is:
 
-    ```bash
-    cd /usr/local/share/
-    sudo chmod -R 755 zsh
-    sudo chown -R root:staff zsh
-    ```
+   ```bash
+   cd /usr/local/share/
+   sudo chmod -R 755 zsh
+   sudo chown -R root:staff zsh
+   ```
 
-    Or use defined alias `fixZshPerms`
+   Or use defined alias `fixZshPerms`
 
 2. As of May 2024 the package control in Sublime Text 4 is not working properly. To be able to install it, need to download and install manually.
 

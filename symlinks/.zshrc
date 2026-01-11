@@ -21,79 +21,11 @@ if [ -f "$HOME"/.aliases ]; then
   . "$HOME"/.aliases
 fi
 
+# source antidote
+source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 
-### Zinit Section
-
-# Zinit Init
-#shellcheck source=/dev/null
-ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
-source "${ZINIT_HOME}/zinit.zsh"
-autoload -Uz _zinit
-# shellcheck disable=SC2034,SC2154
-(( ${+_comps} )) && _comps[zinit]=_zinit
-
-setopt promptsubst
-
-# Load a few important annexes, without Turbo
-# (this is currently required for annexes)
-zinit light-mode for \
-    zdharma-continuum/zinit-annex-as-monitor \
-    zdharma-continuum/zinit-annex-bin-gem-node \
-    zdharma-continuum/zinit-annex-patch-dl \
-    zdharma-continuum/zinit-annex-rust
-
-### End of Zinit's installer chunk
-
-zinit ice wait lucid
-zinit snippet OMZ::lib/git.zsh
-
-zinit ice wait atload"unalias grv" lucid
-zinit snippet OMZ::plugins/git/git.plugin.zsh
-
-zinit ice wait lucid
-zinit snippet OMZ::plugins/zoxide/zoxide.plugin.zsh
-
-zinit ice wait lucid
-zinit snippet OMZ::plugins/docker-compose/docker-compose.plugin.zsh
-
-zinit ice wait lucid
-zinit snippet OMZ::plugins/encode64/encode64.plugin.zsh
-
-zinit ice wait lucid
-zinit snippet OMZ::plugins/extract/extract.plugin.zsh
-
-zinit ice wait lucid
-zinit load djui/alias-tips
-
-zinit ice wait lucid
-zinit load t413/zsh-background-notify       
-
-zinit ice wait lucid
-zinit load mattmc3/zsh-safe-rm
-
-zinit ice wait pick"h.sh" lucid
-zinit load paoloantinori/hhighlighter
-
-zinit ice wait blockf atpull'zinit creinstall -q .' lucid
-zinit load zsh-users/zsh-completions
-
-zinit ice wait atinit"zpcompinit; zpcdreplay" lucid
-zinit load zdharma-continuum/fast-syntax-highlighting
-
-zinit ice wait atload"_zsh_autosuggest_start" lucid
-zinit load zsh-users/zsh-autosuggestions
-
-zinit ice wait lucid
-zinit load trystan2k/zsh-npm-plugin
-
-zinit ice wait lucid
-zinit load trystan2k/zsh-tab-title
-
-zinit ice wait lucid
-zinit load gezalore/zsh-prioritize-cwd-history
-
-zinit ice lucid
-zinit load romkatv/powerlevel10k
+# initialize plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
+antidote load
 
 ### Powerline configuration
 export POWERLEVEL9K_MODE="nerdfont-complete"
@@ -102,11 +34,6 @@ export POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 export POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs )
 export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs command_execution_time node_version)
 export POWERLEVEL9K_NODE_VERSION_BACKGROUND='022'
-
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-export ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Setup bgnotify plugin
 export bgnotify_threshold=4  ## set your own notification threshold

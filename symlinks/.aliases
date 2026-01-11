@@ -31,6 +31,7 @@ alias home="cd ~/"
 
 # Alias to cd to a directory using fzf
 alias cdls='cd $(zoxide query --list | fzf --header "Choose directory:")'
+alias j=z
 
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
