@@ -60,8 +60,6 @@ setopt SHARE_HISTORY         # Share history file amongst all Zsh sessions
 
 eval "$(mise activate zsh)"
 
-eval "$(mcfly init zsh)"
-
 # Handle nppmrc config according to ENV variable
 set-npmrc-config-hook() {
 
@@ -95,3 +93,4 @@ fi
 
 # PERF: Uncoment these line and first one to get a performance report of terminal init
 #zprof
+export PATH="/Users/trystan2k/.openmux/bin:$PATH"

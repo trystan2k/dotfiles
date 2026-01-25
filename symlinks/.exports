@@ -17,9 +17,6 @@ export ZSH_TAB_TITLE_ENABLE_FULL_COMMAND=true
 # Enable concat folder process in tab title
 export ZSH_TAB_TITLE_CONCAT_FOLDER_PROCESS=true
 
-export MCFLY_FUZZY=true
-export MCFLY_INTERFACE_VIEW=BOTTOM
-
 export _ZO_ECHO=1
 
 # This should be the last line of the file

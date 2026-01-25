@@ -265,7 +265,8 @@
       "type": "local",
       "command": [
         "npx",
-        "chrome-devtools-mcp@latest"
+        "chrome-devtools-mcp@latest",
+        "--autoConnect"
       ],
       "enabled": false
     },

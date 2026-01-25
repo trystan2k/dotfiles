@@ -32,4 +32,5 @@ paoloantinori/hhighlighter path:h.sh kind:defer
 trystan2k/zsh-npm-plugin path:npm.plugin.sh kind:defer
 trystan2k/zsh-tab-title kind:defer
 gezalore/zsh-prioritize-cwd-history kind:defer
+atuinsh/atuin
 
