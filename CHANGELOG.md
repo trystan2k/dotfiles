@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [17.1.0](https://github.com/trystan2k/dotfiles/compare/v17.0.0...v17.1.0) (2026-01-25)
+
+### Features
+
+* **tools:** replace mcfly with atuin, add Boring Notch, and do configuration adjustments ([22fffec](https://github.com/trystan2k/dotfiles/commit/22fffec17cc4e60e9226aa78eab3af20349760a4))
+
 ## [17.0.0](https://github.com/trystan2k/dotfiles/compare/v16.17.0...v17.0.0) (2026-01-11)
 
 ### Features
