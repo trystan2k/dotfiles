@@ -341,6 +341,15 @@
         "npx",
         "@jpisnice/shadcn-ui-mcp-server"
       ]
+    },
+    "codemod": {
+      "enabled": false,
+      "type": "local",
+      "command": [
+        "npx",
+        "codemod@latest",
+        "mcp"
+      ]
     }
   },
   "keybinds": {
