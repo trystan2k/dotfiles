@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [18.1.0](https://github.com/trystan2k/dotfiles/compare/v18.0.2...v18.1.0) (2026-04-06)
+
+
+### Features
+
+* **scripts:** add bulk skill installation aliases ([213dde1](https://github.com/trystan2k/dotfiles/commit/213dde174b87c27eb2875b4d6b60e57b77239aad))
+
 ### [18.0.2](https://github.com/trystan2k/dotfiles/compare/v18.0.1...v18.0.2) (2026-04-06)
 
 ### [18.0.1](https://github.com/trystan2k/dotfiles/compare/v18.0.0...v18.0.1) (2026-04-06)
