@@ -1,5 +1,5 @@
 ---
-description: "Set up QA controls (Biome linter/formatter + lint-staged + Husky git hooks + Commitlint) in a Node.js project. Installs all tools, creates config files, and wires up pre-commit, commit-msg, and pre-push hooks."
+description: 'Set up QA controls (Biome linter/formatter + lint-staged + Husky git hooks + Commitlint) in a Node.js project. Installs all tools, creates config files, and wires up pre-commit, commit-msg, and pre-push hooks.'
 ---
 
 Set up a complete QA controls stack in this Node.js project. The stack consists of:
@@ -61,13 +61,7 @@ Create `biome.json` in the project root. Start from this template and adjust to 
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "files": {
-    "includes": [
-      "**",
-      "!dist",
-      "!node_modules",
-      "!build",
-      "!coverage"
-    ]
+    "includes": ["**", "!dist", "!node_modules", "!build", "!coverage"]
   },
   "formatter": {
     "enabled": true,
@@ -121,7 +115,7 @@ If yes, the project uses ES modules — use `export default`:
 ```js
 export default {
   extends: ['@commitlint/config-conventional']
-}
+};
 ```
 
 If no (CommonJS project), use `module.exports`:
@@ -129,7 +123,7 @@ If no (CommonJS project), use `module.exports`:
 ```js
 module.exports = {
   extends: ['@commitlint/config-conventional']
-}
+};
 ```
 
 ---
@@ -139,7 +133,7 @@ module.exports = {
 ```json
 {
   "*.{js,ts}": "biome check --write --no-errors-on-unmatched --files-ignore-unknown=true",
-  "*.json":    "biome check --write --no-errors-on-unmatched --files-ignore-unknown=true"
+  "*.json": "biome check --write --no-errors-on-unmatched --files-ignore-unknown=true"
 }
 ```
 

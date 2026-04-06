@@ -1,0 +1,11 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "parser": "json-stringify",
+  "sortPackageJson": true,
+  "ignorePatterns": ["node_modules/**", "CHANGELOG.md"],
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "none"
+}

@@ -3,10 +3,10 @@
   "version": "18.0.0",
   "description": "My personal dotfiles",
   "keywords": [
-    "dotfiles",
-    "trystan2k",
     "brew",
-    "macos"
+    "dotfiles",
+    "macos",
+    "trystan2k"
   ],
   "homepage": "https://github.com/trystan2k/dotfiles#readme",
   "bugs": {
@@ -18,26 +18,31 @@
     "clean": "rm -rf node_modules",
     "cz": "git-cz",
     "preinstall": "npx only-allow pnpm",
-    "lint": "pnpm run lint:bash && pnpm run lint:eslint",
+    "lint": "pnpm run lint:bash",
     "lint:bash": "bash shellcheck.sh",
-    "lint:eslint": "eslint . --fix",
+    "format": "oxfmt .",
+    "format:check": "oxfmt --check .",
     "prepare": "husky",
     "push": "git push && git push --tags",
     "release": "standard-version -a",
     "release:as": "standard-version --release-as"
   },
+  "devDependencies": {
+    "@commitlint/cli": "^20.5.0",
+    "@commitlint/config-conventional": "^20.5.0",
+    "@commitlint/cz-commitlint": "^20.5.1",
+    "commitizen": "^4.3.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "oxfmt": "^0.43.0",
+    "standard-version": "^9.5.0"
+  },
   "lint-staged": {
-    "*.json": [
-      "pnpm run lint:eslint"
-    ],
-    "*.md": [
-      "pnpm run lint:eslint"
+    "*": [
+      "oxfmt --no-error-on-unmatched-pattern"
     ],
     "*.sh": [
       "pnpm run lint:bash"
-    ],
-    "package.json": [
-      "sort-package-json"
     ]
   },
   "config": {
@@ -45,31 +50,11 @@
       "path": "@commitlint/cz-commitlint"
     }
   },
-  "prettier": {
-    "overrides": [
-      {
-        "files": "*.json",
-        "options": {
-          "parser": "json-stringify"
-        }
-      }
-    ]
+  "engines": {
+    "node": "^24.14.1",
+    "pnpm": "^10.33.0"
   },
-  "devDependencies": {
-    "@commitlint/cli": "^20.1.0",
-    "@commitlint/config-conventional": "^20.0.0",
-    "@commitlint/cz-commitlint": "^20.1.0",
-    "commitizen": "^4.3.1",
-    "eslint": "^9.39.0",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-json": "^4.0.1",
-    "eslint-plugin-markdownlint": "^0.9.0",
-    "husky": "^9.1.7",
-    "lint-staged": "^16.2.6",
-    "prettier": "^3.6.2",
-    "sort-package-json": "^3.4.0",
-    "standard-version": "^9.5.0"
-  },
+  "packageManager": "pnpm@10.33.0",
   "standard-version": {
     "releaseCommitMessageFormat": "chore: release {{currentTag}}"
   }

@@ -9,10 +9,10 @@ Based on the changes staged (if any) or from the lasts commits compared with dev
 It should have these sections sections
 
 1. Small 'Como / Quiero que / Para que' user story
-A brief user story that summarizes the requirements.
+   A brief user story that summarizes the requirements.
 
 2. Criterios de Aceptación
-A bullet point list of the main acceptance criteria that would need to be met for the implementation.
+   A bullet point list of the main acceptance criteria that would need to be met for the implementation.
 
 3. Notas Técnicas
-Any technical notes that would help developers understand the implementation details, if necessary.
+   Any technical notes that would help developers understand the implementation details, if necessary.

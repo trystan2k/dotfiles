@@ -1,6 +1,6 @@
 name: CI-workflow
 
-on: 
+on:
   pull_request:
   push:
     branches:
@@ -31,5 +31,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Run ESLint
-        run: pnpm run lint:eslint
+      - name: Run Lint
+        run: pnpm run lint
+
+      - name: Run Format
+        run: pnpm run format:check

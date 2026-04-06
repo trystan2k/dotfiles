@@ -30,8 +30,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Run ESLint
-        run: pnpm run lint:eslint
+      - name: Run Lint
+        run: pnpm run lint
+
+      - name: Run Format
+        run: pnpm run format:check
 
   release:
     runs-on: ubuntu-latest
@@ -39,7 +42,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-        
+
       - name: Release new version
         uses: softprops/action-gh-release@v2
         env:
@@ -47,4 +50,4 @@ jobs:
         with:
           tag_name: ${{ github.ref }}
           draft: false
-          prerelease: false  
+          prerelease: false

@@ -77,17 +77,17 @@ Outputs:
 
 ## Time Tracking Summary
 
-| Phase | Subagent | Time Spent |
-|-------|----------|------------|
-| Preparation | project-manager-specialist | X min Y sec |
-| Planning | execution-planner-specialist | X min Y sec |
-| Implementation | implementation-specialist | X min Y sec |
-| QA | qa-gate-specialist | X min Y sec |
-| Code and Architecture Review | code-review-specialist and architecture-review-specialist | X min Y sec |
-| Development Logging | development-log-specialist | X min Y sec |
-| Commit/Push | git-specialist | X min Y sec |
-| PR Creation | git-specialist | X min Y sec |
-| **Total** | | **X hr Y min Z sec** |
+| Phase                        | Subagent                                                  | Time Spent           |
+| ---------------------------- | --------------------------------------------------------- | -------------------- |
+| Preparation                  | project-manager-specialist                                | X min Y sec          |
+| Planning                     | execution-planner-specialist                              | X min Y sec          |
+| Implementation               | implementation-specialist                                 | X min Y sec          |
+| QA                           | qa-gate-specialist                                        | X min Y sec          |
+| Code and Architecture Review | code-review-specialist and architecture-review-specialist | X min Y sec          |
+| Development Logging          | development-log-specialist                                | X min Y sec          |
+| Commit/Push                  | git-specialist                                            | X min Y sec          |
+| PR Creation                  | git-specialist                                            | X min Y sec          |
+| **Total**                    |                                                           | **X hr Y min Z sec** |
 ```
 
 ## Instructions (Behavior Contract)
@@ -104,30 +104,30 @@ Follow these steps in order.
 
    **Step 1.1: Get Issue Details (MUST COMPLETE FIRST)**
    - Ask `project-manager-specialist`:
-      - To validate the provided issue or sub-issue number exists and retrieve current status.
-      - If issue appears already implemented or completed, ask the user for clarification before proceeding.
-      - Get basic issue details (number, title, description) and return them.
+     - To validate the provided issue or sub-issue number exists and retrieve current status.
+     - If issue appears already implemented or completed, ask the user for clarification before proceeding.
+     - Get basic issue details (number, title, description) and return them.
    - **DO NOT proceed to Step 1.2 until you have received the issue title from project-manager-specialist.**
 
    **Step 1.2: Create Feature Branch (MUST WAIT FOR STEP 1.1)**
-    - Ask `git-specialist` to create a feature branch using the remote-only approach (worktree-safe):
-       - Fetch `origin/main` to update the remote tracking branch (does NOT checkout main).
-       - If uncommitted changes exist, stash them before branch creation.
-       - Create a new feature branch directly from `origin/main`:
-         - Use the issue title obtained from Step 1.1 to construct the branch name.
-         - Use the pattern defined in the AGENTS.md file (e.g., `feature/[issue-id]-[title-slug]`).
-         - One feature branch per task ID.
-         - All subtasks of that task use the same branch.
-         - If no pattern is found, pause and ask user for naming guidance.
-       - Restore any stashed changes to the new branch.
-       - This approach works in all scenarios including git worktrees where main may be checked out elsewhere.
-    - **Wait for branch creation confirmation before moving to Step 1.3.**
+   - Ask `git-specialist` to create a feature branch using the remote-only approach (worktree-safe):
+     - Fetch `origin/main` to update the remote tracking branch (does NOT checkout main).
+     - If uncommitted changes exist, stash them before branch creation.
+     - Create a new feature branch directly from `origin/main`:
+       - Use the issue title obtained from Step 1.1 to construct the branch name.
+       - Use the pattern defined in the AGENTS.md file (e.g., `feature/[issue-id]-[title-slug]`).
+       - One feature branch per task ID.
+       - All subtasks of that task use the same branch.
+       - If no pattern is found, pause and ask user for naming guidance.
+     - Restore any stashed changes to the new branch.
+     - This approach works in all scenarios including git worktrees where main may be checked out elsewhere.
+   - **Wait for branch creation confirmation before moving to Step 1.3.**
 
    **Step 1.3: Get Full Issue Details (MUST WAIT FOR STEP 1.2)**
    - Ask `project-manager-specialist`:
-      - Check if the issue has sub-issues.
-      - If the issue has no sub-issues and is complex, request a breakdown before implementation.
-      - Once resolved, return the full issue details, sub-issues, dependencies, and acceptance criteria. Always pass the necessary information that the specification requires.
+     - Check if the issue has sub-issues.
+     - If the issue has no sub-issues and is complex, request a breakdown before implementation.
+     - Once resolved, return the full issue details, sub-issues, dependencies, and acceptance criteria. Always pass the necessary information that the specification requires.
 
    - **Stop timer** and record Preparation phase time.
 
@@ -172,22 +172,22 @@ Follow these steps in order.
    - Repeat until QA passes and review outcome is acceptable.
 
 8. Development Logging
-    - **Start timer** for Development Logging phase.
-    - Ask `development-log-specialist` to create and store the development log using `basic-memory` skill format.
-    - Provide planning, implementation, testing, QA, and review context.
-    - Use the current project configuration in basic-memory to store the log.
-    - **Stop timer** and record Development Logging phase time.
+   - **Start timer** for Development Logging phase.
+   - Ask `development-log-specialist` to create and store the development log using `basic-memory` skill format.
+   - Provide planning, implementation, testing, QA, and review context.
+   - Use the current project configuration in basic-memory to store the log.
+   - **Stop timer** and record Development Logging phase time.
 
 9. Mandatory User Approval Before Commit
-    - **CRITICAL**: Discover ALL task-related files before presenting to user:
-      - Run `git status --porcelain` to find all modified and untracked files
-    - Present the user with:
-      - **ALL** files changed or created (not just implementation files)
-      - brief description of changes
-      - proposed commit message (Do not include any task number information in the commit message, unless it is explicitly requested)
-    - Ask for explicit approval.
-    - Do not proceed to commit without explicit approval.
-    - If user requests changes, apply them via specialists and request approval again.
+   - **CRITICAL**: Discover ALL task-related files before presenting to user:
+     - Run `git status --porcelain` to find all modified and untracked files
+   - Present the user with:
+     - **ALL** files changed or created (not just implementation files)
+     - brief description of changes
+     - proposed commit message (Do not include any task number information in the commit message, unless it is explicitly requested)
+   - Ask for explicit approval.
+   - Do not proceed to commit without explicit approval.
+   - If user requests changes, apply them via specialists and request approval again.
 
 10. Commit/Push Cycle
     - **Start timer** for Commit/Push phase.

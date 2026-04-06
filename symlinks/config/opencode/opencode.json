@@ -1,45 +1,27 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "autoupdate": true,
-  "instructions": [
-    "AGENTS.md"
-  ],
+  "instructions": ["AGENTS.md"],
   "mcp": {
     "mcp_engram": {
-      "command": [
-        "engram",
-        "mcp",
-        "--tools=agent"
-      ],
+      "command": ["engram", "mcp", "--tools=agent"],
       "enabled": false,
       "type": "local"
     },
     "mcp_basic-memory": {
       "type": "local",
-      "command": [
-        "uvx",
-        "basic-memory",
-        "mcp"
-      ],
+      "command": ["uvx", "basic-memory", "mcp"],
       "enabled": false
     },
     "mcp_chrome-devtools": {
       "type": "local",
-      "command": [
-        "npx",
-        "chrome-devtools-mcp@latest",
-        "--autoConnect"
-      ],
+      "command": ["npx", "chrome-devtools-mcp@latest", "--autoConnect"],
       "enabled": false
     },
     "mcp_codemod": {
       "enabled": false,
       "type": "local",
-      "command": [
-        "npx",
-        "codemod@latest",
-        "mcp"
-      ]
+      "command": ["npx", "codemod@latest", "mcp"]
     },
     "mcp_context7": {
       "type": "remote",
@@ -67,10 +49,7 @@
     },
     "mcp_repomix": {
       "type": "local",
-      "command": [
-        "repomix",
-        "--mcp"
-      ],
+      "command": ["repomix", "--mcp"],
       "enabled": false
     },
     "mcp_serena": {
@@ -89,28 +68,17 @@
     "mcp_shadcn-ui": {
       "enabled": false,
       "type": "local",
-      "command": [
-        "npx",
-        "@jpisnice/shadcn-ui-mcp-server"
-      ]
+      "command": ["npx", "@jpisnice/shadcn-ui-mcp-server"]
     },
     "mcp_task-master-ai": {
       "type": "local",
-      "command": [
-        "npx",
-        "-y",
-        "--package=task-master-ai",
-        "task-master-ai"
-      ],
+      "command": ["npx", "-y", "--package=task-master-ai", "task-master-ai"],
       "enabled": false
     }
   },
   "model": "openai/gpt-5.4",
   "small_model": "github-copilot/gpt-5-mini",
-  "plugin": [
-    "opencode-wakatime@latest",
-    "opencode-gemini-auth@latest"
-  ],
+  "plugin": ["opencode-wakatime@latest", "opencode-gemini-auth@latest"],
   "provider": {
     "ollama": {
       "npm": "@ai-sdk/openai-compatible",

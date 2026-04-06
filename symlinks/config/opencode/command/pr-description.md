@@ -9,8 +9,8 @@ Based on the changes staged (if any) or from the lasts commits compared with dev
 It should have 3 main sections
 
 1. Contexto
-Should be a brief summary of what the problem was that the changes are solving.
+   Should be a brief summary of what the problem was that the changes are solving.
 2. Cambios Realizados
-A bullet point list of the main changes made in the code.
+   A bullet point list of the main changes made in the code.
 3. Como Probarlo
-Instructions on how to test the changes, including any setup or configuration needed. It should always include the step to run the QA script (npm run complete-check), besides the steps needed to manually test the changes in the application.
+   Instructions on how to test the changes, including any setup or configuration needed. It should always include the step to run the QA script (npm run complete-check), besides the steps needed to manually test the changes in the application.

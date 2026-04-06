@@ -127,7 +127,7 @@ Work through **every section** below for every changed file. Do not skip section
 - [ ] Dead code — unreachable branches, unused variables/imports
 - [ ] Duplicated logic that should be extracted
 - [ ] Naming — does the name describe what the thing actually does?
-- [ ] Comments — are they explaining *why*, not *what*?
+- [ ] Comments — are they explaining _why_, not _what_?
 
 ### 8. Tests (if tests are in scope)
 

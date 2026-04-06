@@ -1,5 +1,5 @@
 ---
-description: "Create a new Linear issue with title, description, team, project, and optional parent linkage."
+description: 'Create a new Linear issue with title, description, team, project, and optional parent linkage.'
 ---
 
 Create a new issue in Linear for this project.

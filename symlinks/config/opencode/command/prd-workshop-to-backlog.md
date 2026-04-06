@@ -1,5 +1,5 @@
 ---
-description: "Run a full PRD refinement workshop from an initial PRD file, generate modular PRD docs, produce an implementation backlog, and optionally create GitHub issues + project items after explicit confirmation."
+description: 'Run a full PRD refinement workshop from an initial PRD file, generate modular PRD docs, produce an implementation backlog, and optionally create GitHub issues + project items after explicit confirmation.'
 ---
 
 Run a complete PRD-to-backlog workflow for this repository.

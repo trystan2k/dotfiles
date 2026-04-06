@@ -139,26 +139,26 @@ Return the full report without asking user questions.
 
 ## Action Routing
 
-| Requested Action | Commands |
-|---|---|
-| `list-projects` | `linear project list` |
-| `list-teams` | `linear team list` |
-| `create-issue` | `linear issue create` |
-| `view-issue` | `linear issue view <issueId>` |
-| `list-issues` | `linear issue list` with filters |
-| `move-to-in-progress` | `linear issue update <issueId> --status "In Progress"` |
-| `move-to-in-review` | `linear issue update <issueId> --status "In Review"` |
-| `move-to-blocked` | `linear issue update <issueId> --status "Blocked"` |
-| `move-to-canceled` | `linear issue update <issueId> --status "Canceled"` |
-| `move-to-done` | `linear issue update <issueId> --status "Done"` |
-| `set-status` | `linear issue update <issueId> --status <status>` |
-| `breakdown-issue` | `linear issue create ... --parent <parentId>` |
-| `list-sub-issues` | `linear issue list` (cannot directly filter by parent via CLI list, assume manual check or use `issue view` if it returns children) |
-| `view-sub-issue` | `linear issue view <issueId>` |
-| `close-issue` | `linear issue update <issueId> --status "Done"` |
-| `delete-document` | `linear document delete <documentId>` (requires `confirmed: true`) |
+| Requested Action      | Commands                                                                                                                            |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `list-projects`       | `linear project list`                                                                                                               |
+| `list-teams`          | `linear team list`                                                                                                                  |
+| `create-issue`        | `linear issue create`                                                                                                               |
+| `view-issue`          | `linear issue view <issueId>`                                                                                                       |
+| `list-issues`         | `linear issue list` with filters                                                                                                    |
+| `move-to-in-progress` | `linear issue update <issueId> --status "In Progress"`                                                                              |
+| `move-to-in-review`   | `linear issue update <issueId> --status "In Review"`                                                                                |
+| `move-to-blocked`     | `linear issue update <issueId> --status "Blocked"`                                                                                  |
+| `move-to-canceled`    | `linear issue update <issueId> --status "Canceled"`                                                                                 |
+| `move-to-done`        | `linear issue update <issueId> --status "Done"`                                                                                     |
+| `set-status`          | `linear issue update <issueId> --status <status>`                                                                                   |
+| `breakdown-issue`     | `linear issue create ... --parent <parentId>`                                                                                       |
+| `list-sub-issues`     | `linear issue list` (cannot directly filter by parent via CLI list, assume manual check or use `issue view` if it returns children) |
+| `view-sub-issue`      | `linear issue view <issueId>`                                                                                                       |
+| `close-issue`         | `linear issue update <issueId> --status "Done"`                                                                                     |
+| `delete-document`     | `linear document delete <documentId>` (requires `confirmed: true`)                                                                  |
 
-*Note: Issue deletion is not supported by the CLI. Use status "Canceled" instead.*
+_Note: Issue deletion is not supported by the CLI. Use status "Canceled" instead._
 
 ---
 
@@ -255,10 +255,10 @@ Standard workflow:
 
 ```markdown
 Ready → In Progress → In Review → Done
-                  ↓ 
-              Blocked
-                  ↓
-            In Progress
+↓
+Blocked
+↓
+In Progress
 ```
 
 To move an issue to a status:

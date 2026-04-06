@@ -61,21 +61,25 @@ Output format must follow this exact template:
 
 ```markdown
 ## Task Analysis
+
 - Main objective:
 - Identified dependencies:
 - System impact:
 
 ## Chosen Approach
+
 - Proposed solution:
 - Justification for simplicity:
 - Components to be modified/created:
 
 ## Implementation Steps
+
 1. [Specific step]
 2. [Specific step]
 3. [Specific step]
 
 ## Validation
+
 - Success criteria:
 - Checkpoints:
 ```

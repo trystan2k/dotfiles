@@ -192,11 +192,11 @@ else
     git stash push -m "pre-branch-creation-$(date +%s)"
     STASHED=true
   fi
-  
+
   git checkout main
   git pull origin main
   git checkout -b <branch_name>
-  
+
   if [ "$STASHED" = true ]; then
     git stash pop
   fi
@@ -225,13 +225,7 @@ fi
 7- Do not include any task number information in the commit message, unless it is explicitly requested
 8- Never include any information that is not related to the changes made in the code
 9- Never skip git hooks
-10- **CRITICAL - DISCOVER AND COMMIT ALL TASK-RELATED FILES**:
-    - **ALWAYS** run `git status --porcelain` FIRST to discover ALL files (modified, added, untracked)
-    - **ALWAYS** use `git add -A` to stage ALL files - do NOT cherry-pick individual files
-    - This includes: implementation files, plan files (`docs/plan/*.md`) and development logs (`docs/development-logs/*.md`)
-    - **NEVER** only commit files explicitly mentioned in the prompt if there are other task-related files
-    - If you see files that seem unrelated to the task, ask the user before excluding them
-    - The only exception is if the user explicitly requests to commit specific files only (rare)
+10- **CRITICAL - DISCOVER AND COMMIT ALL TASK-RELATED FILES**: - **ALWAYS** run `git status --porcelain` FIRST to discover ALL files (modified, added, untracked) - **ALWAYS** use `git add -A` to stage ALL files - do NOT cherry-pick individual files - This includes: implementation files, plan files (`docs/plan/*.md`) and development logs (`docs/development-logs/*.md`) - **NEVER** only commit files explicitly mentioned in the prompt if there are other task-related files - If you see files that seem unrelated to the task, ask the user before excluding them - The only exception is if the user explicitly requests to commit specific files only (rare)
 
 ## Push changes
 
@@ -403,9 +397,9 @@ gh pr create --title "$TITLE" --body "$BODY" --base "$BASE" --head "$BRANCH"
 ## PR review
 
 1- If the project uses GitHub and the request is to ask Copilot for review, first try:
-   `gh copilot-review "$ORG/$REPO" "$PR_NUMBER"`
+`gh copilot-review "$ORG/$REPO" "$PR_NUMBER"`
 2- If that command fails or returns `404`, immediately try the supported GitHub API fallback:
-   `gh api "/repos/$ORG/$REPO/pulls/$PR_NUMBER/requested_reviewers" -f "reviewers[]=copilot-pull-request-reviewer[bot]" --method POST`
+`gh api "/repos/$ORG/$REPO/pulls/$PR_NUMBER/requested_reviewers" -f "reviewers[]=copilot-pull-request-reviewer[bot]" --method POST`
 3- Do NOT post fallback comments like `@copilot review`.
 4- Only stop and report failure if both the direct command and the API fallback fail.
 5- If the project does not use GitHub, report that Copilot review request via gh is not supported.
