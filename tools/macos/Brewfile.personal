@@ -41,3 +41,4 @@ cask "steipete/tap/codexbar"
 
 # App Store
 mas "HP Smart", id: 1474276998
+mas "PDFgear", id: 6469021132
