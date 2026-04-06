@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [18.0.0](https://github.com/trystan2k/dotfiles/compare/v17.1.0...v18.0.0) (2026-04-06)
+
+### Features
+
+* add AI Global Skills installation script and integration ([fe3c9dd](https://github.com/trystan2k/dotfiles/commit/fe3c9dd83729d424678e022ff1d93ebcabf5abf3))
+* **symlinks:** add codemod MCP to opencode ([335c0aa](https://github.com/trystan2k/dotfiles/commit/335c0aa953076abf76583312dbd2c029747c6cc5))
+* **symlinks:** restructure agents and commands, add QA controls setup ([e3b645a](https://github.com/trystan2k/dotfiles/commit/e3b645a5a864917586d2ee53d0ece9a37e2a49ec))
+
 ## [17.1.0](https://github.com/trystan2k/dotfiles/compare/v17.0.0...v17.1.0) (2026-01-25)
 
 ### Features
