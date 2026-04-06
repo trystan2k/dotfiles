@@ -83,6 +83,11 @@ configure() {
         sudo chmod -R 755 /usr/local/share/zsh
         sudo chown -R root:staff /usr/local/share/zsh
     fi   
+
+    info "Install AI Global Skills"
+    if ask_question 'Do you want to install AI Global Skills?'; then
+        "$DOTFILES_FOLDER"/configure/ai-global-skills.sh
+    fi
 }
 
 execute() {

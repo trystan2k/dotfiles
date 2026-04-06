@@ -38,6 +38,7 @@ cask "visual-studio-code"
 # AI Tools
 brew "basicmachines-co/basic-memory/basic-memory"
 cask "steipete/tap/codexbar"
+brew "gentleman-programming/tap/engram"
 
 # App Store
 mas "HP Smart", id: 1474276998
