@@ -10,6 +10,59 @@ function updateBrewfile() {
   brew bundle dump
 }
 
+# Alias function to add multiple skills from a CSV input
+# Usage: add_skills "url1:skill1, url2:skill2" -g -y -a "agent1,agent2"
+function add_skills() {
+  if [ -z "$1" ]; then
+    echo "Usage: add_skills \"url:skill_name, ...\" [extra_args]"
+    return 1
+  fi
+
+  local input="$1"
+  shift
+
+  # Use a separate file descriptor (3) to read the list of skills,
+  # keeping stdin (0) free for interactive prompts inside the loop.
+  while read -u 3 -r item; do
+    # Trim leading/trailing whitespace
+    item=$(echo "$item" | xargs)
+    [ -z "$item" ] && continue
+
+    # Split by the last colon
+    local url="${item%:*}"
+    local name="${item##*:}"
+
+    if [[ "$url" != "$item" && -n "$name" ]]; then
+      echo "Installing skill: $name from $url"
+      npx skills@latest add "$url" --skill "$name" "$@"
+    else
+      echo "Invalid format for skill: $item. Expected url:skill_name"
+    fi
+  done 3< <(echo "$input" | tr ',' '\n')
+}
+
+# Alias function to add multiple skills from a file
+# Usage: bulk_add_skills skills.txt -y -a "opencode"
+function bulk_add_skills() {
+  if [ -z "$1" ] || [ ! -f "$1" ]; then
+    echo "Usage: bulk_add_skills <file_path> [extra_args]"
+    return 1
+  fi
+
+  local file_path="$1"
+  shift
+
+  # Read the file and join non-empty lines with a comma
+  local skills_csv
+  skills_csv=$(grep -v '^$' "$file_path" | paste -sd "," -)
+
+  if [ -n "$skills_csv" ]; then
+    add_skills "$skills_csv" "$@"
+  else
+    echo "The file $file_path is empty or contains no valid skills."
+  fi
+}
+
 # Alias function to create and enter a folder
 function take() {
   mkdir -vp "$@" && cd "${@:$#}" || exit
