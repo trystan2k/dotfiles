@@ -1,7 +1,7 @@
 ---
 description: Senior implementation agent that executes approved tasks and deepthink plans using stack-specific best practices and project conventions.
 mode: subagent
-model: opencode-go/minimax-m2.7
+model: openai/gpt-5.3-codex
 temperature: 0
 tools:
   bash: true

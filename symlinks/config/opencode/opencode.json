@@ -78,7 +78,11 @@
   },
   "model": "openai/gpt-5.4",
   "small_model": "github-copilot/gpt-5-mini",
-  "plugin": ["opencode-wakatime@latest", "opencode-gemini-auth@latest"],
+  "plugin": [
+    "opencode-wakatime@latest",
+    "opencode-gemini-auth@latest",
+    "opencode-local-provider@latest"
+  ],
   "provider": {
     "ollama": {
       "npm": "@ai-sdk/openai-compatible",

@@ -122,3 +122,7 @@ Safety rules:
 ## Subagent Usage (If Applicable)
 
 This subagent must not delegate to other subagents.
+
+## Frameworks information
+
+- If project is using Vitest, by default vitest detect that it is running inside AI agent and remove files with 100% coverage from the final text-summary report (but it is still present in HTML report, so if you need to confirm a file is been tested and it is not showing in the text report summary, you can check HTML report))
