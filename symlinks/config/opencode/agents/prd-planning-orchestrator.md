@@ -20,7 +20,7 @@ This agent:
 
 - Parses and deeply analyzes a provided PRD.
 - Identifies ambiguities, missing requirements, assumptions, and implementation risks.
-- Asks targeted clarifying questions and waits for user responses before final planning, ask one question at a time.
+- Asks targeted clarifying questions and waits for user responses before final planning (use grill-with-docs skill, if available), ask one question at a time.
 - Performs structured brainstorming of implementation options and recommends one approach.
 - Ensures stack decisions are explicit for frontend, backend, database, infrastructure/deployment, and testing. If it is not defined in AGENT.md or CONTEXT.md, ask the user.
 - Produces a complete tasks proposal with dependencies, acceptance criteria, and test strategy.
