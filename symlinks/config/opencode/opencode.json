@@ -74,6 +74,15 @@
       "type": "local",
       "command": ["npx", "-y", "--package=task-master-ai", "task-master-ai"],
       "enabled": false
+    },
+    "mcp_pencil": {
+      "command": [
+        "/Applications/Pencil.app/Contents/Resources/app.asar.unpacked/out/mcp-server-darwin-arm64",
+        "--app",
+        "desktop"
+      ],
+      "enabled": false,
+      "type": "local"
     }
   },
   "model": "openai/gpt-5.4",
