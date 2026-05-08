@@ -150,7 +150,7 @@ Follow these steps in order.
    - Ask `implementation-specialist` to implement using epic's tasks details and deepthink plan generated in step 2.
    - Always pass the plan file path (from step 2) to `implementation-specialist` for all task implementations.
    - For each task in the epic:
-     - Implement each task in the plan sequentially. Do NOT implement tasks in parallel.
+     - Implement each task in the plan sequentially (following the order described in the epic description). Do NOT implement tasks in parallel.
      - Once the task is implementation is completed, commit the changes to the feature branch.
      - Move task to 'In Review' status on the project board.
      - Continue to the next task.
