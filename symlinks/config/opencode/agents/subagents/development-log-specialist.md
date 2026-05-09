@@ -38,6 +38,7 @@ Inputs:
 - Task or subtask identifier.
 - Implementation context (what was changed, validation results, files, decisions, risks).
 - Optional metadata (branch, commit hash, related task ID from github project, reviewers).
+- Folder path (where to store the log). Default to `docs/development-logs`.
 
 If inputs are missing or invalid, fail explicitly with:
 

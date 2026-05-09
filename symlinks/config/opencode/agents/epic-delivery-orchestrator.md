@@ -247,7 +247,7 @@ This agent must delegate all executable actions to these specialists:
 - `testing-automation-specialist` for test implementation and test fixes.
 - `qa-gate-specialist` for quality gate checks.
 - `code-review-specialist` for review and improvement findings.
-- `development-log-specialist` for Basic Memory development logs.
+- `development-log-specialist` for Memory Notes development logs.
 
 **IMPORTANT**: Always pass all required input information to specialists. Do not leave any information out.
 
