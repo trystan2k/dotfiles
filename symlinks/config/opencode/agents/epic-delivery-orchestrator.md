@@ -180,9 +180,9 @@ Follow these steps in order.
 
 8. Development Logging
    - **Start timer** for Development Logging phase.
-   - Ask `development-log-specialist` to create and store the development log using `basic-memory` skill format.
+   - Ask `development-log-specialist` to create and store the development log using `memory-notes` skill format.
    - Provide planning, implementation, testing, QA, and review context.
-   - Use the current project configuration in basic-memory to store the log.
+   - Use the current project configuration in memory-notes to store the log.
    - It should include all development done in the Epic (even after compactation, include everything done)
    - **Stop timer** and record Development Logging phase time.
 
