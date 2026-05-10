@@ -134,7 +134,7 @@ Follow these steps in order.
 
 2. Planning with Deepthink
    - Using the information provided by `project-manager-specialist` from previous step, interview the user (using grill-with-docs and brainstorming skills and question tool) to understand the requirements and constraints, solve any ambiguity, and clarify any missing information.
-   - Ask `execution-planner-specialist` to generate the detailed action plan using deepthink principles using the epic and epic's tasks details and user requirements obtained from epic details and user interview.
+   - Ask `execution-planner-specialist` to generate the detailed action plan using deepthink principles using the full description and details of the epic and ALL its subtasks (not just titles), and user requirements obtained from the user interview.
    - Capture the plan file path returned by `execution-planner-specialist` and store it for use in implementation.
    - Ask user explicit approval to proceed with the plan. DO NOT proceed without user approval.
    - **Stop timer** and record Planning phase time.
@@ -151,9 +151,9 @@ Follow these steps in order.
    - Always pass the plan file path (from step 2) to `implementation-specialist` for all task implementations.
    - For each task in the epic:
      - Implement each task in the plan sequentially (following the order described in the epic description). Do NOT implement tasks in parallel.
-     - Once the task is implementation is completed, commit the changes to the feature branch.
-     - Move task to 'In Review' status on the project board.
-     - Continue to the next task.
+     - Once the task implementation is completed, do NOT commit.
+     - Ask `project-manager-specialist` to move the task to `In Review` on the project board.
+     - Proceed to the next task.
    - Once all tasks are implemented, move the quality verification step to the next phase.
    - **Stop timer** and record Implementation phase time.
 
@@ -204,12 +204,12 @@ Follow these steps in order.
       - **To commit ALL epic-related files** (use `git add -A`), with user approval - DO NOT specify individual files
       - To push commits, with user approval
       - To create a pull request (PR) or merge request (MR) with the committed changes, with user approval, with a comprehensive and accurate implementation description
+    - Once the PR/MR is created, ask `project-manager-specialist` to move the parent epic to `In Review` on the project board.
     - **IMPORTANT**: When calling git-specialist, do NOT restrict files - let it discover and commit all epic-related files
     - **Stop timer** and record Commit/Push phase time.
 
-11. Issue Status Update - Completion
-    - As soon as a task finishes implementation, passes QA, and has an acceptable review outcome, ask `project-manager-specialist` to move that task to `In Review` before presenting commit approval.
-    - As epic's implementation scope epic's implementation scope is complete and all delivered tasks are in `In Review`, ask `project-manager-specialist` to move the parent epic to `In Review` before presenting commit approval.
+11. Issue Status Update - Verification
+    - Verify that the parent epic and all its tasks are correctly moved to `In Review` on the project board.
     - Do not leave any completed task in `In Progress` once it is ready for commit/review.
 
 12. Completion Notification
@@ -219,7 +219,7 @@ Follow these steps in order.
 13. Finalize
     - **CRITICAL**: NEVER merge a pull request or merge request without the user's explicit and direct command to do so. Do not ask "Should I merge?" as a casual follow-up — only raise merging when the user explicitly requests it. This rule applies regardless of all checks passing, reviews being approved, or the workflow reaching this step.
     - When the user explicitly requests a merge, ask `git-specialist` to merge the pull request or merge request, with user approval.
-    - Ask `project-manager-specialist` to move completed issue or sub-issues to `Done`.
+    - Once the PR/MR is merged, ask `project-manager-specialist` to move the parent epic and ALL its subtasks to `Done`.
 
 ## Tool Usage Rules
 
