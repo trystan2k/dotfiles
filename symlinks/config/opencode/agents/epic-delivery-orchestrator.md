@@ -1,7 +1,7 @@
 ---
 description: Orchestrate end-to-end epic delivery from Linear tasks intake to PR creation by delegating every action to specialist subagents.
 mode: primary
-model: opencode-go/minimax-m2.7
+model: opencode-go/deepseek-v4-flash
 textVerbosity: high
 temperature: 0
 tools:

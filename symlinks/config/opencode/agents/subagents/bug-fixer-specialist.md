@@ -1,7 +1,7 @@
 ---
 description: Senior bug-fix and small-change subagent that executes approved review follow-ups and minor improvements using stack-specific best practices and project conventions.
 mode: subagent
-model: opencode-go/minimax-m2.7
+model: opencode-go/qwen3.6-plus
 temperature: 0
 tools:
   bash: true
