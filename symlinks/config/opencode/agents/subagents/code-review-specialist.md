@@ -200,11 +200,11 @@ Work through **every section** below for every changed file. Do not skip section
 - [ ] Tests that test implementation details instead of behavior
 - [ ] Missing test for the specific bug or requirement this task addresses
 
-### 9. CSS Modules
+### 9. CSS / Styling (apply when reviewing .css, .scss, .module.css files)
 
-- [ ] Class names not using the `styles.` prefix
-- [ ] Duplicate class names in different files
-- [ ] Class names not following the `styles.` prefix
+- [ ] CSS Variables — identify if the project uses CSS variables for colors, dimensions, etc. Ensure new changes follow the same pattern and use existing variables.
+- [ ] Design Tokens — if the project uses design tokens, ensure they are used. If a required token does not exist, suggest its creation following the project's defined pattern.
+- [ ] CSS Modules class names — ensure class names use the `styles.` prefix.
 - [ ] cn() utility for className — use `cn(styles.foo, className)` instead of template literal concatenation like `${styles.foo}${className ? ' ' + className : ''}`
 
 ## Findings Format
