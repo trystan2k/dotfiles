@@ -133,7 +133,7 @@ Follow these steps in order.
    - **Stop timer** and record Preparation phase time.
 
 2. Planning with Deepthink
-   - Using the information provided by `project-manager-specialist` from previous step, interview the user (using grill-with-docs and brainstorming skills and question tool) to understand the requirements and constraints, solve any ambiguity, and clarify any missing information.
+   - Using the information provided by `project-manager-specialist` from previous step, interview the user (you MUST use grill-with-docs skills and question tool) to understand the requirements and constraints, solve any ambiguity, and clarify any missing information.
    - Ask `execution-planner-specialist` to generate the detailed action plan using deepthink principles using the full description and details of the epic and ALL its subtasks (not just titles), and user requirements obtained from the user interview.
    - Capture the plan file path returned by `execution-planner-specialist` and store it for use in implementation.
    - Ask user explicit approval to proceed with the plan. DO NOT proceed without user approval.
