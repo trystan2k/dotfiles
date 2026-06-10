@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [18.2.0](https://github.com/trystan2k/dotfiles/compare/v18.1.1...v18.2.0) (2026-06-10)
+
+
+### Features
+
+* **symlinks:** add epic delivery orchestrator agent configuration ([d4720f9](https://github.com/trystan2k/dotfiles/commit/d4720f9ac033ece66bdf54700f5f05f939a66096))
+* **symlinks:** add MCP Pencil server configuration ([2d0bb8f](https://github.com/trystan2k/dotfiles/commit/2d0bb8f8aefaabcdf2c0e865c49fc5b4993dbae3))
+* **symlinks:** update agent configs and add local provider plugin ([8403bb0](https://github.com/trystan2k/dotfiles/commit/8403bb0679172222277fac01801d09ba5371a2c3))
+
+
+### Bug Fixes
+
+* **symlinks:** add error handling to skill functions ([0b82d19](https://github.com/trystan2k/dotfiles/commit/0b82d19f666fbbcc6e68b873def4dca03ba5e69b))
+
 ### [18.1.1](https://github.com/trystan2k/dotfiles/compare/v18.1.0...v18.1.1) (2026-04-10)
 
 ## [18.1.0](https://github.com/trystan2k/dotfiles/compare/v18.0.2...v18.1.0) (2026-04-06)
