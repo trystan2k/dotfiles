@@ -34,9 +34,13 @@ function add_skills() {
 
     if [[ "$url" != "$item" && -n "$name" ]]; then
       echo "Installing skill: $name from $url"
-      npx skills@latest add "$url" --skill "$name" "$@"
+      if ! npx skills@latest add "$url" --skill "$name" "$@"; then
+        echo "Failed to install skill: $name"
+        return 1
+      fi
     else
       echo "Invalid format for skill: $item. Expected url:skill_name"
+      return 1
     fi
   done 3< <(echo "$input" | tr ',' '\n')
 }
@@ -57,9 +61,10 @@ function bulk_add_skills() {
   skills_csv=$(grep -v '^$' "$file_path" | paste -sd "," -)
 
   if [ -n "$skills_csv" ]; then
-    add_skills "$skills_csv" "$@"
+    add_skills "$skills_csv" "$@" || return 1
   else
     echo "The file $file_path is empty or contains no valid skills."
+    return 1
   fi
 }
 
