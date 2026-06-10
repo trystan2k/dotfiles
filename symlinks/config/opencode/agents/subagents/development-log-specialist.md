@@ -1,7 +1,7 @@
 ---
 description: Handle all development log operations.
 mode: subagent
-model: github-copilot/gpt-5-mini
+model: zai-coding-plan/glm-5.1
 temperature: 0
 tools:
   bash: true

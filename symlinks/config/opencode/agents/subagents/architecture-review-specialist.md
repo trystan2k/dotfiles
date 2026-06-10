@@ -1,7 +1,7 @@
 ---
 description: Expert architecture review agent that evaluates task implementations for correctness, quality, best practices, and improvement opportunities using stack-specific skills.
 mode: subagent
-model: github-copilot/claude-sonnet-4.6
+model: openai/gpt-5.4
 temperature: 0
 tools:
   bash: true

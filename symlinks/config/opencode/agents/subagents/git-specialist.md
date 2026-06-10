@@ -1,7 +1,7 @@
 ---
 description: Execute git and pull-request workflows with provider-aware CLI commands, enforcing git-master skill usage when available.
 mode: subagent
-model: github-copilot/gpt-5-mini
+model: zai-coding-plan/glm-5.1
 temperature: 0
 tools:
   bash: true

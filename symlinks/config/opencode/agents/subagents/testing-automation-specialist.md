@@ -1,7 +1,7 @@
 ---
 description: Expert test automation agent for unit, integration, and E2E testing using stack-specific best practices and project conventions.
 mode: subagent
-model: opencode-go/qwen3.6-plus
+model: opencode-go/qwen3.7-max
 reasoningEffort: high
 temperature: 0
 tools:

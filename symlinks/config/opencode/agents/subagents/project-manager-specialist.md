@@ -1,7 +1,7 @@
 ---
 description: Handle all Linear Project and Issues operations using linear CLI. Manages the full issue lifecycle on a Linear Project board — create, query, move status, breakdown into sub-issues, and link them — without touching product source code.
 mode: subagent
-model: github-copilot/gpt-5-mini
+model: zai-coding-plan/glm-5.1
 temperature: 0
 tools:
   bash: true
