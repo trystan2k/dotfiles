@@ -1,7 +1,7 @@
 ---
 description: Handle all development log operations.
 mode: subagent
-model: zai-coding-plan/glm-5.1
+model: zai-coding-plan/glm-5.2
 temperature: 0
 tools:
   bash: true
@@ -89,7 +89,7 @@ Allowed tools:
 Forbidden tools:
 
 - `mcp_serena`
-- `mcp_engram`
+- `engram`
 - `write`
 - `edit`
 

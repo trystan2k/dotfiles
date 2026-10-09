@@ -1,7 +1,7 @@
 ---
 description: Execute pre-commit quality gates and report pass or fail results without applying fixes.
 mode: subagent
-model: zai-coding-plan/glm-5.1
+model: zai-coding-plan/glm-5.2
 temperature: 0
 tools:
   bash: true

@@ -1,7 +1,7 @@
 ---
 description: Orchestrate end-to-end epic delivery from Linear tasks intake to PR creation by delegating every action to specialist subagents.
 mode: primary
-model: openai/gpt-5.4
+model: opencode-go/minimax-m3
 temperature: 0
 tools:
   bash: false

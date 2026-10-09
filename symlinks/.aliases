@@ -1,5 +1,109 @@
 #!/usr/bin/env bash
 
+# Global color variables
+export C_RED=$'\e[0;31m'
+export C_GREEN=$'\e[0;32m'
+export C_YELLOW=$'\e[0;33m'
+export C_CYAN=$'\e[0;36m'
+export C_MAGENTA=$'\e[0;35m'
+export C_NC=$'\e[0m'
+
+function myfuncs() {
+  echo "${C_CYAN}====================================================${C_NC}"
+  echo "${C_MAGENTA}          🛠️  Custom ZSH Utilities Cheat Sheet      ${C_NC}"
+  echo "${C_CYAN}====================================================${C_NC}"
+  echo "Run any command with ${C_YELLOW}-h${C_NC} or ${C_YELLOW}help${C_NC} for detailed usage."
+  echo ""
+  echo "${C_YELLOW}📂 File & Directory Operations${C_NC}"
+  echo "  ${C_GREEN}take${C_NC}          - Create a directory and enter it immediately"
+  echo "  ${C_GREEN}l${C_NC}             - List files in long format"
+  echo "  ${C_GREEN}la${C_NC}            - List all files (including hidden) in long format"
+  echo "  ${C_GREEN}lsd${C_NC}           - List only directories"
+  echo "  ${C_GREEN}foldersize${C_NC}    - Show size of each item in current directory"
+  echo "  ${C_GREEN}..${C_NC},${C_GREEN}...${C_NC},${C_GREEN}....${C_NC},${C_GREEN}.....${C_NC} - Navigate up 1,2,3,4 directories"
+  echo "  ${C_GREEN}~${C_NC},${C_GREEN}-${C_NC}        - Navigate to home or previous directory"
+  echo "  ${C_GREEN}mv${C_NC},${C_GREEN}cp${C_NC}     - Move/copy with confirmation and verbose mode"
+  echo "  ${C_GREEN}dl_github_sub${C_NC} - Download a subfolder from GitHub repository"
+  echo "  ${C_GREEN}extract${C_NC}       - Unzip/Extract archive file(s) (if available)"
+  echo "  ${C_GREEN}ql${C_NC}            - Open a file in macOS Quick Look (if available)"
+  echo "  ${C_GREEN}ds-del${C_NC}        - Recursively delete .DS_Store files"
+  echo "  ${C_GREEN}emptytrash${C_NC}    - Empty Trash and clean up logs"
+  echo "  ${C_GREEN}show${C_NC},${C_GREEN}hide${C_NC} - Show/hide hidden files in Finder"
+  echo "  ${C_GREEN}hidedesktop${C_NC},${C_GREEN}showdesktop${C_NC} - Hide/show desktop icons"
+  echo ""
+  echo "${C_YELLOW}🌐 Navigation & Shortcuts${C_NC}"
+  echo "  ${C_GREEN}thiago${C_NC}        - Navigate to ~/Documents/Thiago"
+  echo "  ${C_GREEN}home${C_NC}          - Navigate to ~/"
+  echo "  ${C_GREEN}icloud${C_NC}        - Navigate to iCloud Drive"
+  echo "  ${C_GREEN}dl${C_NC},${C_GREEN}dt${C_NC}       - Navigate to Downloads or Desktop"
+  echo "  ${C_GREEN}cdls${C_NC}          - Navigate to directory using fzf"
+  echo "  ${C_GREEN}j${C_NC}             - Navigate using zoxide"
+  echo "  ${C_GREEN}path${C_NC}          - Print PATH entries on separate lines"
+  echo "  ${C_GREEN}cpwd${C_NC}          - Copy current directory path to clipboard"
+  echo ""
+  echo "${C_YELLOW}💻 Git & Version Control${C_NC}"
+  echo "  ${C_GREEN}g${C_NC}             - Git shortcut"
+  echo "  ${C_GREEN}gco${C_NC}           - Git checkout"
+  echo "  ${C_GREEN}gcb${C_NC}           - Git checkout -b (create and switch branch)"
+  echo "  ${C_GREEN}gl${C_NC}            - Git pull"
+  echo "  ${C_GREEN}gf${C_NC}            - Git fetch"
+  echo "  ${C_GREEN}gzup${C_NC}          - Git zup"
+  echo "  ${C_GREEN}gmend${C_NC}         - Git amend"
+  echo "  ${C_GREEN}initialCommit${C_NC} - Git add, commit 'Initial Commit', and push"
+  echo "  ${C_GREEN}gsmart${C_NC}        - Generate git commit message using AI"
+  echo ""
+  echo "${C_YELLOW}🔧 Development Tools${C_NC}"
+  echo "  ${C_GREEN}updateBrewfile${C_NC} - Backup and generate new Brewfile"
+  echo "  ${C_GREEN}removeNodeSystem${C_NC} - Uninstall system Node.js"
+  echo "  ${C_GREEN}updateNPMDependencies${C_NC} - Update npm dependencies with npm-check-updates"
+  echo "  ${C_GREEN}npmig${C_NC}         - Install global npm packages to custom directory"
+  echo "  ${C_GREEN}add_skills${C_NC}    - Install multiple skills from CSV input"
+  echo "  ${C_GREEN}bulk_add_skills${C_NC} - Install multiple skills from file"
+  echo "  ${C_GREEN}cbjson${C_NC}        - Format JSON from clipboard or file"
+  echo "  ${C_GREEN}cat${C_NC}           - Colored cat (bat)"
+  echo "  ${C_GREEN}grep${C_NC},${C_GREEN}fgrep${C_NC},${C_GREEN}egrep${C_NC} - Colored grep output"
+  echo "  ${C_GREEN}map${C_NC}           - Intuitive map function (xargs -n1)"
+  echo "  ${C_GREEN}timer${C_NC}         - Simple stopwatch"
+  echo ""
+  echo "${C_YELLOW}🎬 Media & Conversion${C_NC}"
+  echo "  ${C_GREEN}convert_to_mp4${C_NC}  - Convert video file to MP4"
+  echo "  ${C_GREEN}convert_all_to_mp4${C_NC} - Convert all videos in folder to MP4"
+  echo "  ${C_GREEN}convert_to_gif${C_NC} - Convert video file to GIF"
+  echo ""
+  echo "${C_YELLOW}🌐 Networking & Web${C_NC}"
+  echo "  ${C_GREEN}webshare${C_NC}      - Share current directory over local network HTTP"
+  echo "  ${C_GREEN}port${C_NC}          - Check what's running on a port (and optionally kill it)"
+  echo "  ${C_GREEN}kill_port${C_NC}     - Kill processes listening on given port"
+  echo "  ${C_GREEN}myip${C_NC}          - Show local & public IP, plus geolocation"
+  echo "  ${C_GREEN}ifactive${C_NC}      - Show active network interfaces"
+  echo "  ${C_GREEN}flush${C_NC}         - Flush Directory Service cache"
+  echo "  ${C_GREEN}change_mac_address${C_NC} - Change MAC address"
+  echo "  ${C_GREEN}sniff${C_NC}         - View HTTP traffic"
+  echo "  ${C_GREEN}httpdump${C_NC}      - Dump HTTP traffic"
+  echo ""
+  echo "${C_YELLOW}⏱️  Productivity & System${C_NC}"
+  echo "  ${C_GREEN}countdown${C_NC}     - Start a timer with UI notifications"
+  echo "  ${C_GREEN}update${C_NC}        - Update macOS, Homebrew, npm, gems"
+  echo "  ${C_GREEN}week${C_NC}          - Get current week number"
+  echo "  ${C_GREEN}today${C_NC}         - Get current date (YYYY-MM-DD)"
+  echo "  ${C_GREEN}c${C_NC}             - Trim newlines and copy to clipboard"
+  echo "  ${C_GREEN}urlencode${C_NC}     - URL-encode strings"
+  echo "  ${C_GREEN}spotoff${C_NC},${C_GREEN}spoton${C_NC} - Disable/enable Spotlight"
+  echo "  ${C_GREEN}badge${C_NC}         - Ring terminal bell and badge Dock"
+  echo "  ${C_GREEN}stfu${C_NC}          - Mute system volume"
+  echo "  ${C_GREEN}pumpitup${C_NC}      - Maximize system volume"
+  echo "  ${C_GREEN}chromekill${C_NC}    - Kill Chrome renderer processes"
+  echo "  ${C_GREEN}afk${C_NC}           - Lock screen"
+  echo "  ${C_GREEN}reload${C_NC}        - Reload the shell"
+  echo "  ${C_GREEN}lscleanup${C_NC}     - Clean up LaunchServices"
+  echo "  ${C_GREEN}hd${C_NC}            - Canonical hex dump (hexdump -C)"
+  echo "  ${C_GREEN}md5sum${C_NC},${C_GREEN}sha1sum${C_NC} - Checksum aliases"
+  echo ""
+  echo "${C_YELLOW}🖥️  macOS Specific${C_NC}"
+  echo "  ${C_GREEN}chrome${C_NC},${C_GREEN}canary${C_NC} - Open Chrome/Chrome Canary"
+  echo "${C_CYAN}====================================================${C_NC}"
+}
+
 # Alias function to backup current Brewfile and generate a new one, with currenct tools installed
 function updateBrewfile() {
   if [[ -f $HOME/Brewfile ]]; then
@@ -191,9 +295,25 @@ alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
 alias canary='/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary'
 
 # IP addresses
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias localip="ipconfig getifaddr en0"
-alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
+# local IP, public IP, and location in one command
+function myip() {
+    if [[ "$1" == "help" || "$1" == "-h" ]]; then
+        echo "${C_CYAN}🌐 myip${C_NC}: Fetches your networking info."
+        echo "Usage: ${C_YELLOW}myip${C_NC}"
+        return 0
+    fi
+
+    echo "${C_CYAN}Fetching IP details...${C_NC}"
+    local local_ip=$(route -n get default 2>/dev/null | grep 'interface:' | awk '{print $2}' | xargs ipconfig getifaddr 2>/dev/null)
+    [[ -z "$local_ip" ]] && local_ip="127.0.0.1"
+    local public_ip=$(curl -s https://ifconfig.me)
+    local geo_info=$(curl -s "https://ipinfo.io/${public_ip}/city")
+    local country_info=$(curl -s "https://ipinfo.io/${public_ip}/country")
+
+    echo "🏠 ${C_YELLOW}Local IP:${C_NC}  $local_ip"
+    echo "🌍 ${C_YELLOW}Public IP:${C_NC} $public_ip"
+    echo "📍 ${C_YELLOW}Location:${C_NC}  $geo_info, $country_info"
+}
 
 # Show active network interfaces
 alias ifactive="ifconfig | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active'"
@@ -335,6 +455,32 @@ function kill_port() {
   lsof -i tcp:$1 | awk 'NR!=1 {print $2}' | xargs kill
 }
 
+function port() {
+    if [[ "$1" == "help" || "$1" == "-h" || -z "$1" ]]; then
+        echo "${C_CYAN}🔌 port${C_NC}: See what's running on a port and optionally kill it."
+        echo "Usage: ${C_YELLOW}port <number> [kill]${C_NC}"
+        echo "Examples:"
+        echo "  port 8080       (Views processes on port 8080)"
+        echo "  port 3000 kill  (Kills the process running on port 3000)"
+        return 0
+    fi
+
+    local target_port=$1
+    if [[ "$2" == "kill" ]]; then
+        echo "${C_RED}Attempting to kill process on port $target_port...${C_NC}"
+        local pid=$(lsof -t -i:"$target_port")
+        if [[ -n "$pid" ]]; then
+            kill -9 $pid
+            echo "${C_GREEN}✅ Process $pid killed successfully.${C_NC}"
+        else
+            echo "${C_YELLOW}⚠️  No process found running on port $target_port.${C_NC}"
+        fi
+    else
+        echo "${C_CYAN}Processes listening on port $target_port:${C_NC}"
+        lsof -i :"$target_port" || echo "${C_YELLOW}No active processes on this port.${C_NC}"
+    fi
+}
+
 # Alias suffix to open file in cat, when file is 'executed'
 alias -s {json,env,gitignore,md,html,css,toml}=cat
 
@@ -343,12 +489,6 @@ alias -s git="git clone"
 
 # colored cat command
 alias cat='bat'
-
-# Task Master
-alias tm='task-master'
-alias taskmaster='task-master'
-alias basic-memory='~/.local/bin/bm-wrapper'
-alias bm='~/.local/bin/bm-wrapper'
 
 # Hooks to show execution time of commands
 preexec() {
@@ -409,6 +549,247 @@ alias cpwd="pwd | tr -d '\n' | pbcopy"
 # Move and copy files with more information/confirmation
 alias mv="mv -iv"
 alias cp="cp -riv"
+
+# Format JSON
+function cbjson() {
+    if [[ "$1" == "help" || "$1" == "-h" ]]; then
+        echo "${C_CYAN}📋 cbjson${C_NC}: Formats minified JSON."
+        echo "Usage:"
+        echo "  ${C_YELLOW}cbjson${C_NC}          - Formats JSON currently in your clipboard"
+        echo "  ${C_YELLOW}cbjson <file>${C_NC}   - Formats a specific JSON file"
+        return 0
+    fi
+
+    local input_data
+    local source_name
+
+    if [[ -n "$1" ]]; then
+        if [[ ! -f "$1" ]]; then
+            echo "${C_RED}❌ Error: File '$1' not found.${C_NC}"
+            return 1
+        fi
+        input_data=$(cat "$1")
+        source_name="file '$1'"
+    else
+        input_data=$(pbpaste)
+        source_name="clipboard"
+    fi
+
+    # Format JSON using Python safely
+    local formatted=$(echo "$input_data" | python3 -c 'import sys, json; print(json.dumps(json.load(sys.stdin), indent=2))' 2>/dev/null)
+
+    if [[ -n "$formatted" ]]; then
+        echo "$formatted" | pbcopy
+        echo "${C_GREEN}✅ JSON from $source_name formatted and copied to clipboard!${C_NC}"
+        echo "${C_CYAN}Preview:${C_NC}"
+        # If jq is installed, use it for color output in terminal, otherwise just echo
+        if command -v jq >/dev/null 2>&1; then
+            echo "$formatted" | jq -C '.' | head -n 15
+        else
+            echo "$formatted" | head -n 15
+        fi
+        echo "${C_YELLOW}... (truncated) ...${C_NC}"
+    else
+        echo "${C_RED}❌ Error: $source_name does not contain valid JSON data.${C_NC}"
+    fi
+}
+
+# a timer that comes and finds you
+function countdown() {
+    if [[ "$1" == "help" || "$1" == "-h" ]]; then
+        echo "${C_CYAN}⏳ countdown${C_NC}: A simple terminal timer with notifications."
+        echo "Usage: ${C_YELLOW}countdown <time>[s|m|h]${C_NC}"
+        echo "Examples: countdown 45, countdown 5m, countdown 1h"
+        return 0
+    fi
+
+    local input=${1:-60}
+    local seconds=0
+
+    if [[ $input == *m ]]; then seconds=$((${input%m} * 60))
+    elif [[ $input == *h ]]; then seconds=$((${input%h} * 3600))
+    elif [[ $input == *s ]]; then seconds=${input%s}
+    else seconds=$input; fi
+
+    if ! [[ "$seconds" =~ ^[0-9]+$ ]]; then
+        echo "${C_RED}❌ Invalid time format.${C_NC} Use numbers, optionally followed by m or h."
+        return 1
+    fi
+
+    echo "${C_CYAN}Starting timer for $input...${C_NC}"
+    while [ "$seconds" -gt 0 ]; do
+        printf "\r${C_YELLOW}⏳ Time remaining: %02d:%02d${C_NC}\033[0K" $((seconds/60)) $((seconds%60))
+        sleep 1
+        : $((seconds--))
+    done
+
+    printf "\r\033[0K"
+    echo "${C_GREEN}🔔 Time's up! ($input)${C_NC}"
+
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+        osascript -e "display notification \"Your $input timer has finished!\" with title \"⏳ Countdown\" sound name \"Glass\""
+        say "Timer is done" >/dev/null 2>&1 &!
+    else
+        echo -e "\a"
+    fi
+}
+
+# your folder, on any phone, in three seconds
+function webshare() {
+    if [[ "$1" == "help" || "$1" == "-h" || "$1" == "--help" ]]; then
+        echo "${C_CYAN}📁 webshare${C_NC}: Instantly serve the current directory over HTTP with a beautiful UI."
+        echo "Usage: ${C_YELLOW}webshare [port] [-o]${C_NC}"
+        echo ""
+        echo "Options:"
+        echo "  ${C_YELLOW}-o, --open${C_NC}     Automatically open the server in your default browser"
+        echo ""
+        echo "Examples:"
+        echo "  webshare             (Serves on port 8000 by default)"
+        echo "  webshare 3000        (Serves on port 3000)"
+        echo "  webshare 8080 -o     (Serves on 8080 and opens browser)"
+        return 0
+    fi
+
+    local port=8000
+    local open_browser=0
+
+    for arg in "$@"; do
+        case "$arg" in
+            -o|--open) open_browser=1 ;;
+            -*) echo "${C_RED}❌ Unknown option: $arg${C_NC}"; return 1 ;;
+            *)
+                if [[ "$arg" =~ ^[0-9]+$ ]]; then port=$arg
+                else echo "${C_RED}❌ Invalid port: $arg${C_NC}"; return 1; fi
+                ;;
+        esac
+    done
+
+    while lsof -Pi :$port -sTCP:LISTEN -t >/dev/null; do
+        echo "${C_YELLOW}⚠️  Port $port is in use. Trying $((port+1))...${C_NC}"
+        port=$((port+1))
+    done
+
+    local local_ip=$(route -n get default 2>/dev/null | grep 'interface:' | awk '{print $2}' | xargs ipconfig getifaddr 2>/dev/null)
+    [[ -z "$local_ip" ]] && local_ip="127.0.0.1"
+
+    # Friendly Bonjour hostname, detected dynamically (e.g. http://my-macbook.local:8000)
+    local host_name=$(scutil --get LocalHostName 2>/dev/null)
+    local local_alias=""
+    [[ -n "$host_name" ]] && local_alias="http://${host_name}.local:$port"
+
+    echo "${C_GREEN}✅ Web server is running!${C_NC}"
+    echo "${C_CYAN}📂 Serving path:${C_NC} $(pwd)"
+    echo "------------------------------------------------------------"
+    echo "${C_MAGENTA}📱 How to use & share:${C_NC}"
+    echo " • ${C_YELLOW}For yourself:${C_NC} Click or open ${C_GREEN}http://localhost:$port${C_NC}"
+    echo " • ${C_YELLOW}For others:${C_NC}   Tell them to go to one of these links on their device:"
+    echo "                 ${C_GREEN}http://$local_ip:$port${C_NC}   (Always works)"
+    if [[ -n "$local_alias" ]]; then
+        echo "                 ${C_CYAN}$local_alias${C_NC}  (Friendly name, works on most devices)"
+    fi
+    echo "                 ${C_YELLOW}(Note: They must be on the same Wi-Fi/network)${C_NC}"
+    echo "------------------------------------------------------------"
+    echo "${C_YELLOW}Press Ctrl+C to stop the server${C_NC}"
+    echo ""
+
+    if [[ $open_browser -eq 1 ]]; then
+        open "http://localhost:$port"
+    fi
+
+    local py_script=$(cat <<'EOF'
+import http.server, socketserver, os, sys, urllib.parse, html, io
+
+PORT = int(sys.argv[1])
+
+class BeautifulHandler(http.server.SimpleHTTPRequestHandler):
+    def list_directory(self, path):
+        try:
+            files = os.listdir(path)
+        except os.error:
+            self.send_error(404, "No permission to list directory")
+            return None
+
+        files.sort(key=lambda a: a.lower())
+
+        displaypath = html.escape(urllib.parse.unquote(self.path))
+        enc = sys.getfilesystemencoding()
+
+        r = []
+        r.append('<!DOCTYPE html><html><head><meta charset="utf-8">')
+        r.append('<meta name="viewport" content="width=device-width, initial-scale=1">')
+        r.append('<title>Shared Files</title>')
+        r.append('''<style>
+            body { font-family: system-ui, -apple-system, sans-serif; background: #121212; color: #e0e0e0; margin: 0; padding: 20px; }
+            .container { max-width: 800px; margin: 0 auto; background: #1e1e1e; border-radius: 12px; padding: 20px; box-shadow: 0 8px 16px rgba(0,0,0,0.5); }
+            h1 { margin-top: 0; font-size: 1.4rem; border-bottom: 1px solid #333; padding-bottom: 15px; color: #fff; word-break: break-all; }
+            ul { list-style: none; padding: 0; margin: 0; }
+            li { border-bottom: 1px solid #2a2a2a; }
+            li:last-child { border-bottom: none; }
+            a { display: flex; align-items: center; padding: 12px 10px; color: #bbb; text-decoration: none; font-size: 16px; border-radius: 8px; transition: all 0.2s; word-break: break-word; }
+            a:hover { background: #2a2a2a; color: #fff; transform: translateX(4px); }
+            .icon { font-size: 24px; margin-right: 15px; min-width: 30px; text-align: center; }
+            @media (max-width: 600px) { body { padding: 10px; } .container { padding: 15px; } }
+        </style>''')
+        r.append('</head><body><div class="container">')
+        r.append('<h1>📡 Network Share <br><span style="color:#888; font-size:1rem; font-weight:normal;">%s</span></h1>' % displaypath)
+        r.append('<ul>')
+
+        if self.path != "/":
+            r.append('<li><a href=".."><span class="icon">🔙</span> Parent Directory</a></li>')
+
+        for name in files:
+            if name.startswith('.'):
+                continue
+
+            fullname = os.path.join(path, name)
+            displayname = linkname = name
+            icon = "📄"
+
+            if os.path.isdir(fullname):
+                displayname = name + "/"
+                linkname = name + "/"
+                icon = "📁"
+            else:
+                ext = name.lower().split('.')[-1] if '.' in name else ''
+                if ext in ['mkv', 'mp4', 'avi', 'mov', 'webm']: icon = "🎬"
+                elif ext in ['jpg', 'jpeg', 'png', 'gif', 'webp']: icon = "🖼️"
+                elif ext in ['mp3', 'wav', 'flac', 'm4a']: icon = "🎵"
+                elif ext in ['zip', 'rar', '7z', 'tar', 'gz']: icon = "📦"
+                elif ext in ['pdf']: icon = "📕"
+                elif ext in ['txt', 'md', 'csv', 'json']: icon = "📝"
+                elif ext in ['py', 'js', 'html', 'css', 'java', 'cpp', 'sh']: icon = "💻"
+
+            r.append('<li><a href="%s"><span class="icon">%s</span> %s</a></li>'
+                     % (urllib.parse.quote(linkname, errors='surrogatepass'), icon, html.escape(displayname)))
+
+        r.append('</ul></div></body></html>')
+
+        encoded = ''.join(r).encode(enc, 'surrogateescape')
+        f = io.BytesIO()
+        f.write(encoded)
+        f.seek(0)
+        self.send_response(200)
+        self.send_header("Content-type", "text/html; charset=%s" % enc)
+        self.send_header("Content-Length", str(len(encoded)))
+        self.end_headers()
+        return f
+
+class QuietServer(socketserver.TCPServer):
+    allow_reuse_address = True
+
+    def handle_error(self, request, client_address):
+        import sys
+        if issubclass(sys.exc_info()[0], (BrokenPipeError, ConnectionResetError)):
+            return
+        super().handle_error(request, client_address)
+
+with QuietServer(("", PORT), BeautifulHandler) as httpd:
+    httpd.serve_forever()
+EOF
+)
+
+    python3 -c "$py_script" "$port"
+}
 
 #shellcheck source=/dev/null
 [ -f "$HOME/.aliases.local" ] && source "$HOME/.aliases.local"

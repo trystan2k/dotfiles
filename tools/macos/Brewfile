@@ -56,6 +56,7 @@ cask "deskpad"
 cask "hot"
 cask "jordanbaird-ice"
 brew "killport"
+cask "mac-sai"
 cask "notunes"
 cask "notion"
 cask "piphero"
@@ -77,6 +78,3 @@ cask "trae"
 # Fonts
 cask "font-fira-code"
 cask "font-hack-nerd-font"
-
-# AI Tools
-brew "sst/tap/opencode"

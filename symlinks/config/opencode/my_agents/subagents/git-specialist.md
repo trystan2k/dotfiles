@@ -1,7 +1,7 @@
 ---
 description: Execute git and pull-request workflows with provider-aware CLI commands, enforcing git-master skill usage when available.
 mode: subagent
-model: zai-coding-plan/glm-5.1
+model: zai-coding-plan/glm-5.2
 temperature: 0
 tools:
   bash: true

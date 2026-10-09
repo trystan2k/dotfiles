@@ -24,6 +24,11 @@ fi
 # source antidote
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 
+# Force a rebuild if antidote's generated static file is missing or empty.
+if [[ ! -s "${ZDOTDIR:-$HOME}/.zsh_plugins.zsh" ]]; then
+  rm -f "$HOME/Library/Caches/antidote/.antidote.load"
+fi
+
 # initialize plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
 antidote load
 
@@ -53,10 +58,12 @@ setopt auto_cd
 # ZSH_HISTORY Setup
 setopt HIST_VERIFY
 setopt EXTENDED_HISTORY      # save each command's beginning timestamp and the duration to the history file
+setopt INC_APPEND_HISTORY    # write history immediately, not on shell exit
+setopt SHARE_HISTORY         # share it live across ALL open tabs
+setopt HIST_IGNORE_DUPS      # skip consecutive duplicates
+setopt HIST_IGNORE_SPACE     # commands starting with a space are never saved
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_REDUCE_BLANKS
-setopt INC_APPEND_HISTORY    # this is default, but set for share_history
-setopt SHARE_HISTORY         # Share history file amongst all Zsh sessions
 
 eval "$(mise activate zsh)"
 
